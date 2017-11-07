@@ -5,7 +5,7 @@ def fullInput(key, value) {
 def main {
   openBrowser "firefox"
   go "www.google.fr"
-  click link[text="SignIn"]
+  click a[text="SignIn"]
   fullInput("username", "truc")
   fullInput("password", "tructruc")
   click checkbox[text="Rember Me"]
