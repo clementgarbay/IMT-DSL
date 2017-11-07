@@ -81,6 +81,16 @@ public class MySeleniumAdapterFactory extends AdapterFactoryImpl
         return createProgramAdapter();
       }
       @Override
+      public Adapter caseFunctions(Functions object)
+      {
+        return createFunctionsAdapter();
+      }
+      @Override
+      public Adapter caseStatements(Statements object)
+      {
+        return createStatementsAdapter();
+      }
+      @Override
       public Adapter caseFunction(Function object)
       {
         return createFunctionAdapter();
@@ -203,6 +213,36 @@ public class MySeleniumAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createProgramAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Functions <em>Functions</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Functions
+   * @generated
+   */
+  public Adapter createFunctionsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Statements <em>Statements</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Statements
+   * @generated
+   */
+  public Adapter createStatementsAdapter()
   {
     return null;
   }

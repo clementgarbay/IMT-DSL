@@ -25,34 +25,60 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public class ProgramElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.imta.clementdamien.dsl.selenium.MySelenium.Program");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cCommentParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final Assignment cFunctionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cFunctionsFunctionParserRuleCall_1_0 = (RuleCall)cFunctionsAssignment_1.eContents().get(0);
-		private final RuleCall cCommentParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Assignment cFunctionsAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final RuleCall cFunctionsFunctionsParserRuleCall_0_0 = (RuleCall)cFunctionsAssignment_0.eContents().get(0);
+		private final Assignment cStatementsAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final RuleCall cStatementsStatementsParserRuleCall_1_0 = (RuleCall)cStatementsAssignment_1.eContents().get(0);
 		
 		//Program:
-		//	Comment*
-		//	functions+=Function+ //| (statements += Statement)*
-		//	Comment*;
+		//	functions=Functions | statements=Statements;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Comment* functions+=Function+ //| (statements += Statement)*
-		//Comment*
-		public Group getGroup() { return cGroup; }
+		//functions=Functions | statements=Statements
+		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//Comment*
-		public RuleCall getCommentParserRuleCall_0() { return cCommentParserRuleCall_0; }
+		//functions=Functions
+		public Assignment getFunctionsAssignment_0() { return cFunctionsAssignment_0; }
+		
+		//Functions
+		public RuleCall getFunctionsFunctionsParserRuleCall_0_0() { return cFunctionsFunctionsParserRuleCall_0_0; }
+		
+		//statements=Statements
+		public Assignment getStatementsAssignment_1() { return cStatementsAssignment_1; }
+		
+		//Statements
+		public RuleCall getStatementsStatementsParserRuleCall_1_0() { return cStatementsStatementsParserRuleCall_1_0; }
+	}
+	public class FunctionsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.imta.clementdamien.dsl.selenium.MySelenium.Functions");
+		private final Assignment cFunctionsAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cFunctionsFunctionParserRuleCall_0 = (RuleCall)cFunctionsAssignment.eContents().get(0);
+		
+		//Functions:
+		//	functions+=Function+;
+		@Override public ParserRule getRule() { return rule; }
 		
 		//functions+=Function+
-		public Assignment getFunctionsAssignment_1() { return cFunctionsAssignment_1; }
+		public Assignment getFunctionsAssignment() { return cFunctionsAssignment; }
 		
 		//Function
-		public RuleCall getFunctionsFunctionParserRuleCall_1_0() { return cFunctionsFunctionParserRuleCall_1_0; }
+		public RuleCall getFunctionsFunctionParserRuleCall_0() { return cFunctionsFunctionParserRuleCall_0; }
+	}
+	public class StatementsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.imta.clementdamien.dsl.selenium.MySelenium.Statements");
+		private final Assignment cStatementsAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cStatementsStatementParserRuleCall_0 = (RuleCall)cStatementsAssignment.eContents().get(0);
 		
-		////| (statements += Statement)*
-		//Comment*
-		public RuleCall getCommentParserRuleCall_2() { return cCommentParserRuleCall_2; }
+		//Statements:
+		//	statements+=Statement+;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//statements+=Statement+
+		public Assignment getStatementsAssignment() { return cStatementsAssignment; }
+		
+		//Statement
+		public RuleCall getStatementsStatementParserRuleCall_0() { return cStatementsStatementParserRuleCall_0; }
 	}
 	public class FunctionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.imta.clementdamien.dsl.selenium.MySelenium.Function");
@@ -834,6 +860,8 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	private final ProgramElements pProgram;
+	private final FunctionsElements pFunctions;
+	private final StatementsElements pStatements;
 	private final FunctionElements pFunction;
 	private final FunctionNameElements pFunctionName;
 	private final FunctionCallElements pFunctionCall;
@@ -870,6 +898,8 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pProgram = new ProgramElements();
+		this.pFunctions = new FunctionsElements();
+		this.pStatements = new StatementsElements();
 		this.pFunction = new FunctionElements();
 		this.pFunctionName = new FunctionNameElements();
 		this.pFunctionCall = new FunctionCallElements();
@@ -925,15 +955,33 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Program:
-	//	Comment*
-	//	functions+=Function+ //| (statements += Statement)*
-	//	Comment*;
+	//	functions=Functions | statements=Statements;
 	public ProgramElements getProgramAccess() {
 		return pProgram;
 	}
 	
 	public ParserRule getProgramRule() {
 		return getProgramAccess().getRule();
+	}
+	
+	//Functions:
+	//	functions+=Function+;
+	public FunctionsElements getFunctionsAccess() {
+		return pFunctions;
+	}
+	
+	public ParserRule getFunctionsRule() {
+		return getFunctionsAccess().getRule();
+	}
+	
+	//Statements:
+	//	statements+=Statement+;
+	public StatementsElements getStatementsAccess() {
+		return pStatements;
+	}
+	
+	public ParserRule getStatementsRule() {
+		return getStatementsAccess().getRule();
 	}
 	
 	//Function:

@@ -13,12 +13,14 @@ import fr.imta.clementdamien.dsl.selenium.mySelenium.FunctionCall;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.FunctionCallParameters;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.FunctionName;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.FunctionParameters;
+import fr.imta.clementdamien.dsl.selenium.mySelenium.Functions;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.NavigationAction;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Program;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Projection;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Selector;
+import fr.imta.clementdamien.dsl.selenium.mySelenium.Statements;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.TwoParametersAction;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Variable;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.VariableCall;
@@ -75,6 +77,9 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case MySeleniumPackage.FUNCTION_PARAMETERS:
 				sequence_FunctionParameters(context, (FunctionParameters) semanticObject); 
 				return; 
+			case MySeleniumPackage.FUNCTIONS:
+				sequence_Functions(context, (Functions) semanticObject); 
+				return; 
 			case MySeleniumPackage.NAVIGATION_ACTION:
 				sequence_NavigationAction(context, (NavigationAction) semanticObject); 
 				return; 
@@ -89,6 +94,9 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 				return; 
 			case MySeleniumPackage.SELECTOR:
 				sequence_Selector(context, (Selector) semanticObject); 
+				return; 
+			case MySeleniumPackage.STATEMENTS:
+				sequence_Statements(context, (Statements) semanticObject); 
 				return; 
 			case MySeleniumPackage.TWO_PARAMETERS_ACTION:
 				sequence_TwoParametersAction(context, (TwoParametersAction) semanticObject); 
@@ -242,6 +250,18 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     Functions returns Functions
+	 *
+	 * Constraint:
+	 *     functions+=Function+
+	 */
+	protected void sequence_Functions(ISerializationContext context, Functions semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Statement returns NavigationAction
 	 *     NavigationAction returns NavigationAction
 	 *
@@ -289,7 +309,7 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Program returns Program
 	 *
 	 * Constraint:
-	 *     functions+=Function+
+	 *     (functions=Functions | statements=Statements)
 	 */
 	protected void sequence_Program(ISerializationContext context, Program semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -326,6 +346,18 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     (element=DOMElement attrs=Attributes?)
 	 */
 	protected void sequence_Selector(ISerializationContext context, Selector semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Statements returns Statements
+	 *
+	 * Constraint:
+	 *     statements+=Statement+
+	 */
+	protected void sequence_Statements(ISerializationContext context, Statements semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

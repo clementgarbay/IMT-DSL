@@ -13,6 +13,7 @@ import fr.imta.clementdamien.dsl.selenium.mySelenium.FunctionCall;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.FunctionCallParameters;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.FunctionName;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.FunctionParameters;
+import fr.imta.clementdamien.dsl.selenium.mySelenium.Functions;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumFactory;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.NavigationAction;
@@ -21,6 +22,7 @@ import fr.imta.clementdamien.dsl.selenium.mySelenium.Program;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Projection;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Selector;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Statement;
+import fr.imta.clementdamien.dsl.selenium.mySelenium.Statements;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.TwoParametersAction;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Variable;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.VariableCall;
@@ -46,6 +48,20 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
    * @generated
    */
   private EClass programEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass functionsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass statementsEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -254,6 +270,56 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
   public EReference getProgram_Functions()
   {
     return (EReference)programEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getProgram_Statements()
+  {
+    return (EReference)programEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFunctions()
+  {
+    return functionsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFunctions_Functions()
+  {
+    return (EReference)functionsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getStatements()
+  {
+    return statementsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getStatements_Statements()
+  {
+    return (EReference)statementsEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -738,6 +804,13 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
     // Create classes and their features
     programEClass = createEClass(PROGRAM);
     createEReference(programEClass, PROGRAM__FUNCTIONS);
+    createEReference(programEClass, PROGRAM__STATEMENTS);
+
+    functionsEClass = createEClass(FUNCTIONS);
+    createEReference(functionsEClass, FUNCTIONS__FUNCTIONS);
+
+    statementsEClass = createEClass(STATEMENTS);
+    createEReference(statementsEClass, STATEMENTS__STATEMENTS);
 
     functionEClass = createEClass(FUNCTION);
     createEReference(functionEClass, FUNCTION__NAME);
@@ -844,7 +917,14 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
 
     // Initialize classes and features; add operations and parameters
     initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getProgram_Functions(), this.getFunction(), null, "functions", null, 0, -1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProgram_Functions(), this.getFunctions(), null, "functions", null, 0, 1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getProgram_Statements(), this.getStatements(), null, "statements", null, 0, 1, Program.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(functionsEClass, Functions.class, "Functions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFunctions_Functions(), this.getFunction(), null, "functions", null, 0, -1, Functions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(statementsEClass, Statements.class, "Statements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getStatements_Statements(), this.getStatement(), null, "statements", null, 0, -1, Statements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFunction_Name(), this.getFunctionName(), null, "name", null, 0, 1, Function.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

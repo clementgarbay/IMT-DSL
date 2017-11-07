@@ -8,6 +8,13 @@
       disposableProviderFactory="true" fileExtensions="sn" ecorePackage="MySelenium.ecore#/">
     <genClasses ecoreClass="MySelenium.ecore#//Program">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Program/functions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Program/statements"/>
+    </genClasses>
+    <genClasses ecoreClass="MySelenium.ecore#//Functions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Functions/functions"/>
+    </genClasses>
+    <genClasses ecoreClass="MySelenium.ecore#//Statements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Statements/statements"/>
     </genClasses>
     <genClasses ecoreClass="MySelenium.ecore#//Function">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Function/name"/>

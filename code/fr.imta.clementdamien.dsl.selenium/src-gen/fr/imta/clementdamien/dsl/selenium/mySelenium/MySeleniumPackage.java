@@ -68,7 +68,7 @@ public interface MySeleniumPackage extends EPackage
   int PROGRAM = 0;
 
   /**
-   * The feature id for the '<em><b>Functions</b></em>' containment reference list.
+   * The feature id for the '<em><b>Functions</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -77,13 +77,78 @@ public interface MySeleniumPackage extends EPackage
   int PROGRAM__FUNCTIONS = 0;
 
   /**
+   * The feature id for the '<em><b>Statements</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROGRAM__STATEMENTS = 1;
+
+  /**
    * The number of structural features of the '<em>Program</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROGRAM_FEATURE_COUNT = 1;
+  int PROGRAM_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.FunctionsImpl <em>Functions</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.FunctionsImpl
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getFunctions()
+   * @generated
+   */
+  int FUNCTIONS = 1;
+
+  /**
+   * The feature id for the '<em><b>Functions</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTIONS__FUNCTIONS = 0;
+
+  /**
+   * The number of structural features of the '<em>Functions</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTIONS_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.StatementsImpl <em>Statements</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.StatementsImpl
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getStatements()
+   * @generated
+   */
+  int STATEMENTS = 2;
+
+  /**
+   * The feature id for the '<em><b>Statements</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATEMENTS__STATEMENTS = 0;
+
+  /**
+   * The number of structural features of the '<em>Statements</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATEMENTS_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.FunctionImpl <em>Function</em>}' class.
@@ -93,7 +158,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getFunction()
    * @generated
    */
-  int FUNCTION = 1;
+  int FUNCTION = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -139,7 +204,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getFunctionName()
    * @generated
    */
-  int FUNCTION_NAME = 2;
+  int FUNCTION_NAME = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -167,7 +232,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getStatement()
    * @generated
    */
-  int STATEMENT = 5;
+  int STATEMENT = 7;
 
   /**
    * The number of structural features of the '<em>Statement</em>' class.
@@ -186,7 +251,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getFunctionCall()
    * @generated
    */
-  int FUNCTION_CALL = 3;
+  int FUNCTION_CALL = 5;
 
   /**
    * The feature id for the '<em><b>Ref</b></em>' reference.
@@ -223,7 +288,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getAssertableElement()
    * @generated
    */
-  int ASSERTABLE_ELEMENT = 8;
+  int ASSERTABLE_ELEMENT = 10;
 
   /**
    * The number of structural features of the '<em>Assertable Element</em>' class.
@@ -242,7 +307,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getProjection()
    * @generated
    */
-  int PROJECTION = 4;
+  int PROJECTION = 6;
 
   /**
    * The feature id for the '<em><b>Selector</b></em>' containment reference.
@@ -279,7 +344,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getAssertEquals()
    * @generated
    */
-  int ASSERT_EQUALS = 6;
+  int ASSERT_EQUALS = 8;
 
   /**
    * The feature id for the '<em><b>Assertable Element</b></em>' containment reference list.
@@ -307,7 +372,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getAssertContains()
    * @generated
    */
-  int ASSERT_CONTAINS = 7;
+  int ASSERT_CONTAINS = 9;
 
   /**
    * The feature id for the '<em><b>Container</b></em>' containment reference.
@@ -344,7 +409,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getNavigationAction()
    * @generated
    */
-  int NAVIGATION_ACTION = 9;
+  int NAVIGATION_ACTION = 11;
 
   /**
    * The feature id for the '<em><b>Action</b></em>' attribute.
@@ -381,7 +446,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getOneParameterAction()
    * @generated
    */
-  int ONE_PARAMETER_ACTION = 10;
+  int ONE_PARAMETER_ACTION = 12;
 
   /**
    * The feature id for the '<em><b>Action</b></em>' attribute.
@@ -418,7 +483,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getTwoParametersAction()
    * @generated
    */
-  int TWO_PARAMETERS_ACTION = 11;
+  int TWO_PARAMETERS_ACTION = 13;
 
   /**
    * The feature id for the '<em><b>Action</b></em>' attribute.
@@ -464,7 +529,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getSelector()
    * @generated
    */
-  int SELECTOR = 12;
+  int SELECTOR = 14;
 
   /**
    * The feature id for the '<em><b>Element</b></em>' attribute.
@@ -501,7 +566,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getAttributes()
    * @generated
    */
-  int ATTRIBUTES = 13;
+  int ATTRIBUTES = 15;
 
   /**
    * The feature id for the '<em><b>Attrs</b></em>' containment reference list.
@@ -529,7 +594,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getAttribute()
    * @generated
    */
-  int ATTRIBUTE = 14;
+  int ATTRIBUTE = 16;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -566,7 +631,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getFunctionParameters()
    * @generated
    */
-  int FUNCTION_PARAMETERS = 15;
+  int FUNCTION_PARAMETERS = 17;
 
   /**
    * The feature id for the '<em><b>Variables</b></em>' containment reference list.
@@ -594,7 +659,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getFunctionCallParameters()
    * @generated
    */
-  int FUNCTION_CALL_PARAMETERS = 16;
+  int FUNCTION_CALL_PARAMETERS = 18;
 
   /**
    * The feature id for the '<em><b>Variables</b></em>' containment reference list.
@@ -622,7 +687,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getVariableCall()
    * @generated
    */
-  int VARIABLE_CALL = 17;
+  int VARIABLE_CALL = 19;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' reference.
@@ -650,7 +715,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getVariable()
    * @generated
    */
-  int VARIABLE = 18;
+  int VARIABLE = 20;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -682,15 +747,68 @@ public interface MySeleniumPackage extends EPackage
   EClass getProgram();
 
   /**
-   * Returns the meta object for the containment reference list '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Program#getFunctions <em>Functions</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Program#getFunctions <em>Functions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Functions</em>'.
+   * @return the meta object for the containment reference '<em>Functions</em>'.
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Program#getFunctions()
    * @see #getProgram()
    * @generated
    */
   EReference getProgram_Functions();
+
+  /**
+   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Program#getStatements <em>Statements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Statements</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Program#getStatements()
+   * @see #getProgram()
+   * @generated
+   */
+  EReference getProgram_Statements();
+
+  /**
+   * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Functions <em>Functions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Functions</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Functions
+   * @generated
+   */
+  EClass getFunctions();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Functions#getFunctions <em>Functions</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Functions</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Functions#getFunctions()
+   * @see #getFunctions()
+   * @generated
+   */
+  EReference getFunctions_Functions();
+
+  /**
+   * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Statements <em>Statements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Statements</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Statements
+   * @generated
+   */
+  EClass getStatements();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Statements#getStatements <em>Statements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Statements</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Statements#getStatements()
+   * @see #getStatements()
+   * @generated
+   */
+  EReference getStatements_Statements();
 
   /**
    * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Function <em>Function</em>}'.
@@ -1203,12 +1321,56 @@ public interface MySeleniumPackage extends EPackage
     EClass PROGRAM = eINSTANCE.getProgram();
 
     /**
-     * The meta object literal for the '<em><b>Functions</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Functions</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference PROGRAM__FUNCTIONS = eINSTANCE.getProgram_Functions();
+
+    /**
+     * The meta object literal for the '<em><b>Statements</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROGRAM__STATEMENTS = eINSTANCE.getProgram_Statements();
+
+    /**
+     * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.FunctionsImpl <em>Functions</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.FunctionsImpl
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getFunctions()
+     * @generated
+     */
+    EClass FUNCTIONS = eINSTANCE.getFunctions();
+
+    /**
+     * The meta object literal for the '<em><b>Functions</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FUNCTIONS__FUNCTIONS = eINSTANCE.getFunctions_Functions();
+
+    /**
+     * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.StatementsImpl <em>Statements</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.StatementsImpl
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getStatements()
+     * @generated
+     */
+    EClass STATEMENTS = eINSTANCE.getStatements();
+
+    /**
+     * The meta object literal for the '<em><b>Statements</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STATEMENTS__STATEMENTS = eINSTANCE.getStatements_Statements();
 
     /**
      * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.FunctionImpl <em>Function</em>}' class.

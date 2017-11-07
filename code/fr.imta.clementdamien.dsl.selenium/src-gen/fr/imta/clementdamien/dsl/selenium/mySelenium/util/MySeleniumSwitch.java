@@ -80,6 +80,20 @@ public class MySeleniumSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case MySeleniumPackage.FUNCTIONS:
+      {
+        Functions functions = (Functions)theEObject;
+        T result = caseFunctions(functions);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MySeleniumPackage.STATEMENTS:
+      {
+        Statements statements = (Statements)theEObject;
+        T result = caseStatements(statements);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case MySeleniumPackage.FUNCTION:
       {
         Function function = (Function)theEObject;
@@ -231,6 +245,38 @@ public class MySeleniumSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseProgram(Program object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Functions</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Functions</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFunctions(Functions object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Statements</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Statements</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStatements(Statements object)
   {
     return null;
   }

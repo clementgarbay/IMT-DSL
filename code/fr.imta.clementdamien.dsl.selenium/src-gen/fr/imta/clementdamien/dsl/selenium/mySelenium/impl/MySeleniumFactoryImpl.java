@@ -66,6 +66,8 @@ public class MySeleniumFactoryImpl extends EFactoryImpl implements MySeleniumFac
     switch (eClass.getClassifierID())
     {
       case MySeleniumPackage.PROGRAM: return createProgram();
+      case MySeleniumPackage.FUNCTIONS: return createFunctions();
+      case MySeleniumPackage.STATEMENTS: return createStatements();
       case MySeleniumPackage.FUNCTION: return createFunction();
       case MySeleniumPackage.FUNCTION_NAME: return createFunctionName();
       case MySeleniumPackage.FUNCTION_CALL: return createFunctionCall();
@@ -98,6 +100,28 @@ public class MySeleniumFactoryImpl extends EFactoryImpl implements MySeleniumFac
   {
     ProgramImpl program = new ProgramImpl();
     return program;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Functions createFunctions()
+  {
+    FunctionsImpl functions = new FunctionsImpl();
+    return functions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Statements createStatements()
+  {
+    StatementsImpl statements = new StatementsImpl();
+    return statements;
   }
 
   /**

@@ -77,43 +77,117 @@ ruleProgram returns [EObject current=null]
 }:
 	(
 		(
-			{
-				newCompositeNode(grammarAccess.getProgramAccess().getCommentParserRuleCall_0());
-			}
-			ruleComment
-			{
-				afterParserOrEnumRuleCall();
-			}
-		)*
-		(
 			(
 				{
-					newCompositeNode(grammarAccess.getProgramAccess().getFunctionsFunctionParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getProgramAccess().getFunctionsFunctionsParserRuleCall_0_0());
 				}
-				lv_functions_1_0=ruleFunction
+				lv_functions_0_0=ruleFunctions
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getProgramRule());
 					}
-					add(
+					set(
 						$current,
 						"functions",
-						lv_functions_1_0,
-						"fr.imta.clementdamien.dsl.selenium.MySelenium.Function");
+						lv_functions_0_0,
+						"fr.imta.clementdamien.dsl.selenium.MySelenium.Functions");
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)+
+		)
+		    |
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getProgramAccess().getStatementsStatementsParserRuleCall_1_0());
+				}
+				lv_statements_1_0=ruleStatements
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getProgramRule());
+					}
+					set(
+						$current,
+						"statements",
+						lv_statements_1_0,
+						"fr.imta.clementdamien.dsl.selenium.MySelenium.Statements");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleFunctions
+entryRuleFunctions returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getFunctionsRule()); }
+	iv_ruleFunctions=ruleFunctions
+	{ $current=$iv_ruleFunctions.current; }
+	EOF;
+
+// Rule Functions
+ruleFunctions returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
 		(
 			{
-				newCompositeNode(grammarAccess.getProgramAccess().getCommentParserRuleCall_2());
+				newCompositeNode(grammarAccess.getFunctionsAccess().getFunctionsFunctionParserRuleCall_0());
 			}
-			ruleComment
+			lv_functions_0_0=ruleFunction
 			{
+				if ($current==null) {
+					$current = createModelElementForParent(grammarAccess.getFunctionsRule());
+				}
+				add(
+					$current,
+					"functions",
+					lv_functions_0_0,
+					"fr.imta.clementdamien.dsl.selenium.MySelenium.Function");
 				afterParserOrEnumRuleCall();
 			}
-		)*
-	)
+		)
+	)+
+;
+
+// Entry rule entryRuleStatements
+entryRuleStatements returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getStatementsRule()); }
+	iv_ruleStatements=ruleStatements
+	{ $current=$iv_ruleStatements.current; }
+	EOF;
+
+// Rule Statements
+ruleStatements returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				newCompositeNode(grammarAccess.getStatementsAccess().getStatementsStatementParserRuleCall_0());
+			}
+			lv_statements_0_0=ruleStatement
+			{
+				if ($current==null) {
+					$current = createModelElementForParent(grammarAccess.getStatementsRule());
+				}
+				add(
+					$current,
+					"statements",
+					lv_statements_0_0,
+					"fr.imta.clementdamien.dsl.selenium.MySelenium.Statement");
+				afterParserOrEnumRuleCall();
+			}
+		)
+	)+
 ;
 
 // Entry rule entryRuleFunction

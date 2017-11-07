@@ -20,15 +20,11 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class MySeleniumSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected MySeleniumGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Program_CommentParserRuleCall_0_a;
-	protected AbstractElementAlias match_Program_CommentParserRuleCall_2_a;
 	protected AbstractElementAlias match_Selector_AllKeyword_4_q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (MySeleniumGrammarAccess) access;
-		match_Program_CommentParserRuleCall_0_a = new TokenAlias(true, true, grammarAccess.getProgramAccess().getCommentParserRuleCall_0());
-		match_Program_CommentParserRuleCall_2_a = new TokenAlias(true, true, grammarAccess.getProgramAccess().getCommentParserRuleCall_2());
 		match_Selector_AllKeyword_4_q = new TokenAlias(false, true, grammarAccess.getSelectorAccess().getAllKeyword_4());
 	}
 	
@@ -70,38 +66,12 @@ public class MySeleniumSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Program_CommentParserRuleCall_0_a.equals(syntax))
-				emit_Program_CommentParserRuleCall_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Program_CommentParserRuleCall_2_a.equals(syntax))
-				emit_Program_CommentParserRuleCall_2_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Selector_AllKeyword_4_q.equals(syntax))
+			if (match_Selector_AllKeyword_4_q.equals(syntax))
 				emit_Selector_AllKeyword_4_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
-	/**
-	 * Ambiguous syntax:
-	 *     Comment*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) functions+=Function
-	 */
-	protected void emit_Program_CommentParserRuleCall_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     Comment*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     functions+=Function (ambiguity) (rule end)
-	 */
-	protected void emit_Program_CommentParserRuleCall_2_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 	/**
 	 * Ambiguous syntax:
 	 *     '.all'?

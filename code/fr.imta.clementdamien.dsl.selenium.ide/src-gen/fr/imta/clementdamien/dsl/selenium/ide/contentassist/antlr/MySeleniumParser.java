@@ -31,6 +31,7 @@ public class MySeleniumParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getProgramAccess().getAlternatives(), "rule__Program__Alternatives");
 					put(grammarAccess.getProjectionActionAccess().getAlternatives(), "rule__ProjectionAction__Alternatives");
 					put(grammarAccess.getStatementAccess().getAlternatives(), "rule__Statement__Alternatives");
 					put(grammarAccess.getAssertableElementAccess().getAlternatives(), "rule__AssertableElement__Alternatives");
@@ -41,7 +42,6 @@ public class MySeleniumParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDOMElementAccess().getAlternatives(), "rule__DOMElement__Alternatives");
 					put(grammarAccess.getTwoParametersActionTypeAccess().getAlternatives(), "rule__TwoParametersActionType__Alternatives");
 					put(grammarAccess.getVariableCallAccess().getAlternatives(), "rule__VariableCall__Alternatives");
-					put(grammarAccess.getProgramAccess().getGroup(), "rule__Program__Group__0");
 					put(grammarAccess.getFunctionAccess().getGroup(), "rule__Function__Group__0");
 					put(grammarAccess.getFunctionCallAccess().getGroup(), "rule__FunctionCall__Group__0");
 					put(grammarAccess.getProjectionAccess().getGroup(), "rule__Projection__Group__0");
@@ -59,7 +59,10 @@ public class MySeleniumParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFunctionCallParametersAccess().getGroup(), "rule__FunctionCallParameters__Group__0");
 					put(grammarAccess.getFunctionCallParametersAccess().getGroup_2(), "rule__FunctionCallParameters__Group_2__0");
 					put(grammarAccess.getCommentAccess().getGroup(), "rule__Comment__Group__0");
-					put(grammarAccess.getProgramAccess().getFunctionsAssignment_1(), "rule__Program__FunctionsAssignment_1");
+					put(grammarAccess.getProgramAccess().getFunctionsAssignment_0(), "rule__Program__FunctionsAssignment_0");
+					put(grammarAccess.getProgramAccess().getStatementsAssignment_1(), "rule__Program__StatementsAssignment_1");
+					put(grammarAccess.getFunctionsAccess().getFunctionsAssignment(), "rule__Functions__FunctionsAssignment");
+					put(grammarAccess.getStatementsAccess().getStatementsAssignment(), "rule__Statements__StatementsAssignment");
 					put(grammarAccess.getFunctionAccess().getNameAssignment_1(), "rule__Function__NameAssignment_1");
 					put(grammarAccess.getFunctionAccess().getParamsAssignment_2(), "rule__Function__ParamsAssignment_2");
 					put(grammarAccess.getFunctionAccess().getStatementsAssignment_4(), "rule__Function__StatementsAssignment_4");

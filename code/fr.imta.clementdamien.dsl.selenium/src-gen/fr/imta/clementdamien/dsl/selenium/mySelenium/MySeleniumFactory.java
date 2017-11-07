@@ -33,6 +33,24 @@ public interface MySeleniumFactory extends EFactory
   Program createProgram();
 
   /**
+   * Returns a new object of class '<em>Functions</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Functions</em>'.
+   * @generated
+   */
+  Functions createFunctions();
+
+  /**
+   * Returns a new object of class '<em>Statements</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Statements</em>'.
+   * @generated
+   */
+  Statements createStatements();
+
+  /**
    * Returns a new object of class '<em>Function</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
