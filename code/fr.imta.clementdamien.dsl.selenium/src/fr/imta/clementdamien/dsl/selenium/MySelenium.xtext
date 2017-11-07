@@ -1,0 +1,112 @@
+grammar fr.imta.clementdamien.dsl.selenium.MySelenium with org.eclipse.xtext.common.Terminals
+
+generate mySelenium "http://www.imta.fr/clementdamien/dsl/selenium/MySelenium"
+
+
+
+Program:
+	functions = Functions |  statements = Statements
+;
+
+Functions:
+	functions += Function+
+;
+
+Statements:
+	statements += Statement+
+;
+
+Function:
+    'def' name=FunctionName params = FunctionParameters* '{'
+        statements += Statement*
+    '}'
+;
+
+FunctionName:
+    name=ID
+;
+
+FunctionCall:
+    ref=[FunctionName] params = FunctionCallParameters
+;
+
+Projection:
+    selector=Selector '.' projectionAction=ProjectionAction
+;
+
+ProjectionAction: 'value' | 'text' | 'html';
+
+Statement:
+    OneParameterAction | 
+    TwoParametersAction | 
+    FunctionCall | 
+    AssertEquals | 
+    AssertContains | 
+    NavigationAction | 
+    Comment
+;
+
+AssertEquals:
+    'assert' assertableElement += AssertableElement '=' assertableElement += AssertableElement
+;
+
+AssertContains:
+    'assert' container = AssertableElement 'contains' element = AssertableElement
+;
+
+AssertableElement:
+    Variable | STRING | Projection | FunctionCall
+;
+
+NavigationAction:
+    action=NavigationActionType param=STRING
+;
+NavigationActionType:
+    "go" | "openBrowser"
+;
+
+OneParameterAction:
+    action=OneParameterActionType selector=Selector
+;
+
+TwoParametersAction:
+    action=TwoParametersActionType selector=Selector parameter=(Selector | Variable)
+;
+
+Selector:
+    element=DOMElement '[' (attrs = Attributes)? ']' '.all'? 
+;
+
+Attributes:
+	attrs += Attribute (',' attrs += Attribute)* 
+;
+
+Attribute:
+    name=DOMAttribute '=' (STRING | val = [Variable])
+;
+
+DOMAttribute: 'name' | 'text' | 'alt' | 'checked' | 'class';
+
+DOMElement: 'link' | 'button' | 'checkbox' | 'input' | 'h1' | 'body' | 'select' | 'a' | 'img';
+
+OneParameterActionType: 'click';
+TwoParametersActionType: 'assign' | 'fill' | 'choose';
+
+FunctionParameters:
+    '(' variables += Variable (',' variables += Variable)* ')'
+;
+
+FunctionCallParameters:
+    '(' variables += VariableCall (',' variables += VariableCall)* ')'
+;
+
+VariableCall:
+    name=[Variable] | STRING
+;
+Variable:
+    name=ID
+;
+
+Comment:
+	"#" + STRING 
+;

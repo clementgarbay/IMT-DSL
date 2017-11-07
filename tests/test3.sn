@@ -1,0 +1,7 @@
+// Test 3
+openBrowser "firefox"
+go "http://www.imt-atlantique.fr/fr"
+assign a[text="Toutes les actualités"] thea
+click thea
+click img[alt="Accueil"]
+assert body[].html contains thea
