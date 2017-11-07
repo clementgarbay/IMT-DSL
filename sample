@@ -1,15 +1,15 @@
 def fullInput(key, value) {
-  fill input(name=key) value
+  fill input[name=key] value
 }
 
 def main {
   openBrowser "firefox"
   go "www.google.fr"
-  click link(text="SignIn")
+  click link[text="SignIn"]
   fullInput("username", "truc")
   fullInput("password", "tructruc")
-  click checkbox(text="Rember Me")
-  click button(text="SignIn")
-  title <- h1.value
-  assert title equals "Welcome"
+  click checkbox[text="Rember Me"]
+  click button[text="SignIn"]
+  assign h1[].value title
+  assert title = "Welcome"
 }
