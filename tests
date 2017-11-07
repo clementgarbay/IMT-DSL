@@ -1,20 +1,20 @@
 # Test 1
 openBrowser "firefox"
 go "http://www.imt-atlantique.fr/fr"
-assign link[text="Toutes les actualités"] theLink
+assign a[text="Toutes les actualités"] theLink
 assert body[].html contains theLink
 
 # Test 2
 openBrowser "firefox"
 go "http://www.imt-atlantique.fr/fr"
-click link[text="Toutes les actualités"]
-assign link[text="Accueil"] theLink
+click a[text="Toutes les actualités"]
+assign a[text="Accueil"] theLink
 assert body[].html contains theLink
 
 # Test 3
 openBrowser "firefox"
 go "http://www.imt-atlantique.fr/fr"
-assign link[text="Toutes les actualités"] theLink
+assign a[text="Toutes les actualités"] theLink
 click theLink
 click img[alt="Accueil"]
 assert body[].html contains theLink
