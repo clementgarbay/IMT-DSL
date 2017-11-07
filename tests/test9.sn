@@ -1,4 +1,4 @@
-# Test 9
+// Test 9
 def checkPrintable(name) {
   go "http://www.imt-atlantique.fr/fr"
   click a[text=name]

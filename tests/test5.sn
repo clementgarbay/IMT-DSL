@@ -1,4 +1,4 @@
-# Test 5
+// Test 5
 openBrowser "firefox"
 go "http://www.imt-atlantique.fr/fr/formation/trouver-ma-formation"
 click checkbox[checked="true"].all

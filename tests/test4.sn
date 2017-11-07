@@ -1,4 +1,4 @@
-# Test 4
+// Test 4
 openBrowser "firefox"
 go "http://www.imt-atlantique.fr/fr/rechercher"
 fill input[type="text"] "Donald Trump"

@@ -1,4 +1,4 @@
-# Test 6
+// Test 6
 openBrowser "firefox"
 go "http://www.imt-atlantique.fr/fr/rechercher"
 fill input[type="text"] "2007"

@@ -1,4 +1,4 @@
-# Test 2
+// Test 2
 openBrowser "firefox"
 go "http://www.imt-atlantique.fr/fr"
 click a[text="Toutes les actualités"]
