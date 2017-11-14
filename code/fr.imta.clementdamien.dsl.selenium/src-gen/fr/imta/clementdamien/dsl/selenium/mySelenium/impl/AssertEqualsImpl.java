@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -37,7 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class AssertEqualsImpl extends MinimalEObjectImpl.Container implements AssertEquals
+public class AssertEqualsImpl extends StatementImpl implements AssertEquals
 {
   /**
    * The cached value of the '{@link #getAssertableElement() <em>Assertable Element</em>}' containment reference list.

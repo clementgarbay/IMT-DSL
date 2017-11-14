@@ -3,7 +3,6 @@
  */
 package fr.imta.clementdamien.dsl.selenium.mySelenium;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,13 +15,15 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction#getAction <em>Action</em>}</li>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction#getSelector <em>Selector</em>}</li>
+ *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction#getSelectorParameter <em>Selector Parameter</em>}</li>
+ *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction#getStringParameter <em>String Parameter</em>}</li>
  * </ul>
  *
  * @see fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage#getOneParameterAction()
  * @model
  * @generated
  */
-public interface OneParameterAction extends EObject
+public interface OneParameterAction extends Statement
 {
   /**
    * Returns the value of the '<em><b>Action</b></em>' attribute.
@@ -75,5 +76,57 @@ public interface OneParameterAction extends EObject
    * @generated
    */
   void setSelector(Selector value);
+
+  /**
+   * Returns the value of the '<em><b>Selector Parameter</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Selector Parameter</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Selector Parameter</em>' containment reference.
+   * @see #setSelectorParameter(Selector)
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage#getOneParameterAction_SelectorParameter()
+   * @model containment="true"
+   * @generated
+   */
+  Selector getSelectorParameter();
+
+  /**
+   * Sets the value of the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction#getSelectorParameter <em>Selector Parameter</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Selector Parameter</em>' containment reference.
+   * @see #getSelectorParameter()
+   * @generated
+   */
+  void setSelectorParameter(Selector value);
+
+  /**
+   * Returns the value of the '<em><b>String Parameter</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>String Parameter</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>String Parameter</em>' attribute.
+   * @see #setStringParameter(String)
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage#getOneParameterAction_StringParameter()
+   * @model
+   * @generated
+   */
+  String getStringParameter();
+
+  /**
+   * Sets the value of the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction#getStringParameter <em>String Parameter</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>String Parameter</em>' attribute.
+   * @see #getStringParameter()
+   * @generated
+   */
+  void setStringParameter(String value);
 
 } // OneParameterAction

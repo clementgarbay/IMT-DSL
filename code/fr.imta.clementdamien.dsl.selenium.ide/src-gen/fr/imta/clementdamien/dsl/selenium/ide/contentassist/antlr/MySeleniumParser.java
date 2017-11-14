@@ -33,12 +33,14 @@ public class MySeleniumParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getProgramAccess().getAlternatives(), "rule__Program__Alternatives");
 					put(grammarAccess.getProjectionActionAccess().getAlternatives(), "rule__ProjectionAction__Alternatives");
-					put(grammarAccess.getStatementAccess().getStatementAlternatives_0(), "rule__Statement__StatementAlternatives_0");
+					put(grammarAccess.getStatementAccess().getAlternatives(), "rule__Statement__Alternatives");
 					put(grammarAccess.getAssertableElementAccess().getAlternatives(), "rule__AssertableElement__Alternatives");
 					put(grammarAccess.getNavigationActionTypeAccess().getAlternatives(), "rule__NavigationActionType__Alternatives");
+					put(grammarAccess.getOneParameterActionAccess().getAlternatives_2(), "rule__OneParameterAction__Alternatives_2");
 					put(grammarAccess.getAttributeAccess().getAlternatives_2(), "rule__Attribute__Alternatives_2");
 					put(grammarAccess.getDOMAttributeAccess().getAlternatives(), "rule__DOMAttribute__Alternatives");
 					put(grammarAccess.getDOMElementAccess().getAlternatives(), "rule__DOMElement__Alternatives");
+					put(grammarAccess.getOneParameterActionTypeAccess().getAlternatives(), "rule__OneParameterActionType__Alternatives");
 					put(grammarAccess.getTwoParametersActionTypeAccess().getAlternatives(), "rule__TwoParametersActionType__Alternatives");
 					put(grammarAccess.getVariableCallAccess().getAlternatives(), "rule__VariableCall__Alternatives");
 					put(grammarAccess.getFunctionAccess().getGroup(), "rule__Function__Group__0");
@@ -69,7 +71,6 @@ public class MySeleniumParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFunctionCallAccess().getParamsAssignment_1(), "rule__FunctionCall__ParamsAssignment_1");
 					put(grammarAccess.getProjectionAccess().getSelectorAssignment_0(), "rule__Projection__SelectorAssignment_0");
 					put(grammarAccess.getProjectionAccess().getProjectionActionAssignment_2(), "rule__Projection__ProjectionActionAssignment_2");
-					put(grammarAccess.getStatementAccess().getStatementAssignment(), "rule__Statement__StatementAssignment");
 					put(grammarAccess.getAssertEqualsAccess().getAssertableElementAssignment_1(), "rule__AssertEquals__AssertableElementAssignment_1");
 					put(grammarAccess.getAssertEqualsAccess().getOperatorAssignment_2(), "rule__AssertEquals__OperatorAssignment_2");
 					put(grammarAccess.getAssertEqualsAccess().getAssertableElementAssignment_3(), "rule__AssertEquals__AssertableElementAssignment_3");
@@ -80,6 +81,8 @@ public class MySeleniumParser extends AbstractContentAssistParser {
 					put(grammarAccess.getNavigationActionAccess().getParamAssignment_1(), "rule__NavigationAction__ParamAssignment_1");
 					put(grammarAccess.getOneParameterActionAccess().getActionAssignment_0(), "rule__OneParameterAction__ActionAssignment_0");
 					put(grammarAccess.getOneParameterActionAccess().getSelectorAssignment_1(), "rule__OneParameterAction__SelectorAssignment_1");
+					put(grammarAccess.getOneParameterActionAccess().getSelectorParameterAssignment_2_0(), "rule__OneParameterAction__SelectorParameterAssignment_2_0");
+					put(grammarAccess.getOneParameterActionAccess().getStringParameterAssignment_2_1(), "rule__OneParameterAction__StringParameterAssignment_2_1");
 					put(grammarAccess.getTwoParametersActionAccess().getActionAssignment_0(), "rule__TwoParametersAction__ActionAssignment_0");
 					put(grammarAccess.getTwoParametersActionAccess().getSelectorAssignment_1(), "rule__TwoParametersAction__SelectorAssignment_1");
 					put(grammarAccess.getTwoParametersActionAccess().getParameterAssignment_2(), "rule__TwoParametersAction__ParameterAssignment_2");

@@ -112,6 +112,7 @@ public class MySeleniumSwitch<T> extends Switch<T>
       {
         FunctionCall functionCall = (FunctionCall)theEObject;
         T result = caseFunctionCall(functionCall);
+        if (result == null) result = caseStatement(functionCall);
         if (result == null) result = caseAssertableElement(functionCall);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -135,6 +136,7 @@ public class MySeleniumSwitch<T> extends Switch<T>
       {
         AssertEquals assertEquals = (AssertEquals)theEObject;
         T result = caseAssertEquals(assertEquals);
+        if (result == null) result = caseStatement(assertEquals);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -142,6 +144,7 @@ public class MySeleniumSwitch<T> extends Switch<T>
       {
         AssertContains assertContains = (AssertContains)theEObject;
         T result = caseAssertContains(assertContains);
+        if (result == null) result = caseStatement(assertContains);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -156,6 +159,7 @@ public class MySeleniumSwitch<T> extends Switch<T>
       {
         NavigationAction navigationAction = (NavigationAction)theEObject;
         T result = caseNavigationAction(navigationAction);
+        if (result == null) result = caseStatement(navigationAction);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -163,6 +167,7 @@ public class MySeleniumSwitch<T> extends Switch<T>
       {
         OneParameterAction oneParameterAction = (OneParameterAction)theEObject;
         T result = caseOneParameterAction(oneParameterAction);
+        if (result == null) result = caseStatement(oneParameterAction);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

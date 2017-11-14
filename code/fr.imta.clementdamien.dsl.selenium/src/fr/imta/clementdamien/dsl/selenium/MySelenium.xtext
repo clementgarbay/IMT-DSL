@@ -37,12 +37,11 @@ Projection:
 ProjectionAction: 'value' | 'text' | 'html';
 
 Statement:
-    statement = (OneParameterAction | 
-    TwoParametersAction | 
+    OneParameterAction | 
     FunctionCall | 
     AssertEquals | 
     AssertContains | 
-    NavigationAction)
+    NavigationAction
 ;
 
 AssertEquals:
@@ -65,7 +64,7 @@ NavigationActionType:
 ;
 
 OneParameterAction:
-    action=OneParameterActionType selector=Selector
+    action=OneParameterActionType selector=Selector (selectorParameter=Selector | stringParameter=STRING)?
 ;
 
 TwoParametersAction:
@@ -84,11 +83,11 @@ Attribute:
     name=DOMAttribute '=' (value = STRING | val = [Variable])
 ;
 
-DOMAttribute: 'name' | 'text' | 'alt' | 'checked' | 'class';
+DOMAttribute: 'name' | 'text' | 'alt' | 'checked' | 'class' | 'type';
 
 DOMElement: 'link' | 'button' | 'checkbox' | 'input' | 'h1' | 'body' | 'select' | 'a' | 'img';
 
-OneParameterActionType: 'click';
+OneParameterActionType: 'click' | 'assign' | 'fill' | 'choose';
 TwoParametersActionType: 'assign' | 'fill' | 'choose';
 
 FunctionParameters:

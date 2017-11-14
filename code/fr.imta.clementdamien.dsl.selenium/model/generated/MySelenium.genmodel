@@ -32,9 +32,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Projection/selector"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//Projection/projectionAction"/>
     </genClasses>
-    <genClasses ecoreClass="MySelenium.ecore#//Statement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Statement/statement"/>
-    </genClasses>
+    <genClasses ecoreClass="MySelenium.ecore#//Statement"/>
     <genClasses ecoreClass="MySelenium.ecore#//AssertEquals">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//AssertEquals/assertableElement"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//AssertEquals/operator"/>
@@ -52,6 +50,8 @@
     <genClasses ecoreClass="MySelenium.ecore#//OneParameterAction">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//OneParameterAction/action"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//OneParameterAction/selector"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//OneParameterAction/selectorParameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//OneParameterAction/stringParameter"/>
     </genClasses>
     <genClasses ecoreClass="MySelenium.ecore#//TwoParametersAction">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//TwoParametersAction/action"/>

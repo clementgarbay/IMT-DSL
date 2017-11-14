@@ -477,105 +477,50 @@ ruleStatement returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getStatementAccess().getStatementOneParameterActionParserRuleCall_0_0());
-				}
-				lv_statement_0_1=ruleOneParameterAction
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getStatementRule());
-					}
-					set(
-						$current,
-						"statement",
-						lv_statement_0_1,
-						"fr.imta.clementdamien.dsl.selenium.MySelenium.OneParameterAction");
-					afterParserOrEnumRuleCall();
-				}
-				    |
-				{
-					newCompositeNode(grammarAccess.getStatementAccess().getStatementTwoParametersActionParserRuleCall_0_1());
-				}
-				lv_statement_0_2=ruleTwoParametersAction
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getStatementRule());
-					}
-					set(
-						$current,
-						"statement",
-						lv_statement_0_2,
-						"fr.imta.clementdamien.dsl.selenium.MySelenium.TwoParametersAction");
-					afterParserOrEnumRuleCall();
-				}
-				    |
-				{
-					newCompositeNode(grammarAccess.getStatementAccess().getStatementFunctionCallParserRuleCall_0_2());
-				}
-				lv_statement_0_3=ruleFunctionCall
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getStatementRule());
-					}
-					set(
-						$current,
-						"statement",
-						lv_statement_0_3,
-						"fr.imta.clementdamien.dsl.selenium.MySelenium.FunctionCall");
-					afterParserOrEnumRuleCall();
-				}
-				    |
-				{
-					newCompositeNode(grammarAccess.getStatementAccess().getStatementAssertEqualsParserRuleCall_0_3());
-				}
-				lv_statement_0_4=ruleAssertEquals
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getStatementRule());
-					}
-					set(
-						$current,
-						"statement",
-						lv_statement_0_4,
-						"fr.imta.clementdamien.dsl.selenium.MySelenium.AssertEquals");
-					afterParserOrEnumRuleCall();
-				}
-				    |
-				{
-					newCompositeNode(grammarAccess.getStatementAccess().getStatementAssertContainsParserRuleCall_0_4());
-				}
-				lv_statement_0_5=ruleAssertContains
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getStatementRule());
-					}
-					set(
-						$current,
-						"statement",
-						lv_statement_0_5,
-						"fr.imta.clementdamien.dsl.selenium.MySelenium.AssertContains");
-					afterParserOrEnumRuleCall();
-				}
-				    |
-				{
-					newCompositeNode(grammarAccess.getStatementAccess().getStatementNavigationActionParserRuleCall_0_5());
-				}
-				lv_statement_0_6=ruleNavigationAction
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getStatementRule());
-					}
-					set(
-						$current,
-						"statement",
-						lv_statement_0_6,
-						"fr.imta.clementdamien.dsl.selenium.MySelenium.NavigationAction");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
+		{
+			newCompositeNode(grammarAccess.getStatementAccess().getOneParameterActionParserRuleCall_0());
+		}
+		this_OneParameterAction_0=ruleOneParameterAction
+		{
+			$current = $this_OneParameterAction_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getStatementAccess().getFunctionCallParserRuleCall_1());
+		}
+		this_FunctionCall_1=ruleFunctionCall
+		{
+			$current = $this_FunctionCall_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getStatementAccess().getAssertEqualsParserRuleCall_2());
+		}
+		this_AssertEquals_2=ruleAssertEquals
+		{
+			$current = $this_AssertEquals_2.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getStatementAccess().getAssertContainsParserRuleCall_3());
+		}
+		this_AssertContains_3=ruleAssertContains
+		{
+			$current = $this_AssertContains_3.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getStatementAccess().getNavigationActionParserRuleCall_4());
+		}
+		this_NavigationAction_4=ruleNavigationAction
+		{
+			$current = $this_NavigationAction_4.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -919,82 +864,46 @@ ruleOneParameterAction returns [EObject current=null]
 				}
 			)
 		)
-	)
-;
-
-// Entry rule entryRuleTwoParametersAction
-entryRuleTwoParametersAction returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getTwoParametersActionRule()); }
-	iv_ruleTwoParametersAction=ruleTwoParametersAction
-	{ $current=$iv_ruleTwoParametersAction.current; }
-	EOF;
-
-// Rule TwoParametersAction
-ruleTwoParametersAction returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
 		(
 			(
-				{
-					newCompositeNode(grammarAccess.getTwoParametersActionAccess().getActionTwoParametersActionTypeParserRuleCall_0_0());
-				}
-				lv_action_0_0=ruleTwoParametersActionType
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getTwoParametersActionRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getOneParameterActionAccess().getSelectorParameterSelectorParserRuleCall_2_0_0());
 					}
-					set(
-						$current,
-						"action",
-						lv_action_0_0,
-						"fr.imta.clementdamien.dsl.selenium.MySelenium.TwoParametersActionType");
-					afterParserOrEnumRuleCall();
-				}
+					lv_selectorParameter_2_0=ruleSelector
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getOneParameterActionRule());
+						}
+						set(
+							$current,
+							"selectorParameter",
+							lv_selectorParameter_2_0,
+							"fr.imta.clementdamien.dsl.selenium.MySelenium.Selector");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
-		)
-		(
+			    |
 			(
-				{
-					newCompositeNode(grammarAccess.getTwoParametersActionAccess().getSelectorSelectorParserRuleCall_1_0());
-				}
-				lv_selector_1_0=ruleSelector
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getTwoParametersActionRule());
+				(
+					lv_stringParameter_3_0=RULE_STRING
+					{
+						newLeafNode(lv_stringParameter_3_0, grammarAccess.getOneParameterActionAccess().getStringParameterSTRINGTerminalRuleCall_2_1_0());
 					}
-					set(
-						$current,
-						"selector",
-						lv_selector_1_0,
-						"fr.imta.clementdamien.dsl.selenium.MySelenium.Selector");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getTwoParametersActionAccess().getParameterSelectorParserRuleCall_2_0());
-				}
-				lv_parameter_2_0=ruleSelector
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getTwoParametersActionRule());
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getOneParameterActionRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"stringParameter",
+							lv_stringParameter_3_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
 					}
-					set(
-						$current,
-						"parameter",
-						lv_parameter_2_0,
-						"fr.imta.clementdamien.dsl.selenium.MySelenium.Selector");
-					afterParserOrEnumRuleCall();
-				}
+				)
 			)
-		)
+		)?
 	)
 ;
 
@@ -1253,6 +1162,12 @@ ruleDOMAttribute returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleTo
 			$current.merge(kw);
 			newLeafNode(kw, grammarAccess.getDOMAttributeAccess().getClassKeyword_4());
 		}
+		    |
+		kw='type'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getDOMAttributeAccess().getTypeKeyword_5());
+		}
 	)
 ;
 
@@ -1343,11 +1258,31 @@ ruleOneParameterActionType returns [AntlrDatatypeRuleToken current=new AntlrData
 @after {
 	leaveRule();
 }:
-	kw='click'
-	{
-		$current.merge(kw);
-		newLeafNode(kw, grammarAccess.getOneParameterActionTypeAccess().getClickKeyword());
-	}
+	(
+		kw='click'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getOneParameterActionTypeAccess().getClickKeyword_0());
+		}
+		    |
+		kw='assign'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getOneParameterActionTypeAccess().getAssignKeyword_1());
+		}
+		    |
+		kw='fill'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getOneParameterActionTypeAccess().getFillKeyword_2());
+		}
+		    |
+		kw='choose'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getOneParameterActionTypeAccess().getChooseKeyword_3());
+		}
+	)
 ;
 
 // Entry rule entryRuleTwoParametersActionType

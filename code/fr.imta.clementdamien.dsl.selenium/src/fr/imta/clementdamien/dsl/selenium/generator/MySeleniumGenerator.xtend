@@ -57,23 +57,10 @@ class MySeleniumGenerator extends AbstractGenerator {
            private static final String CHROMEDRIVER_PATH = "/usr/local/Cellar/chromedriver/2.33/bin/chromedriver";
            private static final String IMT_BASE_URL = "http://imt-atlantique.fr/fr";
        
-           @BeforeClass
-           public static void createAndStartService() throws IOException {
-               service = new ChromeDriverService.Builder()
-                       .usingDriverExecutable(new File(CHROMEDRIVER_PATH))
-                       .usingAnyFreePort()
-                       .build();
-               service.start();
-           }
-       
+
            @AfterClass
            public static void createAndStopService() {
                service.stop();
-           }
-       
-           @Before
-           public void createDriver() {
-               driver = new RemoteWebDriver(service.getUrl(), DesiredCapabilities.chrome());
            }
        
            @After
@@ -85,23 +72,6 @@ class MySeleniumGenerator extends AbstractGenerator {
                «function.compile»
            «ENDFOR»
        
-           @Test
-           public void testIMTContains() {
-               driver.get(IMT_BASE_URL);
-       
-               Assertions.assertThatCode(() -> {
-                   driver.findElement(By.tagName("body")).findElement(By.className("actu_home_cell2_lnk"));
-               }).doesNotThrowAnyException();
-           }
-       
-           @Test
-           public void testIMTNotContains() {
-               driver.get(IMT_BASE_URL);
-       
-               Assertions.assertThatThrownBy(() -> {
-                   driver.findElement(By.tagName("body")).findElement(By.className("actu_home_cell2_ln"));
-               }).isInstanceOf(NoSuchElementException.class);
-           }
        }
     '''
     
@@ -113,20 +83,67 @@ class MySeleniumGenerator extends AbstractGenerator {
     			«statement.compileStatement»
        	«ENDFOR»
     }
+    
     '''
     
     
     def dispatch compileStatement(OneParameterAction oneParameterAction) '''
-    «oneParameterAction.selector».«oneParameterAction.action»();
+    «oneParameterAction.selector.compile».«oneParameterAction.action»();
+    
     '''
     
     def dispatch compileStatement(TwoParametersAction twoParametersAction) '''
-    «twoParametersAction.selector».«twoParametersAction.action»();
+    // todo TwoParametersAction
+    
+    '''
+    
+    
+    def dispatch compileStatement(FunctionCall functionCall) '''
+    «functionCall.ref»(
+    		«FOR param:functionCall.params.variables»
+    		param
+            «IF functionCall.params.variables.indexOf(param) !== functionCall.params.variables.length() - 1»
+            ,
+			«ENDIF»            
+        «ENDFOR»
+    )
+    '''
+    
+    def dispatch compileStatement(AssertContains assertContains) '''
+    	Assertions.assertThatCode(() -> {
+        driver.findElement(«assertContains.container»).findElement(«assertContains.element»);
+    }).doesNotThrowAnyException();
+    '''
+    
+    def dispatch compileStatement(AssertEquals assertEquals) '''
+    // todo assert equals
+    '''
+    
+    def dispatch compileStatement(NavigationAction navigationAction) '''
+    // «navigationAction.action» «navigationAction.param»
+    «IF navigationAction.action == "openBrowser"»
+    		«IF navigationAction.param == "chrome"»
+         service = new ChromeDriverService.Builder()
+                            .usingDriverExecutable(new File(CHROMEDRIVER_PATH))
+                            .usingAnyFreePort()
+                            .build();
+         service.start();
+         driver = new RemoteWebDriver(service.getUrl(), DesiredCapabilities.chrome());
+        «ENDIF»
+    		«IF navigationAction.param == "firefox"»
+         // todo openBrowser firefox
+        «ENDIF»
+    «ENDIF»
+    «IF navigationAction.action == "go"»
+    	driver.get("«navigationAction.param»");
+ 	«ENDIF»
+ 	
     '''
     
   
     def compile(Selector selector) '''
-    driver.findElement(By.xpath("//«selector.element»[
+    // selector
+    driver.findElement(By.xpath("//«selector.element»[ 
     		«FOR attribute:selector.attrs.attrs»
     		(@«attribute.name» = "«attribute.value»") // TODO manage attribute.val
             «IF selector.attrs.attrs.indexOf(attribute) !== selector.attrs.attrs.length() - 1»

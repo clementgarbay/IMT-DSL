@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,11 +25,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.OneParameterActionImpl#getAction <em>Action</em>}</li>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.OneParameterActionImpl#getSelector <em>Selector</em>}</li>
+ *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.OneParameterActionImpl#getSelectorParameter <em>Selector Parameter</em>}</li>
+ *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.OneParameterActionImpl#getStringParameter <em>String Parameter</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class OneParameterActionImpl extends MinimalEObjectImpl.Container implements OneParameterAction
+public class OneParameterActionImpl extends StatementImpl implements OneParameterAction
 {
   /**
    * The default value of the '{@link #getAction() <em>Action</em>}' attribute.
@@ -61,6 +62,36 @@ public class OneParameterActionImpl extends MinimalEObjectImpl.Container impleme
    * @ordered
    */
   protected Selector selector;
+
+  /**
+   * The cached value of the '{@link #getSelectorParameter() <em>Selector Parameter</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSelectorParameter()
+   * @generated
+   * @ordered
+   */
+  protected Selector selectorParameter;
+
+  /**
+   * The default value of the '{@link #getStringParameter() <em>String Parameter</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStringParameter()
+   * @generated
+   * @ordered
+   */
+  protected static final String STRING_PARAMETER_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getStringParameter() <em>String Parameter</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStringParameter()
+   * @generated
+   * @ordered
+   */
+  protected String stringParameter = STRING_PARAMETER_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -159,6 +190,77 @@ public class OneParameterActionImpl extends MinimalEObjectImpl.Container impleme
    * <!-- end-user-doc -->
    * @generated
    */
+  public Selector getSelectorParameter()
+  {
+    return selectorParameter;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetSelectorParameter(Selector newSelectorParameter, NotificationChain msgs)
+  {
+    Selector oldSelectorParameter = selectorParameter;
+    selectorParameter = newSelectorParameter;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MySeleniumPackage.ONE_PARAMETER_ACTION__SELECTOR_PARAMETER, oldSelectorParameter, newSelectorParameter);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSelectorParameter(Selector newSelectorParameter)
+  {
+    if (newSelectorParameter != selectorParameter)
+    {
+      NotificationChain msgs = null;
+      if (selectorParameter != null)
+        msgs = ((InternalEObject)selectorParameter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MySeleniumPackage.ONE_PARAMETER_ACTION__SELECTOR_PARAMETER, null, msgs);
+      if (newSelectorParameter != null)
+        msgs = ((InternalEObject)newSelectorParameter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MySeleniumPackage.ONE_PARAMETER_ACTION__SELECTOR_PARAMETER, null, msgs);
+      msgs = basicSetSelectorParameter(newSelectorParameter, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MySeleniumPackage.ONE_PARAMETER_ACTION__SELECTOR_PARAMETER, newSelectorParameter, newSelectorParameter));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getStringParameter()
+  {
+    return stringParameter;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setStringParameter(String newStringParameter)
+  {
+    String oldStringParameter = stringParameter;
+    stringParameter = newStringParameter;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MySeleniumPackage.ONE_PARAMETER_ACTION__STRING_PARAMETER, oldStringParameter, stringParameter));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -166,6 +268,8 @@ public class OneParameterActionImpl extends MinimalEObjectImpl.Container impleme
     {
       case MySeleniumPackage.ONE_PARAMETER_ACTION__SELECTOR:
         return basicSetSelector(null, msgs);
+      case MySeleniumPackage.ONE_PARAMETER_ACTION__SELECTOR_PARAMETER:
+        return basicSetSelectorParameter(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -184,6 +288,10 @@ public class OneParameterActionImpl extends MinimalEObjectImpl.Container impleme
         return getAction();
       case MySeleniumPackage.ONE_PARAMETER_ACTION__SELECTOR:
         return getSelector();
+      case MySeleniumPackage.ONE_PARAMETER_ACTION__SELECTOR_PARAMETER:
+        return getSelectorParameter();
+      case MySeleniumPackage.ONE_PARAMETER_ACTION__STRING_PARAMETER:
+        return getStringParameter();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -203,6 +311,12 @@ public class OneParameterActionImpl extends MinimalEObjectImpl.Container impleme
         return;
       case MySeleniumPackage.ONE_PARAMETER_ACTION__SELECTOR:
         setSelector((Selector)newValue);
+        return;
+      case MySeleniumPackage.ONE_PARAMETER_ACTION__SELECTOR_PARAMETER:
+        setSelectorParameter((Selector)newValue);
+        return;
+      case MySeleniumPackage.ONE_PARAMETER_ACTION__STRING_PARAMETER:
+        setStringParameter((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -224,6 +338,12 @@ public class OneParameterActionImpl extends MinimalEObjectImpl.Container impleme
       case MySeleniumPackage.ONE_PARAMETER_ACTION__SELECTOR:
         setSelector((Selector)null);
         return;
+      case MySeleniumPackage.ONE_PARAMETER_ACTION__SELECTOR_PARAMETER:
+        setSelectorParameter((Selector)null);
+        return;
+      case MySeleniumPackage.ONE_PARAMETER_ACTION__STRING_PARAMETER:
+        setStringParameter(STRING_PARAMETER_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -242,6 +362,10 @@ public class OneParameterActionImpl extends MinimalEObjectImpl.Container impleme
         return ACTION_EDEFAULT == null ? action != null : !ACTION_EDEFAULT.equals(action);
       case MySeleniumPackage.ONE_PARAMETER_ACTION__SELECTOR:
         return selector != null;
+      case MySeleniumPackage.ONE_PARAMETER_ACTION__SELECTOR_PARAMETER:
+        return selectorParameter != null;
+      case MySeleniumPackage.ONE_PARAMETER_ACTION__STRING_PARAMETER:
+        return STRING_PARAMETER_EDEFAULT == null ? stringParameter != null : !STRING_PARAMETER_EDEFAULT.equals(stringParameter);
     }
     return super.eIsSet(featureID);
   }
@@ -259,6 +383,8 @@ public class OneParameterActionImpl extends MinimalEObjectImpl.Container impleme
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (action: ");
     result.append(action);
+    result.append(", stringParameter: ");
+    result.append(stringParameter);
     result.append(')');
     return result.toString();
   }

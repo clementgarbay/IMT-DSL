@@ -20,7 +20,6 @@ import fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Program;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Projection;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Selector;
-import fr.imta.clementdamien.dsl.selenium.mySelenium.Statement;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Statements;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.TwoParametersAction;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Variable;
@@ -96,9 +95,6 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case MySeleniumPackage.SELECTOR:
 				sequence_Selector(context, (Selector) semanticObject); 
 				return; 
-			case MySeleniumPackage.STATEMENT:
-				sequence_Statement(context, (Statement) semanticObject); 
-				return; 
 			case MySeleniumPackage.STATEMENTS:
 				sequence_Statements(context, (Statements) semanticObject); 
 				return; 
@@ -118,6 +114,7 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     Statement returns AssertContains
 	 *     AssertContains returns AssertContains
 	 *
 	 * Constraint:
@@ -142,6 +139,7 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     Statement returns AssertEquals
 	 *     AssertEquals returns AssertEquals
 	 *
 	 * Constraint:
@@ -191,6 +189,7 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	/**
 	 * Contexts:
 	 *     FunctionCall returns FunctionCall
+	 *     Statement returns FunctionCall
 	 *     AssertableElement returns FunctionCall
 	 *
 	 * Constraint:
@@ -266,6 +265,7 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     Statement returns NavigationAction
 	 *     NavigationAction returns NavigationAction
 	 *
 	 * Constraint:
@@ -287,22 +287,14 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     Statement returns OneParameterAction
 	 *     OneParameterAction returns OneParameterAction
 	 *
 	 * Constraint:
-	 *     (action=OneParameterActionType selector=Selector)
+	 *     (action=OneParameterActionType selector=Selector (selectorParameter=Selector | stringParameter=STRING)?)
 	 */
 	protected void sequence_OneParameterAction(ISerializationContext context, OneParameterAction semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, MySeleniumPackage.Literals.ONE_PARAMETER_ACTION__ACTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MySeleniumPackage.Literals.ONE_PARAMETER_ACTION__ACTION));
-			if (transientValues.isValueTransient(semanticObject, MySeleniumPackage.Literals.ONE_PARAMETER_ACTION__SELECTOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MySeleniumPackage.Literals.ONE_PARAMETER_ACTION__SELECTOR));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getOneParameterActionAccess().getActionOneParameterActionTypeParserRuleCall_0_0(), semanticObject.getAction());
-		feeder.accept(grammarAccess.getOneParameterActionAccess().getSelectorSelectorParserRuleCall_1_0(), semanticObject.getSelector());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -348,25 +340,6 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     (element=DOMElement attrs=Attributes?)
 	 */
 	protected void sequence_Selector(ISerializationContext context, Selector semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Statement returns Statement
-	 *
-	 * Constraint:
-	 *     (
-	 *         statement=OneParameterAction | 
-	 *         statement=TwoParametersAction | 
-	 *         statement=FunctionCall | 
-	 *         statement=AssertEquals | 
-	 *         statement=AssertContains | 
-	 *         statement=NavigationAction
-	 *     )
-	 */
-	protected void sequence_Statement(ISerializationContext context, Statement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

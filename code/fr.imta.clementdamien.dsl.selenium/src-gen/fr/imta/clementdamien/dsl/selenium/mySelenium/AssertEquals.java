@@ -5,8 +5,6 @@ package fr.imta.clementdamien.dsl.selenium.mySelenium;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Assert Equals</b></em>'.
@@ -24,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface AssertEquals extends EObject
+public interface AssertEquals extends Statement
 {
   /**
    * Returns the value of the '<em><b>Assertable Element</b></em>' containment reference list.

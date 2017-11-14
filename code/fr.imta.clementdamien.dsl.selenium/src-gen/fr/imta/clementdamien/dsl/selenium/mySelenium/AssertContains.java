@@ -3,7 +3,6 @@
  */
 package fr.imta.clementdamien.dsl.selenium.mySelenium;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface AssertContains extends EObject
+public interface AssertContains extends Statement
 {
   /**
    * Returns the value of the '<em><b>Container</b></em>' containment reference.
