@@ -1,6 +1,3 @@
-
-# Created by https://www.gitignore.io/api/macos,xtext,eclipse,intellij
-
 ### Eclipse ###
 
 .metadata
@@ -161,5 +158,4 @@ xtend-gen/
 # Ignore plugin.xml_gen and feature.xml_gen files, when build Eclipse Plugins.
 *.xml_gen
 
-# End of https://www.gitignore.io/api/macos,xtext,eclipse,intellij
-
+.antlr*.jar
