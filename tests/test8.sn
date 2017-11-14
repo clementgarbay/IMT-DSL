@@ -1,5 +1,5 @@
 // Test 8
-def countResults() {
+def countResults {
   div[class="views-row"].all.count
 }
 def main {

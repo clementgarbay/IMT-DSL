@@ -11,10 +11,10 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class TwoParametersActionImpl extends StatementImpl implements TwoParametersAction
+public class TwoParametersActionImpl extends MinimalEObjectImpl.Container implements TwoParametersAction
 {
   /**
    * The default value of the '{@link #getAction() <em>Action</em>}' attribute.
@@ -71,7 +71,7 @@ public class TwoParametersActionImpl extends StatementImpl implements TwoParamet
    * @generated
    * @ordered
    */
-  protected EObject parameter;
+  protected Selector parameter;
 
   /**
    * <!-- begin-user-doc -->
@@ -170,7 +170,7 @@ public class TwoParametersActionImpl extends StatementImpl implements TwoParamet
    * <!-- end-user-doc -->
    * @generated
    */
-  public EObject getParameter()
+  public Selector getParameter()
   {
     return parameter;
   }
@@ -180,9 +180,9 @@ public class TwoParametersActionImpl extends StatementImpl implements TwoParamet
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetParameter(EObject newParameter, NotificationChain msgs)
+  public NotificationChain basicSetParameter(Selector newParameter, NotificationChain msgs)
   {
-    EObject oldParameter = parameter;
+    Selector oldParameter = parameter;
     parameter = newParameter;
     if (eNotificationRequired())
     {
@@ -197,7 +197,7 @@ public class TwoParametersActionImpl extends StatementImpl implements TwoParamet
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setParameter(EObject newParameter)
+  public void setParameter(Selector newParameter)
   {
     if (newParameter != parameter)
     {
@@ -268,7 +268,7 @@ public class TwoParametersActionImpl extends StatementImpl implements TwoParamet
         setSelector((Selector)newValue);
         return;
       case MySeleniumPackage.TWO_PARAMETERS_ACTION__PARAMETER:
-        setParameter((EObject)newValue);
+        setParameter((Selector)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -291,7 +291,7 @@ public class TwoParametersActionImpl extends StatementImpl implements TwoParamet
         setSelector((Selector)null);
         return;
       case MySeleniumPackage.TWO_PARAMETERS_ACTION__PARAMETER:
-        setParameter((EObject)null);
+        setParameter((Selector)null);
         return;
     }
     super.eUnset(featureID);

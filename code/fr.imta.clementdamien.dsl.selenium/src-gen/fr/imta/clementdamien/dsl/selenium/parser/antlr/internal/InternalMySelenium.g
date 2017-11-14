@@ -477,67 +477,105 @@ ruleStatement returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		{
-			newCompositeNode(grammarAccess.getStatementAccess().getOneParameterActionParserRuleCall_0());
-		}
-		this_OneParameterAction_0=ruleOneParameterAction
-		{
-			$current = $this_OneParameterAction_0.current;
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getStatementAccess().getTwoParametersActionParserRuleCall_1());
-		}
-		this_TwoParametersAction_1=ruleTwoParametersAction
-		{
-			$current = $this_TwoParametersAction_1.current;
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getStatementAccess().getFunctionCallParserRuleCall_2());
-		}
-		this_FunctionCall_2=ruleFunctionCall
-		{
-			$current = $this_FunctionCall_2.current;
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getStatementAccess().getAssertEqualsParserRuleCall_3());
-		}
-		this_AssertEquals_3=ruleAssertEquals
-		{
-			$current = $this_AssertEquals_3.current;
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getStatementAccess().getAssertContainsParserRuleCall_4());
-		}
-		this_AssertContains_4=ruleAssertContains
-		{
-			$current = $this_AssertContains_4.current;
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getStatementAccess().getNavigationActionParserRuleCall_5());
-		}
-		this_NavigationAction_5=ruleNavigationAction
-		{
-			$current = $this_NavigationAction_5.current;
-			afterParserOrEnumRuleCall();
-		}
-		    |
-		{
-			newCompositeNode(grammarAccess.getStatementAccess().getCommentParserRuleCall_6());
-		}
-		ruleComment
-		{
-			afterParserOrEnumRuleCall();
-		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getStatementAccess().getStatementOneParameterActionParserRuleCall_0_0());
+				}
+				lv_statement_0_1=ruleOneParameterAction
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getStatementRule());
+					}
+					set(
+						$current,
+						"statement",
+						lv_statement_0_1,
+						"fr.imta.clementdamien.dsl.selenium.MySelenium.OneParameterAction");
+					afterParserOrEnumRuleCall();
+				}
+				    |
+				{
+					newCompositeNode(grammarAccess.getStatementAccess().getStatementTwoParametersActionParserRuleCall_0_1());
+				}
+				lv_statement_0_2=ruleTwoParametersAction
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getStatementRule());
+					}
+					set(
+						$current,
+						"statement",
+						lv_statement_0_2,
+						"fr.imta.clementdamien.dsl.selenium.MySelenium.TwoParametersAction");
+					afterParserOrEnumRuleCall();
+				}
+				    |
+				{
+					newCompositeNode(grammarAccess.getStatementAccess().getStatementFunctionCallParserRuleCall_0_2());
+				}
+				lv_statement_0_3=ruleFunctionCall
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getStatementRule());
+					}
+					set(
+						$current,
+						"statement",
+						lv_statement_0_3,
+						"fr.imta.clementdamien.dsl.selenium.MySelenium.FunctionCall");
+					afterParserOrEnumRuleCall();
+				}
+				    |
+				{
+					newCompositeNode(grammarAccess.getStatementAccess().getStatementAssertEqualsParserRuleCall_0_3());
+				}
+				lv_statement_0_4=ruleAssertEquals
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getStatementRule());
+					}
+					set(
+						$current,
+						"statement",
+						lv_statement_0_4,
+						"fr.imta.clementdamien.dsl.selenium.MySelenium.AssertEquals");
+					afterParserOrEnumRuleCall();
+				}
+				    |
+				{
+					newCompositeNode(grammarAccess.getStatementAccess().getStatementAssertContainsParserRuleCall_0_4());
+				}
+				lv_statement_0_5=ruleAssertContains
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getStatementRule());
+					}
+					set(
+						$current,
+						"statement",
+						lv_statement_0_5,
+						"fr.imta.clementdamien.dsl.selenium.MySelenium.AssertContains");
+					afterParserOrEnumRuleCall();
+				}
+				    |
+				{
+					newCompositeNode(grammarAccess.getStatementAccess().getStatementNavigationActionParserRuleCall_0_5());
+				}
+				lv_statement_0_6=ruleNavigationAction
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getStatementRule());
+					}
+					set(
+						$current,
+						"statement",
+						lv_statement_0_6,
+						"fr.imta.clementdamien.dsl.selenium.MySelenium.NavigationAction");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 	)
 ;
 
@@ -580,10 +618,20 @@ ruleAssertEquals returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_2='='
-		{
-			newLeafNode(otherlv_2, grammarAccess.getAssertEqualsAccess().getEqualsSignKeyword_2());
-		}
+		(
+			(
+				lv_operator_2_0='='
+				{
+					newLeafNode(lv_operator_2_0, grammarAccess.getAssertEqualsAccess().getOperatorEqualsSignKeyword_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getAssertEqualsRule());
+					}
+					setWithLastConsumed($current, "operator", lv_operator_2_0, "=");
+				}
+			)
+		)
 		(
 			(
 				{
@@ -645,10 +693,20 @@ ruleAssertContains returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_2='contains'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getAssertContainsAccess().getContainsKeyword_2());
-		}
+		(
+			(
+				lv_operator_2_0='contains'
+				{
+					newLeafNode(lv_operator_2_0, grammarAccess.getAssertContainsAccess().getOperatorContainsKeyword_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getAssertContainsRule());
+					}
+					setWithLastConsumed($current, "operator", lv_operator_2_0, "contains");
+				}
+			)
+		)
 		(
 			(
 				{
@@ -920,39 +978,21 @@ ruleTwoParametersAction returns [EObject current=null]
 		)
 		(
 			(
-				(
-					{
-						newCompositeNode(grammarAccess.getTwoParametersActionAccess().getParameterSelectorParserRuleCall_2_0_0());
+				{
+					newCompositeNode(grammarAccess.getTwoParametersActionAccess().getParameterSelectorParserRuleCall_2_0());
+				}
+				lv_parameter_2_0=ruleSelector
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getTwoParametersActionRule());
 					}
-					lv_parameter_2_1=ruleSelector
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getTwoParametersActionRule());
-						}
-						set(
-							$current,
-							"parameter",
-							lv_parameter_2_1,
-							"fr.imta.clementdamien.dsl.selenium.MySelenium.Selector");
-						afterParserOrEnumRuleCall();
-					}
-					    |
-					{
-						newCompositeNode(grammarAccess.getTwoParametersActionAccess().getParameterVariableParserRuleCall_2_0_1());
-					}
-					lv_parameter_2_2=ruleVariable
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getTwoParametersActionRule());
-						}
-						set(
-							$current,
-							"parameter",
-							lv_parameter_2_2,
-							"fr.imta.clementdamien.dsl.selenium.MySelenium.Variable");
-						afterParserOrEnumRuleCall();
-					}
-				)
+					set(
+						$current,
+						"parameter",
+						lv_parameter_2_0,
+						"fr.imta.clementdamien.dsl.selenium.MySelenium.Selector");
+					afterParserOrEnumRuleCall();
+				}
 			)
 		)
 	)
@@ -1132,10 +1172,24 @@ ruleAttribute returns [EObject current=null]
 			newLeafNode(otherlv_1, grammarAccess.getAttributeAccess().getEqualsSignKeyword_1());
 		}
 		(
-			this_STRING_2=RULE_STRING
-			{
-				newLeafNode(this_STRING_2, grammarAccess.getAttributeAccess().getSTRINGTerminalRuleCall_2_0());
-			}
+			(
+				(
+					lv_value_2_0=RULE_STRING
+					{
+						newLeafNode(lv_value_2_0, grammarAccess.getAttributeAccess().getValueSTRINGTerminalRuleCall_2_0_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getAttributeRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"value",
+							lv_value_2_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
 			    |
 			(
 				(
@@ -1543,39 +1597,6 @@ ruleVariable returns [EObject current=null]
 					"org.eclipse.xtext.common.Terminals.ID");
 			}
 		)
-	)
-;
-
-// Entry rule entryRuleComment
-entryRuleComment returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getCommentRule()); }
-	iv_ruleComment=ruleComment
-	{ $current=$iv_ruleComment.current.getText(); }
-	EOF;
-
-// Rule Comment
-ruleComment returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			kw='#'
-			{
-				$current.merge(kw);
-				newLeafNode(kw, grammarAccess.getCommentAccess().getNumberSignKeyword_0());
-			}
-		)+
-		this_STRING_1=RULE_STRING
-		{
-			$current.merge(this_STRING_1);
-		}
-		{
-			newLeafNode(this_STRING_1, grammarAccess.getCommentAccess().getSTRINGTerminalRuleCall_1());
-		}
 	)
 ;
 

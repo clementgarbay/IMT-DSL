@@ -30,22 +30,9 @@ public class MySeleniumSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (ruleCall.getRule() == grammarAccess.getCommentRule())
-			return getCommentToken(semanticObject, ruleCall, node);
-		else if (ruleCall.getRule() == grammarAccess.getSTRINGRule())
+		if (ruleCall.getRule() == grammarAccess.getSTRINGRule())
 			return getSTRINGToken(semanticObject, ruleCall, node);
 		return "";
-	}
-	
-	/**
-	 * Comment:
-	 * 	"#" + STRING 
-	 * ;
-	 */
-	protected String getCommentToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "#\"\"";
 	}
 	
 	/**

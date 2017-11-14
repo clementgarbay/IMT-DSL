@@ -3,6 +3,7 @@
  */
 package fr.imta.clementdamien.dsl.selenium.mySelenium;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +22,7 @@ package fr.imta.clementdamien.dsl.selenium.mySelenium;
  * @model
  * @generated
  */
-public interface NavigationAction extends Statement
+public interface NavigationAction extends EObject
 {
   /**
    * Returns the value of the '<em><b>Action</b></em>' attribute.

@@ -457,6 +457,16 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getStatement_Statement()
+  {
+    return (EReference)statementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getAssertEquals()
   {
     return assertEqualsEClass;
@@ -470,6 +480,16 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
   public EReference getAssertEquals_AssertableElement()
   {
     return (EReference)assertEqualsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getAssertEquals_Operator()
+  {
+    return (EAttribute)assertEqualsEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -497,9 +517,19 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getAssertContains_Operator()
+  {
+    return (EAttribute)assertContainsEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getAssertContains_Element()
   {
-    return (EReference)assertContainsEClass.getEStructuralFeatures().get(1);
+    return (EReference)assertContainsEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -687,9 +717,19 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getAttribute_Value()
+  {
+    return (EAttribute)attributeEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getAttribute_Val()
   {
-    return (EReference)attributeEClass.getEStructuralFeatures().get(1);
+    return (EReference)attributeEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -829,12 +869,15 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
     createEAttribute(projectionEClass, PROJECTION__PROJECTION_ACTION);
 
     statementEClass = createEClass(STATEMENT);
+    createEReference(statementEClass, STATEMENT__STATEMENT);
 
     assertEqualsEClass = createEClass(ASSERT_EQUALS);
     createEReference(assertEqualsEClass, ASSERT_EQUALS__ASSERTABLE_ELEMENT);
+    createEAttribute(assertEqualsEClass, ASSERT_EQUALS__OPERATOR);
 
     assertContainsEClass = createEClass(ASSERT_CONTAINS);
     createEReference(assertContainsEClass, ASSERT_CONTAINS__CONTAINER);
+    createEAttribute(assertContainsEClass, ASSERT_CONTAINS__OPERATOR);
     createEReference(assertContainsEClass, ASSERT_CONTAINS__ELEMENT);
 
     assertableElementEClass = createEClass(ASSERTABLE_ELEMENT);
@@ -861,6 +904,7 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
 
     attributeEClass = createEClass(ATTRIBUTE);
     createEAttribute(attributeEClass, ATTRIBUTE__NAME);
+    createEAttribute(attributeEClass, ATTRIBUTE__VALUE);
     createEReference(attributeEClass, ATTRIBUTE__VAL);
 
     functionParametersEClass = createEClass(FUNCTION_PARAMETERS);
@@ -905,14 +949,8 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    functionCallEClass.getESuperTypes().add(this.getStatement());
     functionCallEClass.getESuperTypes().add(this.getAssertableElement());
     projectionEClass.getESuperTypes().add(this.getAssertableElement());
-    assertEqualsEClass.getESuperTypes().add(this.getStatement());
-    assertContainsEClass.getESuperTypes().add(this.getStatement());
-    navigationActionEClass.getESuperTypes().add(this.getStatement());
-    oneParameterActionEClass.getESuperTypes().add(this.getStatement());
-    twoParametersActionEClass.getESuperTypes().add(this.getStatement());
     variableEClass.getESuperTypes().add(this.getAssertableElement());
 
     // Initialize classes and features; add operations and parameters
@@ -943,12 +981,15 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
     initEAttribute(getProjection_ProjectionAction(), ecorePackage.getEString(), "projectionAction", null, 0, 1, Projection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(statementEClass, Statement.class, "Statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getStatement_Statement(), ecorePackage.getEObject(), null, "statement", null, 0, 1, Statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(assertEqualsEClass, AssertEquals.class, "AssertEquals", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getAssertEquals_AssertableElement(), this.getAssertableElement(), null, "assertableElement", null, 0, -1, AssertEquals.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAssertEquals_Operator(), ecorePackage.getEString(), "operator", null, 0, 1, AssertEquals.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(assertContainsEClass, AssertContains.class, "AssertContains", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getAssertContains_Container(), this.getAssertableElement(), null, "container", null, 0, 1, AssertContains.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAssertContains_Operator(), ecorePackage.getEString(), "operator", null, 0, 1, AssertContains.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAssertContains_Element(), this.getAssertableElement(), null, "element", null, 0, 1, AssertContains.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(assertableElementEClass, AssertableElement.class, "AssertableElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -964,7 +1005,7 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
     initEClass(twoParametersActionEClass, TwoParametersAction.class, "TwoParametersAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTwoParametersAction_Action(), ecorePackage.getEString(), "action", null, 0, 1, TwoParametersAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTwoParametersAction_Selector(), this.getSelector(), null, "selector", null, 0, 1, TwoParametersAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTwoParametersAction_Parameter(), ecorePackage.getEObject(), null, "parameter", null, 0, 1, TwoParametersAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTwoParametersAction_Parameter(), this.getSelector(), null, "parameter", null, 0, 1, TwoParametersAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(selectorEClass, Selector.class, "Selector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSelector_Element(), ecorePackage.getEString(), "element", null, 0, 1, Selector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -975,6 +1016,7 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
 
     initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAttribute_Value(), ecorePackage.getEString(), "value", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAttribute_Val(), this.getVariable(), null, "val", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(functionParametersEClass, FunctionParameters.class, "FunctionParameters", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -9,12 +9,16 @@ import fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -28,11 +32,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AssertEqualsImpl#getAssertableElement <em>Assertable Element</em>}</li>
+ *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AssertEqualsImpl#getOperator <em>Operator</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class AssertEqualsImpl extends StatementImpl implements AssertEquals
+public class AssertEqualsImpl extends MinimalEObjectImpl.Container implements AssertEquals
 {
   /**
    * The cached value of the '{@link #getAssertableElement() <em>Assertable Element</em>}' containment reference list.
@@ -43,6 +48,26 @@ public class AssertEqualsImpl extends StatementImpl implements AssertEquals
    * @ordered
    */
   protected EList<AssertableElement> assertableElement;
+
+  /**
+   * The default value of the '{@link #getOperator() <em>Operator</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOperator()
+   * @generated
+   * @ordered
+   */
+  protected static final String OPERATOR_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getOperator() <em>Operator</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOperator()
+   * @generated
+   * @ordered
+   */
+  protected String operator = OPERATOR_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -84,6 +109,29 @@ public class AssertEqualsImpl extends StatementImpl implements AssertEquals
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getOperator()
+  {
+    return operator;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOperator(String newOperator)
+  {
+    String oldOperator = operator;
+    operator = newOperator;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MySeleniumPackage.ASSERT_EQUALS__OPERATOR, oldOperator, operator));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -107,6 +155,8 @@ public class AssertEqualsImpl extends StatementImpl implements AssertEquals
     {
       case MySeleniumPackage.ASSERT_EQUALS__ASSERTABLE_ELEMENT:
         return getAssertableElement();
+      case MySeleniumPackage.ASSERT_EQUALS__OPERATOR:
+        return getOperator();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -126,6 +176,9 @@ public class AssertEqualsImpl extends StatementImpl implements AssertEquals
         getAssertableElement().clear();
         getAssertableElement().addAll((Collection<? extends AssertableElement>)newValue);
         return;
+      case MySeleniumPackage.ASSERT_EQUALS__OPERATOR:
+        setOperator((String)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -143,6 +196,9 @@ public class AssertEqualsImpl extends StatementImpl implements AssertEquals
       case MySeleniumPackage.ASSERT_EQUALS__ASSERTABLE_ELEMENT:
         getAssertableElement().clear();
         return;
+      case MySeleniumPackage.ASSERT_EQUALS__OPERATOR:
+        setOperator(OPERATOR_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -159,8 +215,27 @@ public class AssertEqualsImpl extends StatementImpl implements AssertEquals
     {
       case MySeleniumPackage.ASSERT_EQUALS__ASSERTABLE_ELEMENT:
         return assertableElement != null && !assertableElement.isEmpty();
+      case MySeleniumPackage.ASSERT_EQUALS__OPERATOR:
+        return OPERATOR_EDEFAULT == null ? operator != null : !OPERATOR_EDEFAULT.equals(operator);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (operator: ");
+    result.append(operator);
+    result.append(')');
+    return result.toString();
   }
 
 } //AssertEqualsImpl

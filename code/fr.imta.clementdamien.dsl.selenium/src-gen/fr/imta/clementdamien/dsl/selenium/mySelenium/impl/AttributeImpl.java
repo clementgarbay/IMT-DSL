@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AttributeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AttributeImpl#getValue <em>Value</em>}</li>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AttributeImpl#getVal <em>Val</em>}</li>
  * </ul>
  *
@@ -50,6 +51,26 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValue()
+   * @generated
+   * @ordered
+   */
+  protected static final String VALUE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValue()
+   * @generated
+   * @ordered
+   */
+  protected String value = VALUE_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getVal() <em>Val</em>}' reference.
@@ -110,6 +131,29 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getValue()
+  {
+    return value;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setValue(String newValue)
+  {
+    String oldValue = value;
+    value = newValue;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MySeleniumPackage.ATTRIBUTE__VALUE, oldValue, value));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Variable getVal()
   {
     if (val != null && val.eIsProxy())
@@ -160,6 +204,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
     {
       case MySeleniumPackage.ATTRIBUTE__NAME:
         return getName();
+      case MySeleniumPackage.ATTRIBUTE__VALUE:
+        return getValue();
       case MySeleniumPackage.ATTRIBUTE__VAL:
         if (resolve) return getVal();
         return basicGetVal();
@@ -179,6 +225,9 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
     {
       case MySeleniumPackage.ATTRIBUTE__NAME:
         setName((String)newValue);
+        return;
+      case MySeleniumPackage.ATTRIBUTE__VALUE:
+        setValue((String)newValue);
         return;
       case MySeleniumPackage.ATTRIBUTE__VAL:
         setVal((Variable)newValue);
@@ -200,6 +249,9 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
       case MySeleniumPackage.ATTRIBUTE__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case MySeleniumPackage.ATTRIBUTE__VALUE:
+        setValue(VALUE_EDEFAULT);
+        return;
       case MySeleniumPackage.ATTRIBUTE__VAL:
         setVal((Variable)null);
         return;
@@ -219,6 +271,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
     {
       case MySeleniumPackage.ATTRIBUTE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case MySeleniumPackage.ATTRIBUTE__VALUE:
+        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
       case MySeleniumPackage.ATTRIBUTE__VAL:
         return val != null;
     }
@@ -238,6 +292,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", value: ");
+    result.append(value);
     result.append(')');
     return result.toString();
   }

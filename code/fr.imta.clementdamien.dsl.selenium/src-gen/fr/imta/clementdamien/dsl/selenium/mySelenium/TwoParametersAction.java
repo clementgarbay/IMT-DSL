@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface TwoParametersAction extends Statement
+public interface TwoParametersAction extends EObject
 {
   /**
    * Returns the value of the '<em><b>Action</b></em>' attribute.
@@ -86,12 +86,12 @@ public interface TwoParametersAction extends Statement
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Parameter</em>' containment reference.
-   * @see #setParameter(EObject)
+   * @see #setParameter(Selector)
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage#getTwoParametersAction_Parameter()
    * @model containment="true"
    * @generated
    */
-  EObject getParameter();
+  Selector getParameter();
 
   /**
    * Sets the value of the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.TwoParametersAction#getParameter <em>Parameter</em>}' containment reference.
@@ -101,6 +101,6 @@ public interface TwoParametersAction extends Statement
    * @see #getParameter()
    * @generated
    */
-  void setParameter(EObject value);
+  void setParameter(Selector value);
 
 } // TwoParametersAction

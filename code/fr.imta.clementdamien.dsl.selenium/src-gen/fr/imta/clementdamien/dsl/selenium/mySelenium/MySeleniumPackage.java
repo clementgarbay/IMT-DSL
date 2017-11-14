@@ -225,23 +225,23 @@ public interface MySeleniumPackage extends EPackage
   int FUNCTION_NAME_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.StatementImpl <em>Statement</em>}' class.
+   * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AssertableElementImpl <em>Assertable Element</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.StatementImpl
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getStatement()
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AssertableElementImpl
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getAssertableElement()
    * @generated
    */
-  int STATEMENT = 7;
+  int ASSERTABLE_ELEMENT = 10;
 
   /**
-   * The number of structural features of the '<em>Statement</em>' class.
+   * The number of structural features of the '<em>Assertable Element</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATEMENT_FEATURE_COUNT = 0;
+  int ASSERTABLE_ELEMENT_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.FunctionCallImpl <em>Function Call</em>}' class.
@@ -260,7 +260,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FUNCTION_CALL__REF = STATEMENT_FEATURE_COUNT + 0;
+  int FUNCTION_CALL__REF = ASSERTABLE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Params</b></em>' containment reference.
@@ -269,7 +269,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FUNCTION_CALL__PARAMS = STATEMENT_FEATURE_COUNT + 1;
+  int FUNCTION_CALL__PARAMS = ASSERTABLE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Function Call</em>' class.
@@ -278,26 +278,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FUNCTION_CALL_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
-
-  /**
-   * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AssertableElementImpl <em>Assertable Element</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AssertableElementImpl
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getAssertableElement()
-   * @generated
-   */
-  int ASSERTABLE_ELEMENT = 10;
-
-  /**
-   * The number of structural features of the '<em>Assertable Element</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ASSERTABLE_ELEMENT_FEATURE_COUNT = 0;
+  int FUNCTION_CALL_FEATURE_COUNT = ASSERTABLE_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ProjectionImpl <em>Projection</em>}' class.
@@ -337,6 +318,34 @@ public interface MySeleniumPackage extends EPackage
   int PROJECTION_FEATURE_COUNT = ASSERTABLE_ELEMENT_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.StatementImpl <em>Statement</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.StatementImpl
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getStatement()
+   * @generated
+   */
+  int STATEMENT = 7;
+
+  /**
+   * The feature id for the '<em><b>Statement</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATEMENT__STATEMENT = 0;
+
+  /**
+   * The number of structural features of the '<em>Statement</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STATEMENT_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AssertEqualsImpl <em>Assert Equals</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -353,7 +362,16 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ASSERT_EQUALS__ASSERTABLE_ELEMENT = STATEMENT_FEATURE_COUNT + 0;
+  int ASSERT_EQUALS__ASSERTABLE_ELEMENT = 0;
+
+  /**
+   * The feature id for the '<em><b>Operator</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSERT_EQUALS__OPERATOR = 1;
 
   /**
    * The number of structural features of the '<em>Assert Equals</em>' class.
@@ -362,7 +380,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ASSERT_EQUALS_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
+  int ASSERT_EQUALS_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AssertContainsImpl <em>Assert Contains</em>}' class.
@@ -381,7 +399,16 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ASSERT_CONTAINS__CONTAINER = STATEMENT_FEATURE_COUNT + 0;
+  int ASSERT_CONTAINS__CONTAINER = 0;
+
+  /**
+   * The feature id for the '<em><b>Operator</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSERT_CONTAINS__OPERATOR = 1;
 
   /**
    * The feature id for the '<em><b>Element</b></em>' containment reference.
@@ -390,7 +417,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ASSERT_CONTAINS__ELEMENT = STATEMENT_FEATURE_COUNT + 1;
+  int ASSERT_CONTAINS__ELEMENT = 2;
 
   /**
    * The number of structural features of the '<em>Assert Contains</em>' class.
@@ -399,7 +426,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ASSERT_CONTAINS_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+  int ASSERT_CONTAINS_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.NavigationActionImpl <em>Navigation Action</em>}' class.
@@ -418,7 +445,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NAVIGATION_ACTION__ACTION = STATEMENT_FEATURE_COUNT + 0;
+  int NAVIGATION_ACTION__ACTION = 0;
 
   /**
    * The feature id for the '<em><b>Param</b></em>' attribute.
@@ -427,7 +454,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NAVIGATION_ACTION__PARAM = STATEMENT_FEATURE_COUNT + 1;
+  int NAVIGATION_ACTION__PARAM = 1;
 
   /**
    * The number of structural features of the '<em>Navigation Action</em>' class.
@@ -436,7 +463,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NAVIGATION_ACTION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+  int NAVIGATION_ACTION_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.OneParameterActionImpl <em>One Parameter Action</em>}' class.
@@ -455,7 +482,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ONE_PARAMETER_ACTION__ACTION = STATEMENT_FEATURE_COUNT + 0;
+  int ONE_PARAMETER_ACTION__ACTION = 0;
 
   /**
    * The feature id for the '<em><b>Selector</b></em>' containment reference.
@@ -464,7 +491,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ONE_PARAMETER_ACTION__SELECTOR = STATEMENT_FEATURE_COUNT + 1;
+  int ONE_PARAMETER_ACTION__SELECTOR = 1;
 
   /**
    * The number of structural features of the '<em>One Parameter Action</em>' class.
@@ -473,7 +500,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ONE_PARAMETER_ACTION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+  int ONE_PARAMETER_ACTION_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.TwoParametersActionImpl <em>Two Parameters Action</em>}' class.
@@ -492,7 +519,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TWO_PARAMETERS_ACTION__ACTION = STATEMENT_FEATURE_COUNT + 0;
+  int TWO_PARAMETERS_ACTION__ACTION = 0;
 
   /**
    * The feature id for the '<em><b>Selector</b></em>' containment reference.
@@ -501,7 +528,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TWO_PARAMETERS_ACTION__SELECTOR = STATEMENT_FEATURE_COUNT + 1;
+  int TWO_PARAMETERS_ACTION__SELECTOR = 1;
 
   /**
    * The feature id for the '<em><b>Parameter</b></em>' containment reference.
@@ -510,7 +537,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TWO_PARAMETERS_ACTION__PARAMETER = STATEMENT_FEATURE_COUNT + 2;
+  int TWO_PARAMETERS_ACTION__PARAMETER = 2;
 
   /**
    * The number of structural features of the '<em>Two Parameters Action</em>' class.
@@ -519,7 +546,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TWO_PARAMETERS_ACTION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
+  int TWO_PARAMETERS_ACTION_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.SelectorImpl <em>Selector</em>}' class.
@@ -606,13 +633,22 @@ public interface MySeleniumPackage extends EPackage
   int ATTRIBUTE__NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ATTRIBUTE__VALUE = 1;
+
+  /**
    * The feature id for the '<em><b>Val</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATTRIBUTE__VAL = 1;
+  int ATTRIBUTE__VAL = 2;
 
   /**
    * The number of structural features of the '<em>Attribute</em>' class.
@@ -621,7 +657,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ATTRIBUTE_FEATURE_COUNT = 2;
+  int ATTRIBUTE_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.FunctionParametersImpl <em>Function Parameters</em>}' class.
@@ -949,6 +985,17 @@ public interface MySeleniumPackage extends EPackage
   EClass getStatement();
 
   /**
+   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Statement#getStatement <em>Statement</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Statement</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Statement#getStatement()
+   * @see #getStatement()
+   * @generated
+   */
+  EReference getStatement_Statement();
+
+  /**
    * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.AssertEquals <em>Assert Equals</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -970,6 +1017,17 @@ public interface MySeleniumPackage extends EPackage
   EReference getAssertEquals_AssertableElement();
 
   /**
+   * Returns the meta object for the attribute '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.AssertEquals#getOperator <em>Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Operator</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.AssertEquals#getOperator()
+   * @see #getAssertEquals()
+   * @generated
+   */
+  EAttribute getAssertEquals_Operator();
+
+  /**
    * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.AssertContains <em>Assert Contains</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -989,6 +1047,17 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    */
   EReference getAssertContains_Container();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.AssertContains#getOperator <em>Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Operator</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.AssertContains#getOperator()
+   * @see #getAssertContains()
+   * @generated
+   */
+  EAttribute getAssertContains_Operator();
 
   /**
    * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.AssertContains#getElement <em>Element</em>}'.
@@ -1191,6 +1260,17 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    */
   EAttribute getAttribute_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Attribute#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Attribute#getValue()
+   * @see #getAttribute()
+   * @generated
+   */
+  EAttribute getAttribute_Value();
 
   /**
    * Returns the meta object for the reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Attribute#getVal <em>Val</em>}'.
@@ -1487,6 +1567,14 @@ public interface MySeleniumPackage extends EPackage
     EClass STATEMENT = eINSTANCE.getStatement();
 
     /**
+     * The meta object literal for the '<em><b>Statement</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference STATEMENT__STATEMENT = eINSTANCE.getStatement_Statement();
+
+    /**
      * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AssertEqualsImpl <em>Assert Equals</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1505,6 +1593,14 @@ public interface MySeleniumPackage extends EPackage
     EReference ASSERT_EQUALS__ASSERTABLE_ELEMENT = eINSTANCE.getAssertEquals_AssertableElement();
 
     /**
+     * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSERT_EQUALS__OPERATOR = eINSTANCE.getAssertEquals_Operator();
+
+    /**
      * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AssertContainsImpl <em>Assert Contains</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1521,6 +1617,14 @@ public interface MySeleniumPackage extends EPackage
      * @generated
      */
     EReference ASSERT_CONTAINS__CONTAINER = eINSTANCE.getAssertContains_Container();
+
+    /**
+     * The meta object literal for the '<em><b>Operator</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSERT_CONTAINS__OPERATOR = eINSTANCE.getAssertContains_Operator();
 
     /**
      * The meta object literal for the '<em><b>Element</b></em>' containment reference feature.
@@ -1687,6 +1791,14 @@ public interface MySeleniumPackage extends EPackage
      * @generated
      */
     EAttribute ATTRIBUTE__NAME = eINSTANCE.getAttribute_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ATTRIBUTE__VALUE = eINSTANCE.getAttribute_Value();
 
     /**
      * The meta object literal for the '<em><b>Val</b></em>' reference feature.

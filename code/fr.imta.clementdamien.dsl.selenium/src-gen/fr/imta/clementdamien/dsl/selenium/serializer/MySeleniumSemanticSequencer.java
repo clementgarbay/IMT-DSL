@@ -20,6 +20,7 @@ import fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Program;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Projection;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Selector;
+import fr.imta.clementdamien.dsl.selenium.mySelenium.Statement;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Statements;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.TwoParametersAction;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Variable;
@@ -95,6 +96,9 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case MySeleniumPackage.SELECTOR:
 				sequence_Selector(context, (Selector) semanticObject); 
 				return; 
+			case MySeleniumPackage.STATEMENT:
+				sequence_Statement(context, (Statement) semanticObject); 
+				return; 
 			case MySeleniumPackage.STATEMENTS:
 				sequence_Statements(context, (Statements) semanticObject); 
 				return; 
@@ -114,21 +118,23 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Statement returns AssertContains
 	 *     AssertContains returns AssertContains
 	 *
 	 * Constraint:
-	 *     (container=AssertableElement element=AssertableElement)
+	 *     (container=AssertableElement operator='contains' element=AssertableElement)
 	 */
 	protected void sequence_AssertContains(ISerializationContext context, AssertContains semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, MySeleniumPackage.Literals.ASSERT_CONTAINS__CONTAINER) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MySeleniumPackage.Literals.ASSERT_CONTAINS__CONTAINER));
+			if (transientValues.isValueTransient(semanticObject, MySeleniumPackage.Literals.ASSERT_CONTAINS__OPERATOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MySeleniumPackage.Literals.ASSERT_CONTAINS__OPERATOR));
 			if (transientValues.isValueTransient(semanticObject, MySeleniumPackage.Literals.ASSERT_CONTAINS__ELEMENT) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MySeleniumPackage.Literals.ASSERT_CONTAINS__ELEMENT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getAssertContainsAccess().getContainerAssertableElementParserRuleCall_1_0(), semanticObject.getContainer());
+		feeder.accept(grammarAccess.getAssertContainsAccess().getOperatorContainsKeyword_2_0(), semanticObject.getOperator());
 		feeder.accept(grammarAccess.getAssertContainsAccess().getElementAssertableElementParserRuleCall_3_0(), semanticObject.getElement());
 		feeder.finish();
 	}
@@ -136,11 +142,10 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Statement returns AssertEquals
 	 *     AssertEquals returns AssertEquals
 	 *
 	 * Constraint:
-	 *     (assertableElement+=AssertableElement assertableElement+=AssertableElement)
+	 *     (assertableElement+=AssertableElement operator='=' assertableElement+=AssertableElement)
 	 */
 	protected void sequence_AssertEquals(ISerializationContext context, AssertEquals semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -152,7 +157,7 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Attribute returns Attribute
 	 *
 	 * Constraint:
-	 *     (name=DOMAttribute val=[Variable|ID]?)
+	 *     (name=DOMAttribute (value=STRING | val=[Variable|ID]))
 	 */
 	protected void sequence_Attribute(ISerializationContext context, Attribute semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -186,7 +191,6 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	/**
 	 * Contexts:
 	 *     FunctionCall returns FunctionCall
-	 *     Statement returns FunctionCall
 	 *     AssertableElement returns FunctionCall
 	 *
 	 * Constraint:
@@ -262,7 +266,6 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Statement returns NavigationAction
 	 *     NavigationAction returns NavigationAction
 	 *
 	 * Constraint:
@@ -284,7 +287,6 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Statement returns OneParameterAction
 	 *     OneParameterAction returns OneParameterAction
 	 *
 	 * Constraint:
@@ -352,6 +354,25 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     Statement returns Statement
+	 *
+	 * Constraint:
+	 *     (
+	 *         statement=OneParameterAction | 
+	 *         statement=TwoParametersAction | 
+	 *         statement=FunctionCall | 
+	 *         statement=AssertEquals | 
+	 *         statement=AssertContains | 
+	 *         statement=NavigationAction
+	 *     )
+	 */
+	protected void sequence_Statement(ISerializationContext context, Statement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Statements returns Statements
 	 *
 	 * Constraint:
@@ -364,14 +385,25 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Statement returns TwoParametersAction
 	 *     TwoParametersAction returns TwoParametersAction
 	 *
 	 * Constraint:
-	 *     (action=TwoParametersActionType selector=Selector (parameter=Selector | parameter=Variable))
+	 *     (action=TwoParametersActionType selector=Selector parameter=Selector)
 	 */
 	protected void sequence_TwoParametersAction(ISerializationContext context, TwoParametersAction semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MySeleniumPackage.Literals.TWO_PARAMETERS_ACTION__ACTION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MySeleniumPackage.Literals.TWO_PARAMETERS_ACTION__ACTION));
+			if (transientValues.isValueTransient(semanticObject, MySeleniumPackage.Literals.TWO_PARAMETERS_ACTION__SELECTOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MySeleniumPackage.Literals.TWO_PARAMETERS_ACTION__SELECTOR));
+			if (transientValues.isValueTransient(semanticObject, MySeleniumPackage.Literals.TWO_PARAMETERS_ACTION__PARAMETER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MySeleniumPackage.Literals.TWO_PARAMETERS_ACTION__PARAMETER));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTwoParametersActionAccess().getActionTwoParametersActionTypeParserRuleCall_0_0(), semanticObject.getAction());
+		feeder.accept(grammarAccess.getTwoParametersActionAccess().getSelectorSelectorParserRuleCall_1_0(), semanticObject.getSelector());
+		feeder.accept(grammarAccess.getTwoParametersActionAccess().getParameterSelectorParserRuleCall_2_0(), semanticObject.getParameter());
+		feeder.finish();
 	}
 	
 	

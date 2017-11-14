@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,7 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class OneParameterActionImpl extends StatementImpl implements OneParameterAction
+public class OneParameterActionImpl extends MinimalEObjectImpl.Container implements OneParameterAction
 {
   /**
    * The default value of the '{@link #getAction() <em>Action</em>}' attribute.

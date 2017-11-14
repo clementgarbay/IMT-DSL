@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class FunctionCallImpl extends StatementImpl implements FunctionCall
+public class FunctionCallImpl extends AssertableElementImpl implements FunctionCall
 {
   /**
    * The cached value of the '{@link #getRef() <em>Ref</em>}' reference.

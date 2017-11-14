@@ -27,7 +27,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="FunctionName">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FunctionCall" eSuperTypes="#//Statement #//AssertableElement">
+  <eClassifiers xsi:type="ecore:EClass" name="FunctionCall" eSuperTypes="#//AssertableElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//FunctionName"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="params" eType="#//FunctionCallParameters"
         containment="true"/>
@@ -37,32 +37,37 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="projectionAction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Statement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AssertEquals" eSuperTypes="#//Statement">
+  <eClassifiers xsi:type="ecore:EClass" name="Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AssertEquals">
     <eStructuralFeatures xsi:type="ecore:EReference" name="assertableElement" upperBound="-1"
         eType="#//AssertableElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AssertContains" eSuperTypes="#//Statement">
+  <eClassifiers xsi:type="ecore:EClass" name="AssertContains">
     <eStructuralFeatures xsi:type="ecore:EReference" name="container" eType="#//AssertableElement"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//AssertableElement"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AssertableElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="NavigationAction" eSuperTypes="#//Statement">
+  <eClassifiers xsi:type="ecore:EClass" name="NavigationAction">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="param" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OneParameterAction" eSuperTypes="#//Statement">
+  <eClassifiers xsi:type="ecore:EClass" name="OneParameterAction">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selector" eType="#//Selector"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TwoParametersAction" eSuperTypes="#//Statement">
+  <eClassifiers xsi:type="ecore:EClass" name="TwoParametersAction">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selector" eType="#//Selector"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" eType="#//Selector"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Selector">
@@ -76,6 +81,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Attribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="val" eType="#//Variable"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FunctionParameters">

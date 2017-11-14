@@ -37,21 +37,20 @@ Projection:
 ProjectionAction: 'value' | 'text' | 'html';
 
 Statement:
-    OneParameterAction | 
+    statement = (OneParameterAction | 
     TwoParametersAction | 
     FunctionCall | 
     AssertEquals | 
     AssertContains | 
-    NavigationAction | 
-    Comment
+    NavigationAction)
 ;
 
 AssertEquals:
-    'assert' assertableElement += AssertableElement '=' assertableElement += AssertableElement
+    'assert' assertableElement += AssertableElement operator = '=' assertableElement += AssertableElement
 ;
 
 AssertContains:
-    'assert' container = AssertableElement 'contains' element = AssertableElement
+    'assert' container = AssertableElement operator = 'contains' element = AssertableElement
 ;
 
 AssertableElement:
@@ -70,7 +69,7 @@ OneParameterAction:
 ;
 
 TwoParametersAction:
-    action=TwoParametersActionType selector=Selector parameter=(Selector | Variable)
+    action=TwoParametersActionType selector=Selector parameter=Selector
 ;
 
 Selector:
@@ -82,7 +81,7 @@ Attributes:
 ;
 
 Attribute:
-    name=DOMAttribute '=' (STRING | val = [Variable])
+    name=DOMAttribute '=' (value = STRING | val = [Variable])
 ;
 
 DOMAttribute: 'name' | 'text' | 'alt' | 'checked' | 'class';
@@ -105,8 +104,4 @@ VariableCall:
 ;
 Variable:
     name=ID
-;
-
-Comment:
-	"#" + STRING 
 ;

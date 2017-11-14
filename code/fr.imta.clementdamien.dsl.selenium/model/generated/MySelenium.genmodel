@@ -32,12 +32,16 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Projection/selector"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//Projection/projectionAction"/>
     </genClasses>
-    <genClasses ecoreClass="MySelenium.ecore#//Statement"/>
+    <genClasses ecoreClass="MySelenium.ecore#//Statement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Statement/statement"/>
+    </genClasses>
     <genClasses ecoreClass="MySelenium.ecore#//AssertEquals">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//AssertEquals/assertableElement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//AssertEquals/operator"/>
     </genClasses>
     <genClasses ecoreClass="MySelenium.ecore#//AssertContains">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//AssertContains/container"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//AssertContains/operator"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//AssertContains/element"/>
     </genClasses>
     <genClasses ecoreClass="MySelenium.ecore#//AssertableElement"/>
@@ -63,6 +67,7 @@
     </genClasses>
     <genClasses ecoreClass="MySelenium.ecore#//Attribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//Attribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//Attribute/value"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Attribute/val"/>
     </genClasses>
     <genClasses ecoreClass="MySelenium.ecore#//FunctionParameters">

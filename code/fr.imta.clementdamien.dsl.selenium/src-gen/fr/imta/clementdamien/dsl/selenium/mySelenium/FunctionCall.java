@@ -21,7 +21,7 @@ package fr.imta.clementdamien.dsl.selenium.mySelenium;
  * @model
  * @generated
  */
-public interface FunctionCall extends Statement, AssertableElement
+public interface FunctionCall extends AssertableElement
 {
   /**
    * Returns the value of the '<em><b>Ref</b></em>' reference.
