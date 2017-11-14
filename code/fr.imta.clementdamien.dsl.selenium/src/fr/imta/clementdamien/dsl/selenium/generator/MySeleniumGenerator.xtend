@@ -107,10 +107,11 @@ class MySeleniumGenerator extends AbstractGenerator {
     
     
     def compile(Function function) '''
+    @Test
     private void «function.name.name»() {
     		«FOR statement:function.statements»
-           «statement.compileStatement»
-       «ENDFOR»
+    			«statement.compileStatement»
+       	«ENDFOR»
     }
     '''
     
@@ -123,7 +124,7 @@ class MySeleniumGenerator extends AbstractGenerator {
     «twoParametersAction.selector».«twoParametersAction.action»();
     '''
     
-    
+  
     def compile(Selector selector) '''
     driver.findElement(By.xpath("//«selector.element»[
     		«FOR attribute:selector.attrs.attrs»
