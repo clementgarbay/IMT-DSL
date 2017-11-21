@@ -159,3 +159,5 @@ xtend-gen/
 *.xml_gen
 
 .antlr*.jar
+
+runtime-Eclipse*

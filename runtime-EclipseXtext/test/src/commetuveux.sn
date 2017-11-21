@@ -1,7 +1,0 @@
-def main{
-    openBrowser "chrome"
-    go "http://www.imt-atlantique.fr/fr/rechercher"
-    fill input[type="text"] "Donald Trump"
-    click button[text="Appliquer les filtres"]
-    assert body[].html contains "Aucun résultat ne correspond à votre recherche"     
-}
