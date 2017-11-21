@@ -17,7 +17,7 @@ Statements:
 ;
 
 Function:
-    'def' name=FunctionName params = FunctionParameters* '{'
+    'def' name=FunctionName params = FunctionParameters? '{'
         statements += Statement*
     '}'
 ;
@@ -52,8 +52,8 @@ AssertContains:
     'assert' container = AssertableElement 'contains' element = AssertableElement
 ;
 
-AssertableElement:
-    Variable | STRING | Projection | FunctionCall
+AssertableElement: 
+    Variable | StringParameter | Projection | FunctionCall
 ;
 
 NavigationAction:
@@ -99,8 +99,11 @@ FunctionCallParameters:
 ;
 
 VariableCall:
-    name=[Variable] | STRING
+    name=[Variable] | StringParameter
 ;
 Variable:
     name=ID
+;
+StringParameter:
+    value=STRING
 ;
