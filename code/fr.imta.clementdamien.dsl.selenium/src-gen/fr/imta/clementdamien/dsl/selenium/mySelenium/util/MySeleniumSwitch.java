@@ -228,6 +228,15 @@ public class MySeleniumSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case MySeleniumPackage.STRING_PARAMETER:
+      {
+        StringParameter stringParameter = (StringParameter)theEObject;
+        T result = caseStringParameter(stringParameter);
+        if (result == null) result = caseAssertableElement(stringParameter);
+        if (result == null) result = caseVariableCall(stringParameter);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -564,6 +573,22 @@ public class MySeleniumSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseVariable(Variable object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>String Parameter</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>String Parameter</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStringParameter(StringParameter object)
   {
     return null;
   }

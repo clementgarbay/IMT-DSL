@@ -86,6 +86,7 @@ public class MySeleniumFactoryImpl extends EFactoryImpl implements MySeleniumFac
       case MySeleniumPackage.FUNCTION_CALL_PARAMETERS: return createFunctionCallParameters();
       case MySeleniumPackage.VARIABLE_CALL: return createVariableCall();
       case MySeleniumPackage.VARIABLE: return createVariable();
+      case MySeleniumPackage.STRING_PARAMETER: return createStringParameter();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -320,6 +321,17 @@ public class MySeleniumFactoryImpl extends EFactoryImpl implements MySeleniumFac
   {
     VariableImpl variable = new VariableImpl();
     return variable;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StringParameter createStringParameter()
+  {
+    StringParameterImpl stringParameter = new StringParameterImpl();
+    return stringParameter;
   }
 
   /**

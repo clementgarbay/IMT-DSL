@@ -771,6 +771,43 @@ public interface MySeleniumPackage extends EPackage
    */
   int VARIABLE_FEATURE_COUNT = ASSERTABLE_ELEMENT_FEATURE_COUNT + 1;
 
+  /**
+   * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.StringParameterImpl <em>String Parameter</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.StringParameterImpl
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getStringParameter()
+   * @generated
+   */
+  int STRING_PARAMETER = 21;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_PARAMETER__NAME = ASSERTABLE_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_PARAMETER__VALUE = ASSERTABLE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>String Parameter</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_PARAMETER_FEATURE_COUNT = ASSERTABLE_ELEMENT_FEATURE_COUNT + 2;
+
 
   /**
    * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Program <em>Program</em>}'.
@@ -1368,6 +1405,27 @@ public interface MySeleniumPackage extends EPackage
   EAttribute getVariable_Name();
 
   /**
+   * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.StringParameter <em>String Parameter</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>String Parameter</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.StringParameter
+   * @generated
+   */
+  EClass getStringParameter();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.StringParameter#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.StringParameter#getValue()
+   * @see #getStringParameter()
+   * @generated
+   */
+  EAttribute getStringParameter_Value();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1879,6 +1937,24 @@ public interface MySeleniumPackage extends EPackage
      * @generated
      */
     EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
+
+    /**
+     * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.StringParameterImpl <em>String Parameter</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.StringParameterImpl
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getStringParameter()
+     * @generated
+     */
+    EClass STRING_PARAMETER = eINSTANCE.getStringParameter();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute STRING_PARAMETER__VALUE = eINSTANCE.getStringParameter_Value();
 
   }
 

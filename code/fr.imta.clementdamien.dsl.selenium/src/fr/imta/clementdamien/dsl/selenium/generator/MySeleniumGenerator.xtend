@@ -128,19 +128,12 @@ class MySeleniumGenerator extends AbstractGenerator {
     )
     '''
     
-    def dispatch compileStatement(AssertContains assertContains) {
-		val element = {
-			if (assertContains.element !== null) 
-				'''.findElement(«assertContains.element.compileAssertableElement»)'''
-			else ''''''
-		}
-		
-		'''
+
+    def dispatch compileStatement(AssertContains assertContains) '''
 		Assertions.assertThatCode(() -> {
-		    «assertContains.container.compileAssertableElement»«element»;
-		}).doesNotThrowAnyException();
-		'''
-    }
+	        «assertContains.container.compileAssertableElement».findElement(«assertContains.element.compileAssertableElement»);
+	    }).doesNotThrowAnyException();
+    '''
     
     def dispatch compileStatement(AssertEquals assertEquals) '''
 	assertEquals(«assertEquals.getAssertableElement().get(0)», «assertEquals.getAssertableElement().get(1)»);
@@ -168,7 +161,7 @@ class MySeleniumGenerator extends AbstractGenerator {
     '''
     
     def dispatch compileAssertableElement(Variable variable) '''«variable.compile»'''
-    def dispatch compileAssertableElement(String string) '''«string»'''
+    def dispatch compileAssertableElement(StringParameter sp) '''"«sp.value»"'''
     def dispatch compileAssertableElement(Projection projection) '''«projection.compile»'''
     def dispatch compileAssertableElement(FunctionCall fc) '''«fc.compile»'''
     

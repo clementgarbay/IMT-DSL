@@ -23,6 +23,7 @@ import fr.imta.clementdamien.dsl.selenium.mySelenium.Projection;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Selector;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Statement;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Statements;
+import fr.imta.clementdamien.dsl.selenium.mySelenium.StringParameter;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.TwoParametersAction;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Variable;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.VariableCall;
@@ -188,6 +189,13 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
    * @generated
    */
   private EClass variableEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass stringParameterEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -817,6 +825,26 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getStringParameter()
+  {
+    return stringParameterEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getStringParameter_Value()
+  {
+    return (EAttribute)stringParameterEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public MySeleniumFactory getMySeleniumFactory()
   {
     return (MySeleniumFactory)getEFactoryInstance();
@@ -918,6 +946,9 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
 
     variableEClass = createEClass(VARIABLE);
     createEAttribute(variableEClass, VARIABLE__NAME);
+
+    stringParameterEClass = createEClass(STRING_PARAMETER);
+    createEAttribute(stringParameterEClass, STRING_PARAMETER__VALUE);
   }
 
   /**
@@ -957,6 +988,8 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
     navigationActionEClass.getESuperTypes().add(this.getStatement());
     oneParameterActionEClass.getESuperTypes().add(this.getStatement());
     variableEClass.getESuperTypes().add(this.getAssertableElement());
+    stringParameterEClass.getESuperTypes().add(this.getAssertableElement());
+    stringParameterEClass.getESuperTypes().add(this.getVariableCall());
 
     // Initialize classes and features; add operations and parameters
     initEClass(programEClass, Program.class, "Program", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1035,6 +1068,9 @@ public class MySeleniumPackageImpl extends EPackageImpl implements MySeleniumPac
 
     initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(stringParameterEClass, StringParameter.class, "StringParameter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getStringParameter_Value(), ecorePackage.getEString(), "value", null, 0, 1, StringParameter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

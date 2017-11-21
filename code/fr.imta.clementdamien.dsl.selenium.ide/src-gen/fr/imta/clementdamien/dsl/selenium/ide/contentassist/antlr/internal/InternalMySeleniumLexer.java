@@ -21,7 +21,7 @@ public class InternalMySeleniumLexer extends Lexer {
     public static final int T__12=12;
     public static final int T__13=13;
     public static final int T__14=14;
-    public static final int RULE_ID=5;
+    public static final int RULE_ID=4;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
@@ -34,7 +34,7 @@ public class InternalMySeleniumLexer extends Lexer {
     public static final int T__25=25;
     public static final int T__20=20;
     public static final int T__21=21;
-    public static final int RULE_STRING=4;
+    public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=8;
     public static final int T__37=37;
     public static final int T__38=38;
@@ -843,10 +843,10 @@ public class InternalMySeleniumLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalMySelenium.g:2946:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalMySelenium.g:2946:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalMySelenium.g:2986:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalMySelenium.g:2986:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalMySelenium.g:2946:11: ( '^' )?
+            // InternalMySelenium.g:2986:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -855,7 +855,7 @@ public class InternalMySeleniumLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalMySelenium.g:2946:11: '^'
+                    // InternalMySelenium.g:2986:11: '^'
                     {
                     match('^'); 
 
@@ -873,7 +873,7 @@ public class InternalMySeleniumLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalMySelenium.g:2946:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalMySelenium.g:2986:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -922,10 +922,10 @@ public class InternalMySeleniumLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalMySelenium.g:2948:10: ( ( '0' .. '9' )+ )
-            // InternalMySelenium.g:2948:12: ( '0' .. '9' )+
+            // InternalMySelenium.g:2988:10: ( ( '0' .. '9' )+ )
+            // InternalMySelenium.g:2988:12: ( '0' .. '9' )+
             {
-            // InternalMySelenium.g:2948:12: ( '0' .. '9' )+
+            // InternalMySelenium.g:2988:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -939,7 +939,7 @@ public class InternalMySeleniumLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalMySelenium.g:2948:13: '0' .. '9'
+            	    // InternalMySelenium.g:2988:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -971,10 +971,10 @@ public class InternalMySeleniumLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalMySelenium.g:2950:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalMySelenium.g:2950:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalMySelenium.g:2990:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalMySelenium.g:2990:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalMySelenium.g:2950:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalMySelenium.g:2990:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -992,10 +992,10 @@ public class InternalMySeleniumLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalMySelenium.g:2950:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalMySelenium.g:2990:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalMySelenium.g:2950:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalMySelenium.g:2990:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -1011,7 +1011,7 @@ public class InternalMySeleniumLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalMySelenium.g:2950:21: '\\\\' .
+                    	    // InternalMySelenium.g:2990:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1019,7 +1019,7 @@ public class InternalMySeleniumLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalMySelenium.g:2950:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalMySelenium.g:2990:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1044,10 +1044,10 @@ public class InternalMySeleniumLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalMySelenium.g:2950:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalMySelenium.g:2990:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalMySelenium.g:2950:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalMySelenium.g:2990:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1063,7 +1063,7 @@ public class InternalMySeleniumLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalMySelenium.g:2950:54: '\\\\' .
+                    	    // InternalMySelenium.g:2990:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1071,7 +1071,7 @@ public class InternalMySeleniumLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalMySelenium.g:2950:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalMySelenium.g:2990:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1114,12 +1114,12 @@ public class InternalMySeleniumLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalMySelenium.g:2952:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalMySelenium.g:2952:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalMySelenium.g:2992:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalMySelenium.g:2992:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalMySelenium.g:2952:24: ( options {greedy=false; } : . )*
+            // InternalMySelenium.g:2992:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1144,7 +1144,7 @@ public class InternalMySeleniumLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalMySelenium.g:2952:52: .
+            	    // InternalMySelenium.g:2992:52: .
             	    {
             	    matchAny(); 
 
@@ -1174,12 +1174,12 @@ public class InternalMySeleniumLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalMySelenium.g:2954:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalMySelenium.g:2954:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalMySelenium.g:2994:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalMySelenium.g:2994:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalMySelenium.g:2954:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalMySelenium.g:2994:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1192,7 +1192,7 @@ public class InternalMySeleniumLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalMySelenium.g:2954:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalMySelenium.g:2994:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1212,7 +1212,7 @@ public class InternalMySeleniumLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalMySelenium.g:2954:40: ( ( '\\r' )? '\\n' )?
+            // InternalMySelenium.g:2994:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1221,9 +1221,9 @@ public class InternalMySeleniumLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalMySelenium.g:2954:41: ( '\\r' )? '\\n'
+                    // InternalMySelenium.g:2994:41: ( '\\r' )? '\\n'
                     {
-                    // InternalMySelenium.g:2954:41: ( '\\r' )?
+                    // InternalMySelenium.g:2994:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1232,7 +1232,7 @@ public class InternalMySeleniumLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalMySelenium.g:2954:41: '\\r'
+                            // InternalMySelenium.g:2994:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1264,10 +1264,10 @@ public class InternalMySeleniumLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalMySelenium.g:2956:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalMySelenium.g:2956:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalMySelenium.g:2996:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalMySelenium.g:2996:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalMySelenium.g:2956:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalMySelenium.g:2996:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1321,8 +1321,8 @@ public class InternalMySeleniumLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalMySelenium.g:2958:16: ( . )
-            // InternalMySelenium.g:2958:18: .
+            // InternalMySelenium.g:2998:16: ( . )
+            // InternalMySelenium.g:2998:18: .
             {
             matchAny(); 
 

@@ -81,5 +81,8 @@
     <genClasses ecoreClass="MySelenium.ecore#//Variable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//Variable/name"/>
     </genClasses>
+    <genClasses ecoreClass="MySelenium.ecore#//StringParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//StringParameter/value"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

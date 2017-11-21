@@ -21,6 +21,7 @@ import fr.imta.clementdamien.dsl.selenium.mySelenium.Program;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Projection;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Selector;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Statements;
+import fr.imta.clementdamien.dsl.selenium.mySelenium.StringParameter;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.TwoParametersAction;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Variable;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.VariableCall;
@@ -97,6 +98,9 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 				return; 
 			case MySeleniumPackage.STATEMENTS:
 				sequence_Statements(context, (Statements) semanticObject); 
+				return; 
+			case MySeleniumPackage.STRING_PARAMETER:
+				sequence_StringParameter(context, (StringParameter) semanticObject); 
 				return; 
 			case MySeleniumPackage.TWO_PARAMETERS_ACTION:
 				sequence_TwoParametersAction(context, (TwoParametersAction) semanticObject); 
@@ -241,7 +245,7 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Function returns Function
 	 *
 	 * Constraint:
-	 *     (name=FunctionName params=FunctionParameters* statements+=Statement*)
+	 *     (name=FunctionName params=FunctionParameters? statements+=Statement*)
 	 */
 	protected void sequence_Function(ISerializationContext context, Function semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -350,6 +354,26 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 */
 	protected void sequence_Statements(ISerializationContext context, Statements semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     AssertableElement returns StringParameter
+	 *     VariableCall returns StringParameter
+	 *     StringParameter returns StringParameter
+	 *
+	 * Constraint:
+	 *     value=STRING
+	 */
+	protected void sequence_StringParameter(ISerializationContext context, StringParameter semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, MySeleniumPackage.Literals.STRING_PARAMETER__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MySeleniumPackage.Literals.STRING_PARAMETER__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getStringParameterAccess().getValueSTRINGTerminalRuleCall_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 	
 	

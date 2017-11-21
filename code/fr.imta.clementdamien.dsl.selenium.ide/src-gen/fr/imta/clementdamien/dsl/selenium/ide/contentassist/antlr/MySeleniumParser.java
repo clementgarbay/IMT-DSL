@@ -98,6 +98,7 @@ public class MySeleniumParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFunctionCallParametersAccess().getVariablesAssignment_2_1(), "rule__FunctionCallParameters__VariablesAssignment_2_1");
 					put(grammarAccess.getVariableCallAccess().getNameAssignment_0(), "rule__VariableCall__NameAssignment_0");
 					put(grammarAccess.getVariableAccess().getNameAssignment(), "rule__Variable__NameAssignment");
+					put(grammarAccess.getStringParameterAccess().getValueAssignment(), "rule__StringParameter__ValueAssignment");
 				}
 			};
 		}

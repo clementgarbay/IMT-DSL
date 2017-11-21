@@ -213,6 +213,15 @@ public interface MySeleniumFactory extends EFactory
   Variable createVariable();
 
   /**
+   * Returns a new object of class '<em>String Parameter</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>String Parameter</em>'.
+   * @generated
+   */
+  StringParameter createStringParameter();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -94,12 +94,12 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Function:
-		//	'def' name=FunctionName params=FunctionParameters* '{'
+		//	'def' name=FunctionName params=FunctionParameters? '{'
 		//	statements+=Statement*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'def' name=FunctionName params=FunctionParameters* '{' statements+=Statement* '}'
+		//'def' name=FunctionName params=FunctionParameters? '{' statements+=Statement* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'def'
@@ -111,7 +111,7 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		//FunctionName
 		public RuleCall getNameFunctionNameParserRuleCall_1_0() { return cNameFunctionNameParserRuleCall_1_0; }
 		
-		//params=FunctionParameters*
+		//params=FunctionParameters?
 		public Assignment getParamsAssignment_2() { return cParamsAssignment_2; }
 		
 		//FunctionParameters
@@ -334,22 +334,22 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.imta.clementdamien.dsl.selenium.MySelenium.AssertableElement");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cVariableParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cSTRINGTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cStringParameterParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cProjectionParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cFunctionCallParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
 		//AssertableElement:
-		//	Variable | STRING | Projection | FunctionCall;
+		//	Variable | StringParameter | Projection | FunctionCall;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Variable | STRING | Projection | FunctionCall
+		//Variable | StringParameter | Projection | FunctionCall
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//Variable
 		public RuleCall getVariableParserRuleCall_0() { return cVariableParserRuleCall_0; }
 		
-		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_1() { return cSTRINGTerminalRuleCall_1; }
+		//StringParameter
+		public RuleCall getStringParameterParserRuleCall_1() { return cStringParameterParserRuleCall_1; }
 		
 		//Projection
 		public RuleCall getProjectionParserRuleCall_2() { return cProjectionParserRuleCall_2; }
@@ -838,13 +838,13 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
 		private final CrossReference cNameVariableCrossReference_0_0 = (CrossReference)cNameAssignment_0.eContents().get(0);
 		private final RuleCall cNameVariableIDTerminalRuleCall_0_0_1 = (RuleCall)cNameVariableCrossReference_0_0.eContents().get(1);
-		private final RuleCall cSTRINGTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cStringParameterParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//VariableCall:
-		//	name=[Variable] | STRING;
+		//	name=[Variable] | StringParameter;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//name=[Variable] | STRING
+		//name=[Variable] | StringParameter
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//name=[Variable]
@@ -856,8 +856,8 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameVariableIDTerminalRuleCall_0_0_1() { return cNameVariableIDTerminalRuleCall_0_0_1; }
 		
-		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_1() { return cSTRINGTerminalRuleCall_1; }
+		//StringParameter
+		public RuleCall getStringParameterParserRuleCall_1() { return cStringParameterParserRuleCall_1; }
 	}
 	public class VariableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.imta.clementdamien.dsl.selenium.MySelenium.Variable");
@@ -873,6 +873,21 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_0() { return cNameIDTerminalRuleCall_0; }
+	}
+	public class StringParameterElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.imta.clementdamien.dsl.selenium.MySelenium.StringParameter");
+		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cValueSTRINGTerminalRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
+		
+		//StringParameter:
+		//	value=STRING;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//value=STRING
+		public Assignment getValueAssignment() { return cValueAssignment; }
+		
+		//STRING
+		public RuleCall getValueSTRINGTerminalRuleCall_0() { return cValueSTRINGTerminalRuleCall_0; }
 	}
 	
 	
@@ -903,6 +918,7 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 	private final FunctionCallParametersElements pFunctionCallParameters;
 	private final VariableCallElements pVariableCall;
 	private final VariableElements pVariable;
+	private final StringParameterElements pStringParameter;
 	
 	private final Grammar grammar;
 	
@@ -940,6 +956,7 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		this.pFunctionCallParameters = new FunctionCallParametersElements();
 		this.pVariableCall = new VariableCallElements();
 		this.pVariable = new VariableElements();
+		this.pStringParameter = new StringParameterElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -1000,7 +1017,7 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Function:
-	//	'def' name=FunctionName params=FunctionParameters* '{'
+	//	'def' name=FunctionName params=FunctionParameters? '{'
 	//	statements+=Statement*
 	//	'}';
 	public FunctionElements getFunctionAccess() {
@@ -1082,7 +1099,7 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//AssertableElement:
-	//	Variable | STRING | Projection | FunctionCall;
+	//	Variable | StringParameter | Projection | FunctionCall;
 	public AssertableElementElements getAssertableElementAccess() {
 		return pAssertableElement;
 	}
@@ -1222,7 +1239,7 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//VariableCall:
-	//	name=[Variable] | STRING;
+	//	name=[Variable] | StringParameter;
 	public VariableCallElements getVariableCallAccess() {
 		return pVariableCall;
 	}
@@ -1239,6 +1256,16 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getVariableRule() {
 		return getVariableAccess().getRule();
+	}
+	
+	//StringParameter:
+	//	value=STRING;
+	public StringParameterElements getStringParameterAccess() {
+		return pStringParameter;
+	}
+	
+	public ParserRule getStringParameterRule() {
+		return getStringParameterAccess().getRule();
 	}
 	
 	//terminal ID:

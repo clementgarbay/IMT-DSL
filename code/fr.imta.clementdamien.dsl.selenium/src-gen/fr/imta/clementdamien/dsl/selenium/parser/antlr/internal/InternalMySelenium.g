@@ -247,7 +247,7 @@ ruleFunction returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)*
+		)?
 		otherlv_3='{'
 		{
 			newLeafNode(otherlv_3, grammarAccess.getFunctionAccess().getLeftCurlyBracketKeyword_3());
@@ -679,9 +679,13 @@ ruleAssertableElement returns [EObject current=null]
 			afterParserOrEnumRuleCall();
 		}
 		    |
-		this_STRING_1=RULE_STRING
 		{
-			newLeafNode(this_STRING_1, grammarAccess.getAssertableElementAccess().getSTRINGTerminalRuleCall_1());
+			newCompositeNode(grammarAccess.getAssertableElementAccess().getStringParameterParserRuleCall_1());
+		}
+		this_StringParameter_1=ruleStringParameter
+		{
+			$current = $this_StringParameter_1.current;
+			afterParserOrEnumRuleCall();
 		}
 		    |
 		{
@@ -1487,9 +1491,13 @@ ruleVariableCall returns [EObject current=null]
 			)
 		)
 		    |
-		this_STRING_1=RULE_STRING
 		{
-			newLeafNode(this_STRING_1, grammarAccess.getVariableCallAccess().getSTRINGTerminalRuleCall_1());
+			newCompositeNode(grammarAccess.getVariableCallAccess().getStringParameterParserRuleCall_1());
+		}
+		this_StringParameter_1=ruleStringParameter
+		{
+			$current = $this_StringParameter_1.current;
+			afterParserOrEnumRuleCall();
 		}
 	)
 ;
@@ -1524,6 +1532,41 @@ ruleVariable returns [EObject current=null]
 					"name",
 					lv_name_0_0,
 					"org.eclipse.xtext.common.Terminals.ID");
+			}
+		)
+	)
+;
+
+// Entry rule entryRuleStringParameter
+entryRuleStringParameter returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getStringParameterRule()); }
+	iv_ruleStringParameter=ruleStringParameter
+	{ $current=$iv_ruleStringParameter.current; }
+	EOF;
+
+// Rule StringParameter
+ruleStringParameter returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			lv_value_0_0=RULE_STRING
+			{
+				newLeafNode(lv_value_0_0, grammarAccess.getStringParameterAccess().getValueSTRINGTerminalRuleCall_0());
+			}
+			{
+				if ($current==null) {
+					$current = createModelElement(grammarAccess.getStringParameterRule());
+				}
+				setWithLastConsumed(
+					$current,
+					"value",
+					lv_value_0_0,
+					"org.eclipse.xtext.common.Terminals.STRING");
 			}
 		)
 	)
