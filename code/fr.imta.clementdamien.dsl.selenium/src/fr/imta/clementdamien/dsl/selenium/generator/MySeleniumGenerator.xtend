@@ -87,10 +87,28 @@ class MySeleniumGenerator extends AbstractGenerator {
     '''
     
     
-    def dispatch compileStatement(OneParameterAction oneParameterAction) '''
-    «oneParameterAction.selector.compile».«oneParameterAction.action»();
+    def dispatch compileStatement(OneParameterAction oneParameterAction) {
+		val stringParameter = oneParameterAction.getStringParameter()
+		val selectorParameter = oneParameterAction.getSelectorParameter()
+		if (stringParameter !== null) {
+			'''
+			«oneParameterAction.getSelector().compile».«oneParameterAction.action»("«stringParameter»");
+			
+			'''
+    		} else if (selectorParameter !== null) {
+    			// TODO
+    			'''
+    			«oneParameterAction.selector.compile».«oneParameterAction.action»();
+    			
+	    		'''
+	    	} else {
+    			'''
+    			«oneParameterAction.selector.compile».«oneParameterAction.action»();
+    			
+	    		'''
+		}
+    }
     
-    '''
     
     def dispatch compileStatement(TwoParametersAction twoParametersAction) '''
     // todo TwoParametersAction
@@ -146,7 +164,7 @@ class MySeleniumGenerator extends AbstractGenerator {
     // TODO manage attribute.val
     driver.findElement(By.xpath("//«selector.element»[«selector.attrs.attrs.map[attribute | 
 			'''(@«attribute.name» = '«attribute.value»')'''
-		].join(" AND ")»"));
+		].join(" AND ")»"))
     '''
     
 }
