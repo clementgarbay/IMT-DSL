@@ -116,7 +116,7 @@ class MySeleniumGenerator extends AbstractGenerator {
     '''
     
     def dispatch compileStatement(AssertEquals assertEquals) '''
-    // todo assert equals
+	assertEquals(«assertEquals.getAssertableElement().get(0)», «assertEquals.getAssertableElement().get(1)»);
     '''
     
     def dispatch compileStatement(NavigationAction navigationAction) '''
