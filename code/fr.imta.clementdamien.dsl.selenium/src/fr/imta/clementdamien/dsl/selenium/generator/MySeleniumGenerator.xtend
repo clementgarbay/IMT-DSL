@@ -127,11 +127,19 @@ class MySeleniumGenerator extends AbstractGenerator {
     )
     '''
     
-    def dispatch compileStatement(AssertContains assertContains) '''
-    	Assertions.assertThatCode(() -> {
-        driver.findElement(«assertContains.container»).findElement(«assertContains.element»);
-    }).doesNotThrowAnyException();
-    '''
+    def dispatch compileStatement(AssertContains assertContains) {
+		val element = {
+			if (assertContains.element !== null) 
+				'''.findElement(«assertContains.element.compileAssertableElement»)'''
+			else ''''''
+		}
+		
+		'''
+		Assertions.assertThatCode(() -> {
+		    «assertContains.container.compileAssertableElement»«element»;
+		}).doesNotThrowAnyException();
+		'''
+    }
     
     def dispatch compileStatement(AssertEquals assertEquals) '''
 	assertEquals(«assertEquals.getAssertableElement().get(0)», «assertEquals.getAssertableElement().get(1)»);
@@ -158,13 +166,33 @@ class MySeleniumGenerator extends AbstractGenerator {
  	
     '''
     
+    
+    def dispatch compileAssertableElement(Variable variable) '''«variable.compile»'''
+    def dispatch compileAssertableElement(String string) '''«string»'''
+    def dispatch compileAssertableElement(Projection projection) '''«projection.compile»'''
+    def dispatch compileAssertableElement(FunctionCall fc) '''«fc.compile»'''
+    
+    def compile(Variable variable) '''«variable.name»'''
+    
+    def compile(Projection projection) '''«projection.selector.compile».getAttribute("«projection.projectionAction»")'''
+    
+    def compile(FunctionCall fc) '''«fc.ref»(«fc.params.variables.map[variable |
+    		'''«variable.name»'''
+    ].join(", ")»)'''
+  
+	def compileSelectorAttributes(Selector selector){
+		if (selector.attrs !== null && selector.attrs.attrs != null) {
+			return selector.attrs.attrs.map[attribute | 
+				'''(@«attribute.name» = '«attribute.value»')'''
+			].join(" AND ")
+		}
+		''''''
+	}
   
     def compile(Selector selector) '''
     // selector
     // TODO manage attribute.val
-    driver.findElement(By.xpath("//«selector.element»[«selector.attrs.attrs.map[attribute | 
-			'''(@«attribute.name» = '«attribute.value»')'''
-		].join(" AND ")»"))
+    driver.findElement(By.xpath("//«selector.element»[«selector.compileSelectorAttributes»]"));
     '''
     
 }
