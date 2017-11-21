@@ -118,20 +118,17 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     AssertContains returns AssertContains
 	 *
 	 * Constraint:
-	 *     (container=AssertableElement operator='contains' element=AssertableElement)
+	 *     (container=AssertableElement element=AssertableElement)
 	 */
 	protected void sequence_AssertContains(ISerializationContext context, AssertContains semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, MySeleniumPackage.Literals.ASSERT_CONTAINS__CONTAINER) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MySeleniumPackage.Literals.ASSERT_CONTAINS__CONTAINER));
-			if (transientValues.isValueTransient(semanticObject, MySeleniumPackage.Literals.ASSERT_CONTAINS__OPERATOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MySeleniumPackage.Literals.ASSERT_CONTAINS__OPERATOR));
 			if (transientValues.isValueTransient(semanticObject, MySeleniumPackage.Literals.ASSERT_CONTAINS__ELEMENT) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MySeleniumPackage.Literals.ASSERT_CONTAINS__ELEMENT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getAssertContainsAccess().getContainerAssertableElementParserRuleCall_1_0(), semanticObject.getContainer());
-		feeder.accept(grammarAccess.getAssertContainsAccess().getOperatorContainsKeyword_2_0(), semanticObject.getOperator());
 		feeder.accept(grammarAccess.getAssertContainsAccess().getElementAssertableElementParserRuleCall_3_0(), semanticObject.getElement());
 		feeder.finish();
 	}
@@ -143,7 +140,7 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     AssertEquals returns AssertEquals
 	 *
 	 * Constraint:
-	 *     (assertableElement+=AssertableElement operator='=' assertableElement+=AssertableElement)
+	 *     (assertableElement+=AssertableElement assertableElement+=AssertableElement)
 	 */
 	protected void sequence_AssertEquals(ISerializationContext context, AssertEquals semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -337,7 +334,7 @@ public class MySeleniumSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     Selector returns Selector
 	 *
 	 * Constraint:
-	 *     (element=DOMElement attrs=Attributes?)
+	 *     (element=DOMElement attrs=Attributes? all?='.all'?)
 	 */
 	protected void sequence_Selector(ISerializationContext context, Selector semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

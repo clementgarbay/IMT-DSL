@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AssertContainsImpl#getContainer <em>Container</em>}</li>
- *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AssertContainsImpl#getOperator <em>Operator</em>}</li>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AssertContainsImpl#getElement <em>Element</em>}</li>
  * </ul>
  *
@@ -41,26 +40,6 @@ public class AssertContainsImpl extends StatementImpl implements AssertContains
    * @ordered
    */
   protected AssertableElement container;
-
-  /**
-   * The default value of the '{@link #getOperator() <em>Operator</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getOperator()
-   * @generated
-   * @ordered
-   */
-  protected static final String OPERATOR_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getOperator() <em>Operator</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getOperator()
-   * @generated
-   * @ordered
-   */
-  protected String operator = OPERATOR_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getElement() <em>Element</em>}' containment reference.
@@ -146,29 +125,6 @@ public class AssertContainsImpl extends StatementImpl implements AssertContains
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getOperator()
-  {
-    return operator;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setOperator(String newOperator)
-  {
-    String oldOperator = operator;
-    operator = newOperator;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MySeleniumPackage.ASSERT_CONTAINS__OPERATOR, oldOperator, operator));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public AssertableElement getElement()
   {
     return element;
@@ -242,8 +198,6 @@ public class AssertContainsImpl extends StatementImpl implements AssertContains
     {
       case MySeleniumPackage.ASSERT_CONTAINS__CONTAINER:
         return getContainer();
-      case MySeleniumPackage.ASSERT_CONTAINS__OPERATOR:
-        return getOperator();
       case MySeleniumPackage.ASSERT_CONTAINS__ELEMENT:
         return getElement();
     }
@@ -262,9 +216,6 @@ public class AssertContainsImpl extends StatementImpl implements AssertContains
     {
       case MySeleniumPackage.ASSERT_CONTAINS__CONTAINER:
         setContainer((AssertableElement)newValue);
-        return;
-      case MySeleniumPackage.ASSERT_CONTAINS__OPERATOR:
-        setOperator((String)newValue);
         return;
       case MySeleniumPackage.ASSERT_CONTAINS__ELEMENT:
         setElement((AssertableElement)newValue);
@@ -286,9 +237,6 @@ public class AssertContainsImpl extends StatementImpl implements AssertContains
       case MySeleniumPackage.ASSERT_CONTAINS__CONTAINER:
         setContainer((AssertableElement)null);
         return;
-      case MySeleniumPackage.ASSERT_CONTAINS__OPERATOR:
-        setOperator(OPERATOR_EDEFAULT);
-        return;
       case MySeleniumPackage.ASSERT_CONTAINS__ELEMENT:
         setElement((AssertableElement)null);
         return;
@@ -308,29 +256,10 @@ public class AssertContainsImpl extends StatementImpl implements AssertContains
     {
       case MySeleniumPackage.ASSERT_CONTAINS__CONTAINER:
         return container != null;
-      case MySeleniumPackage.ASSERT_CONTAINS__OPERATOR:
-        return OPERATOR_EDEFAULT == null ? operator != null : !OPERATOR_EDEFAULT.equals(operator);
       case MySeleniumPackage.ASSERT_CONTAINS__ELEMENT:
         return element != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (operator: ");
-    result.append(operator);
-    result.append(')');
-    return result.toString();
   }
 
 } //AssertContainsImpl

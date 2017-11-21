@@ -932,9 +932,15 @@ rule__DOMAttribute__Alternatives
 	)
 	|
 	(
-		{ before(grammarAccess.getDOMAttributeAccess().getTypeKeyword_5()); }
+		{ before(grammarAccess.getDOMAttributeAccess().getIdKeyword_5()); }
+		'id'
+		{ after(grammarAccess.getDOMAttributeAccess().getIdKeyword_5()); }
+	)
+	|
+	(
+		{ before(grammarAccess.getDOMAttributeAccess().getTypeKeyword_6()); }
 		'type'
-		{ after(grammarAccess.getDOMAttributeAccess().getTypeKeyword_5()); }
+		{ after(grammarAccess.getDOMAttributeAccess().getTypeKeyword_6()); }
 	)
 ;
 finally {
@@ -1454,9 +1460,9 @@ rule__AssertEquals__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getAssertEqualsAccess().getOperatorAssignment_2()); }
-	(rule__AssertEquals__OperatorAssignment_2)
-	{ after(grammarAccess.getAssertEqualsAccess().getOperatorAssignment_2()); }
+	{ before(grammarAccess.getAssertEqualsAccess().getEqualsSignKeyword_2()); }
+	'='
+	{ after(grammarAccess.getAssertEqualsAccess().getEqualsSignKeyword_2()); }
 )
 ;
 finally {
@@ -1562,9 +1568,9 @@ rule__AssertContains__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getAssertContainsAccess().getOperatorAssignment_2()); }
-	(rule__AssertContains__OperatorAssignment_2)
-	{ after(grammarAccess.getAssertContainsAccess().getOperatorAssignment_2()); }
+	{ before(grammarAccess.getAssertContainsAccess().getContainsKeyword_2()); }
+	'contains'
+	{ after(grammarAccess.getAssertContainsAccess().getContainsKeyword_2()); }
 )
 ;
 finally {
@@ -1858,9 +1864,9 @@ rule__Selector__Group__4__Impl
 	}
 :
 (
-	{ before(grammarAccess.getSelectorAccess().getAllKeyword_4()); }
-	('.all')?
-	{ after(grammarAccess.getSelectorAccess().getAllKeyword_4()); }
+	{ before(grammarAccess.getSelectorAccess().getAllAssignment_4()); }
+	(rule__Selector__AllAssignment_4)?
+	{ after(grammarAccess.getSelectorAccess().getAllAssignment_4()); }
 )
 ;
 finally {
@@ -2580,25 +2586,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__AssertEquals__OperatorAssignment_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getAssertEqualsAccess().getOperatorEqualsSignKeyword_2_0()); }
-		(
-			{ before(grammarAccess.getAssertEqualsAccess().getOperatorEqualsSignKeyword_2_0()); }
-			'='
-			{ after(grammarAccess.getAssertEqualsAccess().getOperatorEqualsSignKeyword_2_0()); }
-		)
-		{ after(grammarAccess.getAssertEqualsAccess().getOperatorEqualsSignKeyword_2_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 rule__AssertEquals__AssertableElementAssignment_3
 	@init {
 		int stackSize = keepStackSize();
@@ -2623,25 +2610,6 @@ rule__AssertContains__ContainerAssignment_1
 		{ before(grammarAccess.getAssertContainsAccess().getContainerAssertableElementParserRuleCall_1_0()); }
 		ruleAssertableElement
 		{ after(grammarAccess.getAssertContainsAccess().getContainerAssertableElementParserRuleCall_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__AssertContains__OperatorAssignment_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getAssertContainsAccess().getOperatorContainsKeyword_2_0()); }
-		(
-			{ before(grammarAccess.getAssertContainsAccess().getOperatorContainsKeyword_2_0()); }
-			'contains'
-			{ after(grammarAccess.getAssertContainsAccess().getOperatorContainsKeyword_2_0()); }
-		)
-		{ after(grammarAccess.getAssertContainsAccess().getOperatorContainsKeyword_2_0()); }
 	)
 ;
 finally {
@@ -2777,6 +2745,25 @@ rule__Selector__AttrsAssignment_2
 		{ before(grammarAccess.getSelectorAccess().getAttrsAttributesParserRuleCall_2_0()); }
 		ruleAttributes
 		{ after(grammarAccess.getSelectorAccess().getAttrsAttributesParserRuleCall_2_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__Selector__AllAssignment_4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getSelectorAccess().getAllAllKeyword_4_0()); }
+		(
+			{ before(grammarAccess.getSelectorAccess().getAllAllKeyword_4_0()); }
+			'.all'
+			{ after(grammarAccess.getSelectorAccess().getAllAllKeyword_4_0()); }
+		)
+		{ after(grammarAccess.getSelectorAccess().getAllAllKeyword_4_0()); }
 	)
 ;
 finally {

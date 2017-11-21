@@ -266,16 +266,15 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cAssertKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cAssertableElementAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cAssertableElementAssertableElementParserRuleCall_1_0 = (RuleCall)cAssertableElementAssignment_1.eContents().get(0);
-		private final Assignment cOperatorAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final Keyword cOperatorEqualsSignKeyword_2_0 = (Keyword)cOperatorAssignment_2.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cAssertableElementAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cAssertableElementAssertableElementParserRuleCall_3_0 = (RuleCall)cAssertableElementAssignment_3.eContents().get(0);
 		
 		//AssertEquals:
-		//	'assert' assertableElement+=AssertableElement operator='=' assertableElement+=AssertableElement;
+		//	'assert' assertableElement+=AssertableElement '=' assertableElement+=AssertableElement;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'assert' assertableElement+=AssertableElement operator='=' assertableElement+=AssertableElement
+		//'assert' assertableElement+=AssertableElement '=' assertableElement+=AssertableElement
 		public Group getGroup() { return cGroup; }
 		
 		//'assert'
@@ -287,11 +286,8 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		//AssertableElement
 		public RuleCall getAssertableElementAssertableElementParserRuleCall_1_0() { return cAssertableElementAssertableElementParserRuleCall_1_0; }
 		
-		//operator='='
-		public Assignment getOperatorAssignment_2() { return cOperatorAssignment_2; }
-		
 		//'='
-		public Keyword getOperatorEqualsSignKeyword_2_0() { return cOperatorEqualsSignKeyword_2_0; }
+		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
 		
 		//assertableElement+=AssertableElement
 		public Assignment getAssertableElementAssignment_3() { return cAssertableElementAssignment_3; }
@@ -305,16 +301,15 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cAssertKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cContainerAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cContainerAssertableElementParserRuleCall_1_0 = (RuleCall)cContainerAssignment_1.eContents().get(0);
-		private final Assignment cOperatorAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final Keyword cOperatorContainsKeyword_2_0 = (Keyword)cOperatorAssignment_2.eContents().get(0);
+		private final Keyword cContainsKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cElementAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cElementAssertableElementParserRuleCall_3_0 = (RuleCall)cElementAssignment_3.eContents().get(0);
 		
 		//AssertContains:
-		//	'assert' container=AssertableElement operator='contains' element=AssertableElement;
+		//	'assert' container=AssertableElement 'contains' element=AssertableElement;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'assert' container=AssertableElement operator='contains' element=AssertableElement
+		//'assert' container=AssertableElement 'contains' element=AssertableElement
 		public Group getGroup() { return cGroup; }
 		
 		//'assert'
@@ -326,11 +321,8 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		//AssertableElement
 		public RuleCall getContainerAssertableElementParserRuleCall_1_0() { return cContainerAssertableElementParserRuleCall_1_0; }
 		
-		//operator='contains'
-		public Assignment getOperatorAssignment_2() { return cOperatorAssignment_2; }
-		
 		//'contains'
-		public Keyword getOperatorContainsKeyword_2_0() { return cOperatorContainsKeyword_2_0; }
+		public Keyword getContainsKeyword_2() { return cContainsKeyword_2; }
 		
 		//element=AssertableElement
 		public Assignment getElementAssignment_3() { return cElementAssignment_3; }
@@ -502,13 +494,14 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cAttrsAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cAttrsAttributesParserRuleCall_2_0 = (RuleCall)cAttrsAssignment_2.eContents().get(0);
 		private final Keyword cRightSquareBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cAllKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cAllAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final Keyword cAllAllKeyword_4_0 = (Keyword)cAllAssignment_4.eContents().get(0);
 		
 		//Selector:
-		//	element=DOMElement '[' attrs=Attributes? ']' '.all'?;
+		//	element=DOMElement '[' attrs=Attributes? ']' all?='.all'?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//element=DOMElement '[' attrs=Attributes? ']' '.all'?
+		//element=DOMElement '[' attrs=Attributes? ']' all?='.all'?
 		public Group getGroup() { return cGroup; }
 		
 		//element=DOMElement
@@ -529,8 +522,11 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		//']'
 		public Keyword getRightSquareBracketKeyword_3() { return cRightSquareBracketKeyword_3; }
 		
-		//'.all'?
-		public Keyword getAllKeyword_4() { return cAllKeyword_4; }
+		//all?='.all'?
+		public Assignment getAllAssignment_4() { return cAllAssignment_4; }
+		
+		//'.all'
+		public Keyword getAllAllKeyword_4_0() { return cAllAllKeyword_4_0; }
 	}
 	public class AttributesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.imta.clementdamien.dsl.selenium.MySelenium.Attributes");
@@ -622,13 +618,14 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cAltKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
 		private final Keyword cCheckedKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
 		private final Keyword cClassKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
-		private final Keyword cTypeKeyword_5 = (Keyword)cAlternatives.eContents().get(5);
+		private final Keyword cIdKeyword_5 = (Keyword)cAlternatives.eContents().get(5);
+		private final Keyword cTypeKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
 		
 		//DOMAttribute:
-		//	'name' | 'text' | 'alt' | 'checked' | 'class' | 'type';
+		//	'name' | 'text' | 'alt' | 'checked' | 'class' | 'id' | 'type';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'name' | 'text' | 'alt' | 'checked' | 'class' | 'type'
+		//'name' | 'text' | 'alt' | 'checked' | 'class' | 'id' | 'type'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//'name'
@@ -646,8 +643,11 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		//'class'
 		public Keyword getClassKeyword_4() { return cClassKeyword_4; }
 		
+		//'id'
+		public Keyword getIdKeyword_5() { return cIdKeyword_5; }
+		
 		//'type'
-		public Keyword getTypeKeyword_5() { return cTypeKeyword_5; }
+		public Keyword getTypeKeyword_6() { return cTypeKeyword_6; }
 	}
 	public class DOMElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.imta.clementdamien.dsl.selenium.MySelenium.DOMElement");
@@ -1062,7 +1062,7 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//AssertEquals:
-	//	'assert' assertableElement+=AssertableElement operator='=' assertableElement+=AssertableElement;
+	//	'assert' assertableElement+=AssertableElement '=' assertableElement+=AssertableElement;
 	public AssertEqualsElements getAssertEqualsAccess() {
 		return pAssertEquals;
 	}
@@ -1072,7 +1072,7 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//AssertContains:
-	//	'assert' container=AssertableElement operator='contains' element=AssertableElement;
+	//	'assert' container=AssertableElement 'contains' element=AssertableElement;
 	public AssertContainsElements getAssertContainsAccess() {
 		return pAssertContains;
 	}
@@ -1132,7 +1132,7 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Selector:
-	//	element=DOMElement '[' attrs=Attributes? ']' '.all'?;
+	//	element=DOMElement '[' attrs=Attributes? ']' all?='.all'?;
 	public SelectorElements getSelectorAccess() {
 		return pSelector;
 	}
@@ -1162,7 +1162,7 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DOMAttribute:
-	//	'name' | 'text' | 'alt' | 'checked' | 'class' | 'type';
+	//	'name' | 'text' | 'alt' | 'checked' | 'class' | 'id' | 'type';
 	public DOMAttributeElements getDOMAttributeAccess() {
 		return pDOMAttribute;
 	}

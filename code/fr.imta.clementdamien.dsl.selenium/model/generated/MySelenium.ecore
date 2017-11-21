@@ -41,12 +41,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="AssertEquals" eSuperTypes="#//Statement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="assertableElement" upperBound="-1"
         eType="#//AssertableElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AssertContains" eSuperTypes="#//Statement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="container" eType="#//AssertableElement"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//AssertableElement"
         containment="true"/>
   </eClassifiers>
@@ -74,6 +72,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="element" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attrs" eType="#//Attributes"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="all" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Attributes">
     <eStructuralFeatures xsi:type="ecore:EReference" name="attrs" upperBound="-1"

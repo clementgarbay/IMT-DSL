@@ -563,20 +563,10 @@ ruleAssertEquals returns [EObject current=null]
 				}
 			)
 		)
-		(
-			(
-				lv_operator_2_0='='
-				{
-					newLeafNode(lv_operator_2_0, grammarAccess.getAssertEqualsAccess().getOperatorEqualsSignKeyword_2_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getAssertEqualsRule());
-					}
-					setWithLastConsumed($current, "operator", lv_operator_2_0, "=");
-				}
-			)
-		)
+		otherlv_2='='
+		{
+			newLeafNode(otherlv_2, grammarAccess.getAssertEqualsAccess().getEqualsSignKeyword_2());
+		}
 		(
 			(
 				{
@@ -638,20 +628,10 @@ ruleAssertContains returns [EObject current=null]
 				}
 			)
 		)
-		(
-			(
-				lv_operator_2_0='contains'
-				{
-					newLeafNode(lv_operator_2_0, grammarAccess.getAssertContainsAccess().getOperatorContainsKeyword_2_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getAssertContainsRule());
-					}
-					setWithLastConsumed($current, "operator", lv_operator_2_0, "contains");
-				}
-			)
-		)
+		otherlv_2='contains'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getAssertContainsAccess().getContainsKeyword_2());
+		}
 		(
 			(
 				{
@@ -970,10 +950,18 @@ ruleSelector returns [EObject current=null]
 			newLeafNode(otherlv_3, grammarAccess.getSelectorAccess().getRightSquareBracketKeyword_3());
 		}
 		(
-			otherlv_4='.all'
-			{
-				newLeafNode(otherlv_4, grammarAccess.getSelectorAccess().getAllKeyword_4());
-			}
+			(
+				lv_all_4_0='.all'
+				{
+					newLeafNode(lv_all_4_0, grammarAccess.getSelectorAccess().getAllAllKeyword_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getSelectorRule());
+					}
+					setWithLastConsumed($current, "all", true, ".all");
+				}
+			)
 		)?
 	)
 ;
@@ -1163,10 +1151,16 @@ ruleDOMAttribute returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleTo
 			newLeafNode(kw, grammarAccess.getDOMAttributeAccess().getClassKeyword_4());
 		}
 		    |
+		kw='id'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getDOMAttributeAccess().getIdKeyword_5());
+		}
+		    |
 		kw='type'
 		{
 			$current.merge(kw);
-			newLeafNode(kw, grammarAccess.getDOMAttributeAccess().getTypeKeyword_5());
+			newLeafNode(kw, grammarAccess.getDOMAttributeAccess().getTypeKeyword_6());
 		}
 	)
 ;

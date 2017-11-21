@@ -50,7 +50,7 @@ class MySeleniumGenerator extends AbstractGenerator {
        import java.io.IOException;
        
        @RunWith(BlockJUnit4ClassRunner.class)
-       public class Test extends TestCase {
+       public class TestSelenium extends TestCase {
        
            private static ChromeDriverService service;
            private WebDriver driver;
@@ -78,7 +78,7 @@ class MySeleniumGenerator extends AbstractGenerator {
     
     def compile(Function function) '''
     @Test
-    private void «function.name.name»() {
+    private void «function.name.name»() throws Exception {
     		«FOR statement:function.statements»
     			«statement.compileStatement»
        	«ENDFOR»
@@ -88,25 +88,26 @@ class MySeleniumGenerator extends AbstractGenerator {
     
     
     def dispatch compileStatement(OneParameterAction oneParameterAction) {
+		val selector = oneParameterAction.getSelector()
 		val stringParameter = oneParameterAction.getStringParameter()
 		val selectorParameter = oneParameterAction.getSelectorParameter()
-		if (stringParameter !== null) {
-			'''
-			«oneParameterAction.getSelector().compile».«oneParameterAction.action»("«stringParameter»");
-			
-			'''
-    		} else if (selectorParameter !== null) {
-    			// TODO
-    			'''
-    			«oneParameterAction.selector.compile».«oneParameterAction.action»();
-    			
-	    		'''
-	    	} else {
-    			'''
-    			«oneParameterAction.selector.compile».«oneParameterAction.action»();
-    			
-	    		'''
+		var action = {
+			if (stringParameter !== null) {
+				'''.«oneParameterAction.action»("«stringParameter»")'''
+	    		} else if (selectorParameter !== null) {
+	    			// TODO: useful ?
+	    			'''.«oneParameterAction.action»("«selectorParameter.compile()»")'''
+		    	} else {
+	    			'''.«oneParameterAction.action»()'''
+			}
 		}
+		
+		val iterable = if (selector.isAll()) '''.forEach(element -> element«action»)''' else action
+		
+		'''
+		«selector.compile»«iterable»;
+			
+		'''
     }
     
     
@@ -166,7 +167,6 @@ class MySeleniumGenerator extends AbstractGenerator {
  	
     '''
     
-    
     def dispatch compileAssertableElement(Variable variable) '''«variable.compile»'''
     def dispatch compileAssertableElement(String string) '''«string»'''
     def dispatch compileAssertableElement(Projection projection) '''«projection.compile»'''
@@ -181,7 +181,7 @@ class MySeleniumGenerator extends AbstractGenerator {
     ].join(", ")»)'''
   
 	def compileSelectorAttributes(Selector selector){
-		if (selector.attrs !== null && selector.attrs.attrs != null) {
+		if (selector.attrs !== null && selector.attrs.attrs !== null) {
 			return selector.attrs.attrs.map[attribute | 
 				'''(@«attribute.name» = '«attribute.value»')'''
 			].join(" AND ")
@@ -189,10 +189,13 @@ class MySeleniumGenerator extends AbstractGenerator {
 		''''''
 	}
   
-    def compile(Selector selector) '''
-    // selector
-    // TODO manage attribute.val
-    driver.findElement(By.xpath("//«selector.element»[«selector.compileSelectorAttributes»]"));
-    '''
+    def compile(Selector selector) {
+    		val function = if (selector.isAll()) 'findElements' else 'findElement'
+		'''
+	    // selector
+	    // TODO manage attribute.val
+	    driver.«function»(By.xpath("//«selector.element»[«selector.compileSelectorAttributes»]"))
+	    '''
+    }
     
 }

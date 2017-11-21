@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Selector#getElement <em>Element</em>}</li>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Selector#getAttrs <em>Attrs</em>}</li>
+ *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Selector#isAll <em>All</em>}</li>
  * </ul>
  *
  * @see fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage#getSelector()
@@ -75,5 +76,31 @@ public interface Selector extends EObject
    * @generated
    */
   void setAttrs(Attributes value);
+
+  /**
+   * Returns the value of the '<em><b>All</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>All</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>All</em>' attribute.
+   * @see #setAll(boolean)
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage#getSelector_All()
+   * @model
+   * @generated
+   */
+  boolean isAll();
+
+  /**
+   * Sets the value of the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Selector#isAll <em>All</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>All</em>' attribute.
+   * @see #isAll()
+   * @generated
+   */
+  void setAll(boolean value);
 
 } // Selector

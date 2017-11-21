@@ -72,10 +72,8 @@ public class MySeleniumParser extends AbstractContentAssistParser {
 					put(grammarAccess.getProjectionAccess().getSelectorAssignment_0(), "rule__Projection__SelectorAssignment_0");
 					put(grammarAccess.getProjectionAccess().getProjectionActionAssignment_2(), "rule__Projection__ProjectionActionAssignment_2");
 					put(grammarAccess.getAssertEqualsAccess().getAssertableElementAssignment_1(), "rule__AssertEquals__AssertableElementAssignment_1");
-					put(grammarAccess.getAssertEqualsAccess().getOperatorAssignment_2(), "rule__AssertEquals__OperatorAssignment_2");
 					put(grammarAccess.getAssertEqualsAccess().getAssertableElementAssignment_3(), "rule__AssertEquals__AssertableElementAssignment_3");
 					put(grammarAccess.getAssertContainsAccess().getContainerAssignment_1(), "rule__AssertContains__ContainerAssignment_1");
-					put(grammarAccess.getAssertContainsAccess().getOperatorAssignment_2(), "rule__AssertContains__OperatorAssignment_2");
 					put(grammarAccess.getAssertContainsAccess().getElementAssignment_3(), "rule__AssertContains__ElementAssignment_3");
 					put(grammarAccess.getNavigationActionAccess().getActionAssignment_0(), "rule__NavigationAction__ActionAssignment_0");
 					put(grammarAccess.getNavigationActionAccess().getParamAssignment_1(), "rule__NavigationAction__ParamAssignment_1");
@@ -88,6 +86,7 @@ public class MySeleniumParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTwoParametersActionAccess().getParameterAssignment_2(), "rule__TwoParametersAction__ParameterAssignment_2");
 					put(grammarAccess.getSelectorAccess().getElementAssignment_0(), "rule__Selector__ElementAssignment_0");
 					put(grammarAccess.getSelectorAccess().getAttrsAssignment_2(), "rule__Selector__AttrsAssignment_2");
+					put(grammarAccess.getSelectorAccess().getAllAssignment_4(), "rule__Selector__AllAssignment_4");
 					put(grammarAccess.getAttributesAccess().getAttrsAssignment_0(), "rule__Attributes__AttrsAssignment_0");
 					put(grammarAccess.getAttributesAccess().getAttrsAssignment_1_1(), "rule__Attributes__AttrsAssignment_1_1");
 					put(grammarAccess.getAttributeAccess().getNameAssignment_0(), "rule__Attribute__NameAssignment_0");

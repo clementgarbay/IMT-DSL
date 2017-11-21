@@ -72,7 +72,7 @@ TwoParametersAction:
 ;
 
 Selector:
-    element=DOMElement '[' (attrs = Attributes)? ']' '.all'? 
+    element=DOMElement '[' (attrs = Attributes)? ']' all?='.all'?
 ;
 
 Attributes:
@@ -83,7 +83,7 @@ Attribute:
     name=DOMAttribute '=' (value = STRING | val = [Variable])
 ;
 
-DOMAttribute: 'name' | 'text' | 'alt' | 'checked' | 'class' | 'type';
+DOMAttribute: 'name' | 'text' | 'alt' | 'checked' | 'class' | 'id' | 'type';
 
 DOMElement: 'link' | 'button' | 'checkbox' | 'input' | 'h1' | 'body' | 'select' | 'a' | 'img';
 
