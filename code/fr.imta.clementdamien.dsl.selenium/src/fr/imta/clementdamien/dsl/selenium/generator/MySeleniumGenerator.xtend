@@ -143,14 +143,10 @@ class MySeleniumGenerator extends AbstractGenerator {
   
     def compile(Selector selector) '''
     // selector
-    driver.findElement(By.xpath("//«selector.element»[ 
-    		«FOR attribute:selector.attrs.attrs»
-    		(@«attribute.name» = "«attribute.value»") // TODO manage attribute.val
-            «IF selector.attrs.attrs.indexOf(attribute) !== selector.attrs.attrs.length() - 1»
-            AND
-			«ENDIF»            
-        «ENDFOR»
-    "));;
+    // TODO manage attribute.val
+    driver.findElement(By.xpath("//«selector.element»[«selector.attrs.attrs.map[attribute | 
+			'''(@«attribute.name» = '«attribute.value»')'''
+		].join(" AND ")»"));
     '''
     
 }
