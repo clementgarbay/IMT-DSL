@@ -45,11 +45,11 @@ Statement:
 ;
 
 AssertEquals:
-    'assert' assertableElement += AssertableElement operator = '=' assertableElement += AssertableElement
+    'assert' assertableElement += AssertableElement '=' assertableElement += AssertableElement
 ;
 
 AssertContains:
-    'assert' container = AssertableElement operator = 'contains' element = AssertableElement
+    'assert' container = AssertableElement 'contains' element = AssertableElement
 ;
 
 AssertableElement:
