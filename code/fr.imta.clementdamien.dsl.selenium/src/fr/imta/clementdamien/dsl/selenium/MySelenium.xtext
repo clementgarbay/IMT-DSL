@@ -37,7 +37,8 @@ Projection:
 ProjectionAction: 'value' | 'text' | 'html';
 
 Statement:
-    OneParameterAction | 
+    Action |
+    AssignAction | 
     FunctionCall | 
     AssertEquals | 
     AssertContains | 
@@ -63,13 +64,18 @@ NavigationActionType:
     "go" | "openBrowser"
 ;
 
-OneParameterAction:
-    action=OneParameterActionType selector=Selector (selectorParameter=Selector | stringParameter=STRING)?
+Action:
+    action=ActionType target=ActionTarget (selectorParameter=Selector | stringParameter=STRING)?
 ;
 
-TwoParametersAction:
-    action=TwoParametersActionType selector=Selector parameter=Selector
+ActionTarget:
+	Selector | VariableRef
 ;
+
+AssignAction:
+    "assign" selector=Selector val=Variable
+;
+
 
 Selector:
     element=DOMElement '[' (attrs = Attributes)? ']' '.all'? 
@@ -80,15 +86,15 @@ Attributes:
 ;
 
 Attribute:
-    name=DOMAttribute '=' (value = STRING | val = [Variable])
+    name=DOMAttribute '=' (value = STRING | val = VariableRef)
 ;
+
 
 DOMAttribute: 'name' | 'text' | 'alt' | 'checked' | 'class' | 'type';
 
 DOMElement: 'link' | 'button' | 'checkbox' | 'input' | 'h1' | 'body' | 'select' | 'a' | 'img';
 
-OneParameterActionType: 'click' | 'assign' | 'fill' | 'choose';
-TwoParametersActionType: 'assign' | 'fill' | 'choose';
+ActionType: 'click' | 'assign' | 'fill' | 'choose';
 
 FunctionParameters:
     '(' variables += Variable (',' variables += Variable)* ')'
@@ -99,8 +105,13 @@ FunctionCallParameters:
 ;
 
 VariableCall:
-    name=[Variable] | StringParameter
+    name=VariableRef | StringParameter
 ;
+
+VariableRef:
+    ref=[Variable]
+;
+
 Variable:
     name=ID
 ;

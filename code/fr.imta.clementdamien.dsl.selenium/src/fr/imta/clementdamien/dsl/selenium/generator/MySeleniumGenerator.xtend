@@ -87,34 +87,33 @@ class MySeleniumGenerator extends AbstractGenerator {
     '''
     
     
-    def dispatch compileStatement(OneParameterAction oneParameterAction) {
-		val stringParameter = oneParameterAction.getStringParameter()
-		val selectorParameter = oneParameterAction.getSelectorParameter()
+    def dispatch compileStatement(Action action) {
+		val stringParameter = action.getStringParameter()
+		val selectorParameter = action.getSelectorParameter()
 		if (stringParameter !== null) {
 			'''
-			«oneParameterAction.getSelector().compile».«oneParameterAction.action»("«stringParameter»");
+			«action.getTarget().compile».«action.action»("«stringParameter»");
 			
 			'''
     		} else if (selectorParameter !== null) {
     			// TODO
     			'''
-    			«oneParameterAction.selector.compile».«oneParameterAction.action»();
+    			«action.selector.compile».«action.action»();
     			
 	    		'''
 	    	} else {
     			'''
-    			«oneParameterAction.selector.compile».«oneParameterAction.action»();
+    			«action.selector.compile».«action.action»();
     			
 	    		'''
 		}
     }
+   
     
+    def dispatch compileActionTarget(Selector selector) '''«selector.compile»'''
+    def dispatch compileActionTarget(VariableRef varRef) '''«varRef.compile»'''
     
-    def dispatch compileStatement(TwoParametersAction twoParametersAction) '''
-    // todo TwoParametersAction
-    
-    '''
-    
+    def compile(VariableRef varRef) '''«varRef.ref.compile»'''
     
     def dispatch compileStatement(FunctionCall functionCall) '''
     «functionCall.ref»(
@@ -157,6 +156,11 @@ class MySeleniumGenerator extends AbstractGenerator {
     	driver.get("«navigationAction.param»");
  	«ENDIF»
  	
+    '''
+    
+    def dispatch compileStatement(AssignAction assignAction) '''
+    // assinging
+   	
     '''
     
     
