@@ -5,7 +5,7 @@ generate mySelenium "http://www.imta.fr/clementdamien/dsl/selenium/MySelenium"
 
 
 Program:
-	functions = Functions |  statements = Statements
+	Functions | Statements
 ;
 
 Functions:

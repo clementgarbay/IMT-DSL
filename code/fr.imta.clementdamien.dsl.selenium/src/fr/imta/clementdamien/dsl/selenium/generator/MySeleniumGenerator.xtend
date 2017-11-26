@@ -22,61 +22,22 @@ import fr.imta.clementdamien.dsl.selenium.mySelenium.*;
 class MySeleniumGenerator extends AbstractGenerator {
 	
 	 @Inject extension IQualifiedNameProvider;
+     @Inject extension ProgramGenerator;
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		for (e : resource.allContents.toIterable.filter(Program)) {
             fsa.generateFile(
                         "Test.java",
-                        e.compile
+                        e.compileProgram 
                 )
         }
 	}
 	
 	
-	def compile(Program program) '''
-       import junit.framework.TestCase;
-       import org.assertj.core.api.Assertions;
-       import org.junit.*;
-       import org.junit.runner.RunWith;
-       import org.junit.runners.BlockJUnit4ClassRunner;
-       import org.openqa.selenium.By;
-       import org.openqa.selenium.NoSuchElementException;
-       import org.openqa.selenium.WebDriver;
-       import org.openqa.selenium.chrome.ChromeDriverService;
-       import org.openqa.selenium.remote.DesiredCapabilities;
-       import org.openqa.selenium.remote.RemoteWebDriver;
-       
-       import java.io.File;
-       import java.io.IOException;
-       
-       @RunWith(BlockJUnit4ClassRunner.class)
-       public class Test extends TestCase {
-       
-           private static ChromeDriverService service;
-           private WebDriver driver;
-           private static final String CHROMEDRIVER_PATH = "/usr/local/Cellar/chromedriver/2.33/bin/chromedriver";
-           private static final String IMT_BASE_URL = "http://imt-atlantique.fr/fr";
-       
 
-           @AfterClass
-           public static void createAndStopService() {
-               service.stop();
-           }
-       
-           @After
-           public void quitDriver() {
-               driver.quit();
-           }
-           
-           «FOR function:program.functions.functions»
-               «function.compile»
-           «ENDFOR»
-       
-       }
-    '''
     
     
-    def compile(Function function) '''
+    /*def compile(Function function) '''
     @Test
     private void «function.name.name»() {
     		«FOR statement:function.statements»
@@ -88,26 +49,30 @@ class MySeleniumGenerator extends AbstractGenerator {
     
     
     def dispatch compileStatement(Action action) {
-		val stringParameter = action.getStringParameter()
-		val selectorParameter = action.getSelectorParameter()
-		if (stringParameter !== null) {
-			'''
-			«action.getTarget().compile».«action.action»("«stringParameter»");
-			
-			'''
-    		} else if (selectorParameter !== null) {
-    			// TODO
-    			'''
-    			«action.selector.compile».«action.action»();
-    			
-	    		'''
-	    	} else {
-    			'''
-    			«action.selector.compile».«action.action»();
-    			
-	    		'''
-		}
+    		
+		val stringParameter = action.stringParameter
+		val selectorParameter = action.selectorParameter
+		
+		val parameter = 
+			if(stringParameter !== null){
+				'''"stringParameter"'''
+			} else if (selectorParameter !== null) {
+				selectorParameter.compile
+			} else {
+				''''''
+			}
+		
+		
+		'''
+		«action.target.compileActionTarget».«action.action»(«parameter»);
+		
+		'''
+    		
     }
+    
+    def compile(FunctionName functionName) '''«functionName.name»'''
+    
+    
    
     
     def dispatch compileActionTarget(Selector selector) '''«selector.compile»'''
@@ -115,17 +80,17 @@ class MySeleniumGenerator extends AbstractGenerator {
     
     def compile(VariableRef varRef) '''«varRef.ref.compile»'''
     
-    def dispatch compileStatement(FunctionCall functionCall) '''
-    «functionCall.ref»(
-    		«FOR param:functionCall.params.variables»
-    		param
-            «IF functionCall.params.variables.indexOf(param) !== functionCall.params.variables.length() - 1»
-            ,
-			«ENDIF»            
-        «ENDFOR»
-    )
-    '''
+    def dispatch compileStatement(FunctionCall functionCall) {
+    		val params = functionCall.params.variables.map(param | '''«param.compileVariableCall»''').join(", ")
+	    '''
+	    «functionCall.ref.compile»(«params»);
+	    
+	    '''
+    } 
     
+    
+    def dispatch compileVariableCall(VariableRef variableRef) '''«variableRef.ref.compile»'''
+    def dispatch compileVariableCall(StringParameter stringParam) '''"«stringParam.value»"'''
 
     def dispatch compileStatement(AssertContains assertContains) '''
 	    	Assertions.assertThatCode(() -> {
@@ -167,15 +132,12 @@ class MySeleniumGenerator extends AbstractGenerator {
     def dispatch compileAssertableElement(Variable variable) '''«variable.compile»'''
     def dispatch compileAssertableElement(StringParameter sp) '''"«sp.value»"'''
     def dispatch compileAssertableElement(Projection projection) '''«projection.compile»'''
-    def dispatch compileAssertableElement(FunctionCall fc) '''«fc.compile»'''
+    def dispatch compileAssertableElement(FunctionCall fc) '''«fc.compileStatement»'''
     
     def compile(Variable variable) '''«variable.name»'''
     
     def compile(Projection projection) '''«projection.selector.compile».getAttribute("«projection.projectionAction»")'''
     
-    def compile(FunctionCall fc) '''«fc.ref»(«fc.params.variables.map[variable |
-    		'''«variable.name»'''
-    ].join(", ")»)'''
   
 	def compileSelectorAttributes(Selector selector){
   		if (selector.attrs !== null && selector.attrs.attrs !== null){
@@ -190,5 +152,5 @@ class MySeleniumGenerator extends AbstractGenerator {
     // selector
     driver.findElement(By.xpath("//«selector.element»[«selector.compileSelectorAttributes»]"));
     '''
-    
+    */
 }
