@@ -1,5 +1,30 @@
 # A DSL for browser automation
 
+## Choices
+
+### Auxiliary functions
+Sometimes, it is required to use auxiliary functions that can be called from `main`.
+Here is a real life example :
+```
+def checkPrintable(name) {
+  go "http://www.imt-atlantique.fr/fr"
+  click a[text=name]
+  assign img[alt="Imprimer"] imageImprimer
+  assert body[].html contains imageImprimer
+} 
+def main {
+  openBrowser "firefox"
+  checkPrintable("COMMUNIQUÉS DE PRESSE")
+  checkPrintable("DOSSIERS DE PRESSE")
+  checkPrintable("VISUELS POUR LA PRESSE")
+  checkPrintable("LA PRESSE EN PARLE")
+  checkPrintable("TRIBUNES DE PRESSE")
+  checkPrintable("LES PALMARÈS")
+}
+```
+In that case, 
+
+
 ## DSL syntax
 
 ### Selector

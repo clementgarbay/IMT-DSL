@@ -9,11 +9,17 @@ Program:
 ;
 
 Functions:
-	functions += Function+
+	functions += Function+ mainFunction = MainFunction
 ;
 
 Statements:
 	statements += Statement+
+;
+
+MainFunction:
+    {MainFunction} 'def' 'main' '{'
+        statements += Statement*
+    '}'
 ;
 
 Function:
@@ -105,7 +111,7 @@ FunctionCallParameters:
 ;
 
 VariableCall:
-    name=VariableRef | StringParameter
+    VariableRef | StringParameter
 ;
 
 VariableRef:
