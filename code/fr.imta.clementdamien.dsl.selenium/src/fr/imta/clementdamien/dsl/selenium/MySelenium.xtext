@@ -18,13 +18,13 @@ Statements:
 
 MainFunction:
     {MainFunction} 'def' 'main' '{'
-        statements += Statement*
+        statements = Statements
     '}'
 ;
 
 Function:
     'def' name=FunctionName params = FunctionParameters? '{'
-        statements += Statement*
+        statements = Statements
     '}'
 ;
 

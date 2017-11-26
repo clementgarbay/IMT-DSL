@@ -3,6 +3,7 @@ package fr.imta.clementdamien.dsl.selenium.generator
 import fr.imta.clementdamien.dsl.selenium.mySelenium.*;
 import java.util.List
 import com.google.inject.Inject
+import java.util.LinkedList
 
 class ProgramGenerator {
 
@@ -23,7 +24,7 @@ class ProgramGenerator {
     }
 
     def dispatch compileProgram(Statements statements) {
-        statements.buildMainFunctionFromStatements
+        programFactory(new LinkedList(), statements.buildMainFunctionFromStatements.toString)
     }
 
 
