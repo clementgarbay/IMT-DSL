@@ -2,6 +2,7 @@ package fr.imta.clementdamien.dsl.selenium.generator;
 
 import fr.imta.clementdamien.dsl.selenium.mySelenium.*;
 import com.google.inject.Inject
+import fr.imta.clementdamien.dsl.selenium.generator.statement.StatementGenerator
 
 class FunctionGenerator {
 
