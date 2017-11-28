@@ -5,11 +5,11 @@ generate mySelenium "http://www.imta.fr/clementdamien/dsl/selenium/MySelenium"
 
 
 Program:
-	Functions //| Statements
+	Statements | Functions 
 ;
 
 Functions:
-	functions += Function+ mainFunction = MainFunction
+	(functions += Function)+ (mainFunction = MainFunction)
 ;
 
 Statements:

@@ -25,7 +25,7 @@ class MySeleniumGenerator extends AbstractGenerator {
      @Inject extension ProgramGenerator;
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
-		for (e : resource.allContents.toIterable.filter(Program)) {
+		for (e : resource.contents.filter(Program)) {
             fsa.generateFile(
                         "Test.java",
                         e.compileProgram 
