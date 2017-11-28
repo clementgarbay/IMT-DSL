@@ -5,7 +5,7 @@ generate mySelenium "http://www.imta.fr/clementdamien/dsl/selenium/MySelenium"
 
 
 Program:
-	Functions | Statements
+	Functions //| Statements
 ;
 
 Functions:
@@ -17,7 +17,7 @@ Statements:
 ;
 
 MainFunction:
-    {MainFunction} 'def' 'main' '{'
+    'def' 'main' '{'
         statements = Statements
     '}'
 ;
@@ -79,12 +79,12 @@ ActionTarget:
 ;
 
 AssignAction:
-    "assign" selector=Selector val=Variable
+    "assign" selector=Selector variable=Variable
 ;
 
 
 Selector:
-    element=DOMElement '[' (attrs = Attributes)? ']' '.all'? 
+    element=DOMElement '[' (attrs = Attributes)? ']'  all?='.all'?
 ;
 
 Attributes:
@@ -92,11 +92,11 @@ Attributes:
 ;
 
 Attribute:
-    name=DOMAttribute '=' (value = STRING | val = VariableRef)
+    name=DOMAttribute '=' (value = STRING | variable = VariableRef)
 ;
 
 
-DOMAttribute: 'name' | 'text' | 'alt' | 'checked' | 'class' | 'type';
+DOMAttribute: 'name' | 'text' | 'alt' | 'checked' | 'class' | 'id' | 'type';
 
 DOMElement: 'link' | 'button' | 'checkbox' | 'input' | 'h1' | 'body' | 'select' | 'a' | 'img';
 
@@ -121,6 +121,10 @@ VariableRef:
 Variable:
     name=ID
 ;
+
+//terminal ID : '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+//terminal VAR_ID : ('a'..'z'|'A'..'Z'|'_')+;
+
 StringParameter:
     value=STRING
 ;

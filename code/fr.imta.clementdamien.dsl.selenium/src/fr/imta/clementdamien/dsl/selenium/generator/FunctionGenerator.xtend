@@ -10,7 +10,7 @@ class FunctionGenerator {
 	@Inject extension StatementGenerator;
 
     def compileAuxiliaryFunction(Function function) '''
-	    private Object «function.name.name»(«function.params.compile»){
+	    private Object «function.name.name»(«function.params.compile») throws Exception {
 	        «function.statements.compileStatements»
 	    }
     '''
@@ -18,7 +18,7 @@ class FunctionGenerator {
     def compileMainFunction(MainFunction mainFunction) {
         '''
 		@Test
-		public void test() {
+		public void test() throws Exception {
 			«mainFunction.statements.compileStatements»
 		}
     		'''
@@ -27,7 +27,7 @@ class FunctionGenerator {
     def buildMainFunctionFromStatements(Statements statements) {
        '''
 		@Test
-		public void test() {
+		public void test() throws Exception {
 			«statements.compileStatements»
 		}
     		'''

@@ -1,13 +1,13 @@
 package fr.imta.clementdamien.dsl.selenium.generator
 
 import fr.imta.clementdamien.dsl.selenium.mySelenium.*;
+
 import java.util.List
 import com.google.inject.Inject
 import java.util.LinkedList
 
 class ProgramGenerator {
 
-	
     @Inject extension FunctionGenerator
 	
 	
@@ -40,12 +40,13 @@ class ProgramGenerator {
        import org.openqa.selenium.chrome.ChromeDriverService;
        import org.openqa.selenium.remote.DesiredCapabilities;
        import org.openqa.selenium.remote.RemoteWebDriver;
+       import org.openqa.selenium.WebElement;
 
        import java.io.File;
        import java.io.IOException;
 
        @RunWith(BlockJUnit4ClassRunner.class)
-       public class Test extends TestCase {
+       public class TestSelenium extends TestCase {
 
            private static ChromeDriverService service;
            private WebDriver driver;

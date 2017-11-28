@@ -7,10 +7,6 @@ import fr.imta.clementdamien.dsl.selenium.generator.*;
 
 class StatementGenerator {
 	
-	@Inject extension FunctionGenerator;
-	@Inject extension VariableGenerator;
-	
-	
 	@Inject extension ActionStatementGenerator;
 	@Inject extension AssertStatementGenerator;
 	@Inject extension AssignStatementGenerator;

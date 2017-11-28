@@ -24,7 +24,15 @@ class NavigationStatementGenerator {
 			service.start();
             '''
 		} else if(navigationAction.param == "firefox"){
-			'''// todo openBrowser firefox'''
+			'''
+			// todo openBrowser firefox
+			// use chrome instead
+			service = new ChromeDriverService.Builder()
+							                            .usingDriverExecutable(new File(CHROMEDRIVER_PATH))
+							                            .usingAnyFreePort()
+							                            .build();
+			service.start();
+			'''
 		} else {
 			'''// Unknown browser `«navigationAction.param»` :/. Do you mean `firefox` or `chrome` ?'''
 		}
