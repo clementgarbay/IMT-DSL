@@ -17,7 +17,7 @@ class FunctionGenerator {
     	
 	    '''
 		    private Object «function.name.name»(«params») throws Exception {
-		        «function.statements.compileStatements»
+		        «function.statements.compileStatements(true)»
 		    }
 	    '''
     }
@@ -26,7 +26,7 @@ class FunctionGenerator {
         '''
 		@Test
 		public void test() throws Exception {
-			«mainFunction.statements.compileStatements»
+			«mainFunction.statements.compileStatements(false)»
 		}
     		'''
     }
@@ -35,7 +35,7 @@ class FunctionGenerator {
        '''
 		@Test
 		public void test() throws Exception {
-			«statements.compileStatements»
+			«statements.compileStatements(false)»
 		}
     		'''
     }
