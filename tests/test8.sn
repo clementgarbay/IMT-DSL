@@ -1,6 +1,6 @@
 // Test 8
 def countResults {
-  div[class="views-row"].all.count
+  count div[class="views-row"].all
 }
 def main {
   openBrowser "firefox"

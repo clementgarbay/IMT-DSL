@@ -11,9 +11,13 @@ class FunctionCallStatementGenerator {
 	@Inject extension VariableGenerator;
 	
 	def compile(FunctionCall functionCall) {
-    		val params = functionCall.params.variables
-    			.map(param | '''«param.compileVariableCall»''')
-    			.join(", ")
+    		val params = 
+    			if(functionCall.params !== null)
+	    			functionCall.params.variables
+	    			.filter(param | param !== null)
+	    			.map(param | '''«param.compileVariableCall»''')
+	    			.join(", ")
+    			else ''''''
     			
 	    '''«functionCall.ref.compile»(«params»);'''
     } 

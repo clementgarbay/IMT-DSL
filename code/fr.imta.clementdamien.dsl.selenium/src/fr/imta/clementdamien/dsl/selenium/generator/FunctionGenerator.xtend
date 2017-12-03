@@ -9,11 +9,18 @@ class FunctionGenerator {
 	@Inject extension VariableGenerator;
 	@Inject extension StatementGenerator;
 
-    def compileAuxiliaryFunction(Function function) '''
-	    private Object «function.name.name»(«function.params.compile») throws Exception {
-	        «function.statements.compileStatements»
-	    }
-    '''
+    def compileAuxiliaryFunction(Function function) {
+    		val params = 
+    			if(function.params !== null)
+    				function.params.compile
+    			else ''''''
+    	
+	    '''
+		    private Object «function.name.name»(«params») throws Exception {
+		        «function.statements.compileStatements»
+		    }
+	    '''
+    }
 
     def compileMainFunction(MainFunction mainFunction) {
         '''

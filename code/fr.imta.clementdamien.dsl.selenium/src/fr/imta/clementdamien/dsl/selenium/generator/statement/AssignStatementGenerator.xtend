@@ -9,10 +9,11 @@ class AssignStatementGenerator {
 	
 	@Inject extension VariableGenerator;
 	@Inject extension SelectorGenerator;
+	@Inject extension ActionStatementGenerator;
 	
 	
 	def compile(AssignAction assignAction) '''
-	WebElement «assignAction.variable.compile» = «assignAction.selector.compile»;
+	WebElement «assignAction.variable.compile» = «assignAction.target.compileActionTarget»;
 	'''
 
 }

@@ -9,24 +9,15 @@ class ActionStatementGenerator {
 	
 	@Inject extension VariableGenerator;
 	@Inject extension SelectorGenerator;
+	@Inject extension FunctionCallStatementGenerator;
 	
 	
 	def compile(Action action) {
     		
-		val stringParameter = action.stringParameter
-		val selectorParameter = action.selectorParameter
-		
-		val parameter = 
-			if(stringParameter !== null){
-				'''"stringParameter"'''
-			} else if (selectorParameter !== null) {
-				selectorParameter.compile
-			} else {
-				''''''
-			}
+		val parameter = if(action.param !== null) action.param.compileActionParameter else ''''''
 		
 		'''
-		«action.target.compileActionTarget»«action.target.handleIterable(action, parameter as String)»;
+		«action.target.compileActionTarget»«action.target.handleIterable(action, parameter.toString)»;
 		'''
     		
     }
@@ -46,7 +37,12 @@ class ActionStatementGenerator {
     
     def dispatch compileActionTarget(Selector selector) { selector.compile }
     def dispatch compileActionTarget(VariableRef varRef) { varRef.compile }
+    def dispatch compileActionTarget(FunctionCall fc) { fc.compile }
     
 
+	def dispatch compileActionParameter(Selector selector){ selector.compile }
+	def dispatch compileActionParameter(ActionParameterString aps){ aps.compile }
+    
+    def compile(ActionParameterString aps){ '''"«aps.value»"''' }
     
 }

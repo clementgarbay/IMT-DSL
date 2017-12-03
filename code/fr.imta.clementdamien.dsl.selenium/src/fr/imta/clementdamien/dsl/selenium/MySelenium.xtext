@@ -33,7 +33,7 @@ FunctionName:
 ;
 
 FunctionCall:
-    ref=[FunctionName] params = FunctionCallParameters
+    ref=[FunctionName] (params = FunctionCallParameters)
 ;
 
 Projection:
@@ -70,16 +70,27 @@ NavigationActionType:
     "go" | "openBrowser"
 ;
 
+
+
 Action:
-    action=ActionType target=ActionTarget (selectorParameter=Selector | stringParameter=STRING)?
+    action=ActionType target=ActionTarget (param=ActionParameter)?
 ;
+
+// assign action is specific action 
+AssignAction:
+	'assign' target=ActionTarget variable=Variable
+; 
 
 ActionTarget:
-	Selector | VariableRef
+	Selector | VariableRef | FunctionCall
 ;
 
-AssignAction:
-    "assign" selector=Selector variable=Variable
+ActionParameter:
+	Selector | ActionParameterString
+;
+
+ActionParameterString:
+	value=STRING
 ;
 
 
@@ -98,16 +109,16 @@ Attribute:
 
 DOMAttribute: 'name' | 'text' | 'alt' | 'checked' | 'class' | 'id' | 'type';
 
-DOMElement: 'link' | 'button' | 'checkbox' | 'input' | 'h1' | 'body' | 'select' | 'a' | 'img';
+DOMElement: 'link' | 'button' | 'checkbox' | 'input' | 'h1' | 'body' | 'select' | 'a' | 'img' | 'div';
 
-ActionType: 'click' | 'assign' | 'fill' | 'choose';
+ActionType: 'click' | 'fill' | 'choose' | 'count';
 
 FunctionParameters:
     '(' variables += Variable (',' variables += Variable)* ')'
 ;
 
 FunctionCallParameters:
-    '(' variables += VariableCall (',' variables += VariableCall)* ')'
+    '(' ( variables += VariableCall (',' variables += VariableCall)* )? ')'
 ;
 
 VariableCall:
