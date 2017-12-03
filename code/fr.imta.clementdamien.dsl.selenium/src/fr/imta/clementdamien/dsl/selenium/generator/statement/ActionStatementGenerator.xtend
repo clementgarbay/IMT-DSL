@@ -23,7 +23,10 @@ class ActionStatementGenerator {
     }
     
     def dispatch handleIterable(Selector selector, Action action, String parameter) {
-    		val element = '''.«action.action»(«parameter»)'''
+    		
+    		val actionName = if(action.action == "choose") "click" else action.action
+    	
+    		val element = '''.«actionName»(«parameter»)'''
     		if(selector.isAll)
     			'''.forEach(element -> element«element»)''' 
 		else
