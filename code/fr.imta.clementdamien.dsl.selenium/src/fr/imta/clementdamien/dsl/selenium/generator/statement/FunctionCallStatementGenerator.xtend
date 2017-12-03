@@ -19,6 +19,6 @@ class FunctionCallStatementGenerator {
 	    			.join(", ")
     			else ''''''
     			
-	    '''«functionCall.ref.compile»(«params»);'''
+	    '''«functionCall.ref.compile»(«params»)'''
     } 
 }

@@ -13,7 +13,7 @@ class AssertStatementGenerator {
 	@Inject extension ProjectionGenerator;
 	
 	def compile(AssertEquals assertEquals) '''
-	assertEquals(«assertEquals.getAssertableElement().get(0)», «assertEquals.getAssertableElement().get(1)»);
+	assertEquals(«assertEquals.getAssertableElement().get(0).compileAssertableElement», «assertEquals.getAssertableElement().get(1).compileAssertableElement»);
     '''
 	
 	def compile(AssertContains assertContains) '''

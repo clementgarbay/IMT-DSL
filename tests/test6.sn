@@ -2,6 +2,7 @@
 openBrowser "firefox"
 go "http://www.imt-atlantique.fr/fr/rechercher"
 fill input[type="text"] "2007"
-choose select[] [text="Le mois dernier"]
+//choose select[] [text="Le mois dernier"]
+choose select[text="Le mois dernier"]
 click button[text="Appliquer les filtres"]
 assert body[].html contains "Aucun résultat ne correspond à votre recherche"
