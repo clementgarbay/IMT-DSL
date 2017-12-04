@@ -32,7 +32,12 @@ class ActionStatementGenerator {
     def dispatch handleIterable(Selector selector, Action action, String parameter) {
     		if (action.action == "count") return '''.size()'''
     		
-    		val actionName = if (action.action == "choose") "click" else action.action
+    		val actionName = 
+    			if (action.action == "choose") 
+    				"click" 
+    			else if (action.action == "fill")
+    				"sendKeys"
+    			else action.action
     		val element = '''.«actionName»(«parameter»)'''
     		
     		if (selector.isAll())
