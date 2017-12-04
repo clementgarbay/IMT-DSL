@@ -3,8 +3,6 @@
  */
 package fr.imta.clementdamien.dsl.selenium.mySelenium;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -80,19 +78,29 @@ public interface Function extends EObject
   void setParams(FunctionParameters value);
 
   /**
-   * Returns the value of the '<em><b>Statements</b></em>' containment reference list.
-   * The list contents are of type {@link fr.imta.clementdamien.dsl.selenium.mySelenium.Statement}.
+   * Returns the value of the '<em><b>Statements</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Statements</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Statements</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Statements</em>' containment reference list.
+   * @return the value of the '<em>Statements</em>' containment reference.
+   * @see #setStatements(Statements)
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage#getFunction_Statements()
    * @model containment="true"
    * @generated
    */
-  EList<Statement> getStatements();
+  Statements getStatements();
+
+  /**
+   * Sets the value of the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Function#getStatements <em>Statements</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Statements</em>' containment reference.
+   * @see #getStatements()
+   * @generated
+   */
+  void setStatements(Statements value);
 
 } // Function

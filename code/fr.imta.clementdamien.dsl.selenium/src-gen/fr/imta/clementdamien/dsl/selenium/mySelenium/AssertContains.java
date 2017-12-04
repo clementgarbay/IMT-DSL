@@ -14,7 +14,6 @@ package fr.imta.clementdamien.dsl.selenium.mySelenium;
  * </p>
  * <ul>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.AssertContains#getContainer <em>Container</em>}</li>
- *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.AssertContains#getOperator <em>Operator</em>}</li>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.AssertContains#getElement <em>Element</em>}</li>
  * </ul>
  *
@@ -49,32 +48,6 @@ public interface AssertContains extends Statement
    * @generated
    */
   void setContainer(AssertableElement value);
-
-  /**
-   * Returns the value of the '<em><b>Operator</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Operator</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Operator</em>' attribute.
-   * @see #setOperator(String)
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage#getAssertContains_Operator()
-   * @model
-   * @generated
-   */
-  String getOperator();
-
-  /**
-   * Sets the value of the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.AssertContains#getOperator <em>Operator</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Operator</em>' attribute.
-   * @see #getOperator()
-   * @generated
-   */
-  void setOperator(String value);
 
   /**
    * Returns the value of the '<em><b>Element</b></em>' containment reference.

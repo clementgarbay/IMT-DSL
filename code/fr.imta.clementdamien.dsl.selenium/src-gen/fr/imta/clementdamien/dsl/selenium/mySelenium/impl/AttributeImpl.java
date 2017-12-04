@@ -5,9 +5,10 @@ package fr.imta.clementdamien.dsl.selenium.mySelenium.impl;
 
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Attribute;
 import fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage;
-import fr.imta.clementdamien.dsl.selenium.mySelenium.Variable;
+import fr.imta.clementdamien.dsl.selenium.mySelenium.VariableRef;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -25,7 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AttributeImpl#getName <em>Name</em>}</li>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AttributeImpl#getValue <em>Value</em>}</li>
- *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AttributeImpl#getVal <em>Val</em>}</li>
+ *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AttributeImpl#getVariable <em>Variable</em>}</li>
  * </ul>
  *
  * @generated
@@ -73,14 +74,14 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
   protected String value = VALUE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getVal() <em>Val</em>}' reference.
+   * The cached value of the '{@link #getVariable() <em>Variable</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVal()
+   * @see #getVariable()
    * @generated
    * @ordered
    */
-  protected Variable val;
+  protected VariableRef variable;
 
   /**
    * <!-- begin-user-doc -->
@@ -154,19 +155,9 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
    * <!-- end-user-doc -->
    * @generated
    */
-  public Variable getVal()
+  public VariableRef getVariable()
   {
-    if (val != null && val.eIsProxy())
-    {
-      InternalEObject oldVal = (InternalEObject)val;
-      val = (Variable)eResolveProxy(oldVal);
-      if (val != oldVal)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MySeleniumPackage.ATTRIBUTE__VAL, oldVal, val));
-      }
-    }
-    return val;
+    return variable;
   }
 
   /**
@@ -174,22 +165,53 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
    * <!-- end-user-doc -->
    * @generated
    */
-  public Variable basicGetVal()
+  public NotificationChain basicSetVariable(VariableRef newVariable, NotificationChain msgs)
   {
-    return val;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setVal(Variable newVal)
-  {
-    Variable oldVal = val;
-    val = newVal;
+    VariableRef oldVariable = variable;
+    variable = newVariable;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MySeleniumPackage.ATTRIBUTE__VAL, oldVal, val));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MySeleniumPackage.ATTRIBUTE__VARIABLE, oldVariable, newVariable);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setVariable(VariableRef newVariable)
+  {
+    if (newVariable != variable)
+    {
+      NotificationChain msgs = null;
+      if (variable != null)
+        msgs = ((InternalEObject)variable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MySeleniumPackage.ATTRIBUTE__VARIABLE, null, msgs);
+      if (newVariable != null)
+        msgs = ((InternalEObject)newVariable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MySeleniumPackage.ATTRIBUTE__VARIABLE, null, msgs);
+      msgs = basicSetVariable(newVariable, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MySeleniumPackage.ATTRIBUTE__VARIABLE, newVariable, newVariable));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case MySeleniumPackage.ATTRIBUTE__VARIABLE:
+        return basicSetVariable(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -206,9 +228,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
         return getName();
       case MySeleniumPackage.ATTRIBUTE__VALUE:
         return getValue();
-      case MySeleniumPackage.ATTRIBUTE__VAL:
-        if (resolve) return getVal();
-        return basicGetVal();
+      case MySeleniumPackage.ATTRIBUTE__VARIABLE:
+        return getVariable();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -229,8 +250,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
       case MySeleniumPackage.ATTRIBUTE__VALUE:
         setValue((String)newValue);
         return;
-      case MySeleniumPackage.ATTRIBUTE__VAL:
-        setVal((Variable)newValue);
+      case MySeleniumPackage.ATTRIBUTE__VARIABLE:
+        setVariable((VariableRef)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -252,8 +273,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
       case MySeleniumPackage.ATTRIBUTE__VALUE:
         setValue(VALUE_EDEFAULT);
         return;
-      case MySeleniumPackage.ATTRIBUTE__VAL:
-        setVal((Variable)null);
+      case MySeleniumPackage.ATTRIBUTE__VARIABLE:
+        setVariable((VariableRef)null);
         return;
     }
     super.eUnset(featureID);
@@ -273,8 +294,8 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case MySeleniumPackage.ATTRIBUTE__VALUE:
         return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
-      case MySeleniumPackage.ATTRIBUTE__VAL:
-        return val != null;
+      case MySeleniumPackage.ATTRIBUTE__VARIABLE:
+        return variable != null;
     }
     return super.eIsSet(featureID);
   }

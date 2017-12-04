@@ -68,6 +68,7 @@ public class MySeleniumFactoryImpl extends EFactoryImpl implements MySeleniumFac
       case MySeleniumPackage.PROGRAM: return createProgram();
       case MySeleniumPackage.FUNCTIONS: return createFunctions();
       case MySeleniumPackage.STATEMENTS: return createStatements();
+      case MySeleniumPackage.MAIN_FUNCTION: return createMainFunction();
       case MySeleniumPackage.FUNCTION: return createFunction();
       case MySeleniumPackage.FUNCTION_NAME: return createFunctionName();
       case MySeleniumPackage.FUNCTION_CALL: return createFunctionCall();
@@ -77,15 +78,21 @@ public class MySeleniumFactoryImpl extends EFactoryImpl implements MySeleniumFac
       case MySeleniumPackage.ASSERT_CONTAINS: return createAssertContains();
       case MySeleniumPackage.ASSERTABLE_ELEMENT: return createAssertableElement();
       case MySeleniumPackage.NAVIGATION_ACTION: return createNavigationAction();
-      case MySeleniumPackage.ONE_PARAMETER_ACTION: return createOneParameterAction();
-      case MySeleniumPackage.TWO_PARAMETERS_ACTION: return createTwoParametersAction();
+      case MySeleniumPackage.ACTION: return createAction();
+      case MySeleniumPackage.ASSIGN_ACTION: return createAssignAction();
+      case MySeleniumPackage.ACTION_TARGET: return createActionTarget();
+      case MySeleniumPackage.ACTION_PARAMETER: return createActionParameter();
+      case MySeleniumPackage.ACTION_PARAMETER_STRING: return createActionParameterString();
       case MySeleniumPackage.SELECTOR: return createSelector();
+      case MySeleniumPackage.PARENT: return createParent();
       case MySeleniumPackage.ATTRIBUTES: return createAttributes();
       case MySeleniumPackage.ATTRIBUTE: return createAttribute();
       case MySeleniumPackage.FUNCTION_PARAMETERS: return createFunctionParameters();
       case MySeleniumPackage.FUNCTION_CALL_PARAMETERS: return createFunctionCallParameters();
       case MySeleniumPackage.VARIABLE_CALL: return createVariableCall();
+      case MySeleniumPackage.VARIABLE_REF: return createVariableRef();
       case MySeleniumPackage.VARIABLE: return createVariable();
+      case MySeleniumPackage.STRING_PARAMETER: return createStringParameter();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -122,6 +129,17 @@ public class MySeleniumFactoryImpl extends EFactoryImpl implements MySeleniumFac
   {
     StatementsImpl statements = new StatementsImpl();
     return statements;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MainFunction createMainFunction()
+  {
+    MainFunctionImpl mainFunction = new MainFunctionImpl();
+    return mainFunction;
   }
 
   /**
@@ -228,10 +246,10 @@ public class MySeleniumFactoryImpl extends EFactoryImpl implements MySeleniumFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public OneParameterAction createOneParameterAction()
+  public Action createAction()
   {
-    OneParameterActionImpl oneParameterAction = new OneParameterActionImpl();
-    return oneParameterAction;
+    ActionImpl action = new ActionImpl();
+    return action;
   }
 
   /**
@@ -239,10 +257,43 @@ public class MySeleniumFactoryImpl extends EFactoryImpl implements MySeleniumFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public TwoParametersAction createTwoParametersAction()
+  public AssignAction createAssignAction()
   {
-    TwoParametersActionImpl twoParametersAction = new TwoParametersActionImpl();
-    return twoParametersAction;
+    AssignActionImpl assignAction = new AssignActionImpl();
+    return assignAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ActionTarget createActionTarget()
+  {
+    ActionTargetImpl actionTarget = new ActionTargetImpl();
+    return actionTarget;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ActionParameter createActionParameter()
+  {
+    ActionParameterImpl actionParameter = new ActionParameterImpl();
+    return actionParameter;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ActionParameterString createActionParameterString()
+  {
+    ActionParameterStringImpl actionParameterString = new ActionParameterStringImpl();
+    return actionParameterString;
   }
 
   /**
@@ -254,6 +305,17 @@ public class MySeleniumFactoryImpl extends EFactoryImpl implements MySeleniumFac
   {
     SelectorImpl selector = new SelectorImpl();
     return selector;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Parent createParent()
+  {
+    ParentImpl parent = new ParentImpl();
+    return parent;
   }
 
   /**
@@ -316,10 +378,32 @@ public class MySeleniumFactoryImpl extends EFactoryImpl implements MySeleniumFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public VariableRef createVariableRef()
+  {
+    VariableRefImpl variableRef = new VariableRefImpl();
+    return variableRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Variable createVariable()
   {
     VariableImpl variable = new VariableImpl();
     return variable;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public StringParameter createStringParameter()
+  {
+    StringParameterImpl stringParameter = new StringParameterImpl();
+    return stringParameter;
   }
 
   /**

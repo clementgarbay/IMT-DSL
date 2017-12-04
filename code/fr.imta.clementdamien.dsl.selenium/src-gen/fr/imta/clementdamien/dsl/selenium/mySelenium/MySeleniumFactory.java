@@ -51,6 +51,15 @@ public interface MySeleniumFactory extends EFactory
   Statements createStatements();
 
   /**
+   * Returns a new object of class '<em>Main Function</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Main Function</em>'.
+   * @generated
+   */
+  MainFunction createMainFunction();
+
+  /**
    * Returns a new object of class '<em>Function</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -132,22 +141,49 @@ public interface MySeleniumFactory extends EFactory
   NavigationAction createNavigationAction();
 
   /**
-   * Returns a new object of class '<em>One Parameter Action</em>'.
+   * Returns a new object of class '<em>Action</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>One Parameter Action</em>'.
+   * @return a new object of class '<em>Action</em>'.
    * @generated
    */
-  OneParameterAction createOneParameterAction();
+  Action createAction();
 
   /**
-   * Returns a new object of class '<em>Two Parameters Action</em>'.
+   * Returns a new object of class '<em>Assign Action</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Two Parameters Action</em>'.
+   * @return a new object of class '<em>Assign Action</em>'.
    * @generated
    */
-  TwoParametersAction createTwoParametersAction();
+  AssignAction createAssignAction();
+
+  /**
+   * Returns a new object of class '<em>Action Target</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Action Target</em>'.
+   * @generated
+   */
+  ActionTarget createActionTarget();
+
+  /**
+   * Returns a new object of class '<em>Action Parameter</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Action Parameter</em>'.
+   * @generated
+   */
+  ActionParameter createActionParameter();
+
+  /**
+   * Returns a new object of class '<em>Action Parameter String</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Action Parameter String</em>'.
+   * @generated
+   */
+  ActionParameterString createActionParameterString();
 
   /**
    * Returns a new object of class '<em>Selector</em>'.
@@ -157,6 +193,15 @@ public interface MySeleniumFactory extends EFactory
    * @generated
    */
   Selector createSelector();
+
+  /**
+   * Returns a new object of class '<em>Parent</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Parent</em>'.
+   * @generated
+   */
+  Parent createParent();
 
   /**
    * Returns a new object of class '<em>Attributes</em>'.
@@ -204,6 +249,15 @@ public interface MySeleniumFactory extends EFactory
   VariableCall createVariableCall();
 
   /**
+   * Returns a new object of class '<em>Variable Ref</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Variable Ref</em>'.
+   * @generated
+   */
+  VariableRef createVariableRef();
+
+  /**
    * Returns a new object of class '<em>Variable</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -211,6 +265,15 @@ public interface MySeleniumFactory extends EFactory
    * @generated
    */
   Variable createVariable();
+
+  /**
+   * Returns a new object of class '<em>String Parameter</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>String Parameter</em>'.
+   * @generated
+   */
+  StringParameter createStringParameter();
 
   /**
    * Returns the package supported by this factory.

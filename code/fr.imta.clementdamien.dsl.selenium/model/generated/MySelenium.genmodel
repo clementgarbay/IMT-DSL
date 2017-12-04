@@ -6,15 +6,16 @@
     complianceLevel="6.0" copyrightFields="false" runtimeVersion="2.13">
   <genPackages prefix="MySelenium" basePackage="fr.imta.clementdamien.dsl.selenium"
       disposableProviderFactory="true" fileExtensions="sn" ecorePackage="MySelenium.ecore#/">
-    <genClasses ecoreClass="MySelenium.ecore#//Program">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Program/functions"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Program/statements"/>
-    </genClasses>
+    <genClasses ecoreClass="MySelenium.ecore#//Program"/>
     <genClasses ecoreClass="MySelenium.ecore#//Functions">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Functions/functions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Functions/mainFunction"/>
     </genClasses>
     <genClasses ecoreClass="MySelenium.ecore#//Statements">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Statements/statements"/>
+    </genClasses>
+    <genClasses ecoreClass="MySelenium.ecore#//MainFunction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//MainFunction/statements"/>
     </genClasses>
     <genClasses ecoreClass="MySelenium.ecore#//Function">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Function/name"/>
@@ -35,11 +36,9 @@
     <genClasses ecoreClass="MySelenium.ecore#//Statement"/>
     <genClasses ecoreClass="MySelenium.ecore#//AssertEquals">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//AssertEquals/assertableElement"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//AssertEquals/operator"/>
     </genClasses>
     <genClasses ecoreClass="MySelenium.ecore#//AssertContains">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//AssertContains/container"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//AssertContains/operator"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//AssertContains/element"/>
     </genClasses>
     <genClasses ecoreClass="MySelenium.ecore#//AssertableElement"/>
@@ -47,20 +46,29 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//NavigationAction/action"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//NavigationAction/param"/>
     </genClasses>
-    <genClasses ecoreClass="MySelenium.ecore#//OneParameterAction">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//OneParameterAction/action"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//OneParameterAction/selector"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//OneParameterAction/selectorParameter"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//OneParameterAction/stringParameter"/>
+    <genClasses ecoreClass="MySelenium.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//Action/action"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Action/target"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Action/param"/>
     </genClasses>
-    <genClasses ecoreClass="MySelenium.ecore#//TwoParametersAction">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//TwoParametersAction/action"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//TwoParametersAction/selector"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//TwoParametersAction/parameter"/>
+    <genClasses ecoreClass="MySelenium.ecore#//AssignAction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//AssignAction/target"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//AssignAction/variable"/>
+    </genClasses>
+    <genClasses ecoreClass="MySelenium.ecore#//ActionTarget"/>
+    <genClasses ecoreClass="MySelenium.ecore#//ActionParameter"/>
+    <genClasses ecoreClass="MySelenium.ecore#//ActionParameterString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//ActionParameterString/value"/>
     </genClasses>
     <genClasses ecoreClass="MySelenium.ecore#//Selector">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//Selector/element"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Selector/attrs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Selector/parent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//Selector/all"/>
+    </genClasses>
+    <genClasses ecoreClass="MySelenium.ecore#//Parent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//Parent/element"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Parent/attrs"/>
     </genClasses>
     <genClasses ecoreClass="MySelenium.ecore#//Attributes">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Attributes/attrs"/>
@@ -68,7 +76,7 @@
     <genClasses ecoreClass="MySelenium.ecore#//Attribute">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//Attribute/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//Attribute/value"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Attribute/val"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//Attribute/variable"/>
     </genClasses>
     <genClasses ecoreClass="MySelenium.ecore#//FunctionParameters">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//FunctionParameters/variables"/>
@@ -76,11 +84,15 @@
     <genClasses ecoreClass="MySelenium.ecore#//FunctionCallParameters">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MySelenium.ecore#//FunctionCallParameters/variables"/>
     </genClasses>
-    <genClasses ecoreClass="MySelenium.ecore#//VariableCall">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MySelenium.ecore#//VariableCall/name"/>
+    <genClasses ecoreClass="MySelenium.ecore#//VariableCall"/>
+    <genClasses ecoreClass="MySelenium.ecore#//VariableRef">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MySelenium.ecore#//VariableRef/ref"/>
     </genClasses>
     <genClasses ecoreClass="MySelenium.ecore#//Variable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//Variable/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MySelenium.ecore#//StringParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MySelenium.ecore#//StringParameter/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

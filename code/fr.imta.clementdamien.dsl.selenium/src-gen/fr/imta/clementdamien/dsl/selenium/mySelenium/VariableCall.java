@@ -10,12 +10,6 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>Variable Call</b></em>'.
  * <!-- end-user-doc -->
  *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.VariableCall#getName <em>Name</em>}</li>
- * </ul>
  *
  * @see fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage#getVariableCall()
  * @model
@@ -23,30 +17,4 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface VariableCall extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Name</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Name</em>' reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' reference.
-   * @see #setName(Variable)
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage#getVariableCall_Name()
-   * @model
-   * @generated
-   */
-  Variable getName();
-
-  /**
-   * Sets the value of the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.VariableCall#getName <em>Name</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' reference.
-   * @see #getName()
-   * @generated
-   */
-  void setName(Variable value);
-
 } // VariableCall

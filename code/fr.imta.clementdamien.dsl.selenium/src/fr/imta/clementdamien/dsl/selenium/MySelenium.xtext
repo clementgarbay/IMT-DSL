@@ -3,7 +3,6 @@ grammar fr.imta.clementdamien.dsl.selenium.MySelenium with org.eclipse.xtext.com
 generate mySelenium "http://www.imta.fr/clementdamien/dsl/selenium/MySelenium"
 
 
-
 Program:
 	Statements | Functions 
 ;
@@ -60,7 +59,7 @@ AssertContains:
 ;
 
 AssertableElement: 
-    Variable | StringParameter | Projection | FunctionCall
+    Variable | StringParameter | Selector | FunctionCall
 ;
 
 NavigationAction:

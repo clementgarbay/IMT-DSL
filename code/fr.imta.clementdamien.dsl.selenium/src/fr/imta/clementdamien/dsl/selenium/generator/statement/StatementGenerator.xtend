@@ -1,9 +1,13 @@
 package fr.imta.clementdamien.dsl.selenium.generator.statement;
 
-import fr.imta.clementdamien.dsl.selenium.mySelenium.*;
-import java.util.List
 import com.google.inject.Inject
-import fr.imta.clementdamien.dsl.selenium.generator.*;
+import fr.imta.clementdamien.dsl.selenium.mySelenium.Action
+import fr.imta.clementdamien.dsl.selenium.mySelenium.AssertContains
+import fr.imta.clementdamien.dsl.selenium.mySelenium.AssertEquals
+import fr.imta.clementdamien.dsl.selenium.mySelenium.AssignAction
+import fr.imta.clementdamien.dsl.selenium.mySelenium.FunctionCall
+import fr.imta.clementdamien.dsl.selenium.mySelenium.NavigationAction
+import fr.imta.clementdamien.dsl.selenium.mySelenium.Statements
 
 class StatementGenerator {
 	
@@ -14,17 +18,14 @@ class StatementGenerator {
 	@Inject extension NavigationStatementGenerator;
 	
 	def compileStatements(Statements statements, Boolean isReturnNeeded) {
-		
 		val lastStatement = statements.statements.last
 		
 		statements.statements
 			.map(statement | {
 				val statementCompiled = statement.compileStatement
-				
 				val isLast = lastStatement == statement
-				
 				val statementCompiledPrefix = 
-					if(isReturnNeeded && isLast && statement.shouldAddAReturn)
+					if (isReturnNeeded && isLast && statement.shouldAddAReturn)
 						"return "
 					else ""
 				
@@ -45,19 +46,14 @@ class StatementGenerator {
 	
 	def dispatch compileStatement(NavigationAction na) { na.compile }
 	
-	
-	
-	
 	def dispatch shouldAddAReturn(Action action) {
 		val actionName = action.action
 		// 'click' | 'fill' | 'choose' | 'count' 
-		if(actionName == "count")
+		if (actionName == "count")
 			true
 		else
 			false
 	}
-	
-	
 	
 	def dispatch shouldAddAReturn(AssertEquals assert) { false }
 	

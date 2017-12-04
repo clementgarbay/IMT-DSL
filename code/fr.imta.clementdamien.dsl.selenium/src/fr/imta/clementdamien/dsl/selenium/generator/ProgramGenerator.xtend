@@ -1,24 +1,21 @@
 package fr.imta.clementdamien.dsl.selenium.generator
 
-import fr.imta.clementdamien.dsl.selenium.mySelenium.*;
-
-import java.util.List
 import com.google.inject.Inject
+import fr.imta.clementdamien.dsl.selenium.mySelenium.Functions
+import fr.imta.clementdamien.dsl.selenium.mySelenium.Statements
 import java.util.LinkedList
+import java.util.List
 
 class ProgramGenerator {
 
     @Inject extension FunctionGenerator
 	
-	
 	def dispatch compileProgram(Functions functions) {
-
-        val compiledFunctions =
+		val compiledFunctions =
             functions.functions
                 .map(function | function.compileAuxiliaryFunction.toString)
 
         val compiledMainFunction = functions.mainFunction.compileMainFunction.toString
-
 
         programFactory(compiledFunctions, compiledMainFunction)
     }
@@ -26,7 +23,6 @@ class ProgramGenerator {
     def dispatch compileProgram(Statements statements) {
         programFactory(new LinkedList(), statements.buildMainFunctionFromStatements.toString)
     }
-
 
     def programFactory(List<String> functions, String mainFunction) '''
        import junit.framework.TestCase;
@@ -70,6 +66,5 @@ class ProgramGenerator {
 
        }
     '''
-
 
 }

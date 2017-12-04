@@ -84,6 +84,7 @@ public class MySeleniumSwitch<T> extends Switch<T>
       {
         Functions functions = (Functions)theEObject;
         T result = caseFunctions(functions);
+        if (result == null) result = caseProgram(functions);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -91,6 +92,14 @@ public class MySeleniumSwitch<T> extends Switch<T>
       {
         Statements statements = (Statements)theEObject;
         T result = caseStatements(statements);
+        if (result == null) result = caseProgram(statements);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MySeleniumPackage.MAIN_FUNCTION:
+      {
+        MainFunction mainFunction = (MainFunction)theEObject;
+        T result = caseMainFunction(mainFunction);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -114,6 +123,7 @@ public class MySeleniumSwitch<T> extends Switch<T>
         T result = caseFunctionCall(functionCall);
         if (result == null) result = caseStatement(functionCall);
         if (result == null) result = caseAssertableElement(functionCall);
+        if (result == null) result = caseActionTarget(functionCall);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -163,18 +173,41 @@ public class MySeleniumSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MySeleniumPackage.ONE_PARAMETER_ACTION:
+      case MySeleniumPackage.ACTION:
       {
-        OneParameterAction oneParameterAction = (OneParameterAction)theEObject;
-        T result = caseOneParameterAction(oneParameterAction);
-        if (result == null) result = caseStatement(oneParameterAction);
+        Action action = (Action)theEObject;
+        T result = caseAction(action);
+        if (result == null) result = caseStatement(action);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MySeleniumPackage.TWO_PARAMETERS_ACTION:
+      case MySeleniumPackage.ASSIGN_ACTION:
       {
-        TwoParametersAction twoParametersAction = (TwoParametersAction)theEObject;
-        T result = caseTwoParametersAction(twoParametersAction);
+        AssignAction assignAction = (AssignAction)theEObject;
+        T result = caseAssignAction(assignAction);
+        if (result == null) result = caseStatement(assignAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MySeleniumPackage.ACTION_TARGET:
+      {
+        ActionTarget actionTarget = (ActionTarget)theEObject;
+        T result = caseActionTarget(actionTarget);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MySeleniumPackage.ACTION_PARAMETER:
+      {
+        ActionParameter actionParameter = (ActionParameter)theEObject;
+        T result = caseActionParameter(actionParameter);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MySeleniumPackage.ACTION_PARAMETER_STRING:
+      {
+        ActionParameterString actionParameterString = (ActionParameterString)theEObject;
+        T result = caseActionParameterString(actionParameterString);
+        if (result == null) result = caseActionParameter(actionParameterString);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -182,6 +215,15 @@ public class MySeleniumSwitch<T> extends Switch<T>
       {
         Selector selector = (Selector)theEObject;
         T result = caseSelector(selector);
+        if (result == null) result = caseActionTarget(selector);
+        if (result == null) result = caseActionParameter(selector);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MySeleniumPackage.PARENT:
+      {
+        Parent parent = (Parent)theEObject;
+        T result = caseParent(parent);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -220,11 +262,30 @@ public class MySeleniumSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case MySeleniumPackage.VARIABLE_REF:
+      {
+        VariableRef variableRef = (VariableRef)theEObject;
+        T result = caseVariableRef(variableRef);
+        if (result == null) result = caseActionTarget(variableRef);
+        if (result == null) result = caseActionParameter(variableRef);
+        if (result == null) result = caseVariableCall(variableRef);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case MySeleniumPackage.VARIABLE:
       {
         Variable variable = (Variable)theEObject;
         T result = caseVariable(variable);
         if (result == null) result = caseAssertableElement(variable);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MySeleniumPackage.STRING_PARAMETER:
+      {
+        StringParameter stringParameter = (StringParameter)theEObject;
+        T result = caseStringParameter(stringParameter);
+        if (result == null) result = caseAssertableElement(stringParameter);
+        if (result == null) result = caseVariableCall(stringParameter);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -276,6 +337,22 @@ public class MySeleniumSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseStatements(Statements object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Main Function</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Main Function</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMainFunction(MainFunction object)
   {
     return null;
   }
@@ -425,33 +502,81 @@ public class MySeleniumSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>One Parameter Action</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Action</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>One Parameter Action</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Action</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseOneParameterAction(OneParameterAction object)
+  public T caseAction(Action object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Two Parameters Action</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Assign Action</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Two Parameters Action</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Assign Action</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseTwoParametersAction(TwoParametersAction object)
+  public T caseAssignAction(AssignAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Action Target</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Action Target</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseActionTarget(ActionTarget object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Action Parameter</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Action Parameter</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseActionParameter(ActionParameter object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Action Parameter String</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Action Parameter String</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseActionParameterString(ActionParameterString object)
   {
     return null;
   }
@@ -468,6 +593,22 @@ public class MySeleniumSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseSelector(Selector object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Parent</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Parent</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseParent(Parent object)
   {
     return null;
   }
@@ -553,6 +694,22 @@ public class MySeleniumSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Variable Ref</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Variable Ref</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVariableRef(VariableRef object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Variable</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -564,6 +721,22 @@ public class MySeleniumSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseVariable(Variable object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>String Parameter</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>String Parameter</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseStringParameter(StringParameter object)
   {
     return null;
   }
