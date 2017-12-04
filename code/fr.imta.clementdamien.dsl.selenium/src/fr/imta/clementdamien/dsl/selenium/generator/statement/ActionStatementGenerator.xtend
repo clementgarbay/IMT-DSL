@@ -46,6 +46,7 @@ class ActionStatementGenerator {
     
 
 	def dispatch compileActionParameter(Selector selector){ selector.compile }
+	def dispatch compileActionParameter(VariableRef vr){ vr.compile }
 	def dispatch compileActionParameter(ActionParameterString aps){ aps.compile }
     
     def compile(ActionParameterString aps){ '''"«aps.value»"''' }

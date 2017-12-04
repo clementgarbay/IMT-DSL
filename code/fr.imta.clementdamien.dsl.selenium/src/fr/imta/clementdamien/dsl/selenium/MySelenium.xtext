@@ -86,7 +86,7 @@ ActionTarget:
 ;
 
 ActionParameter:
-	Selector | ActionParameterString
+	Selector | ActionParameterString | VariableRef
 ;
 
 ActionParameterString:
@@ -95,7 +95,11 @@ ActionParameterString:
 
 
 Selector:
-    element=DOMElement '[' (attrs = Attributes)? ']'  all?='.all'?
+    element=DOMElement '[' (attrs = Attributes)? ']' ('.parent' '(' parent=Parent ')')? (all?='.all')? 
+;
+
+Parent:
+	element=DOMElement '[' (attrs = Attributes)? ']'
 ;
 
 Attributes:
