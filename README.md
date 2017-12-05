@@ -55,7 +55,7 @@ div[class="views-row"].all
 
 | Elements  |   |          
 | -         | - |
-| Attribute | `value`, `html`, `count`, ... |
+| Attribute | `value`, `html`, ... |
 
 Apply a projection to a selector.
 
@@ -64,7 +64,7 @@ Apply a projection to a selector.
 ```
 body[].html
 p[].value
-div[class="views-row"].all.count
+div[class="views-row"].all
 ```
 
 ### Action
@@ -73,7 +73,7 @@ div[class="views-row"].all.count
 
 | Elements  |   |          
 | -         | - |
-| Action | `click`, `fill`, `choose`, ... |
+| Action | `click`, `fill`, `choose`, `count`, ... |
 
 Proceed to an action on a specific selector.
 
@@ -82,8 +82,9 @@ Proceed to an action on a specific selector.
 ```
 click checkbox[checked="true"].all
 click button[text="Appliquer les filtres"]
-choose select[] [text="Le mois dernier"]
+choose select[text="Le mois dernier"]
 fill input[type="text"] "2007"
+count div[class="views-row"].all
 ```
 
 ### Assignment
@@ -126,7 +127,7 @@ A function auto-returns the result of the last statement.
 
 ```
 def countResults() {
-  div[class="views-row"].all.count
+  count div[class="views-row"].all
 }
 ```
 
@@ -149,7 +150,7 @@ def checkPrintable(name) {
   click imageImprimer
 }
 def main {
-  openBrowser "firefox"
+  openBrowser "chrome"
   checkPrintable("COMMUNIQUÉS DE PRESSE")
   checkPrintable("DOSSIERS DE PRESSE")
 }

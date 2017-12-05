@@ -3,7 +3,7 @@ def fullInput(key, value) {
 }
 
 def main {
-  openBrowser "firefox"
+  openBrowser "chrome"
   go "www.google.fr"
   click a[text="SignIn"]
   fullInput("username", "truc")

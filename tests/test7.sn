@@ -1,5 +1,5 @@
 // Test 7
-openBrowser "firefox"
+openBrowser "chrome"
 go "http://www.imt-atlantique.fr/fr"
 assign div[class="actu_home_ctner_inner_cell1_titre"].parent(a[]) theLink
 go "http://www.imt-atlantique.fr/fr/rechercher"

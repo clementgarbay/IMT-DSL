@@ -7,7 +7,7 @@ def checkPrintable(name) {
   click imageImprimer
 }
 def main {
-  openBrowser "firefox"
+  openBrowser "chrome"
   checkPrintable("COMMUNIQUÉS DE PRESSE")
   checkPrintable("DOSSIERS DE PRESSE")
   checkPrintable("VISUELS POUR LA PRESSE")
