@@ -1,5 +1,19 @@
 # A DSL for browser automation
 
+## Avancement
+
+Nous avons implémenté toute la grammaire xtext ainsi que l'ensemble du code xtend correspondant pour la génération de code final Java.
+
+Néanmoins, par manque important de temps le code Java généré pour les exemples 7 et 8 n'est pas totalement correct. 
+
+De plus, le bon fonctionnement avec lancement de Selenium n'a été testé que pour les exemples 1 à 3.
+
+## Elements explicatifs
+
+Pour tester le bon fonctionnement du code Selenium généré, nous écrivons un fichier de test unitaire.
+
+Le projet Java `test-selenium` montre notamment un exemple de code fonctionnel, celui de l'exemple `test1.sn`.
+
 ## Choices
 
 ### Auxiliary functions
