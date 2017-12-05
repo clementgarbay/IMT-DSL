@@ -5,4 +5,5 @@ click checkbox[checked="true"].all
 click checkbox[text="Anglais"]
 click checkbox[text="A domicile"]
 click button[text="Appliquer les critères"]
-assert body[].html contains "Aucune formation trouvée répondant à vos critères"
+assign div[text="Aucun résultat ne correspond à votre recherche"] expected
+assert body[].html contains expected

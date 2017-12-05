@@ -1,5 +1,5 @@
 // Test 4
-openBrowser "firefox"
+openBrowser "chrome"
 go "http://www.imt-atlantique.fr/fr/rechercher"
 fill input[type="text", id="edit-search-api-fulltext"] "Donald Trump"
 click input[type="submit", value="Appliquer les filtres"]

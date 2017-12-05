@@ -8,6 +8,7 @@ import fr.imta.clementdamien.dsl.selenium.mySelenium.ActionParameterString
 import fr.imta.clementdamien.dsl.selenium.mySelenium.FunctionCall
 import fr.imta.clementdamien.dsl.selenium.mySelenium.Selector
 import fr.imta.clementdamien.dsl.selenium.mySelenium.VariableRef
+import java.util.Random
 
 class ActionStatementGenerator {
 	
@@ -21,15 +22,28 @@ class ActionStatementGenerator {
     }
     
     def dispatch delegateCompile(Action action, Selector selector, String parameter) {
-    		val function = if (selector.isAll()) 'findElements' else 'findElement'
     		
     		if (action.action == "click" || action.action == "choose") {
-    			return 
+    			if (selector.isAll()) {
+    				return 
 				'''
-				Actions actions = new Actions(driver);
-				actions.moveToElement(driver.«function»(«action.target.compileActionTarget»)).click().perform();
+				driver.findElements(«action.target.compileActionTarget»).forEach(element -> {
+					Actions actions = new Actions(driver);
+					actions.moveToElement(element).click().perform();
+				});
 				'''
+    			} else {
+    				val random = new Random().nextInt(5000000)
+    				val actionName = '''action«random»'''
+    				return 
+				'''
+				Actions «actionName» = new Actions(driver);
+				«actionName».moveToElement(driver.findElement(«action.target.compileActionTarget»)).click().perform();
+				'''
+    			}
     		}
+    		
+    		val function = if (selector.isAll()) 'findElements' else 'findElement'
         
     		'''driver.«function»(«action.target.compileActionTarget»)«action.target.handleIterable(action, parameter.toString)»;'''
     }
