@@ -35,6 +35,15 @@ class ActionStatementGenerator {
     }
     
     def dispatch delegateCompile(Action action, VariableRef varRef, String parameter) {
+    		if (action.action == "click" || action.action == "choose") {
+    			val actionName = '''action«varRef.getRef().getName()»'''
+    			return 
+				'''
+				Actions «actionName» = new Actions(driver);
+				«actionName».moveToElement(driver.findElement(«action.target.compileActionTarget»)).click().perform();
+				'''
+    		}
+    		
     		'''driver.findElement(«action.target.compileActionTarget»)«action.target.handleIterable(action, parameter.toString)»;'''
     }
     
