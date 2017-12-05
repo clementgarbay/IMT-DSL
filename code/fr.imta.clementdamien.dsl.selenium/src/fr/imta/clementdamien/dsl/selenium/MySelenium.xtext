@@ -59,7 +59,7 @@ AssertContains:
 ;
 
 AssertableElement: 
-    Variable | StringParameter | Selector | FunctionCall
+    Variable | StringParameter | Projection | FunctionCall
 ;
 
 NavigationAction:
