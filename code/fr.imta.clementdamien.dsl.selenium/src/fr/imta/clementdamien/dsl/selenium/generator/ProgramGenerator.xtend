@@ -48,13 +48,26 @@ class ProgramGenerator {
            private WebDriver driver;
            private static final String CHROMEDRIVER_PATH = "/usr/local/Cellar/chromedriver/2.33/bin/chromedriver";
            private static final String IMT_BASE_URL = "http://imt-atlantique.fr/fr";
-
-
+       
+           @BeforeClass
+           public static void createAndStartService() throws IOException {
+               service = new ChromeDriverService.Builder()
+                       .usingDriverExecutable(new File(CHROMEDRIVER_PATH))
+                       .usingAnyFreePort()
+                       .build();
+               service.start();
+           }
+       
            @AfterClass
            public static void createAndStopService() {
                service.stop();
            }
-
+       
+           @Before
+           public void createDriver() {
+               driver = new RemoteWebDriver(service.getUrl(), DesiredCapabilities.chrome());
+           }
+       
            @After
            public void quitDriver() {
                driver.quit();
