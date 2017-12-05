@@ -14,31 +14,6 @@ Pour tester le bon fonctionnement du code Selenium généré, nous écrivons un 
 
 Le projet Java `test-selenium` montre notamment un exemple de code fonctionnel, celui de l'exemple `test1.sn`.
 
-## Choices
-
-### Auxiliary functions
-Sometimes, it is required to use auxiliary functions that can be called from `main`.
-Here is a real life example :
-```
-def checkPrintable(name) {
-  go "http://www.imt-atlantique.fr/fr"
-  click a[text=name]
-  assign img[alt="Imprimer"] imageImprimer
-  assert body[].html contains imageImprimer
-} 
-def main {
-  openBrowser "firefox"
-  checkPrintable("COMMUNIQUÉS DE PRESSE")
-  checkPrintable("DOSSIERS DE PRESSE")
-  checkPrintable("VISUELS POUR LA PRESSE")
-  checkPrintable("LA PRESSE EN PARLE")
-  checkPrintable("TRIBUNES DE PRESSE")
-  checkPrintable("LES PALMARÈS")
-}
-```
-In that case, 
-
-
 ## DSL syntax
 
 ### Selector
