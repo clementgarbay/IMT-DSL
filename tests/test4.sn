@@ -1,6 +1,7 @@
 // Test 4
-openBrowser "firefox"
+openBrowser "chrome"
 go "http://www.imt-atlantique.fr/fr/rechercher"
-fill input[type="text"] "Donald Trump"
-click button[text="Appliquer les filtres"]
-assert body[].html contains "Aucun résultat ne correspond à votre recherche"
+fill input[type="text", id="edit-search-api-fulltext"] "Donald Trump"
+click input[type="submit", value="Appliquer les filtres"]
+assign div[text="Aucun résultat ne correspond à votre recherche"] expected
+assert body[].html contains expected

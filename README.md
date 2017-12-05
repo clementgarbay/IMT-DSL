@@ -1,5 +1,19 @@
 # A DSL for browser automation
 
+## Avancement
+
+Nous avons implémenté toute la grammaire xtext ainsi que l'ensemble du code xtend correspondant pour la génération de code final Java.
+
+Néanmoins, par manque important de temps le code Java généré pour les exemples 7 et 8 n'est pas totalement correct. 
+
+De plus, le bon fonctionnement avec lancement de Selenium n'a été testé que pour les exemples 1 à 3.
+
+## Elements explicatifs
+
+Pour tester le bon fonctionnement du code Selenium généré, nous écrivons un fichier de test unitaire.
+
+Le projet Java `test-selenium` montre notamment un exemple de code fonctionnel, celui de l'exemple `test1.sn`.
+
 ## DSL syntax
 
 ### Selector
@@ -30,7 +44,7 @@ div[class="views-row"].all
 
 | Elements  |   |          
 | -         | - |
-| Attribute | `value`, `html`, `count`, ... |
+| Attribute | `value`, `html`, ... |
 
 Apply a projection to a selector.
 
@@ -39,7 +53,7 @@ Apply a projection to a selector.
 ```
 body[].html
 p[].value
-div[class="views-row"].all.count
+div[class="views-row"].all
 ```
 
 ### Action
@@ -48,7 +62,7 @@ div[class="views-row"].all.count
 
 | Elements  |   |          
 | -         | - |
-| Action | `click`, `fill`, `choose`, ... |
+| Action | `click`, `fill`, `choose`, `count`, ... |
 
 Proceed to an action on a specific selector.
 
@@ -57,8 +71,9 @@ Proceed to an action on a specific selector.
 ```
 click checkbox[checked="true"].all
 click button[text="Appliquer les filtres"]
-choose select[] [text="Le mois dernier"]
+choose select[text="Le mois dernier"]
 fill input[type="text"] "2007"
+count div[class="views-row"].all
 ```
 
 ### Assignment
@@ -101,7 +116,7 @@ A function auto-returns the result of the last statement.
 
 ```
 def countResults() {
-  div[class="views-row"].all.count
+  count div[class="views-row"].all
 }
 ```
 
@@ -124,7 +139,7 @@ def checkPrintable(name) {
   click imageImprimer
 }
 def main {
-  openBrowser "firefox"
+  openBrowser "chrome"
   checkPrintable("COMMUNIQUÉS DE PRESSE")
   checkPrintable("DOSSIERS DE PRESSE")
 }

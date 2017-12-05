@@ -1,18 +1,17 @@
 // Test 9
-def checkPrintable(name) {
+def checkPrintable(linkName) {
   go "http://www.imt-atlantique.fr/fr"
-  click a[text=name]
+  click a[text=linkName]
   assign img[alt="Imprimer"] imageImprimer
   assert body[].html contains imageImprimer
   click imageImprimer
 }
 def main {
-  openBrowser "firefox"
-  checkPrintable("COMMUNIQUÉS DE PRESSE")
-  checkPrintable("DOSSIERS DE PRESSE")
-  checkPrintable("VISUELS POUR LA PRESSE")
-  checkPrintable("LA PRESSE EN PARLE")
-  checkPrintable("TRIBUNES DE PRESSE")
-  checkPrintable("LES PALMARÈS")
+  openBrowser "chrome"
+  checkPrintable("Communiqués de Presse")
+  checkPrintable("Dossiers de Presse")
+  checkPrintable("Visuels pour la Presse")
+  checkPrintable("La presse en parle")
+  checkPrintable("Tribunes de presse")
+  checkPrintable("Les palmarès")
 }
-

@@ -3,7 +3,6 @@
  */
 package fr.imta.clementdamien.dsl.selenium.mySelenium;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Selector#getElement <em>Element</em>}</li>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Selector#getAttrs <em>Attrs</em>}</li>
+ *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Selector#getParent <em>Parent</em>}</li>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Selector#isAll <em>All</em>}</li>
  * </ul>
  *
@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Selector extends EObject
+public interface Selector extends ActionTarget, ActionParameter
 {
   /**
    * Returns the value of the '<em><b>Element</b></em>' attribute.
@@ -76,6 +76,32 @@ public interface Selector extends EObject
    * @generated
    */
   void setAttrs(Attributes value);
+
+  /**
+   * Returns the value of the '<em><b>Parent</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Parent</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Parent</em>' containment reference.
+   * @see #setParent(Parent)
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage#getSelector_Parent()
+   * @model containment="true"
+   * @generated
+   */
+  Parent getParent();
+
+  /**
+   * Sets the value of the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Selector#getParent <em>Parent</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Parent</em>' containment reference.
+   * @see #getParent()
+   * @generated
+   */
+  void setParent(Parent value);
 
   /**
    * Returns the value of the '<em><b>All</b></em>' attribute.

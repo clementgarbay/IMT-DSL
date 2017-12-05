@@ -1,2 +1,8 @@
 // Test 7
-// TODO
+openBrowser "chrome"
+go "http://www.imt-atlantique.fr/fr"
+assign div[class="actu_home_ctner_inner_cell1_titre"].parent(a[]) theLink
+go "http://www.imt-atlantique.fr/fr/rechercher"
+fill input[id="edit-search-api-fulltext"] theLink
+click button[text="Appliquer les filtres"]
+assert body[].html contains theLink

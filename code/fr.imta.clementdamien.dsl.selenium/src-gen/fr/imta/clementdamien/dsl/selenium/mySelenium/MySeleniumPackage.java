@@ -68,31 +68,13 @@ public interface MySeleniumPackage extends EPackage
   int PROGRAM = 0;
 
   /**
-   * The feature id for the '<em><b>Functions</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROGRAM__FUNCTIONS = 0;
-
-  /**
-   * The feature id for the '<em><b>Statements</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PROGRAM__STATEMENTS = 1;
-
-  /**
    * The number of structural features of the '<em>Program</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROGRAM_FEATURE_COUNT = 2;
+  int PROGRAM_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.FunctionsImpl <em>Functions</em>}' class.
@@ -111,7 +93,16 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FUNCTIONS__FUNCTIONS = 0;
+  int FUNCTIONS__FUNCTIONS = PROGRAM_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Main Function</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTIONS__MAIN_FUNCTION = PROGRAM_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Functions</em>' class.
@@ -120,7 +111,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FUNCTIONS_FEATURE_COUNT = 1;
+  int FUNCTIONS_FEATURE_COUNT = PROGRAM_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.StatementsImpl <em>Statements</em>}' class.
@@ -139,7 +130,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATEMENTS__STATEMENTS = 0;
+  int STATEMENTS__STATEMENTS = PROGRAM_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Statements</em>' class.
@@ -148,7 +139,35 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STATEMENTS_FEATURE_COUNT = 1;
+  int STATEMENTS_FEATURE_COUNT = PROGRAM_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MainFunctionImpl <em>Main Function</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MainFunctionImpl
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getMainFunction()
+   * @generated
+   */
+  int MAIN_FUNCTION = 3;
+
+  /**
+   * The feature id for the '<em><b>Statements</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_FUNCTION__STATEMENTS = 0;
+
+  /**
+   * The number of structural features of the '<em>Main Function</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MAIN_FUNCTION_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.FunctionImpl <em>Function</em>}' class.
@@ -158,7 +177,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getFunction()
    * @generated
    */
-  int FUNCTION = 3;
+  int FUNCTION = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -179,7 +198,7 @@ public interface MySeleniumPackage extends EPackage
   int FUNCTION__PARAMS = 1;
 
   /**
-   * The feature id for the '<em><b>Statements</b></em>' containment reference list.
+   * The feature id for the '<em><b>Statements</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -204,7 +223,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getFunctionName()
    * @generated
    */
-  int FUNCTION_NAME = 4;
+  int FUNCTION_NAME = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -232,7 +251,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getStatement()
    * @generated
    */
-  int STATEMENT = 7;
+  int STATEMENT = 8;
 
   /**
    * The number of structural features of the '<em>Statement</em>' class.
@@ -251,7 +270,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getFunctionCall()
    * @generated
    */
-  int FUNCTION_CALL = 5;
+  int FUNCTION_CALL = 6;
 
   /**
    * The feature id for the '<em><b>Ref</b></em>' reference.
@@ -288,7 +307,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getAssertableElement()
    * @generated
    */
-  int ASSERTABLE_ELEMENT = 10;
+  int ASSERTABLE_ELEMENT = 11;
 
   /**
    * The number of structural features of the '<em>Assertable Element</em>' class.
@@ -307,7 +326,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getProjection()
    * @generated
    */
-  int PROJECTION = 6;
+  int PROJECTION = 7;
 
   /**
    * The feature id for the '<em><b>Selector</b></em>' containment reference.
@@ -344,7 +363,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getAssertEquals()
    * @generated
    */
-  int ASSERT_EQUALS = 8;
+  int ASSERT_EQUALS = 9;
 
   /**
    * The feature id for the '<em><b>Assertable Element</b></em>' containment reference list.
@@ -372,7 +391,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getAssertContains()
    * @generated
    */
-  int ASSERT_CONTAINS = 9;
+  int ASSERT_CONTAINS = 10;
 
   /**
    * The feature id for the '<em><b>Container</b></em>' containment reference.
@@ -409,7 +428,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getNavigationAction()
    * @generated
    */
-  int NAVIGATION_ACTION = 11;
+  int NAVIGATION_ACTION = 12;
 
   /**
    * The feature id for the '<em><b>Action</b></em>' attribute.
@@ -439,14 +458,14 @@ public interface MySeleniumPackage extends EPackage
   int NAVIGATION_ACTION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.OneParameterActionImpl <em>One Parameter Action</em>}' class.
+   * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ActionImpl <em>Action</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.OneParameterActionImpl
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getOneParameterAction()
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ActionImpl
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getAction()
    * @generated
    */
-  int ONE_PARAMETER_ACTION = 12;
+  int ACTION = 13;
 
   /**
    * The feature id for the '<em><b>Action</b></em>' attribute.
@@ -455,89 +474,137 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ONE_PARAMETER_ACTION__ACTION = STATEMENT_FEATURE_COUNT + 0;
+  int ACTION__ACTION = STATEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Selector</b></em>' containment reference.
+   * The feature id for the '<em><b>Target</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ONE_PARAMETER_ACTION__SELECTOR = STATEMENT_FEATURE_COUNT + 1;
+  int ACTION__TARGET = STATEMENT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Selector Parameter</b></em>' containment reference.
+   * The feature id for the '<em><b>Param</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ONE_PARAMETER_ACTION__SELECTOR_PARAMETER = STATEMENT_FEATURE_COUNT + 2;
+  int ACTION__PARAM = STATEMENT_FEATURE_COUNT + 2;
 
   /**
-   * The feature id for the '<em><b>String Parameter</b></em>' attribute.
+   * The number of structural features of the '<em>Action</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ONE_PARAMETER_ACTION__STRING_PARAMETER = STATEMENT_FEATURE_COUNT + 3;
+  int ACTION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 3;
 
   /**
-   * The number of structural features of the '<em>One Parameter Action</em>' class.
+   * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AssignActionImpl <em>Assign Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AssignActionImpl
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getAssignAction()
+   * @generated
+   */
+  int ASSIGN_ACTION = 14;
+
+  /**
+   * The feature id for the '<em><b>Target</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ONE_PARAMETER_ACTION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 4;
+  int ASSIGN_ACTION__TARGET = STATEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.TwoParametersActionImpl <em>Two Parameters Action</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.TwoParametersActionImpl
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getTwoParametersAction()
-   * @generated
-   */
-  int TWO_PARAMETERS_ACTION = 13;
-
-  /**
-   * The feature id for the '<em><b>Action</b></em>' attribute.
+   * The feature id for the '<em><b>Variable</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TWO_PARAMETERS_ACTION__ACTION = 0;
+  int ASSIGN_ACTION__VARIABLE = STATEMENT_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Selector</b></em>' containment reference.
+   * The number of structural features of the '<em>Assign Action</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TWO_PARAMETERS_ACTION__SELECTOR = 1;
+  int ASSIGN_ACTION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 
   /**
-   * The feature id for the '<em><b>Parameter</b></em>' containment reference.
+   * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ActionTargetImpl <em>Action Target</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ActionTargetImpl
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getActionTarget()
+   * @generated
+   */
+  int ACTION_TARGET = 15;
+
+  /**
+   * The number of structural features of the '<em>Action Target</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TWO_PARAMETERS_ACTION__PARAMETER = 2;
+  int ACTION_TARGET_FEATURE_COUNT = 0;
 
   /**
-   * The number of structural features of the '<em>Two Parameters Action</em>' class.
+   * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ActionParameterImpl <em>Action Parameter</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ActionParameterImpl
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getActionParameter()
+   * @generated
+   */
+  int ACTION_PARAMETER = 16;
+
+  /**
+   * The number of structural features of the '<em>Action Parameter</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TWO_PARAMETERS_ACTION_FEATURE_COUNT = 3;
+  int ACTION_PARAMETER_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ActionParameterStringImpl <em>Action Parameter String</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ActionParameterStringImpl
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getActionParameterString()
+   * @generated
+   */
+  int ACTION_PARAMETER_STRING = 17;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION_PARAMETER_STRING__VALUE = ACTION_PARAMETER_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Action Parameter String</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ACTION_PARAMETER_STRING_FEATURE_COUNT = ACTION_PARAMETER_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.SelectorImpl <em>Selector</em>}' class.
@@ -547,7 +614,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getSelector()
    * @generated
    */
-  int SELECTOR = 14;
+  int SELECTOR = 18;
 
   /**
    * The feature id for the '<em><b>Element</b></em>' attribute.
@@ -556,7 +623,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELECTOR__ELEMENT = 0;
+  int SELECTOR__ELEMENT = ACTION_TARGET_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Attrs</b></em>' containment reference.
@@ -565,7 +632,25 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELECTOR__ATTRS = 1;
+  int SELECTOR__ATTRS = ACTION_TARGET_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Parent</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECTOR__PARENT = ACTION_TARGET_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>All</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SELECTOR__ALL = ACTION_TARGET_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>All</b></em>' attribute.
@@ -583,7 +668,44 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SELECTOR_FEATURE_COUNT = 3;
+  int SELECTOR_FEATURE_COUNT = ACTION_TARGET_FEATURE_COUNT + 4;
+
+  /**
+   * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ParentImpl <em>Parent</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ParentImpl
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getParent()
+   * @generated
+   */
+  int PARENT = 19;
+
+  /**
+   * The feature id for the '<em><b>Element</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARENT__ELEMENT = 0;
+
+  /**
+   * The feature id for the '<em><b>Attrs</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARENT__ATTRS = 1;
+
+  /**
+   * The number of structural features of the '<em>Parent</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PARENT_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AttributesImpl <em>Attributes</em>}' class.
@@ -593,7 +715,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getAttributes()
    * @generated
    */
-  int ATTRIBUTES = 15;
+  int ATTRIBUTES = 20;
 
   /**
    * The feature id for the '<em><b>Attrs</b></em>' containment reference list.
@@ -621,7 +743,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getAttribute()
    * @generated
    */
-  int ATTRIBUTE = 16;
+  int ATTRIBUTE = 21;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -642,13 +764,13 @@ public interface MySeleniumPackage extends EPackage
   int ATTRIBUTE__VALUE = 1;
 
   /**
-   * The feature id for the '<em><b>Val</b></em>' reference.
+   * The feature id for the '<em><b>Variable</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ATTRIBUTE__VAL = 2;
+  int ATTRIBUTE__VARIABLE = 2;
 
   /**
    * The number of structural features of the '<em>Attribute</em>' class.
@@ -667,7 +789,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getFunctionParameters()
    * @generated
    */
-  int FUNCTION_PARAMETERS = 17;
+  int FUNCTION_PARAMETERS = 22;
 
   /**
    * The feature id for the '<em><b>Variables</b></em>' containment reference list.
@@ -695,7 +817,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getFunctionCallParameters()
    * @generated
    */
-  int FUNCTION_CALL_PARAMETERS = 18;
+  int FUNCTION_CALL_PARAMETERS = 23;
 
   /**
    * The feature id for the '<em><b>Variables</b></em>' containment reference list.
@@ -723,16 +845,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getVariableCall()
    * @generated
    */
-  int VARIABLE_CALL = 19;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int VARIABLE_CALL__NAME = 0;
+  int VARIABLE_CALL = 24;
 
   /**
    * The number of structural features of the '<em>Variable Call</em>' class.
@@ -741,7 +854,35 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VARIABLE_CALL_FEATURE_COUNT = 1;
+  int VARIABLE_CALL_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.VariableRefImpl <em>Variable Ref</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.VariableRefImpl
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getVariableRef()
+   * @generated
+   */
+  int VARIABLE_REF = 25;
+
+  /**
+   * The feature id for the '<em><b>Ref</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_REF__REF = ACTION_TARGET_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Variable Ref</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_REF_FEATURE_COUNT = ACTION_TARGET_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.VariableImpl <em>Variable</em>}' class.
@@ -751,7 +892,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getVariable()
    * @generated
    */
-  int VARIABLE = 20;
+  int VARIABLE = 26;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -779,16 +920,7 @@ public interface MySeleniumPackage extends EPackage
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getStringParameter()
    * @generated
    */
-  int STRING_PARAMETER = 21;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int STRING_PARAMETER__NAME = ASSERTABLE_ELEMENT_FEATURE_COUNT + 0;
+  int STRING_PARAMETER = 27;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -797,7 +929,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_PARAMETER__VALUE = ASSERTABLE_ELEMENT_FEATURE_COUNT + 1;
+  int STRING_PARAMETER__VALUE = ASSERTABLE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>String Parameter</em>' class.
@@ -806,7 +938,7 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRING_PARAMETER_FEATURE_COUNT = ASSERTABLE_ELEMENT_FEATURE_COUNT + 2;
+  int STRING_PARAMETER_FEATURE_COUNT = ASSERTABLE_ELEMENT_FEATURE_COUNT + 1;
 
 
   /**
@@ -818,28 +950,6 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    */
   EClass getProgram();
-
-  /**
-   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Program#getFunctions <em>Functions</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Functions</em>'.
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Program#getFunctions()
-   * @see #getProgram()
-   * @generated
-   */
-  EReference getProgram_Functions();
-
-  /**
-   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Program#getStatements <em>Statements</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Statements</em>'.
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Program#getStatements()
-   * @see #getProgram()
-   * @generated
-   */
-  EReference getProgram_Statements();
 
   /**
    * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Functions <em>Functions</em>}'.
@@ -863,6 +973,17 @@ public interface MySeleniumPackage extends EPackage
   EReference getFunctions_Functions();
 
   /**
+   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Functions#getMainFunction <em>Main Function</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Main Function</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Functions#getMainFunction()
+   * @see #getFunctions()
+   * @generated
+   */
+  EReference getFunctions_MainFunction();
+
+  /**
    * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Statements <em>Statements</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -882,6 +1003,27 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    */
   EReference getStatements_Statements();
+
+  /**
+   * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.MainFunction <em>Main Function</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Main Function</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.MainFunction
+   * @generated
+   */
+  EClass getMainFunction();
+
+  /**
+   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.MainFunction#getStatements <em>Statements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Statements</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.MainFunction#getStatements()
+   * @see #getMainFunction()
+   * @generated
+   */
+  EReference getMainFunction_Statements();
 
   /**
    * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Function <em>Function</em>}'.
@@ -916,10 +1058,10 @@ public interface MySeleniumPackage extends EPackage
   EReference getFunction_Params();
 
   /**
-   * Returns the meta object for the containment reference list '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Function#getStatements <em>Statements</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Function#getStatements <em>Statements</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Statements</em>'.
+   * @return the meta object for the containment reference '<em>Statements</em>'.
    * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Function#getStatements()
    * @see #getFunction()
    * @generated
@@ -1117,101 +1259,120 @@ public interface MySeleniumPackage extends EPackage
   EAttribute getNavigationAction_Param();
 
   /**
-   * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction <em>One Parameter Action</em>}'.
+   * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Action <em>Action</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>One Parameter Action</em>'.
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction
+   * @return the meta object for class '<em>Action</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Action
    * @generated
    */
-  EClass getOneParameterAction();
+  EClass getAction();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction#getAction <em>Action</em>}'.
+   * Returns the meta object for the attribute '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Action#getAction <em>Action</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Action</em>'.
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction#getAction()
-   * @see #getOneParameterAction()
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Action#getAction()
+   * @see #getAction()
    * @generated
    */
-  EAttribute getOneParameterAction_Action();
+  EAttribute getAction_Action();
 
   /**
-   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction#getSelector <em>Selector</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Action#getTarget <em>Target</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Selector</em>'.
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction#getSelector()
-   * @see #getOneParameterAction()
+   * @return the meta object for the containment reference '<em>Target</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Action#getTarget()
+   * @see #getAction()
    * @generated
    */
-  EReference getOneParameterAction_Selector();
+  EReference getAction_Target();
 
   /**
-   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction#getSelectorParameter <em>Selector Parameter</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Action#getParam <em>Param</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Selector Parameter</em>'.
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction#getSelectorParameter()
-   * @see #getOneParameterAction()
+   * @return the meta object for the containment reference '<em>Param</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Action#getParam()
+   * @see #getAction()
    * @generated
    */
-  EReference getOneParameterAction_SelectorParameter();
+  EReference getAction_Param();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction#getStringParameter <em>String Parameter</em>}'.
+   * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.AssignAction <em>Assign Action</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>String Parameter</em>'.
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction#getStringParameter()
-   * @see #getOneParameterAction()
+   * @return the meta object for class '<em>Assign Action</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.AssignAction
    * @generated
    */
-  EAttribute getOneParameterAction_StringParameter();
+  EClass getAssignAction();
 
   /**
-   * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.TwoParametersAction <em>Two Parameters Action</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.AssignAction#getTarget <em>Target</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Two Parameters Action</em>'.
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.TwoParametersAction
+   * @return the meta object for the containment reference '<em>Target</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.AssignAction#getTarget()
+   * @see #getAssignAction()
    * @generated
    */
-  EClass getTwoParametersAction();
+  EReference getAssignAction_Target();
 
   /**
-   * Returns the meta object for the attribute '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.TwoParametersAction#getAction <em>Action</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.AssignAction#getVariable <em>Variable</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Action</em>'.
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.TwoParametersAction#getAction()
-   * @see #getTwoParametersAction()
+   * @return the meta object for the containment reference '<em>Variable</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.AssignAction#getVariable()
+   * @see #getAssignAction()
    * @generated
    */
-  EAttribute getTwoParametersAction_Action();
+  EReference getAssignAction_Variable();
 
   /**
-   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.TwoParametersAction#getSelector <em>Selector</em>}'.
+   * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.ActionTarget <em>Action Target</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Selector</em>'.
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.TwoParametersAction#getSelector()
-   * @see #getTwoParametersAction()
+   * @return the meta object for class '<em>Action Target</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.ActionTarget
    * @generated
    */
-  EReference getTwoParametersAction_Selector();
+  EClass getActionTarget();
 
   /**
-   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.TwoParametersAction#getParameter <em>Parameter</em>}'.
+   * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.ActionParameter <em>Action Parameter</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Parameter</em>'.
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.TwoParametersAction#getParameter()
-   * @see #getTwoParametersAction()
+   * @return the meta object for class '<em>Action Parameter</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.ActionParameter
    * @generated
    */
-  EReference getTwoParametersAction_Parameter();
+  EClass getActionParameter();
+
+  /**
+   * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.ActionParameterString <em>Action Parameter String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Action Parameter String</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.ActionParameterString
+   * @generated
+   */
+  EClass getActionParameterString();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.ActionParameterString#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.ActionParameterString#getValue()
+   * @see #getActionParameterString()
+   * @generated
+   */
+  EAttribute getActionParameterString_Value();
 
   /**
    * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Selector <em>Selector</em>}'.
@@ -1246,6 +1407,17 @@ public interface MySeleniumPackage extends EPackage
   EReference getSelector_Attrs();
 
   /**
+   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Selector#getParent <em>Parent</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Parent</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Selector#getParent()
+   * @see #getSelector()
+   * @generated
+   */
+  EReference getSelector_Parent();
+
+  /**
    * Returns the meta object for the attribute '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Selector#isAll <em>All</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1255,6 +1427,38 @@ public interface MySeleniumPackage extends EPackage
    * @generated
    */
   EAttribute getSelector_All();
+
+  /**
+   * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Parent <em>Parent</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Parent</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Parent
+   * @generated
+   */
+  EClass getParent();
+
+  /**
+   * Returns the meta object for the attribute '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Parent#getElement <em>Element</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Element</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Parent#getElement()
+   * @see #getParent()
+   * @generated
+   */
+  EAttribute getParent_Element();
+
+  /**
+   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Parent#getAttrs <em>Attrs</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Attrs</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Parent#getAttrs()
+   * @see #getParent()
+   * @generated
+   */
+  EReference getParent_Attrs();
 
   /**
    * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Attributes <em>Attributes</em>}'.
@@ -1310,15 +1514,15 @@ public interface MySeleniumPackage extends EPackage
   EAttribute getAttribute_Value();
 
   /**
-   * Returns the meta object for the reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Attribute#getVal <em>Val</em>}'.
+   * Returns the meta object for the containment reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Attribute#getVariable <em>Variable</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Val</em>'.
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Attribute#getVal()
+   * @return the meta object for the containment reference '<em>Variable</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Attribute#getVariable()
    * @see #getAttribute()
    * @generated
    */
-  EReference getAttribute_Val();
+  EReference getAttribute_Variable();
 
   /**
    * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.FunctionParameters <em>Function Parameters</em>}'.
@@ -1373,15 +1577,25 @@ public interface MySeleniumPackage extends EPackage
   EClass getVariableCall();
 
   /**
-   * Returns the meta object for the reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.VariableCall#getName <em>Name</em>}'.
+   * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.VariableRef <em>Variable Ref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Name</em>'.
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.VariableCall#getName()
-   * @see #getVariableCall()
+   * @return the meta object for class '<em>Variable Ref</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.VariableRef
    * @generated
    */
-  EReference getVariableCall_Name();
+  EClass getVariableRef();
+
+  /**
+   * Returns the meta object for the reference '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.VariableRef#getRef <em>Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Ref</em>'.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.VariableRef#getRef()
+   * @see #getVariableRef()
+   * @generated
+   */
+  EReference getVariableRef_Ref();
 
   /**
    * Returns the meta object for class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Variable <em>Variable</em>}'.
@@ -1459,22 +1673,6 @@ public interface MySeleniumPackage extends EPackage
     EClass PROGRAM = eINSTANCE.getProgram();
 
     /**
-     * The meta object literal for the '<em><b>Functions</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PROGRAM__FUNCTIONS = eINSTANCE.getProgram_Functions();
-
-    /**
-     * The meta object literal for the '<em><b>Statements</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PROGRAM__STATEMENTS = eINSTANCE.getProgram_Statements();
-
-    /**
      * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.FunctionsImpl <em>Functions</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1493,6 +1691,14 @@ public interface MySeleniumPackage extends EPackage
     EReference FUNCTIONS__FUNCTIONS = eINSTANCE.getFunctions_Functions();
 
     /**
+     * The meta object literal for the '<em><b>Main Function</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FUNCTIONS__MAIN_FUNCTION = eINSTANCE.getFunctions_MainFunction();
+
+    /**
      * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.StatementsImpl <em>Statements</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1509,6 +1715,24 @@ public interface MySeleniumPackage extends EPackage
      * @generated
      */
     EReference STATEMENTS__STATEMENTS = eINSTANCE.getStatements_Statements();
+
+    /**
+     * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MainFunctionImpl <em>Main Function</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MainFunctionImpl
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getMainFunction()
+     * @generated
+     */
+    EClass MAIN_FUNCTION = eINSTANCE.getMainFunction();
+
+    /**
+     * The meta object literal for the '<em><b>Statements</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MAIN_FUNCTION__STATEMENTS = eINSTANCE.getMainFunction_Statements();
 
     /**
      * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.FunctionImpl <em>Function</em>}' class.
@@ -1537,7 +1761,7 @@ public interface MySeleniumPackage extends EPackage
     EReference FUNCTION__PARAMS = eINSTANCE.getFunction_Params();
 
     /**
-     * The meta object literal for the '<em><b>Statements</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Statements</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1705,14 +1929,14 @@ public interface MySeleniumPackage extends EPackage
     EAttribute NAVIGATION_ACTION__PARAM = eINSTANCE.getNavigationAction_Param();
 
     /**
-     * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.OneParameterActionImpl <em>One Parameter Action</em>}' class.
+     * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ActionImpl <em>Action</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.OneParameterActionImpl
-     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getOneParameterAction()
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ActionImpl
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getAction()
      * @generated
      */
-    EClass ONE_PARAMETER_ACTION = eINSTANCE.getOneParameterAction();
+    EClass ACTION = eINSTANCE.getAction();
 
     /**
      * The meta object literal for the '<em><b>Action</b></em>' attribute feature.
@@ -1720,65 +1944,87 @@ public interface MySeleniumPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ONE_PARAMETER_ACTION__ACTION = eINSTANCE.getOneParameterAction_Action();
+    EAttribute ACTION__ACTION = eINSTANCE.getAction_Action();
 
     /**
-     * The meta object literal for the '<em><b>Selector</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Target</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ONE_PARAMETER_ACTION__SELECTOR = eINSTANCE.getOneParameterAction_Selector();
+    EReference ACTION__TARGET = eINSTANCE.getAction_Target();
 
     /**
-     * The meta object literal for the '<em><b>Selector Parameter</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Param</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ONE_PARAMETER_ACTION__SELECTOR_PARAMETER = eINSTANCE.getOneParameterAction_SelectorParameter();
+    EReference ACTION__PARAM = eINSTANCE.getAction_Param();
 
     /**
-     * The meta object literal for the '<em><b>String Parameter</b></em>' attribute feature.
+     * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AssignActionImpl <em>Assign Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AssignActionImpl
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getAssignAction()
+     * @generated
+     */
+    EClass ASSIGN_ACTION = eINSTANCE.getAssignAction();
+
+    /**
+     * The meta object literal for the '<em><b>Target</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ONE_PARAMETER_ACTION__STRING_PARAMETER = eINSTANCE.getOneParameterAction_StringParameter();
+    EReference ASSIGN_ACTION__TARGET = eINSTANCE.getAssignAction_Target();
 
     /**
-     * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.TwoParametersActionImpl <em>Two Parameters Action</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.TwoParametersActionImpl
-     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getTwoParametersAction()
-     * @generated
-     */
-    EClass TWO_PARAMETERS_ACTION = eINSTANCE.getTwoParametersAction();
-
-    /**
-     * The meta object literal for the '<em><b>Action</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Variable</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TWO_PARAMETERS_ACTION__ACTION = eINSTANCE.getTwoParametersAction_Action();
+    EReference ASSIGN_ACTION__VARIABLE = eINSTANCE.getAssignAction_Variable();
 
     /**
-     * The meta object literal for the '<em><b>Selector</b></em>' containment reference feature.
+     * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ActionTargetImpl <em>Action Target</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ActionTargetImpl
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getActionTarget()
+     * @generated
+     */
+    EClass ACTION_TARGET = eINSTANCE.getActionTarget();
+
+    /**
+     * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ActionParameterImpl <em>Action Parameter</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ActionParameterImpl
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getActionParameter()
+     * @generated
+     */
+    EClass ACTION_PARAMETER = eINSTANCE.getActionParameter();
+
+    /**
+     * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ActionParameterStringImpl <em>Action Parameter String</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ActionParameterStringImpl
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getActionParameterString()
+     * @generated
+     */
+    EClass ACTION_PARAMETER_STRING = eINSTANCE.getActionParameterString();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TWO_PARAMETERS_ACTION__SELECTOR = eINSTANCE.getTwoParametersAction_Selector();
-
-    /**
-     * The meta object literal for the '<em><b>Parameter</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference TWO_PARAMETERS_ACTION__PARAMETER = eINSTANCE.getTwoParametersAction_Parameter();
+    EAttribute ACTION_PARAMETER_STRING__VALUE = eINSTANCE.getActionParameterString_Value();
 
     /**
      * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.SelectorImpl <em>Selector</em>}' class.
@@ -1807,12 +2053,46 @@ public interface MySeleniumPackage extends EPackage
     EReference SELECTOR__ATTRS = eINSTANCE.getSelector_Attrs();
 
     /**
+     * The meta object literal for the '<em><b>Parent</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SELECTOR__PARENT = eINSTANCE.getSelector_Parent();
+
+    /**
      * The meta object literal for the '<em><b>All</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute SELECTOR__ALL = eINSTANCE.getSelector_All();
+
+    /**
+     * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ParentImpl <em>Parent</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.ParentImpl
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getParent()
+     * @generated
+     */
+    EClass PARENT = eINSTANCE.getParent();
+
+    /**
+     * The meta object literal for the '<em><b>Element</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PARENT__ELEMENT = eINSTANCE.getParent_Element();
+
+    /**
+     * The meta object literal for the '<em><b>Attrs</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PARENT__ATTRS = eINSTANCE.getParent_Attrs();
 
     /**
      * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.AttributesImpl <em>Attributes</em>}' class.
@@ -1859,12 +2139,12 @@ public interface MySeleniumPackage extends EPackage
     EAttribute ATTRIBUTE__VALUE = eINSTANCE.getAttribute_Value();
 
     /**
-     * The meta object literal for the '<em><b>Val</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Variable</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference ATTRIBUTE__VAL = eINSTANCE.getAttribute_Val();
+    EReference ATTRIBUTE__VARIABLE = eINSTANCE.getAttribute_Variable();
 
     /**
      * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.FunctionParametersImpl <em>Function Parameters</em>}' class.
@@ -1913,12 +2193,22 @@ public interface MySeleniumPackage extends EPackage
     EClass VARIABLE_CALL = eINSTANCE.getVariableCall();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' reference feature.
+     * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.VariableRefImpl <em>Variable Ref</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.VariableRefImpl
+     * @see fr.imta.clementdamien.dsl.selenium.mySelenium.impl.MySeleniumPackageImpl#getVariableRef()
+     * @generated
+     */
+    EClass VARIABLE_REF = eINSTANCE.getVariableRef();
+
+    /**
+     * The meta object literal for the '<em><b>Ref</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference VARIABLE_CALL__NAME = eINSTANCE.getVariableCall_Name();
+    EReference VARIABLE_REF__REF = eINSTANCE.getVariableRef_Ref();
 
     /**
      * The meta object literal for the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.impl.VariableImpl <em>Variable</em>}' class.

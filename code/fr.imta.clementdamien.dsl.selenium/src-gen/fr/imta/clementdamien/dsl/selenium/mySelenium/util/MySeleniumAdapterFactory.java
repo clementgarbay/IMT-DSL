@@ -91,6 +91,11 @@ public class MySeleniumAdapterFactory extends AdapterFactoryImpl
         return createStatementsAdapter();
       }
       @Override
+      public Adapter caseMainFunction(MainFunction object)
+      {
+        return createMainFunctionAdapter();
+      }
+      @Override
       public Adapter caseFunction(Function object)
       {
         return createFunctionAdapter();
@@ -136,19 +141,39 @@ public class MySeleniumAdapterFactory extends AdapterFactoryImpl
         return createNavigationActionAdapter();
       }
       @Override
-      public Adapter caseOneParameterAction(OneParameterAction object)
+      public Adapter caseAction(Action object)
       {
-        return createOneParameterActionAdapter();
+        return createActionAdapter();
       }
       @Override
-      public Adapter caseTwoParametersAction(TwoParametersAction object)
+      public Adapter caseAssignAction(AssignAction object)
       {
-        return createTwoParametersActionAdapter();
+        return createAssignActionAdapter();
+      }
+      @Override
+      public Adapter caseActionTarget(ActionTarget object)
+      {
+        return createActionTargetAdapter();
+      }
+      @Override
+      public Adapter caseActionParameter(ActionParameter object)
+      {
+        return createActionParameterAdapter();
+      }
+      @Override
+      public Adapter caseActionParameterString(ActionParameterString object)
+      {
+        return createActionParameterStringAdapter();
       }
       @Override
       public Adapter caseSelector(Selector object)
       {
         return createSelectorAdapter();
+      }
+      @Override
+      public Adapter caseParent(Parent object)
+      {
+        return createParentAdapter();
       }
       @Override
       public Adapter caseAttributes(Attributes object)
@@ -174,6 +199,11 @@ public class MySeleniumAdapterFactory extends AdapterFactoryImpl
       public Adapter caseVariableCall(VariableCall object)
       {
         return createVariableCallAdapter();
+      }
+      @Override
+      public Adapter caseVariableRef(VariableRef object)
+      {
+        return createVariableRefAdapter();
       }
       @Override
       public Adapter caseVariable(Variable object)
@@ -248,6 +278,21 @@ public class MySeleniumAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createStatementsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.MainFunction <em>Main Function</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.MainFunction
+   * @generated
+   */
+  public Adapter createMainFunctionAdapter()
   {
     return null;
   }
@@ -388,31 +433,76 @@ public class MySeleniumAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction <em>One Parameter Action</em>}'.
+   * Creates a new adapter for an object of class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Action <em>Action</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.OneParameterAction
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Action
    * @generated
    */
-  public Adapter createOneParameterActionAdapter()
+  public Adapter createActionAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.TwoParametersAction <em>Two Parameters Action</em>}'.
+   * Creates a new adapter for an object of class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.AssignAction <em>Assign Action</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.TwoParametersAction
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.AssignAction
    * @generated
    */
-  public Adapter createTwoParametersActionAdapter()
+  public Adapter createAssignActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.ActionTarget <em>Action Target</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.ActionTarget
+   * @generated
+   */
+  public Adapter createActionTargetAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.ActionParameter <em>Action Parameter</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.ActionParameter
+   * @generated
+   */
+  public Adapter createActionParameterAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.ActionParameterString <em>Action Parameter String</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.ActionParameterString
+   * @generated
+   */
+  public Adapter createActionParameterStringAdapter()
   {
     return null;
   }
@@ -428,6 +518,21 @@ public class MySeleniumAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createSelectorAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Parent <em>Parent</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.Parent
+   * @generated
+   */
+  public Adapter createParentAdapter()
   {
     return null;
   }
@@ -503,6 +608,21 @@ public class MySeleniumAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createVariableCallAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.VariableRef <em>Variable Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.VariableRef
+   * @generated
+   */
+  public Adapter createVariableRefAdapter()
   {
     return null;
   }

@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Attribute#getName <em>Name</em>}</li>
  *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Attribute#getValue <em>Value</em>}</li>
- *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Attribute#getVal <em>Val</em>}</li>
+ *   <li>{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Attribute#getVariable <em>Variable</em>}</li>
  * </ul>
  *
  * @see fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage#getAttribute()
@@ -78,29 +78,29 @@ public interface Attribute extends EObject
   void setValue(String value);
 
   /**
-   * Returns the value of the '<em><b>Val</b></em>' reference.
+   * Returns the value of the '<em><b>Variable</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Val</em>' reference isn't clear,
+   * If the meaning of the '<em>Variable</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Val</em>' reference.
-   * @see #setVal(Variable)
-   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage#getAttribute_Val()
-   * @model
+   * @return the value of the '<em>Variable</em>' containment reference.
+   * @see #setVariable(VariableRef)
+   * @see fr.imta.clementdamien.dsl.selenium.mySelenium.MySeleniumPackage#getAttribute_Variable()
+   * @model containment="true"
    * @generated
    */
-  Variable getVal();
+  VariableRef getVariable();
 
   /**
-   * Sets the value of the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Attribute#getVal <em>Val</em>}' reference.
+   * Sets the value of the '{@link fr.imta.clementdamien.dsl.selenium.mySelenium.Attribute#getVariable <em>Variable</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Val</em>' reference.
-   * @see #getVal()
+   * @param value the new value of the '<em>Variable</em>' containment reference.
+   * @see #getVariable()
    * @generated
    */
-  void setVal(Variable value);
+  void setVariable(VariableRef value);
 
 } // Attribute

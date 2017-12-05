@@ -1,5 +1,5 @@
 // Test 2
-openBrowser "firefox"
+openBrowser "chrome"
 go "http://www.imt-atlantique.fr/fr"
 click a[text="Toutes les actualités"]
 assign a[text="Accueil"] thea

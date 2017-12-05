@@ -3,22 +3,27 @@ grammar fr.imta.clementdamien.dsl.selenium.MySelenium with org.eclipse.xtext.com
 generate mySelenium "http://www.imta.fr/clementdamien/dsl/selenium/MySelenium"
 
 
-
 Program:
-	functions = Functions |  statements = Statements
+	Statements | Functions 
 ;
 
 Functions:
-	functions += Function+
+	(functions += Function)+ (mainFunction = MainFunction)
 ;
 
 Statements:
 	statements += Statement+
 ;
 
+MainFunction:
+    'def' 'main' '{'
+        statements = Statements
+    '}'
+;
+
 Function:
     'def' name=FunctionName params = FunctionParameters? '{'
-        statements += Statement*
+        statements = Statements
     '}'
 ;
 
@@ -27,7 +32,7 @@ FunctionName:
 ;
 
 FunctionCall:
-    ref=[FunctionName] params = FunctionCallParameters
+    ref=[FunctionName] (params = FunctionCallParameters)
 ;
 
 Projection:
@@ -37,7 +42,8 @@ Projection:
 ProjectionAction: 'value' | 'text' | 'html';
 
 Statement:
-    OneParameterAction | 
+    Action |
+    AssignAction | 
     FunctionCall | 
     AssertEquals | 
     AssertContains | 
@@ -63,16 +69,36 @@ NavigationActionType:
     "go" | "openBrowser"
 ;
 
-OneParameterAction:
-    action=OneParameterActionType selector=Selector (selectorParameter=Selector | stringParameter=STRING)?
+
+
+Action:
+    action=ActionType target=ActionTarget (param=ActionParameter)?
 ;
 
-TwoParametersAction:
-    action=TwoParametersActionType selector=Selector parameter=Selector
+// assign action is specific action 
+AssignAction:
+	'assign' target=ActionTarget variable=Variable
+; 
+
+ActionTarget:
+	Selector | VariableRef | FunctionCall
 ;
+
+ActionParameter:
+	Selector | ActionParameterString | VariableRef
+;
+
+ActionParameterString:
+	value=STRING
+;
+
 
 Selector:
-    element=DOMElement '[' (attrs = Attributes)? ']' all?='.all'?
+    element=DOMElement '[' (attrs = Attributes)? ']' ('.parent' '(' parent=Parent ')')? (all?='.all')? 
+;
+
+Parent:
+	element=DOMElement '[' (attrs = Attributes)? ']'
 ;
 
 Attributes:
@@ -80,30 +106,39 @@ Attributes:
 ;
 
 Attribute:
-    name=DOMAttribute '=' (value = STRING | val = [Variable])
+    name=DOMAttribute '=' (value = STRING | variable = VariableRef)
 ;
 
-DOMAttribute: 'name' | 'text' | 'alt' | 'checked' | 'class' | 'id' | 'type';
 
-DOMElement: 'link' | 'button' | 'checkbox' | 'input' | 'h1' | 'body' | 'select' | 'a' | 'img';
+DOMAttribute: 'name' | 'text' | 'alt' | 'checked' | 'class' | 'id' | 'type' | 'value';
 
-OneParameterActionType: 'click' | 'assign' | 'fill' | 'choose';
-TwoParametersActionType: 'assign' | 'fill' | 'choose';
+DOMElement: 'link' | 'button' | 'checkbox' | 'input' | 'h1' | 'body' | 'select' | 'a' | 'img' | 'div';
+
+ActionType: 'click' | 'fill' | 'choose' | 'count';
 
 FunctionParameters:
     '(' variables += Variable (',' variables += Variable)* ')'
 ;
 
 FunctionCallParameters:
-    '(' variables += VariableCall (',' variables += VariableCall)* ')'
+    '(' ( variables += VariableCall (',' variables += VariableCall)* )? ')'
 ;
 
 VariableCall:
-    name=[Variable] | StringParameter
+    VariableRef | StringParameter
 ;
+
+VariableRef:
+    ref=[Variable]
+;
+
 Variable:
     name=ID
 ;
+
+//terminal ID : '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+//terminal VAR_ID : ('a'..'z'|'A'..'Z'|'_')+;
+
 StringParameter:
     value=STRING
 ;
