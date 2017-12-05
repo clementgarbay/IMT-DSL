@@ -14,6 +14,7 @@ class NavigationStatementGenerator {
 	}
 	
 	private def compileNavigationOpenBrowser(NavigationAction navigationAction) {
+		""
 		//if (navigationAction.param == "chrome") {
 		//	'''
 		//	service = new ChromeDriverService.Builder()
