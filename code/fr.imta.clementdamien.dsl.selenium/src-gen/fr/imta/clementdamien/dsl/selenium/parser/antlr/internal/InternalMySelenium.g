@@ -1497,6 +1497,12 @@ ruleDOMAttribute returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleTo
 			$current.merge(kw);
 			newLeafNode(kw, grammarAccess.getDOMAttributeAccess().getTypeKeyword_6());
 		}
+		    |
+		kw='value'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getDOMAttributeAccess().getValueKeyword_7());
+		}
 	)
 ;
 

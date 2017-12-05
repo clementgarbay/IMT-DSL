@@ -110,7 +110,7 @@ Attribute:
 ;
 
 
-DOMAttribute: 'name' | 'text' | 'alt' | 'checked' | 'class' | 'id' | 'type';
+DOMAttribute: 'name' | 'text' | 'alt' | 'checked' | 'class' | 'id' | 'type' | 'value';
 
 DOMElement: 'link' | 'button' | 'checkbox' | 'input' | 'h1' | 'body' | 'select' | 'a' | 'img' | 'div';
 

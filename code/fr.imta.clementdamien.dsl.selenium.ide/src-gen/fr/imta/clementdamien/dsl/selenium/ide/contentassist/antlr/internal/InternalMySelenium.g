@@ -1149,6 +1149,12 @@ rule__DOMAttribute__Alternatives
 		'type'
 		{ after(grammarAccess.getDOMAttributeAccess().getTypeKeyword_6()); }
 	)
+	|
+	(
+		{ before(grammarAccess.getDOMAttributeAccess().getValueKeyword_7()); }
+		'value'
+		{ after(grammarAccess.getDOMAttributeAccess().getValueKeyword_7()); }
+	)
 ;
 finally {
 	restoreStackSize(stackSize);

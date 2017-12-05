@@ -766,12 +766,13 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cClassKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
 		private final Keyword cIdKeyword_5 = (Keyword)cAlternatives.eContents().get(5);
 		private final Keyword cTypeKeyword_6 = (Keyword)cAlternatives.eContents().get(6);
+		private final Keyword cValueKeyword_7 = (Keyword)cAlternatives.eContents().get(7);
 		
 		//DOMAttribute:
-		//	'name' | 'text' | 'alt' | 'checked' | 'class' | 'id' | 'type';
+		//	'name' | 'text' | 'alt' | 'checked' | 'class' | 'id' | 'type' | 'value';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'name' | 'text' | 'alt' | 'checked' | 'class' | 'id' | 'type'
+		//'name' | 'text' | 'alt' | 'checked' | 'class' | 'id' | 'type' | 'value'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//'name'
@@ -794,6 +795,9 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'type'
 		public Keyword getTypeKeyword_6() { return cTypeKeyword_6; }
+		
+		//'value'
+		public Keyword getValueKeyword_7() { return cValueKeyword_7; }
 	}
 	public class DOMElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "fr.imta.clementdamien.dsl.selenium.MySelenium.DOMElement");
@@ -1386,7 +1390,7 @@ public class MySeleniumGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DOMAttribute:
-	//	'name' | 'text' | 'alt' | 'checked' | 'class' | 'id' | 'type';
+	//	'name' | 'text' | 'alt' | 'checked' | 'class' | 'id' | 'type' | 'value';
 	public DOMAttributeElements getDOMAttributeAccess() {
 		return pDOMAttribute;
 	}

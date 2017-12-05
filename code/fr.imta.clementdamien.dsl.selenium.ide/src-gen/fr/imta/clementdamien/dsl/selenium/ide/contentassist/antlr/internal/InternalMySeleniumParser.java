@@ -3023,11 +3023,11 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
                 {
                 int LA5_1 = input.LA(2);
 
-                if ( (LA5_1==EOF||LA5_1==RULE_ID||(LA5_1>=14 && LA5_1<=15)||(LA5_1>=32 && LA5_1<=35)||LA5_1==39||(LA5_1>=41 && LA5_1<=44)) ) {
-                    alt5=1;
-                }
-                else if ( (LA5_1==48) ) {
+                if ( (LA5_1==48) ) {
                     alt5=4;
+                }
+                else if ( (LA5_1==EOF||LA5_1==RULE_ID||(LA5_1>=14 && LA5_1<=15)||(LA5_1>=32 && LA5_1<=35)||LA5_1==39||(LA5_1>=41 && LA5_1<=44)) ) {
+                    alt5=1;
                 }
                 else {
                     NoViableAltException nvae =
@@ -3245,11 +3245,11 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
             else if ( (LA7_0==RULE_ID) ) {
                 int LA7_2 = input.LA(2);
 
-                if ( (LA7_2==EOF||(LA7_2>=RULE_ID && LA7_2<=RULE_STRING)||(LA7_2>=14 && LA7_2<=15)||(LA7_2>=22 && LA7_2<=35)||LA7_2==39||LA7_2==41||LA7_2==44) ) {
-                    alt7=2;
-                }
-                else if ( (LA7_2==48) ) {
+                if ( (LA7_2==48) ) {
                     alt7=3;
+                }
+                else if ( (LA7_2==EOF||(LA7_2>=RULE_ID && LA7_2<=RULE_STRING)||(LA7_2>=14 && LA7_2<=15)||(LA7_2>=22 && LA7_2<=35)||LA7_2==39||LA7_2==41||LA7_2==44) ) {
+                    alt7=2;
                 }
                 else {
                     NoViableAltException nvae =
@@ -3547,14 +3547,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DOMAttribute__Alternatives"
-    // InternalMySelenium.g:1106:1: rule__DOMAttribute__Alternatives : ( ( 'name' ) | ( 'text' ) | ( 'alt' ) | ( 'checked' ) | ( 'class' ) | ( 'id' ) | ( 'type' ) );
+    // InternalMySelenium.g:1106:1: rule__DOMAttribute__Alternatives : ( ( 'name' ) | ( 'text' ) | ( 'alt' ) | ( 'checked' ) | ( 'class' ) | ( 'id' ) | ( 'type' ) | ( 'value' ) );
     public final void rule__DOMAttribute__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1110:1: ( ( 'name' ) | ( 'text' ) | ( 'alt' ) | ( 'checked' ) | ( 'class' ) | ( 'id' ) | ( 'type' ) )
-            int alt10=7;
+            // InternalMySelenium.g:1110:1: ( ( 'name' ) | ( 'text' ) | ( 'alt' ) | ( 'checked' ) | ( 'class' ) | ( 'id' ) | ( 'type' ) | ( 'value' ) )
+            int alt10=8;
             switch ( input.LA(1) ) {
             case 16:
                 {
@@ -3589,6 +3589,11 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
             case 21:
                 {
                 alt10=7;
+                }
+                break;
+            case 11:
+                {
+                alt10=8;
                 }
                 break;
             default:
@@ -3704,6 +3709,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
                     }
                     break;
+                case 8 :
+                    // InternalMySelenium.g:1153:2: ( 'value' )
+                    {
+                    // InternalMySelenium.g:1153:2: ( 'value' )
+                    // InternalMySelenium.g:1154:3: 'value'
+                    {
+                     before(grammarAccess.getDOMAttributeAccess().getValueKeyword_7()); 
+                    match(input,11,FOLLOW_2); 
+                     after(grammarAccess.getDOMAttributeAccess().getValueKeyword_7()); 
+
+                    }
+
+
+                    }
+                    break;
 
             }
         }
@@ -3722,13 +3742,13 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DOMElement__Alternatives"
-    // InternalMySelenium.g:1157:1: rule__DOMElement__Alternatives : ( ( 'link' ) | ( 'button' ) | ( 'checkbox' ) | ( 'input' ) | ( 'h1' ) | ( 'body' ) | ( 'select' ) | ( 'a' ) | ( 'img' ) | ( 'div' ) );
+    // InternalMySelenium.g:1163:1: rule__DOMElement__Alternatives : ( ( 'link' ) | ( 'button' ) | ( 'checkbox' ) | ( 'input' ) | ( 'h1' ) | ( 'body' ) | ( 'select' ) | ( 'a' ) | ( 'img' ) | ( 'div' ) );
     public final void rule__DOMElement__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1161:1: ( ( 'link' ) | ( 'button' ) | ( 'checkbox' ) | ( 'input' ) | ( 'h1' ) | ( 'body' ) | ( 'select' ) | ( 'a' ) | ( 'img' ) | ( 'div' ) )
+            // InternalMySelenium.g:1167:1: ( ( 'link' ) | ( 'button' ) | ( 'checkbox' ) | ( 'input' ) | ( 'h1' ) | ( 'body' ) | ( 'select' ) | ( 'a' ) | ( 'img' ) | ( 'div' ) )
             int alt11=10;
             switch ( input.LA(1) ) {
             case 22:
@@ -3790,10 +3810,10 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
             switch (alt11) {
                 case 1 :
-                    // InternalMySelenium.g:1162:2: ( 'link' )
+                    // InternalMySelenium.g:1168:2: ( 'link' )
                     {
-                    // InternalMySelenium.g:1162:2: ( 'link' )
-                    // InternalMySelenium.g:1163:3: 'link'
+                    // InternalMySelenium.g:1168:2: ( 'link' )
+                    // InternalMySelenium.g:1169:3: 'link'
                     {
                      before(grammarAccess.getDOMElementAccess().getLinkKeyword_0()); 
                     match(input,22,FOLLOW_2); 
@@ -3805,10 +3825,10 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // InternalMySelenium.g:1168:2: ( 'button' )
+                    // InternalMySelenium.g:1174:2: ( 'button' )
                     {
-                    // InternalMySelenium.g:1168:2: ( 'button' )
-                    // InternalMySelenium.g:1169:3: 'button'
+                    // InternalMySelenium.g:1174:2: ( 'button' )
+                    // InternalMySelenium.g:1175:3: 'button'
                     {
                      before(grammarAccess.getDOMElementAccess().getButtonKeyword_1()); 
                     match(input,23,FOLLOW_2); 
@@ -3820,10 +3840,10 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // InternalMySelenium.g:1174:2: ( 'checkbox' )
+                    // InternalMySelenium.g:1180:2: ( 'checkbox' )
                     {
-                    // InternalMySelenium.g:1174:2: ( 'checkbox' )
-                    // InternalMySelenium.g:1175:3: 'checkbox'
+                    // InternalMySelenium.g:1180:2: ( 'checkbox' )
+                    // InternalMySelenium.g:1181:3: 'checkbox'
                     {
                      before(grammarAccess.getDOMElementAccess().getCheckboxKeyword_2()); 
                     match(input,24,FOLLOW_2); 
@@ -3835,10 +3855,10 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 4 :
-                    // InternalMySelenium.g:1180:2: ( 'input' )
+                    // InternalMySelenium.g:1186:2: ( 'input' )
                     {
-                    // InternalMySelenium.g:1180:2: ( 'input' )
-                    // InternalMySelenium.g:1181:3: 'input'
+                    // InternalMySelenium.g:1186:2: ( 'input' )
+                    // InternalMySelenium.g:1187:3: 'input'
                     {
                      before(grammarAccess.getDOMElementAccess().getInputKeyword_3()); 
                     match(input,25,FOLLOW_2); 
@@ -3850,10 +3870,10 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 5 :
-                    // InternalMySelenium.g:1186:2: ( 'h1' )
+                    // InternalMySelenium.g:1192:2: ( 'h1' )
                     {
-                    // InternalMySelenium.g:1186:2: ( 'h1' )
-                    // InternalMySelenium.g:1187:3: 'h1'
+                    // InternalMySelenium.g:1192:2: ( 'h1' )
+                    // InternalMySelenium.g:1193:3: 'h1'
                     {
                      before(grammarAccess.getDOMElementAccess().getH1Keyword_4()); 
                     match(input,26,FOLLOW_2); 
@@ -3865,10 +3885,10 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 6 :
-                    // InternalMySelenium.g:1192:2: ( 'body' )
+                    // InternalMySelenium.g:1198:2: ( 'body' )
                     {
-                    // InternalMySelenium.g:1192:2: ( 'body' )
-                    // InternalMySelenium.g:1193:3: 'body'
+                    // InternalMySelenium.g:1198:2: ( 'body' )
+                    // InternalMySelenium.g:1199:3: 'body'
                     {
                      before(grammarAccess.getDOMElementAccess().getBodyKeyword_5()); 
                     match(input,27,FOLLOW_2); 
@@ -3880,10 +3900,10 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 7 :
-                    // InternalMySelenium.g:1198:2: ( 'select' )
+                    // InternalMySelenium.g:1204:2: ( 'select' )
                     {
-                    // InternalMySelenium.g:1198:2: ( 'select' )
-                    // InternalMySelenium.g:1199:3: 'select'
+                    // InternalMySelenium.g:1204:2: ( 'select' )
+                    // InternalMySelenium.g:1205:3: 'select'
                     {
                      before(grammarAccess.getDOMElementAccess().getSelectKeyword_6()); 
                     match(input,28,FOLLOW_2); 
@@ -3895,10 +3915,10 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 8 :
-                    // InternalMySelenium.g:1204:2: ( 'a' )
+                    // InternalMySelenium.g:1210:2: ( 'a' )
                     {
-                    // InternalMySelenium.g:1204:2: ( 'a' )
-                    // InternalMySelenium.g:1205:3: 'a'
+                    // InternalMySelenium.g:1210:2: ( 'a' )
+                    // InternalMySelenium.g:1211:3: 'a'
                     {
                      before(grammarAccess.getDOMElementAccess().getAKeyword_7()); 
                     match(input,29,FOLLOW_2); 
@@ -3910,10 +3930,10 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 9 :
-                    // InternalMySelenium.g:1210:2: ( 'img' )
+                    // InternalMySelenium.g:1216:2: ( 'img' )
                     {
-                    // InternalMySelenium.g:1210:2: ( 'img' )
-                    // InternalMySelenium.g:1211:3: 'img'
+                    // InternalMySelenium.g:1216:2: ( 'img' )
+                    // InternalMySelenium.g:1217:3: 'img'
                     {
                      before(grammarAccess.getDOMElementAccess().getImgKeyword_8()); 
                     match(input,30,FOLLOW_2); 
@@ -3925,10 +3945,10 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 10 :
-                    // InternalMySelenium.g:1216:2: ( 'div' )
+                    // InternalMySelenium.g:1222:2: ( 'div' )
                     {
-                    // InternalMySelenium.g:1216:2: ( 'div' )
-                    // InternalMySelenium.g:1217:3: 'div'
+                    // InternalMySelenium.g:1222:2: ( 'div' )
+                    // InternalMySelenium.g:1223:3: 'div'
                     {
                      before(grammarAccess.getDOMElementAccess().getDivKeyword_9()); 
                     match(input,31,FOLLOW_2); 
@@ -3957,13 +3977,13 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ActionType__Alternatives"
-    // InternalMySelenium.g:1226:1: rule__ActionType__Alternatives : ( ( 'click' ) | ( 'fill' ) | ( 'choose' ) | ( 'count' ) );
+    // InternalMySelenium.g:1232:1: rule__ActionType__Alternatives : ( ( 'click' ) | ( 'fill' ) | ( 'choose' ) | ( 'count' ) );
     public final void rule__ActionType__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1230:1: ( ( 'click' ) | ( 'fill' ) | ( 'choose' ) | ( 'count' ) )
+            // InternalMySelenium.g:1236:1: ( ( 'click' ) | ( 'fill' ) | ( 'choose' ) | ( 'count' ) )
             int alt12=4;
             switch ( input.LA(1) ) {
             case 32:
@@ -3995,10 +4015,10 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
             switch (alt12) {
                 case 1 :
-                    // InternalMySelenium.g:1231:2: ( 'click' )
+                    // InternalMySelenium.g:1237:2: ( 'click' )
                     {
-                    // InternalMySelenium.g:1231:2: ( 'click' )
-                    // InternalMySelenium.g:1232:3: 'click'
+                    // InternalMySelenium.g:1237:2: ( 'click' )
+                    // InternalMySelenium.g:1238:3: 'click'
                     {
                      before(grammarAccess.getActionTypeAccess().getClickKeyword_0()); 
                     match(input,32,FOLLOW_2); 
@@ -4010,10 +4030,10 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // InternalMySelenium.g:1237:2: ( 'fill' )
+                    // InternalMySelenium.g:1243:2: ( 'fill' )
                     {
-                    // InternalMySelenium.g:1237:2: ( 'fill' )
-                    // InternalMySelenium.g:1238:3: 'fill'
+                    // InternalMySelenium.g:1243:2: ( 'fill' )
+                    // InternalMySelenium.g:1244:3: 'fill'
                     {
                      before(grammarAccess.getActionTypeAccess().getFillKeyword_1()); 
                     match(input,33,FOLLOW_2); 
@@ -4025,10 +4045,10 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // InternalMySelenium.g:1243:2: ( 'choose' )
+                    // InternalMySelenium.g:1249:2: ( 'choose' )
                     {
-                    // InternalMySelenium.g:1243:2: ( 'choose' )
-                    // InternalMySelenium.g:1244:3: 'choose'
+                    // InternalMySelenium.g:1249:2: ( 'choose' )
+                    // InternalMySelenium.g:1250:3: 'choose'
                     {
                      before(grammarAccess.getActionTypeAccess().getChooseKeyword_2()); 
                     match(input,34,FOLLOW_2); 
@@ -4040,10 +4060,10 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 4 :
-                    // InternalMySelenium.g:1249:2: ( 'count' )
+                    // InternalMySelenium.g:1255:2: ( 'count' )
                     {
-                    // InternalMySelenium.g:1249:2: ( 'count' )
-                    // InternalMySelenium.g:1250:3: 'count'
+                    // InternalMySelenium.g:1255:2: ( 'count' )
+                    // InternalMySelenium.g:1256:3: 'count'
                     {
                      before(grammarAccess.getActionTypeAccess().getCountKeyword_3()); 
                     match(input,35,FOLLOW_2); 
@@ -4072,13 +4092,13 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VariableCall__Alternatives"
-    // InternalMySelenium.g:1259:1: rule__VariableCall__Alternatives : ( ( ruleVariableRef ) | ( ruleStringParameter ) );
+    // InternalMySelenium.g:1265:1: rule__VariableCall__Alternatives : ( ( ruleVariableRef ) | ( ruleStringParameter ) );
     public final void rule__VariableCall__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1263:1: ( ( ruleVariableRef ) | ( ruleStringParameter ) )
+            // InternalMySelenium.g:1269:1: ( ( ruleVariableRef ) | ( ruleStringParameter ) )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -4096,10 +4116,10 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
             }
             switch (alt13) {
                 case 1 :
-                    // InternalMySelenium.g:1264:2: ( ruleVariableRef )
+                    // InternalMySelenium.g:1270:2: ( ruleVariableRef )
                     {
-                    // InternalMySelenium.g:1264:2: ( ruleVariableRef )
-                    // InternalMySelenium.g:1265:3: ruleVariableRef
+                    // InternalMySelenium.g:1270:2: ( ruleVariableRef )
+                    // InternalMySelenium.g:1271:3: ruleVariableRef
                     {
                      before(grammarAccess.getVariableCallAccess().getVariableRefParserRuleCall_0()); 
                     pushFollow(FOLLOW_2);
@@ -4115,10 +4135,10 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // InternalMySelenium.g:1270:2: ( ruleStringParameter )
+                    // InternalMySelenium.g:1276:2: ( ruleStringParameter )
                     {
-                    // InternalMySelenium.g:1270:2: ( ruleStringParameter )
-                    // InternalMySelenium.g:1271:3: ruleStringParameter
+                    // InternalMySelenium.g:1276:2: ( ruleStringParameter )
+                    // InternalMySelenium.g:1277:3: ruleStringParameter
                     {
                      before(grammarAccess.getVariableCallAccess().getStringParameterParserRuleCall_1()); 
                     pushFollow(FOLLOW_2);
@@ -4151,14 +4171,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Functions__Group__0"
-    // InternalMySelenium.g:1280:1: rule__Functions__Group__0 : rule__Functions__Group__0__Impl rule__Functions__Group__1 ;
+    // InternalMySelenium.g:1286:1: rule__Functions__Group__0 : rule__Functions__Group__0__Impl rule__Functions__Group__1 ;
     public final void rule__Functions__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1284:1: ( rule__Functions__Group__0__Impl rule__Functions__Group__1 )
-            // InternalMySelenium.g:1285:2: rule__Functions__Group__0__Impl rule__Functions__Group__1
+            // InternalMySelenium.g:1290:1: ( rule__Functions__Group__0__Impl rule__Functions__Group__1 )
+            // InternalMySelenium.g:1291:2: rule__Functions__Group__0__Impl rule__Functions__Group__1
             {
             pushFollow(FOLLOW_4);
             rule__Functions__Group__0__Impl();
@@ -4189,24 +4209,24 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Functions__Group__0__Impl"
-    // InternalMySelenium.g:1292:1: rule__Functions__Group__0__Impl : ( ( ( rule__Functions__FunctionsAssignment_0 ) ) ( ( rule__Functions__FunctionsAssignment_0 )* ) ) ;
+    // InternalMySelenium.g:1298:1: rule__Functions__Group__0__Impl : ( ( ( rule__Functions__FunctionsAssignment_0 ) ) ( ( rule__Functions__FunctionsAssignment_0 )* ) ) ;
     public final void rule__Functions__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1296:1: ( ( ( ( rule__Functions__FunctionsAssignment_0 ) ) ( ( rule__Functions__FunctionsAssignment_0 )* ) ) )
-            // InternalMySelenium.g:1297:1: ( ( ( rule__Functions__FunctionsAssignment_0 ) ) ( ( rule__Functions__FunctionsAssignment_0 )* ) )
+            // InternalMySelenium.g:1302:1: ( ( ( ( rule__Functions__FunctionsAssignment_0 ) ) ( ( rule__Functions__FunctionsAssignment_0 )* ) ) )
+            // InternalMySelenium.g:1303:1: ( ( ( rule__Functions__FunctionsAssignment_0 ) ) ( ( rule__Functions__FunctionsAssignment_0 )* ) )
             {
-            // InternalMySelenium.g:1297:1: ( ( ( rule__Functions__FunctionsAssignment_0 ) ) ( ( rule__Functions__FunctionsAssignment_0 )* ) )
-            // InternalMySelenium.g:1298:2: ( ( rule__Functions__FunctionsAssignment_0 ) ) ( ( rule__Functions__FunctionsAssignment_0 )* )
+            // InternalMySelenium.g:1303:1: ( ( ( rule__Functions__FunctionsAssignment_0 ) ) ( ( rule__Functions__FunctionsAssignment_0 )* ) )
+            // InternalMySelenium.g:1304:2: ( ( rule__Functions__FunctionsAssignment_0 ) ) ( ( rule__Functions__FunctionsAssignment_0 )* )
             {
-            // InternalMySelenium.g:1298:2: ( ( rule__Functions__FunctionsAssignment_0 ) )
-            // InternalMySelenium.g:1299:3: ( rule__Functions__FunctionsAssignment_0 )
+            // InternalMySelenium.g:1304:2: ( ( rule__Functions__FunctionsAssignment_0 ) )
+            // InternalMySelenium.g:1305:3: ( rule__Functions__FunctionsAssignment_0 )
             {
              before(grammarAccess.getFunctionsAccess().getFunctionsAssignment_0()); 
-            // InternalMySelenium.g:1300:3: ( rule__Functions__FunctionsAssignment_0 )
-            // InternalMySelenium.g:1300:4: rule__Functions__FunctionsAssignment_0
+            // InternalMySelenium.g:1306:3: ( rule__Functions__FunctionsAssignment_0 )
+            // InternalMySelenium.g:1306:4: rule__Functions__FunctionsAssignment_0
             {
             pushFollow(FOLLOW_5);
             rule__Functions__FunctionsAssignment_0();
@@ -4220,11 +4240,11 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
             }
 
-            // InternalMySelenium.g:1303:2: ( ( rule__Functions__FunctionsAssignment_0 )* )
-            // InternalMySelenium.g:1304:3: ( rule__Functions__FunctionsAssignment_0 )*
+            // InternalMySelenium.g:1309:2: ( ( rule__Functions__FunctionsAssignment_0 )* )
+            // InternalMySelenium.g:1310:3: ( rule__Functions__FunctionsAssignment_0 )*
             {
              before(grammarAccess.getFunctionsAccess().getFunctionsAssignment_0()); 
-            // InternalMySelenium.g:1305:3: ( rule__Functions__FunctionsAssignment_0 )*
+            // InternalMySelenium.g:1311:3: ( rule__Functions__FunctionsAssignment_0 )*
             loop14:
             do {
                 int alt14=2;
@@ -4243,7 +4263,7 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
                 switch (alt14) {
             	case 1 :
-            	    // InternalMySelenium.g:1305:4: rule__Functions__FunctionsAssignment_0
+            	    // InternalMySelenium.g:1311:4: rule__Functions__FunctionsAssignment_0
             	    {
             	    pushFollow(FOLLOW_5);
             	    rule__Functions__FunctionsAssignment_0();
@@ -4285,14 +4305,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Functions__Group__1"
-    // InternalMySelenium.g:1314:1: rule__Functions__Group__1 : rule__Functions__Group__1__Impl ;
+    // InternalMySelenium.g:1320:1: rule__Functions__Group__1 : rule__Functions__Group__1__Impl ;
     public final void rule__Functions__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1318:1: ( rule__Functions__Group__1__Impl )
-            // InternalMySelenium.g:1319:2: rule__Functions__Group__1__Impl
+            // InternalMySelenium.g:1324:1: ( rule__Functions__Group__1__Impl )
+            // InternalMySelenium.g:1325:2: rule__Functions__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Functions__Group__1__Impl();
@@ -4318,21 +4338,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Functions__Group__1__Impl"
-    // InternalMySelenium.g:1325:1: rule__Functions__Group__1__Impl : ( ( rule__Functions__MainFunctionAssignment_1 ) ) ;
+    // InternalMySelenium.g:1331:1: rule__Functions__Group__1__Impl : ( ( rule__Functions__MainFunctionAssignment_1 ) ) ;
     public final void rule__Functions__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1329:1: ( ( ( rule__Functions__MainFunctionAssignment_1 ) ) )
-            // InternalMySelenium.g:1330:1: ( ( rule__Functions__MainFunctionAssignment_1 ) )
+            // InternalMySelenium.g:1335:1: ( ( ( rule__Functions__MainFunctionAssignment_1 ) ) )
+            // InternalMySelenium.g:1336:1: ( ( rule__Functions__MainFunctionAssignment_1 ) )
             {
-            // InternalMySelenium.g:1330:1: ( ( rule__Functions__MainFunctionAssignment_1 ) )
-            // InternalMySelenium.g:1331:2: ( rule__Functions__MainFunctionAssignment_1 )
+            // InternalMySelenium.g:1336:1: ( ( rule__Functions__MainFunctionAssignment_1 ) )
+            // InternalMySelenium.g:1337:2: ( rule__Functions__MainFunctionAssignment_1 )
             {
              before(grammarAccess.getFunctionsAccess().getMainFunctionAssignment_1()); 
-            // InternalMySelenium.g:1332:2: ( rule__Functions__MainFunctionAssignment_1 )
-            // InternalMySelenium.g:1332:3: rule__Functions__MainFunctionAssignment_1
+            // InternalMySelenium.g:1338:2: ( rule__Functions__MainFunctionAssignment_1 )
+            // InternalMySelenium.g:1338:3: rule__Functions__MainFunctionAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Functions__MainFunctionAssignment_1();
@@ -4365,14 +4385,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MainFunction__Group__0"
-    // InternalMySelenium.g:1341:1: rule__MainFunction__Group__0 : rule__MainFunction__Group__0__Impl rule__MainFunction__Group__1 ;
+    // InternalMySelenium.g:1347:1: rule__MainFunction__Group__0 : rule__MainFunction__Group__0__Impl rule__MainFunction__Group__1 ;
     public final void rule__MainFunction__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1345:1: ( rule__MainFunction__Group__0__Impl rule__MainFunction__Group__1 )
-            // InternalMySelenium.g:1346:2: rule__MainFunction__Group__0__Impl rule__MainFunction__Group__1
+            // InternalMySelenium.g:1351:1: ( rule__MainFunction__Group__0__Impl rule__MainFunction__Group__1 )
+            // InternalMySelenium.g:1352:2: rule__MainFunction__Group__0__Impl rule__MainFunction__Group__1
             {
             pushFollow(FOLLOW_6);
             rule__MainFunction__Group__0__Impl();
@@ -4403,17 +4423,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MainFunction__Group__0__Impl"
-    // InternalMySelenium.g:1353:1: rule__MainFunction__Group__0__Impl : ( 'def' ) ;
+    // InternalMySelenium.g:1359:1: rule__MainFunction__Group__0__Impl : ( 'def' ) ;
     public final void rule__MainFunction__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1357:1: ( ( 'def' ) )
-            // InternalMySelenium.g:1358:1: ( 'def' )
+            // InternalMySelenium.g:1363:1: ( ( 'def' ) )
+            // InternalMySelenium.g:1364:1: ( 'def' )
             {
-            // InternalMySelenium.g:1358:1: ( 'def' )
-            // InternalMySelenium.g:1359:2: 'def'
+            // InternalMySelenium.g:1364:1: ( 'def' )
+            // InternalMySelenium.g:1365:2: 'def'
             {
              before(grammarAccess.getMainFunctionAccess().getDefKeyword_0()); 
             match(input,36,FOLLOW_2); 
@@ -4440,14 +4460,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MainFunction__Group__1"
-    // InternalMySelenium.g:1368:1: rule__MainFunction__Group__1 : rule__MainFunction__Group__1__Impl rule__MainFunction__Group__2 ;
+    // InternalMySelenium.g:1374:1: rule__MainFunction__Group__1 : rule__MainFunction__Group__1__Impl rule__MainFunction__Group__2 ;
     public final void rule__MainFunction__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1372:1: ( rule__MainFunction__Group__1__Impl rule__MainFunction__Group__2 )
-            // InternalMySelenium.g:1373:2: rule__MainFunction__Group__1__Impl rule__MainFunction__Group__2
+            // InternalMySelenium.g:1378:1: ( rule__MainFunction__Group__1__Impl rule__MainFunction__Group__2 )
+            // InternalMySelenium.g:1379:2: rule__MainFunction__Group__1__Impl rule__MainFunction__Group__2
             {
             pushFollow(FOLLOW_7);
             rule__MainFunction__Group__1__Impl();
@@ -4478,17 +4498,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MainFunction__Group__1__Impl"
-    // InternalMySelenium.g:1380:1: rule__MainFunction__Group__1__Impl : ( 'main' ) ;
+    // InternalMySelenium.g:1386:1: rule__MainFunction__Group__1__Impl : ( 'main' ) ;
     public final void rule__MainFunction__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1384:1: ( ( 'main' ) )
-            // InternalMySelenium.g:1385:1: ( 'main' )
+            // InternalMySelenium.g:1390:1: ( ( 'main' ) )
+            // InternalMySelenium.g:1391:1: ( 'main' )
             {
-            // InternalMySelenium.g:1385:1: ( 'main' )
-            // InternalMySelenium.g:1386:2: 'main'
+            // InternalMySelenium.g:1391:1: ( 'main' )
+            // InternalMySelenium.g:1392:2: 'main'
             {
              before(grammarAccess.getMainFunctionAccess().getMainKeyword_1()); 
             match(input,37,FOLLOW_2); 
@@ -4515,14 +4535,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MainFunction__Group__2"
-    // InternalMySelenium.g:1395:1: rule__MainFunction__Group__2 : rule__MainFunction__Group__2__Impl rule__MainFunction__Group__3 ;
+    // InternalMySelenium.g:1401:1: rule__MainFunction__Group__2 : rule__MainFunction__Group__2__Impl rule__MainFunction__Group__3 ;
     public final void rule__MainFunction__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1399:1: ( rule__MainFunction__Group__2__Impl rule__MainFunction__Group__3 )
-            // InternalMySelenium.g:1400:2: rule__MainFunction__Group__2__Impl rule__MainFunction__Group__3
+            // InternalMySelenium.g:1405:1: ( rule__MainFunction__Group__2__Impl rule__MainFunction__Group__3 )
+            // InternalMySelenium.g:1406:2: rule__MainFunction__Group__2__Impl rule__MainFunction__Group__3
             {
             pushFollow(FOLLOW_8);
             rule__MainFunction__Group__2__Impl();
@@ -4553,17 +4573,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MainFunction__Group__2__Impl"
-    // InternalMySelenium.g:1407:1: rule__MainFunction__Group__2__Impl : ( '{' ) ;
+    // InternalMySelenium.g:1413:1: rule__MainFunction__Group__2__Impl : ( '{' ) ;
     public final void rule__MainFunction__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1411:1: ( ( '{' ) )
-            // InternalMySelenium.g:1412:1: ( '{' )
+            // InternalMySelenium.g:1417:1: ( ( '{' ) )
+            // InternalMySelenium.g:1418:1: ( '{' )
             {
-            // InternalMySelenium.g:1412:1: ( '{' )
-            // InternalMySelenium.g:1413:2: '{'
+            // InternalMySelenium.g:1418:1: ( '{' )
+            // InternalMySelenium.g:1419:2: '{'
             {
              before(grammarAccess.getMainFunctionAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,38,FOLLOW_2); 
@@ -4590,14 +4610,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MainFunction__Group__3"
-    // InternalMySelenium.g:1422:1: rule__MainFunction__Group__3 : rule__MainFunction__Group__3__Impl rule__MainFunction__Group__4 ;
+    // InternalMySelenium.g:1428:1: rule__MainFunction__Group__3 : rule__MainFunction__Group__3__Impl rule__MainFunction__Group__4 ;
     public final void rule__MainFunction__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1426:1: ( rule__MainFunction__Group__3__Impl rule__MainFunction__Group__4 )
-            // InternalMySelenium.g:1427:2: rule__MainFunction__Group__3__Impl rule__MainFunction__Group__4
+            // InternalMySelenium.g:1432:1: ( rule__MainFunction__Group__3__Impl rule__MainFunction__Group__4 )
+            // InternalMySelenium.g:1433:2: rule__MainFunction__Group__3__Impl rule__MainFunction__Group__4
             {
             pushFollow(FOLLOW_9);
             rule__MainFunction__Group__3__Impl();
@@ -4628,21 +4648,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MainFunction__Group__3__Impl"
-    // InternalMySelenium.g:1434:1: rule__MainFunction__Group__3__Impl : ( ( rule__MainFunction__StatementsAssignment_3 ) ) ;
+    // InternalMySelenium.g:1440:1: rule__MainFunction__Group__3__Impl : ( ( rule__MainFunction__StatementsAssignment_3 ) ) ;
     public final void rule__MainFunction__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1438:1: ( ( ( rule__MainFunction__StatementsAssignment_3 ) ) )
-            // InternalMySelenium.g:1439:1: ( ( rule__MainFunction__StatementsAssignment_3 ) )
+            // InternalMySelenium.g:1444:1: ( ( ( rule__MainFunction__StatementsAssignment_3 ) ) )
+            // InternalMySelenium.g:1445:1: ( ( rule__MainFunction__StatementsAssignment_3 ) )
             {
-            // InternalMySelenium.g:1439:1: ( ( rule__MainFunction__StatementsAssignment_3 ) )
-            // InternalMySelenium.g:1440:2: ( rule__MainFunction__StatementsAssignment_3 )
+            // InternalMySelenium.g:1445:1: ( ( rule__MainFunction__StatementsAssignment_3 ) )
+            // InternalMySelenium.g:1446:2: ( rule__MainFunction__StatementsAssignment_3 )
             {
              before(grammarAccess.getMainFunctionAccess().getStatementsAssignment_3()); 
-            // InternalMySelenium.g:1441:2: ( rule__MainFunction__StatementsAssignment_3 )
-            // InternalMySelenium.g:1441:3: rule__MainFunction__StatementsAssignment_3
+            // InternalMySelenium.g:1447:2: ( rule__MainFunction__StatementsAssignment_3 )
+            // InternalMySelenium.g:1447:3: rule__MainFunction__StatementsAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__MainFunction__StatementsAssignment_3();
@@ -4675,14 +4695,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MainFunction__Group__4"
-    // InternalMySelenium.g:1449:1: rule__MainFunction__Group__4 : rule__MainFunction__Group__4__Impl ;
+    // InternalMySelenium.g:1455:1: rule__MainFunction__Group__4 : rule__MainFunction__Group__4__Impl ;
     public final void rule__MainFunction__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1453:1: ( rule__MainFunction__Group__4__Impl )
-            // InternalMySelenium.g:1454:2: rule__MainFunction__Group__4__Impl
+            // InternalMySelenium.g:1459:1: ( rule__MainFunction__Group__4__Impl )
+            // InternalMySelenium.g:1460:2: rule__MainFunction__Group__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__MainFunction__Group__4__Impl();
@@ -4708,17 +4728,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MainFunction__Group__4__Impl"
-    // InternalMySelenium.g:1460:1: rule__MainFunction__Group__4__Impl : ( '}' ) ;
+    // InternalMySelenium.g:1466:1: rule__MainFunction__Group__4__Impl : ( '}' ) ;
     public final void rule__MainFunction__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1464:1: ( ( '}' ) )
-            // InternalMySelenium.g:1465:1: ( '}' )
+            // InternalMySelenium.g:1470:1: ( ( '}' ) )
+            // InternalMySelenium.g:1471:1: ( '}' )
             {
-            // InternalMySelenium.g:1465:1: ( '}' )
-            // InternalMySelenium.g:1466:2: '}'
+            // InternalMySelenium.g:1471:1: ( '}' )
+            // InternalMySelenium.g:1472:2: '}'
             {
              before(grammarAccess.getMainFunctionAccess().getRightCurlyBracketKeyword_4()); 
             match(input,39,FOLLOW_2); 
@@ -4745,14 +4765,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Function__Group__0"
-    // InternalMySelenium.g:1476:1: rule__Function__Group__0 : rule__Function__Group__0__Impl rule__Function__Group__1 ;
+    // InternalMySelenium.g:1482:1: rule__Function__Group__0 : rule__Function__Group__0__Impl rule__Function__Group__1 ;
     public final void rule__Function__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1480:1: ( rule__Function__Group__0__Impl rule__Function__Group__1 )
-            // InternalMySelenium.g:1481:2: rule__Function__Group__0__Impl rule__Function__Group__1
+            // InternalMySelenium.g:1486:1: ( rule__Function__Group__0__Impl rule__Function__Group__1 )
+            // InternalMySelenium.g:1487:2: rule__Function__Group__0__Impl rule__Function__Group__1
             {
             pushFollow(FOLLOW_10);
             rule__Function__Group__0__Impl();
@@ -4783,17 +4803,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Function__Group__0__Impl"
-    // InternalMySelenium.g:1488:1: rule__Function__Group__0__Impl : ( 'def' ) ;
+    // InternalMySelenium.g:1494:1: rule__Function__Group__0__Impl : ( 'def' ) ;
     public final void rule__Function__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1492:1: ( ( 'def' ) )
-            // InternalMySelenium.g:1493:1: ( 'def' )
+            // InternalMySelenium.g:1498:1: ( ( 'def' ) )
+            // InternalMySelenium.g:1499:1: ( 'def' )
             {
-            // InternalMySelenium.g:1493:1: ( 'def' )
-            // InternalMySelenium.g:1494:2: 'def'
+            // InternalMySelenium.g:1499:1: ( 'def' )
+            // InternalMySelenium.g:1500:2: 'def'
             {
              before(grammarAccess.getFunctionAccess().getDefKeyword_0()); 
             match(input,36,FOLLOW_2); 
@@ -4820,14 +4840,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Function__Group__1"
-    // InternalMySelenium.g:1503:1: rule__Function__Group__1 : rule__Function__Group__1__Impl rule__Function__Group__2 ;
+    // InternalMySelenium.g:1509:1: rule__Function__Group__1 : rule__Function__Group__1__Impl rule__Function__Group__2 ;
     public final void rule__Function__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1507:1: ( rule__Function__Group__1__Impl rule__Function__Group__2 )
-            // InternalMySelenium.g:1508:2: rule__Function__Group__1__Impl rule__Function__Group__2
+            // InternalMySelenium.g:1513:1: ( rule__Function__Group__1__Impl rule__Function__Group__2 )
+            // InternalMySelenium.g:1514:2: rule__Function__Group__1__Impl rule__Function__Group__2
             {
             pushFollow(FOLLOW_11);
             rule__Function__Group__1__Impl();
@@ -4858,21 +4878,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Function__Group__1__Impl"
-    // InternalMySelenium.g:1515:1: rule__Function__Group__1__Impl : ( ( rule__Function__NameAssignment_1 ) ) ;
+    // InternalMySelenium.g:1521:1: rule__Function__Group__1__Impl : ( ( rule__Function__NameAssignment_1 ) ) ;
     public final void rule__Function__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1519:1: ( ( ( rule__Function__NameAssignment_1 ) ) )
-            // InternalMySelenium.g:1520:1: ( ( rule__Function__NameAssignment_1 ) )
+            // InternalMySelenium.g:1525:1: ( ( ( rule__Function__NameAssignment_1 ) ) )
+            // InternalMySelenium.g:1526:1: ( ( rule__Function__NameAssignment_1 ) )
             {
-            // InternalMySelenium.g:1520:1: ( ( rule__Function__NameAssignment_1 ) )
-            // InternalMySelenium.g:1521:2: ( rule__Function__NameAssignment_1 )
+            // InternalMySelenium.g:1526:1: ( ( rule__Function__NameAssignment_1 ) )
+            // InternalMySelenium.g:1527:2: ( rule__Function__NameAssignment_1 )
             {
              before(grammarAccess.getFunctionAccess().getNameAssignment_1()); 
-            // InternalMySelenium.g:1522:2: ( rule__Function__NameAssignment_1 )
-            // InternalMySelenium.g:1522:3: rule__Function__NameAssignment_1
+            // InternalMySelenium.g:1528:2: ( rule__Function__NameAssignment_1 )
+            // InternalMySelenium.g:1528:3: rule__Function__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Function__NameAssignment_1();
@@ -4905,14 +4925,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Function__Group__2"
-    // InternalMySelenium.g:1530:1: rule__Function__Group__2 : rule__Function__Group__2__Impl rule__Function__Group__3 ;
+    // InternalMySelenium.g:1536:1: rule__Function__Group__2 : rule__Function__Group__2__Impl rule__Function__Group__3 ;
     public final void rule__Function__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1534:1: ( rule__Function__Group__2__Impl rule__Function__Group__3 )
-            // InternalMySelenium.g:1535:2: rule__Function__Group__2__Impl rule__Function__Group__3
+            // InternalMySelenium.g:1540:1: ( rule__Function__Group__2__Impl rule__Function__Group__3 )
+            // InternalMySelenium.g:1541:2: rule__Function__Group__2__Impl rule__Function__Group__3
             {
             pushFollow(FOLLOW_11);
             rule__Function__Group__2__Impl();
@@ -4943,20 +4963,20 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Function__Group__2__Impl"
-    // InternalMySelenium.g:1542:1: rule__Function__Group__2__Impl : ( ( rule__Function__ParamsAssignment_2 )? ) ;
+    // InternalMySelenium.g:1548:1: rule__Function__Group__2__Impl : ( ( rule__Function__ParamsAssignment_2 )? ) ;
     public final void rule__Function__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1546:1: ( ( ( rule__Function__ParamsAssignment_2 )? ) )
-            // InternalMySelenium.g:1547:1: ( ( rule__Function__ParamsAssignment_2 )? )
+            // InternalMySelenium.g:1552:1: ( ( ( rule__Function__ParamsAssignment_2 )? ) )
+            // InternalMySelenium.g:1553:1: ( ( rule__Function__ParamsAssignment_2 )? )
             {
-            // InternalMySelenium.g:1547:1: ( ( rule__Function__ParamsAssignment_2 )? )
-            // InternalMySelenium.g:1548:2: ( rule__Function__ParamsAssignment_2 )?
+            // InternalMySelenium.g:1553:1: ( ( rule__Function__ParamsAssignment_2 )? )
+            // InternalMySelenium.g:1554:2: ( rule__Function__ParamsAssignment_2 )?
             {
              before(grammarAccess.getFunctionAccess().getParamsAssignment_2()); 
-            // InternalMySelenium.g:1549:2: ( rule__Function__ParamsAssignment_2 )?
+            // InternalMySelenium.g:1555:2: ( rule__Function__ParamsAssignment_2 )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -4965,7 +4985,7 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
             }
             switch (alt15) {
                 case 1 :
-                    // InternalMySelenium.g:1549:3: rule__Function__ParamsAssignment_2
+                    // InternalMySelenium.g:1555:3: rule__Function__ParamsAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Function__ParamsAssignment_2();
@@ -5001,14 +5021,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Function__Group__3"
-    // InternalMySelenium.g:1557:1: rule__Function__Group__3 : rule__Function__Group__3__Impl rule__Function__Group__4 ;
+    // InternalMySelenium.g:1563:1: rule__Function__Group__3 : rule__Function__Group__3__Impl rule__Function__Group__4 ;
     public final void rule__Function__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1561:1: ( rule__Function__Group__3__Impl rule__Function__Group__4 )
-            // InternalMySelenium.g:1562:2: rule__Function__Group__3__Impl rule__Function__Group__4
+            // InternalMySelenium.g:1567:1: ( rule__Function__Group__3__Impl rule__Function__Group__4 )
+            // InternalMySelenium.g:1568:2: rule__Function__Group__3__Impl rule__Function__Group__4
             {
             pushFollow(FOLLOW_8);
             rule__Function__Group__3__Impl();
@@ -5039,17 +5059,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Function__Group__3__Impl"
-    // InternalMySelenium.g:1569:1: rule__Function__Group__3__Impl : ( '{' ) ;
+    // InternalMySelenium.g:1575:1: rule__Function__Group__3__Impl : ( '{' ) ;
     public final void rule__Function__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1573:1: ( ( '{' ) )
-            // InternalMySelenium.g:1574:1: ( '{' )
+            // InternalMySelenium.g:1579:1: ( ( '{' ) )
+            // InternalMySelenium.g:1580:1: ( '{' )
             {
-            // InternalMySelenium.g:1574:1: ( '{' )
-            // InternalMySelenium.g:1575:2: '{'
+            // InternalMySelenium.g:1580:1: ( '{' )
+            // InternalMySelenium.g:1581:2: '{'
             {
              before(grammarAccess.getFunctionAccess().getLeftCurlyBracketKeyword_3()); 
             match(input,38,FOLLOW_2); 
@@ -5076,14 +5096,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Function__Group__4"
-    // InternalMySelenium.g:1584:1: rule__Function__Group__4 : rule__Function__Group__4__Impl rule__Function__Group__5 ;
+    // InternalMySelenium.g:1590:1: rule__Function__Group__4 : rule__Function__Group__4__Impl rule__Function__Group__5 ;
     public final void rule__Function__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1588:1: ( rule__Function__Group__4__Impl rule__Function__Group__5 )
-            // InternalMySelenium.g:1589:2: rule__Function__Group__4__Impl rule__Function__Group__5
+            // InternalMySelenium.g:1594:1: ( rule__Function__Group__4__Impl rule__Function__Group__5 )
+            // InternalMySelenium.g:1595:2: rule__Function__Group__4__Impl rule__Function__Group__5
             {
             pushFollow(FOLLOW_9);
             rule__Function__Group__4__Impl();
@@ -5114,21 +5134,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Function__Group__4__Impl"
-    // InternalMySelenium.g:1596:1: rule__Function__Group__4__Impl : ( ( rule__Function__StatementsAssignment_4 ) ) ;
+    // InternalMySelenium.g:1602:1: rule__Function__Group__4__Impl : ( ( rule__Function__StatementsAssignment_4 ) ) ;
     public final void rule__Function__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1600:1: ( ( ( rule__Function__StatementsAssignment_4 ) ) )
-            // InternalMySelenium.g:1601:1: ( ( rule__Function__StatementsAssignment_4 ) )
+            // InternalMySelenium.g:1606:1: ( ( ( rule__Function__StatementsAssignment_4 ) ) )
+            // InternalMySelenium.g:1607:1: ( ( rule__Function__StatementsAssignment_4 ) )
             {
-            // InternalMySelenium.g:1601:1: ( ( rule__Function__StatementsAssignment_4 ) )
-            // InternalMySelenium.g:1602:2: ( rule__Function__StatementsAssignment_4 )
+            // InternalMySelenium.g:1607:1: ( ( rule__Function__StatementsAssignment_4 ) )
+            // InternalMySelenium.g:1608:2: ( rule__Function__StatementsAssignment_4 )
             {
              before(grammarAccess.getFunctionAccess().getStatementsAssignment_4()); 
-            // InternalMySelenium.g:1603:2: ( rule__Function__StatementsAssignment_4 )
-            // InternalMySelenium.g:1603:3: rule__Function__StatementsAssignment_4
+            // InternalMySelenium.g:1609:2: ( rule__Function__StatementsAssignment_4 )
+            // InternalMySelenium.g:1609:3: rule__Function__StatementsAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__Function__StatementsAssignment_4();
@@ -5161,14 +5181,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Function__Group__5"
-    // InternalMySelenium.g:1611:1: rule__Function__Group__5 : rule__Function__Group__5__Impl ;
+    // InternalMySelenium.g:1617:1: rule__Function__Group__5 : rule__Function__Group__5__Impl ;
     public final void rule__Function__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1615:1: ( rule__Function__Group__5__Impl )
-            // InternalMySelenium.g:1616:2: rule__Function__Group__5__Impl
+            // InternalMySelenium.g:1621:1: ( rule__Function__Group__5__Impl )
+            // InternalMySelenium.g:1622:2: rule__Function__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Function__Group__5__Impl();
@@ -5194,17 +5214,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Function__Group__5__Impl"
-    // InternalMySelenium.g:1622:1: rule__Function__Group__5__Impl : ( '}' ) ;
+    // InternalMySelenium.g:1628:1: rule__Function__Group__5__Impl : ( '}' ) ;
     public final void rule__Function__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1626:1: ( ( '}' ) )
-            // InternalMySelenium.g:1627:1: ( '}' )
+            // InternalMySelenium.g:1632:1: ( ( '}' ) )
+            // InternalMySelenium.g:1633:1: ( '}' )
             {
-            // InternalMySelenium.g:1627:1: ( '}' )
-            // InternalMySelenium.g:1628:2: '}'
+            // InternalMySelenium.g:1633:1: ( '}' )
+            // InternalMySelenium.g:1634:2: '}'
             {
              before(grammarAccess.getFunctionAccess().getRightCurlyBracketKeyword_5()); 
             match(input,39,FOLLOW_2); 
@@ -5231,14 +5251,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group__0"
-    // InternalMySelenium.g:1638:1: rule__FunctionCall__Group__0 : rule__FunctionCall__Group__0__Impl rule__FunctionCall__Group__1 ;
+    // InternalMySelenium.g:1644:1: rule__FunctionCall__Group__0 : rule__FunctionCall__Group__0__Impl rule__FunctionCall__Group__1 ;
     public final void rule__FunctionCall__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1642:1: ( rule__FunctionCall__Group__0__Impl rule__FunctionCall__Group__1 )
-            // InternalMySelenium.g:1643:2: rule__FunctionCall__Group__0__Impl rule__FunctionCall__Group__1
+            // InternalMySelenium.g:1648:1: ( rule__FunctionCall__Group__0__Impl rule__FunctionCall__Group__1 )
+            // InternalMySelenium.g:1649:2: rule__FunctionCall__Group__0__Impl rule__FunctionCall__Group__1
             {
             pushFollow(FOLLOW_12);
             rule__FunctionCall__Group__0__Impl();
@@ -5269,21 +5289,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group__0__Impl"
-    // InternalMySelenium.g:1650:1: rule__FunctionCall__Group__0__Impl : ( ( rule__FunctionCall__RefAssignment_0 ) ) ;
+    // InternalMySelenium.g:1656:1: rule__FunctionCall__Group__0__Impl : ( ( rule__FunctionCall__RefAssignment_0 ) ) ;
     public final void rule__FunctionCall__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1654:1: ( ( ( rule__FunctionCall__RefAssignment_0 ) ) )
-            // InternalMySelenium.g:1655:1: ( ( rule__FunctionCall__RefAssignment_0 ) )
+            // InternalMySelenium.g:1660:1: ( ( ( rule__FunctionCall__RefAssignment_0 ) ) )
+            // InternalMySelenium.g:1661:1: ( ( rule__FunctionCall__RefAssignment_0 ) )
             {
-            // InternalMySelenium.g:1655:1: ( ( rule__FunctionCall__RefAssignment_0 ) )
-            // InternalMySelenium.g:1656:2: ( rule__FunctionCall__RefAssignment_0 )
+            // InternalMySelenium.g:1661:1: ( ( rule__FunctionCall__RefAssignment_0 ) )
+            // InternalMySelenium.g:1662:2: ( rule__FunctionCall__RefAssignment_0 )
             {
              before(grammarAccess.getFunctionCallAccess().getRefAssignment_0()); 
-            // InternalMySelenium.g:1657:2: ( rule__FunctionCall__RefAssignment_0 )
-            // InternalMySelenium.g:1657:3: rule__FunctionCall__RefAssignment_0
+            // InternalMySelenium.g:1663:2: ( rule__FunctionCall__RefAssignment_0 )
+            // InternalMySelenium.g:1663:3: rule__FunctionCall__RefAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__FunctionCall__RefAssignment_0();
@@ -5316,14 +5336,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group__1"
-    // InternalMySelenium.g:1665:1: rule__FunctionCall__Group__1 : rule__FunctionCall__Group__1__Impl ;
+    // InternalMySelenium.g:1671:1: rule__FunctionCall__Group__1 : rule__FunctionCall__Group__1__Impl ;
     public final void rule__FunctionCall__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1669:1: ( rule__FunctionCall__Group__1__Impl )
-            // InternalMySelenium.g:1670:2: rule__FunctionCall__Group__1__Impl
+            // InternalMySelenium.g:1675:1: ( rule__FunctionCall__Group__1__Impl )
+            // InternalMySelenium.g:1676:2: rule__FunctionCall__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__FunctionCall__Group__1__Impl();
@@ -5349,21 +5369,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__Group__1__Impl"
-    // InternalMySelenium.g:1676:1: rule__FunctionCall__Group__1__Impl : ( ( rule__FunctionCall__ParamsAssignment_1 ) ) ;
+    // InternalMySelenium.g:1682:1: rule__FunctionCall__Group__1__Impl : ( ( rule__FunctionCall__ParamsAssignment_1 ) ) ;
     public final void rule__FunctionCall__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1680:1: ( ( ( rule__FunctionCall__ParamsAssignment_1 ) ) )
-            // InternalMySelenium.g:1681:1: ( ( rule__FunctionCall__ParamsAssignment_1 ) )
+            // InternalMySelenium.g:1686:1: ( ( ( rule__FunctionCall__ParamsAssignment_1 ) ) )
+            // InternalMySelenium.g:1687:1: ( ( rule__FunctionCall__ParamsAssignment_1 ) )
             {
-            // InternalMySelenium.g:1681:1: ( ( rule__FunctionCall__ParamsAssignment_1 ) )
-            // InternalMySelenium.g:1682:2: ( rule__FunctionCall__ParamsAssignment_1 )
+            // InternalMySelenium.g:1687:1: ( ( rule__FunctionCall__ParamsAssignment_1 ) )
+            // InternalMySelenium.g:1688:2: ( rule__FunctionCall__ParamsAssignment_1 )
             {
              before(grammarAccess.getFunctionCallAccess().getParamsAssignment_1()); 
-            // InternalMySelenium.g:1683:2: ( rule__FunctionCall__ParamsAssignment_1 )
-            // InternalMySelenium.g:1683:3: rule__FunctionCall__ParamsAssignment_1
+            // InternalMySelenium.g:1689:2: ( rule__FunctionCall__ParamsAssignment_1 )
+            // InternalMySelenium.g:1689:3: rule__FunctionCall__ParamsAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__FunctionCall__ParamsAssignment_1();
@@ -5396,14 +5416,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Projection__Group__0"
-    // InternalMySelenium.g:1692:1: rule__Projection__Group__0 : rule__Projection__Group__0__Impl rule__Projection__Group__1 ;
+    // InternalMySelenium.g:1698:1: rule__Projection__Group__0 : rule__Projection__Group__0__Impl rule__Projection__Group__1 ;
     public final void rule__Projection__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1696:1: ( rule__Projection__Group__0__Impl rule__Projection__Group__1 )
-            // InternalMySelenium.g:1697:2: rule__Projection__Group__0__Impl rule__Projection__Group__1
+            // InternalMySelenium.g:1702:1: ( rule__Projection__Group__0__Impl rule__Projection__Group__1 )
+            // InternalMySelenium.g:1703:2: rule__Projection__Group__0__Impl rule__Projection__Group__1
             {
             pushFollow(FOLLOW_13);
             rule__Projection__Group__0__Impl();
@@ -5434,21 +5454,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Projection__Group__0__Impl"
-    // InternalMySelenium.g:1704:1: rule__Projection__Group__0__Impl : ( ( rule__Projection__SelectorAssignment_0 ) ) ;
+    // InternalMySelenium.g:1710:1: rule__Projection__Group__0__Impl : ( ( rule__Projection__SelectorAssignment_0 ) ) ;
     public final void rule__Projection__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1708:1: ( ( ( rule__Projection__SelectorAssignment_0 ) ) )
-            // InternalMySelenium.g:1709:1: ( ( rule__Projection__SelectorAssignment_0 ) )
+            // InternalMySelenium.g:1714:1: ( ( ( rule__Projection__SelectorAssignment_0 ) ) )
+            // InternalMySelenium.g:1715:1: ( ( rule__Projection__SelectorAssignment_0 ) )
             {
-            // InternalMySelenium.g:1709:1: ( ( rule__Projection__SelectorAssignment_0 ) )
-            // InternalMySelenium.g:1710:2: ( rule__Projection__SelectorAssignment_0 )
+            // InternalMySelenium.g:1715:1: ( ( rule__Projection__SelectorAssignment_0 ) )
+            // InternalMySelenium.g:1716:2: ( rule__Projection__SelectorAssignment_0 )
             {
              before(grammarAccess.getProjectionAccess().getSelectorAssignment_0()); 
-            // InternalMySelenium.g:1711:2: ( rule__Projection__SelectorAssignment_0 )
-            // InternalMySelenium.g:1711:3: rule__Projection__SelectorAssignment_0
+            // InternalMySelenium.g:1717:2: ( rule__Projection__SelectorAssignment_0 )
+            // InternalMySelenium.g:1717:3: rule__Projection__SelectorAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Projection__SelectorAssignment_0();
@@ -5481,14 +5501,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Projection__Group__1"
-    // InternalMySelenium.g:1719:1: rule__Projection__Group__1 : rule__Projection__Group__1__Impl rule__Projection__Group__2 ;
+    // InternalMySelenium.g:1725:1: rule__Projection__Group__1 : rule__Projection__Group__1__Impl rule__Projection__Group__2 ;
     public final void rule__Projection__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1723:1: ( rule__Projection__Group__1__Impl rule__Projection__Group__2 )
-            // InternalMySelenium.g:1724:2: rule__Projection__Group__1__Impl rule__Projection__Group__2
+            // InternalMySelenium.g:1729:1: ( rule__Projection__Group__1__Impl rule__Projection__Group__2 )
+            // InternalMySelenium.g:1730:2: rule__Projection__Group__1__Impl rule__Projection__Group__2
             {
             pushFollow(FOLLOW_14);
             rule__Projection__Group__1__Impl();
@@ -5519,17 +5539,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Projection__Group__1__Impl"
-    // InternalMySelenium.g:1731:1: rule__Projection__Group__1__Impl : ( '.' ) ;
+    // InternalMySelenium.g:1737:1: rule__Projection__Group__1__Impl : ( '.' ) ;
     public final void rule__Projection__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1735:1: ( ( '.' ) )
-            // InternalMySelenium.g:1736:1: ( '.' )
+            // InternalMySelenium.g:1741:1: ( ( '.' ) )
+            // InternalMySelenium.g:1742:1: ( '.' )
             {
-            // InternalMySelenium.g:1736:1: ( '.' )
-            // InternalMySelenium.g:1737:2: '.'
+            // InternalMySelenium.g:1742:1: ( '.' )
+            // InternalMySelenium.g:1743:2: '.'
             {
              before(grammarAccess.getProjectionAccess().getFullStopKeyword_1()); 
             match(input,40,FOLLOW_2); 
@@ -5556,14 +5576,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Projection__Group__2"
-    // InternalMySelenium.g:1746:1: rule__Projection__Group__2 : rule__Projection__Group__2__Impl ;
+    // InternalMySelenium.g:1752:1: rule__Projection__Group__2 : rule__Projection__Group__2__Impl ;
     public final void rule__Projection__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1750:1: ( rule__Projection__Group__2__Impl )
-            // InternalMySelenium.g:1751:2: rule__Projection__Group__2__Impl
+            // InternalMySelenium.g:1756:1: ( rule__Projection__Group__2__Impl )
+            // InternalMySelenium.g:1757:2: rule__Projection__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Projection__Group__2__Impl();
@@ -5589,21 +5609,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Projection__Group__2__Impl"
-    // InternalMySelenium.g:1757:1: rule__Projection__Group__2__Impl : ( ( rule__Projection__ProjectionActionAssignment_2 ) ) ;
+    // InternalMySelenium.g:1763:1: rule__Projection__Group__2__Impl : ( ( rule__Projection__ProjectionActionAssignment_2 ) ) ;
     public final void rule__Projection__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1761:1: ( ( ( rule__Projection__ProjectionActionAssignment_2 ) ) )
-            // InternalMySelenium.g:1762:1: ( ( rule__Projection__ProjectionActionAssignment_2 ) )
+            // InternalMySelenium.g:1767:1: ( ( ( rule__Projection__ProjectionActionAssignment_2 ) ) )
+            // InternalMySelenium.g:1768:1: ( ( rule__Projection__ProjectionActionAssignment_2 ) )
             {
-            // InternalMySelenium.g:1762:1: ( ( rule__Projection__ProjectionActionAssignment_2 ) )
-            // InternalMySelenium.g:1763:2: ( rule__Projection__ProjectionActionAssignment_2 )
+            // InternalMySelenium.g:1768:1: ( ( rule__Projection__ProjectionActionAssignment_2 ) )
+            // InternalMySelenium.g:1769:2: ( rule__Projection__ProjectionActionAssignment_2 )
             {
              before(grammarAccess.getProjectionAccess().getProjectionActionAssignment_2()); 
-            // InternalMySelenium.g:1764:2: ( rule__Projection__ProjectionActionAssignment_2 )
-            // InternalMySelenium.g:1764:3: rule__Projection__ProjectionActionAssignment_2
+            // InternalMySelenium.g:1770:2: ( rule__Projection__ProjectionActionAssignment_2 )
+            // InternalMySelenium.g:1770:3: rule__Projection__ProjectionActionAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__Projection__ProjectionActionAssignment_2();
@@ -5636,14 +5656,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertEquals__Group__0"
-    // InternalMySelenium.g:1773:1: rule__AssertEquals__Group__0 : rule__AssertEquals__Group__0__Impl rule__AssertEquals__Group__1 ;
+    // InternalMySelenium.g:1779:1: rule__AssertEquals__Group__0 : rule__AssertEquals__Group__0__Impl rule__AssertEquals__Group__1 ;
     public final void rule__AssertEquals__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1777:1: ( rule__AssertEquals__Group__0__Impl rule__AssertEquals__Group__1 )
-            // InternalMySelenium.g:1778:2: rule__AssertEquals__Group__0__Impl rule__AssertEquals__Group__1
+            // InternalMySelenium.g:1783:1: ( rule__AssertEquals__Group__0__Impl rule__AssertEquals__Group__1 )
+            // InternalMySelenium.g:1784:2: rule__AssertEquals__Group__0__Impl rule__AssertEquals__Group__1
             {
             pushFollow(FOLLOW_15);
             rule__AssertEquals__Group__0__Impl();
@@ -5674,17 +5694,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertEquals__Group__0__Impl"
-    // InternalMySelenium.g:1785:1: rule__AssertEquals__Group__0__Impl : ( 'assert' ) ;
+    // InternalMySelenium.g:1791:1: rule__AssertEquals__Group__0__Impl : ( 'assert' ) ;
     public final void rule__AssertEquals__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1789:1: ( ( 'assert' ) )
-            // InternalMySelenium.g:1790:1: ( 'assert' )
+            // InternalMySelenium.g:1795:1: ( ( 'assert' ) )
+            // InternalMySelenium.g:1796:1: ( 'assert' )
             {
-            // InternalMySelenium.g:1790:1: ( 'assert' )
-            // InternalMySelenium.g:1791:2: 'assert'
+            // InternalMySelenium.g:1796:1: ( 'assert' )
+            // InternalMySelenium.g:1797:2: 'assert'
             {
              before(grammarAccess.getAssertEqualsAccess().getAssertKeyword_0()); 
             match(input,41,FOLLOW_2); 
@@ -5711,14 +5731,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertEquals__Group__1"
-    // InternalMySelenium.g:1800:1: rule__AssertEquals__Group__1 : rule__AssertEquals__Group__1__Impl rule__AssertEquals__Group__2 ;
+    // InternalMySelenium.g:1806:1: rule__AssertEquals__Group__1 : rule__AssertEquals__Group__1__Impl rule__AssertEquals__Group__2 ;
     public final void rule__AssertEquals__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1804:1: ( rule__AssertEquals__Group__1__Impl rule__AssertEquals__Group__2 )
-            // InternalMySelenium.g:1805:2: rule__AssertEquals__Group__1__Impl rule__AssertEquals__Group__2
+            // InternalMySelenium.g:1810:1: ( rule__AssertEquals__Group__1__Impl rule__AssertEquals__Group__2 )
+            // InternalMySelenium.g:1811:2: rule__AssertEquals__Group__1__Impl rule__AssertEquals__Group__2
             {
             pushFollow(FOLLOW_16);
             rule__AssertEquals__Group__1__Impl();
@@ -5749,21 +5769,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertEquals__Group__1__Impl"
-    // InternalMySelenium.g:1812:1: rule__AssertEquals__Group__1__Impl : ( ( rule__AssertEquals__AssertableElementAssignment_1 ) ) ;
+    // InternalMySelenium.g:1818:1: rule__AssertEquals__Group__1__Impl : ( ( rule__AssertEquals__AssertableElementAssignment_1 ) ) ;
     public final void rule__AssertEquals__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1816:1: ( ( ( rule__AssertEquals__AssertableElementAssignment_1 ) ) )
-            // InternalMySelenium.g:1817:1: ( ( rule__AssertEquals__AssertableElementAssignment_1 ) )
+            // InternalMySelenium.g:1822:1: ( ( ( rule__AssertEquals__AssertableElementAssignment_1 ) ) )
+            // InternalMySelenium.g:1823:1: ( ( rule__AssertEquals__AssertableElementAssignment_1 ) )
             {
-            // InternalMySelenium.g:1817:1: ( ( rule__AssertEquals__AssertableElementAssignment_1 ) )
-            // InternalMySelenium.g:1818:2: ( rule__AssertEquals__AssertableElementAssignment_1 )
+            // InternalMySelenium.g:1823:1: ( ( rule__AssertEquals__AssertableElementAssignment_1 ) )
+            // InternalMySelenium.g:1824:2: ( rule__AssertEquals__AssertableElementAssignment_1 )
             {
              before(grammarAccess.getAssertEqualsAccess().getAssertableElementAssignment_1()); 
-            // InternalMySelenium.g:1819:2: ( rule__AssertEquals__AssertableElementAssignment_1 )
-            // InternalMySelenium.g:1819:3: rule__AssertEquals__AssertableElementAssignment_1
+            // InternalMySelenium.g:1825:2: ( rule__AssertEquals__AssertableElementAssignment_1 )
+            // InternalMySelenium.g:1825:3: rule__AssertEquals__AssertableElementAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__AssertEquals__AssertableElementAssignment_1();
@@ -5796,14 +5816,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertEquals__Group__2"
-    // InternalMySelenium.g:1827:1: rule__AssertEquals__Group__2 : rule__AssertEquals__Group__2__Impl rule__AssertEquals__Group__3 ;
+    // InternalMySelenium.g:1833:1: rule__AssertEquals__Group__2 : rule__AssertEquals__Group__2__Impl rule__AssertEquals__Group__3 ;
     public final void rule__AssertEquals__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1831:1: ( rule__AssertEquals__Group__2__Impl rule__AssertEquals__Group__3 )
-            // InternalMySelenium.g:1832:2: rule__AssertEquals__Group__2__Impl rule__AssertEquals__Group__3
+            // InternalMySelenium.g:1837:1: ( rule__AssertEquals__Group__2__Impl rule__AssertEquals__Group__3 )
+            // InternalMySelenium.g:1838:2: rule__AssertEquals__Group__2__Impl rule__AssertEquals__Group__3
             {
             pushFollow(FOLLOW_15);
             rule__AssertEquals__Group__2__Impl();
@@ -5834,17 +5854,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertEquals__Group__2__Impl"
-    // InternalMySelenium.g:1839:1: rule__AssertEquals__Group__2__Impl : ( '=' ) ;
+    // InternalMySelenium.g:1845:1: rule__AssertEquals__Group__2__Impl : ( '=' ) ;
     public final void rule__AssertEquals__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1843:1: ( ( '=' ) )
-            // InternalMySelenium.g:1844:1: ( '=' )
+            // InternalMySelenium.g:1849:1: ( ( '=' ) )
+            // InternalMySelenium.g:1850:1: ( '=' )
             {
-            // InternalMySelenium.g:1844:1: ( '=' )
-            // InternalMySelenium.g:1845:2: '='
+            // InternalMySelenium.g:1850:1: ( '=' )
+            // InternalMySelenium.g:1851:2: '='
             {
              before(grammarAccess.getAssertEqualsAccess().getEqualsSignKeyword_2()); 
             match(input,42,FOLLOW_2); 
@@ -5871,14 +5891,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertEquals__Group__3"
-    // InternalMySelenium.g:1854:1: rule__AssertEquals__Group__3 : rule__AssertEquals__Group__3__Impl ;
+    // InternalMySelenium.g:1860:1: rule__AssertEquals__Group__3 : rule__AssertEquals__Group__3__Impl ;
     public final void rule__AssertEquals__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1858:1: ( rule__AssertEquals__Group__3__Impl )
-            // InternalMySelenium.g:1859:2: rule__AssertEquals__Group__3__Impl
+            // InternalMySelenium.g:1864:1: ( rule__AssertEquals__Group__3__Impl )
+            // InternalMySelenium.g:1865:2: rule__AssertEquals__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__AssertEquals__Group__3__Impl();
@@ -5904,21 +5924,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertEquals__Group__3__Impl"
-    // InternalMySelenium.g:1865:1: rule__AssertEquals__Group__3__Impl : ( ( rule__AssertEquals__AssertableElementAssignment_3 ) ) ;
+    // InternalMySelenium.g:1871:1: rule__AssertEquals__Group__3__Impl : ( ( rule__AssertEquals__AssertableElementAssignment_3 ) ) ;
     public final void rule__AssertEquals__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1869:1: ( ( ( rule__AssertEquals__AssertableElementAssignment_3 ) ) )
-            // InternalMySelenium.g:1870:1: ( ( rule__AssertEquals__AssertableElementAssignment_3 ) )
+            // InternalMySelenium.g:1875:1: ( ( ( rule__AssertEquals__AssertableElementAssignment_3 ) ) )
+            // InternalMySelenium.g:1876:1: ( ( rule__AssertEquals__AssertableElementAssignment_3 ) )
             {
-            // InternalMySelenium.g:1870:1: ( ( rule__AssertEquals__AssertableElementAssignment_3 ) )
-            // InternalMySelenium.g:1871:2: ( rule__AssertEquals__AssertableElementAssignment_3 )
+            // InternalMySelenium.g:1876:1: ( ( rule__AssertEquals__AssertableElementAssignment_3 ) )
+            // InternalMySelenium.g:1877:2: ( rule__AssertEquals__AssertableElementAssignment_3 )
             {
              before(grammarAccess.getAssertEqualsAccess().getAssertableElementAssignment_3()); 
-            // InternalMySelenium.g:1872:2: ( rule__AssertEquals__AssertableElementAssignment_3 )
-            // InternalMySelenium.g:1872:3: rule__AssertEquals__AssertableElementAssignment_3
+            // InternalMySelenium.g:1878:2: ( rule__AssertEquals__AssertableElementAssignment_3 )
+            // InternalMySelenium.g:1878:3: rule__AssertEquals__AssertableElementAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__AssertEquals__AssertableElementAssignment_3();
@@ -5951,14 +5971,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertContains__Group__0"
-    // InternalMySelenium.g:1881:1: rule__AssertContains__Group__0 : rule__AssertContains__Group__0__Impl rule__AssertContains__Group__1 ;
+    // InternalMySelenium.g:1887:1: rule__AssertContains__Group__0 : rule__AssertContains__Group__0__Impl rule__AssertContains__Group__1 ;
     public final void rule__AssertContains__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1885:1: ( rule__AssertContains__Group__0__Impl rule__AssertContains__Group__1 )
-            // InternalMySelenium.g:1886:2: rule__AssertContains__Group__0__Impl rule__AssertContains__Group__1
+            // InternalMySelenium.g:1891:1: ( rule__AssertContains__Group__0__Impl rule__AssertContains__Group__1 )
+            // InternalMySelenium.g:1892:2: rule__AssertContains__Group__0__Impl rule__AssertContains__Group__1
             {
             pushFollow(FOLLOW_15);
             rule__AssertContains__Group__0__Impl();
@@ -5989,17 +6009,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertContains__Group__0__Impl"
-    // InternalMySelenium.g:1893:1: rule__AssertContains__Group__0__Impl : ( 'assert' ) ;
+    // InternalMySelenium.g:1899:1: rule__AssertContains__Group__0__Impl : ( 'assert' ) ;
     public final void rule__AssertContains__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1897:1: ( ( 'assert' ) )
-            // InternalMySelenium.g:1898:1: ( 'assert' )
+            // InternalMySelenium.g:1903:1: ( ( 'assert' ) )
+            // InternalMySelenium.g:1904:1: ( 'assert' )
             {
-            // InternalMySelenium.g:1898:1: ( 'assert' )
-            // InternalMySelenium.g:1899:2: 'assert'
+            // InternalMySelenium.g:1904:1: ( 'assert' )
+            // InternalMySelenium.g:1905:2: 'assert'
             {
              before(grammarAccess.getAssertContainsAccess().getAssertKeyword_0()); 
             match(input,41,FOLLOW_2); 
@@ -6026,14 +6046,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertContains__Group__1"
-    // InternalMySelenium.g:1908:1: rule__AssertContains__Group__1 : rule__AssertContains__Group__1__Impl rule__AssertContains__Group__2 ;
+    // InternalMySelenium.g:1914:1: rule__AssertContains__Group__1 : rule__AssertContains__Group__1__Impl rule__AssertContains__Group__2 ;
     public final void rule__AssertContains__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1912:1: ( rule__AssertContains__Group__1__Impl rule__AssertContains__Group__2 )
-            // InternalMySelenium.g:1913:2: rule__AssertContains__Group__1__Impl rule__AssertContains__Group__2
+            // InternalMySelenium.g:1918:1: ( rule__AssertContains__Group__1__Impl rule__AssertContains__Group__2 )
+            // InternalMySelenium.g:1919:2: rule__AssertContains__Group__1__Impl rule__AssertContains__Group__2
             {
             pushFollow(FOLLOW_17);
             rule__AssertContains__Group__1__Impl();
@@ -6064,21 +6084,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertContains__Group__1__Impl"
-    // InternalMySelenium.g:1920:1: rule__AssertContains__Group__1__Impl : ( ( rule__AssertContains__ContainerAssignment_1 ) ) ;
+    // InternalMySelenium.g:1926:1: rule__AssertContains__Group__1__Impl : ( ( rule__AssertContains__ContainerAssignment_1 ) ) ;
     public final void rule__AssertContains__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1924:1: ( ( ( rule__AssertContains__ContainerAssignment_1 ) ) )
-            // InternalMySelenium.g:1925:1: ( ( rule__AssertContains__ContainerAssignment_1 ) )
+            // InternalMySelenium.g:1930:1: ( ( ( rule__AssertContains__ContainerAssignment_1 ) ) )
+            // InternalMySelenium.g:1931:1: ( ( rule__AssertContains__ContainerAssignment_1 ) )
             {
-            // InternalMySelenium.g:1925:1: ( ( rule__AssertContains__ContainerAssignment_1 ) )
-            // InternalMySelenium.g:1926:2: ( rule__AssertContains__ContainerAssignment_1 )
+            // InternalMySelenium.g:1931:1: ( ( rule__AssertContains__ContainerAssignment_1 ) )
+            // InternalMySelenium.g:1932:2: ( rule__AssertContains__ContainerAssignment_1 )
             {
              before(grammarAccess.getAssertContainsAccess().getContainerAssignment_1()); 
-            // InternalMySelenium.g:1927:2: ( rule__AssertContains__ContainerAssignment_1 )
-            // InternalMySelenium.g:1927:3: rule__AssertContains__ContainerAssignment_1
+            // InternalMySelenium.g:1933:2: ( rule__AssertContains__ContainerAssignment_1 )
+            // InternalMySelenium.g:1933:3: rule__AssertContains__ContainerAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__AssertContains__ContainerAssignment_1();
@@ -6111,14 +6131,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertContains__Group__2"
-    // InternalMySelenium.g:1935:1: rule__AssertContains__Group__2 : rule__AssertContains__Group__2__Impl rule__AssertContains__Group__3 ;
+    // InternalMySelenium.g:1941:1: rule__AssertContains__Group__2 : rule__AssertContains__Group__2__Impl rule__AssertContains__Group__3 ;
     public final void rule__AssertContains__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1939:1: ( rule__AssertContains__Group__2__Impl rule__AssertContains__Group__3 )
-            // InternalMySelenium.g:1940:2: rule__AssertContains__Group__2__Impl rule__AssertContains__Group__3
+            // InternalMySelenium.g:1945:1: ( rule__AssertContains__Group__2__Impl rule__AssertContains__Group__3 )
+            // InternalMySelenium.g:1946:2: rule__AssertContains__Group__2__Impl rule__AssertContains__Group__3
             {
             pushFollow(FOLLOW_15);
             rule__AssertContains__Group__2__Impl();
@@ -6149,17 +6169,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertContains__Group__2__Impl"
-    // InternalMySelenium.g:1947:1: rule__AssertContains__Group__2__Impl : ( 'contains' ) ;
+    // InternalMySelenium.g:1953:1: rule__AssertContains__Group__2__Impl : ( 'contains' ) ;
     public final void rule__AssertContains__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1951:1: ( ( 'contains' ) )
-            // InternalMySelenium.g:1952:1: ( 'contains' )
+            // InternalMySelenium.g:1957:1: ( ( 'contains' ) )
+            // InternalMySelenium.g:1958:1: ( 'contains' )
             {
-            // InternalMySelenium.g:1952:1: ( 'contains' )
-            // InternalMySelenium.g:1953:2: 'contains'
+            // InternalMySelenium.g:1958:1: ( 'contains' )
+            // InternalMySelenium.g:1959:2: 'contains'
             {
              before(grammarAccess.getAssertContainsAccess().getContainsKeyword_2()); 
             match(input,43,FOLLOW_2); 
@@ -6186,14 +6206,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertContains__Group__3"
-    // InternalMySelenium.g:1962:1: rule__AssertContains__Group__3 : rule__AssertContains__Group__3__Impl ;
+    // InternalMySelenium.g:1968:1: rule__AssertContains__Group__3 : rule__AssertContains__Group__3__Impl ;
     public final void rule__AssertContains__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1966:1: ( rule__AssertContains__Group__3__Impl )
-            // InternalMySelenium.g:1967:2: rule__AssertContains__Group__3__Impl
+            // InternalMySelenium.g:1972:1: ( rule__AssertContains__Group__3__Impl )
+            // InternalMySelenium.g:1973:2: rule__AssertContains__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__AssertContains__Group__3__Impl();
@@ -6219,21 +6239,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertContains__Group__3__Impl"
-    // InternalMySelenium.g:1973:1: rule__AssertContains__Group__3__Impl : ( ( rule__AssertContains__ElementAssignment_3 ) ) ;
+    // InternalMySelenium.g:1979:1: rule__AssertContains__Group__3__Impl : ( ( rule__AssertContains__ElementAssignment_3 ) ) ;
     public final void rule__AssertContains__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1977:1: ( ( ( rule__AssertContains__ElementAssignment_3 ) ) )
-            // InternalMySelenium.g:1978:1: ( ( rule__AssertContains__ElementAssignment_3 ) )
+            // InternalMySelenium.g:1983:1: ( ( ( rule__AssertContains__ElementAssignment_3 ) ) )
+            // InternalMySelenium.g:1984:1: ( ( rule__AssertContains__ElementAssignment_3 ) )
             {
-            // InternalMySelenium.g:1978:1: ( ( rule__AssertContains__ElementAssignment_3 ) )
-            // InternalMySelenium.g:1979:2: ( rule__AssertContains__ElementAssignment_3 )
+            // InternalMySelenium.g:1984:1: ( ( rule__AssertContains__ElementAssignment_3 ) )
+            // InternalMySelenium.g:1985:2: ( rule__AssertContains__ElementAssignment_3 )
             {
              before(grammarAccess.getAssertContainsAccess().getElementAssignment_3()); 
-            // InternalMySelenium.g:1980:2: ( rule__AssertContains__ElementAssignment_3 )
-            // InternalMySelenium.g:1980:3: rule__AssertContains__ElementAssignment_3
+            // InternalMySelenium.g:1986:2: ( rule__AssertContains__ElementAssignment_3 )
+            // InternalMySelenium.g:1986:3: rule__AssertContains__ElementAssignment_3
             {
             pushFollow(FOLLOW_2);
             rule__AssertContains__ElementAssignment_3();
@@ -6266,14 +6286,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NavigationAction__Group__0"
-    // InternalMySelenium.g:1989:1: rule__NavigationAction__Group__0 : rule__NavigationAction__Group__0__Impl rule__NavigationAction__Group__1 ;
+    // InternalMySelenium.g:1995:1: rule__NavigationAction__Group__0 : rule__NavigationAction__Group__0__Impl rule__NavigationAction__Group__1 ;
     public final void rule__NavigationAction__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:1993:1: ( rule__NavigationAction__Group__0__Impl rule__NavigationAction__Group__1 )
-            // InternalMySelenium.g:1994:2: rule__NavigationAction__Group__0__Impl rule__NavigationAction__Group__1
+            // InternalMySelenium.g:1999:1: ( rule__NavigationAction__Group__0__Impl rule__NavigationAction__Group__1 )
+            // InternalMySelenium.g:2000:2: rule__NavigationAction__Group__0__Impl rule__NavigationAction__Group__1
             {
             pushFollow(FOLLOW_18);
             rule__NavigationAction__Group__0__Impl();
@@ -6304,21 +6324,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NavigationAction__Group__0__Impl"
-    // InternalMySelenium.g:2001:1: rule__NavigationAction__Group__0__Impl : ( ( rule__NavigationAction__ActionAssignment_0 ) ) ;
+    // InternalMySelenium.g:2007:1: rule__NavigationAction__Group__0__Impl : ( ( rule__NavigationAction__ActionAssignment_0 ) ) ;
     public final void rule__NavigationAction__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2005:1: ( ( ( rule__NavigationAction__ActionAssignment_0 ) ) )
-            // InternalMySelenium.g:2006:1: ( ( rule__NavigationAction__ActionAssignment_0 ) )
+            // InternalMySelenium.g:2011:1: ( ( ( rule__NavigationAction__ActionAssignment_0 ) ) )
+            // InternalMySelenium.g:2012:1: ( ( rule__NavigationAction__ActionAssignment_0 ) )
             {
-            // InternalMySelenium.g:2006:1: ( ( rule__NavigationAction__ActionAssignment_0 ) )
-            // InternalMySelenium.g:2007:2: ( rule__NavigationAction__ActionAssignment_0 )
+            // InternalMySelenium.g:2012:1: ( ( rule__NavigationAction__ActionAssignment_0 ) )
+            // InternalMySelenium.g:2013:2: ( rule__NavigationAction__ActionAssignment_0 )
             {
              before(grammarAccess.getNavigationActionAccess().getActionAssignment_0()); 
-            // InternalMySelenium.g:2008:2: ( rule__NavigationAction__ActionAssignment_0 )
-            // InternalMySelenium.g:2008:3: rule__NavigationAction__ActionAssignment_0
+            // InternalMySelenium.g:2014:2: ( rule__NavigationAction__ActionAssignment_0 )
+            // InternalMySelenium.g:2014:3: rule__NavigationAction__ActionAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__NavigationAction__ActionAssignment_0();
@@ -6351,14 +6371,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NavigationAction__Group__1"
-    // InternalMySelenium.g:2016:1: rule__NavigationAction__Group__1 : rule__NavigationAction__Group__1__Impl ;
+    // InternalMySelenium.g:2022:1: rule__NavigationAction__Group__1 : rule__NavigationAction__Group__1__Impl ;
     public final void rule__NavigationAction__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2020:1: ( rule__NavigationAction__Group__1__Impl )
-            // InternalMySelenium.g:2021:2: rule__NavigationAction__Group__1__Impl
+            // InternalMySelenium.g:2026:1: ( rule__NavigationAction__Group__1__Impl )
+            // InternalMySelenium.g:2027:2: rule__NavigationAction__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__NavigationAction__Group__1__Impl();
@@ -6384,21 +6404,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NavigationAction__Group__1__Impl"
-    // InternalMySelenium.g:2027:1: rule__NavigationAction__Group__1__Impl : ( ( rule__NavigationAction__ParamAssignment_1 ) ) ;
+    // InternalMySelenium.g:2033:1: rule__NavigationAction__Group__1__Impl : ( ( rule__NavigationAction__ParamAssignment_1 ) ) ;
     public final void rule__NavigationAction__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2031:1: ( ( ( rule__NavigationAction__ParamAssignment_1 ) ) )
-            // InternalMySelenium.g:2032:1: ( ( rule__NavigationAction__ParamAssignment_1 ) )
+            // InternalMySelenium.g:2037:1: ( ( ( rule__NavigationAction__ParamAssignment_1 ) ) )
+            // InternalMySelenium.g:2038:1: ( ( rule__NavigationAction__ParamAssignment_1 ) )
             {
-            // InternalMySelenium.g:2032:1: ( ( rule__NavigationAction__ParamAssignment_1 ) )
-            // InternalMySelenium.g:2033:2: ( rule__NavigationAction__ParamAssignment_1 )
+            // InternalMySelenium.g:2038:1: ( ( rule__NavigationAction__ParamAssignment_1 ) )
+            // InternalMySelenium.g:2039:2: ( rule__NavigationAction__ParamAssignment_1 )
             {
              before(grammarAccess.getNavigationActionAccess().getParamAssignment_1()); 
-            // InternalMySelenium.g:2034:2: ( rule__NavigationAction__ParamAssignment_1 )
-            // InternalMySelenium.g:2034:3: rule__NavigationAction__ParamAssignment_1
+            // InternalMySelenium.g:2040:2: ( rule__NavigationAction__ParamAssignment_1 )
+            // InternalMySelenium.g:2040:3: rule__NavigationAction__ParamAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__NavigationAction__ParamAssignment_1();
@@ -6431,14 +6451,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Action__Group__0"
-    // InternalMySelenium.g:2043:1: rule__Action__Group__0 : rule__Action__Group__0__Impl rule__Action__Group__1 ;
+    // InternalMySelenium.g:2049:1: rule__Action__Group__0 : rule__Action__Group__0__Impl rule__Action__Group__1 ;
     public final void rule__Action__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2047:1: ( rule__Action__Group__0__Impl rule__Action__Group__1 )
-            // InternalMySelenium.g:2048:2: rule__Action__Group__0__Impl rule__Action__Group__1
+            // InternalMySelenium.g:2053:1: ( rule__Action__Group__0__Impl rule__Action__Group__1 )
+            // InternalMySelenium.g:2054:2: rule__Action__Group__0__Impl rule__Action__Group__1
             {
             pushFollow(FOLLOW_19);
             rule__Action__Group__0__Impl();
@@ -6469,21 +6489,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Action__Group__0__Impl"
-    // InternalMySelenium.g:2055:1: rule__Action__Group__0__Impl : ( ( rule__Action__ActionAssignment_0 ) ) ;
+    // InternalMySelenium.g:2061:1: rule__Action__Group__0__Impl : ( ( rule__Action__ActionAssignment_0 ) ) ;
     public final void rule__Action__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2059:1: ( ( ( rule__Action__ActionAssignment_0 ) ) )
-            // InternalMySelenium.g:2060:1: ( ( rule__Action__ActionAssignment_0 ) )
+            // InternalMySelenium.g:2065:1: ( ( ( rule__Action__ActionAssignment_0 ) ) )
+            // InternalMySelenium.g:2066:1: ( ( rule__Action__ActionAssignment_0 ) )
             {
-            // InternalMySelenium.g:2060:1: ( ( rule__Action__ActionAssignment_0 ) )
-            // InternalMySelenium.g:2061:2: ( rule__Action__ActionAssignment_0 )
+            // InternalMySelenium.g:2066:1: ( ( rule__Action__ActionAssignment_0 ) )
+            // InternalMySelenium.g:2067:2: ( rule__Action__ActionAssignment_0 )
             {
              before(grammarAccess.getActionAccess().getActionAssignment_0()); 
-            // InternalMySelenium.g:2062:2: ( rule__Action__ActionAssignment_0 )
-            // InternalMySelenium.g:2062:3: rule__Action__ActionAssignment_0
+            // InternalMySelenium.g:2068:2: ( rule__Action__ActionAssignment_0 )
+            // InternalMySelenium.g:2068:3: rule__Action__ActionAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Action__ActionAssignment_0();
@@ -6516,14 +6536,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Action__Group__1"
-    // InternalMySelenium.g:2070:1: rule__Action__Group__1 : rule__Action__Group__1__Impl rule__Action__Group__2 ;
+    // InternalMySelenium.g:2076:1: rule__Action__Group__1 : rule__Action__Group__1__Impl rule__Action__Group__2 ;
     public final void rule__Action__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2074:1: ( rule__Action__Group__1__Impl rule__Action__Group__2 )
-            // InternalMySelenium.g:2075:2: rule__Action__Group__1__Impl rule__Action__Group__2
+            // InternalMySelenium.g:2080:1: ( rule__Action__Group__1__Impl rule__Action__Group__2 )
+            // InternalMySelenium.g:2081:2: rule__Action__Group__1__Impl rule__Action__Group__2
             {
             pushFollow(FOLLOW_15);
             rule__Action__Group__1__Impl();
@@ -6554,21 +6574,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Action__Group__1__Impl"
-    // InternalMySelenium.g:2082:1: rule__Action__Group__1__Impl : ( ( rule__Action__TargetAssignment_1 ) ) ;
+    // InternalMySelenium.g:2088:1: rule__Action__Group__1__Impl : ( ( rule__Action__TargetAssignment_1 ) ) ;
     public final void rule__Action__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2086:1: ( ( ( rule__Action__TargetAssignment_1 ) ) )
-            // InternalMySelenium.g:2087:1: ( ( rule__Action__TargetAssignment_1 ) )
+            // InternalMySelenium.g:2092:1: ( ( ( rule__Action__TargetAssignment_1 ) ) )
+            // InternalMySelenium.g:2093:1: ( ( rule__Action__TargetAssignment_1 ) )
             {
-            // InternalMySelenium.g:2087:1: ( ( rule__Action__TargetAssignment_1 ) )
-            // InternalMySelenium.g:2088:2: ( rule__Action__TargetAssignment_1 )
+            // InternalMySelenium.g:2093:1: ( ( rule__Action__TargetAssignment_1 ) )
+            // InternalMySelenium.g:2094:2: ( rule__Action__TargetAssignment_1 )
             {
              before(grammarAccess.getActionAccess().getTargetAssignment_1()); 
-            // InternalMySelenium.g:2089:2: ( rule__Action__TargetAssignment_1 )
-            // InternalMySelenium.g:2089:3: rule__Action__TargetAssignment_1
+            // InternalMySelenium.g:2095:2: ( rule__Action__TargetAssignment_1 )
+            // InternalMySelenium.g:2095:3: rule__Action__TargetAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Action__TargetAssignment_1();
@@ -6601,14 +6621,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Action__Group__2"
-    // InternalMySelenium.g:2097:1: rule__Action__Group__2 : rule__Action__Group__2__Impl ;
+    // InternalMySelenium.g:2103:1: rule__Action__Group__2 : rule__Action__Group__2__Impl ;
     public final void rule__Action__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2101:1: ( rule__Action__Group__2__Impl )
-            // InternalMySelenium.g:2102:2: rule__Action__Group__2__Impl
+            // InternalMySelenium.g:2107:1: ( rule__Action__Group__2__Impl )
+            // InternalMySelenium.g:2108:2: rule__Action__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Action__Group__2__Impl();
@@ -6634,20 +6654,20 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Action__Group__2__Impl"
-    // InternalMySelenium.g:2108:1: rule__Action__Group__2__Impl : ( ( rule__Action__ParamAssignment_2 )? ) ;
+    // InternalMySelenium.g:2114:1: rule__Action__Group__2__Impl : ( ( rule__Action__ParamAssignment_2 )? ) ;
     public final void rule__Action__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2112:1: ( ( ( rule__Action__ParamAssignment_2 )? ) )
-            // InternalMySelenium.g:2113:1: ( ( rule__Action__ParamAssignment_2 )? )
+            // InternalMySelenium.g:2118:1: ( ( ( rule__Action__ParamAssignment_2 )? ) )
+            // InternalMySelenium.g:2119:1: ( ( rule__Action__ParamAssignment_2 )? )
             {
-            // InternalMySelenium.g:2113:1: ( ( rule__Action__ParamAssignment_2 )? )
-            // InternalMySelenium.g:2114:2: ( rule__Action__ParamAssignment_2 )?
+            // InternalMySelenium.g:2119:1: ( ( rule__Action__ParamAssignment_2 )? )
+            // InternalMySelenium.g:2120:2: ( rule__Action__ParamAssignment_2 )?
             {
              before(grammarAccess.getActionAccess().getParamAssignment_2()); 
-            // InternalMySelenium.g:2115:2: ( rule__Action__ParamAssignment_2 )?
+            // InternalMySelenium.g:2121:2: ( rule__Action__ParamAssignment_2 )?
             int alt16=2;
             int LA16_0 = input.LA(1);
 
@@ -6663,7 +6683,7 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
             }
             switch (alt16) {
                 case 1 :
-                    // InternalMySelenium.g:2115:3: rule__Action__ParamAssignment_2
+                    // InternalMySelenium.g:2121:3: rule__Action__ParamAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Action__ParamAssignment_2();
@@ -6699,14 +6719,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssignAction__Group__0"
-    // InternalMySelenium.g:2124:1: rule__AssignAction__Group__0 : rule__AssignAction__Group__0__Impl rule__AssignAction__Group__1 ;
+    // InternalMySelenium.g:2130:1: rule__AssignAction__Group__0 : rule__AssignAction__Group__0__Impl rule__AssignAction__Group__1 ;
     public final void rule__AssignAction__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2128:1: ( rule__AssignAction__Group__0__Impl rule__AssignAction__Group__1 )
-            // InternalMySelenium.g:2129:2: rule__AssignAction__Group__0__Impl rule__AssignAction__Group__1
+            // InternalMySelenium.g:2134:1: ( rule__AssignAction__Group__0__Impl rule__AssignAction__Group__1 )
+            // InternalMySelenium.g:2135:2: rule__AssignAction__Group__0__Impl rule__AssignAction__Group__1
             {
             pushFollow(FOLLOW_19);
             rule__AssignAction__Group__0__Impl();
@@ -6737,17 +6757,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssignAction__Group__0__Impl"
-    // InternalMySelenium.g:2136:1: rule__AssignAction__Group__0__Impl : ( 'assign' ) ;
+    // InternalMySelenium.g:2142:1: rule__AssignAction__Group__0__Impl : ( 'assign' ) ;
     public final void rule__AssignAction__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2140:1: ( ( 'assign' ) )
-            // InternalMySelenium.g:2141:1: ( 'assign' )
+            // InternalMySelenium.g:2146:1: ( ( 'assign' ) )
+            // InternalMySelenium.g:2147:1: ( 'assign' )
             {
-            // InternalMySelenium.g:2141:1: ( 'assign' )
-            // InternalMySelenium.g:2142:2: 'assign'
+            // InternalMySelenium.g:2147:1: ( 'assign' )
+            // InternalMySelenium.g:2148:2: 'assign'
             {
              before(grammarAccess.getAssignActionAccess().getAssignKeyword_0()); 
             match(input,44,FOLLOW_2); 
@@ -6774,14 +6794,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssignAction__Group__1"
-    // InternalMySelenium.g:2151:1: rule__AssignAction__Group__1 : rule__AssignAction__Group__1__Impl rule__AssignAction__Group__2 ;
+    // InternalMySelenium.g:2157:1: rule__AssignAction__Group__1 : rule__AssignAction__Group__1__Impl rule__AssignAction__Group__2 ;
     public final void rule__AssignAction__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2155:1: ( rule__AssignAction__Group__1__Impl rule__AssignAction__Group__2 )
-            // InternalMySelenium.g:2156:2: rule__AssignAction__Group__1__Impl rule__AssignAction__Group__2
+            // InternalMySelenium.g:2161:1: ( rule__AssignAction__Group__1__Impl rule__AssignAction__Group__2 )
+            // InternalMySelenium.g:2162:2: rule__AssignAction__Group__1__Impl rule__AssignAction__Group__2
             {
             pushFollow(FOLLOW_10);
             rule__AssignAction__Group__1__Impl();
@@ -6812,21 +6832,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssignAction__Group__1__Impl"
-    // InternalMySelenium.g:2163:1: rule__AssignAction__Group__1__Impl : ( ( rule__AssignAction__TargetAssignment_1 ) ) ;
+    // InternalMySelenium.g:2169:1: rule__AssignAction__Group__1__Impl : ( ( rule__AssignAction__TargetAssignment_1 ) ) ;
     public final void rule__AssignAction__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2167:1: ( ( ( rule__AssignAction__TargetAssignment_1 ) ) )
-            // InternalMySelenium.g:2168:1: ( ( rule__AssignAction__TargetAssignment_1 ) )
+            // InternalMySelenium.g:2173:1: ( ( ( rule__AssignAction__TargetAssignment_1 ) ) )
+            // InternalMySelenium.g:2174:1: ( ( rule__AssignAction__TargetAssignment_1 ) )
             {
-            // InternalMySelenium.g:2168:1: ( ( rule__AssignAction__TargetAssignment_1 ) )
-            // InternalMySelenium.g:2169:2: ( rule__AssignAction__TargetAssignment_1 )
+            // InternalMySelenium.g:2174:1: ( ( rule__AssignAction__TargetAssignment_1 ) )
+            // InternalMySelenium.g:2175:2: ( rule__AssignAction__TargetAssignment_1 )
             {
              before(grammarAccess.getAssignActionAccess().getTargetAssignment_1()); 
-            // InternalMySelenium.g:2170:2: ( rule__AssignAction__TargetAssignment_1 )
-            // InternalMySelenium.g:2170:3: rule__AssignAction__TargetAssignment_1
+            // InternalMySelenium.g:2176:2: ( rule__AssignAction__TargetAssignment_1 )
+            // InternalMySelenium.g:2176:3: rule__AssignAction__TargetAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__AssignAction__TargetAssignment_1();
@@ -6859,14 +6879,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssignAction__Group__2"
-    // InternalMySelenium.g:2178:1: rule__AssignAction__Group__2 : rule__AssignAction__Group__2__Impl ;
+    // InternalMySelenium.g:2184:1: rule__AssignAction__Group__2 : rule__AssignAction__Group__2__Impl ;
     public final void rule__AssignAction__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2182:1: ( rule__AssignAction__Group__2__Impl )
-            // InternalMySelenium.g:2183:2: rule__AssignAction__Group__2__Impl
+            // InternalMySelenium.g:2188:1: ( rule__AssignAction__Group__2__Impl )
+            // InternalMySelenium.g:2189:2: rule__AssignAction__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__AssignAction__Group__2__Impl();
@@ -6892,21 +6912,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssignAction__Group__2__Impl"
-    // InternalMySelenium.g:2189:1: rule__AssignAction__Group__2__Impl : ( ( rule__AssignAction__VariableAssignment_2 ) ) ;
+    // InternalMySelenium.g:2195:1: rule__AssignAction__Group__2__Impl : ( ( rule__AssignAction__VariableAssignment_2 ) ) ;
     public final void rule__AssignAction__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2193:1: ( ( ( rule__AssignAction__VariableAssignment_2 ) ) )
-            // InternalMySelenium.g:2194:1: ( ( rule__AssignAction__VariableAssignment_2 ) )
+            // InternalMySelenium.g:2199:1: ( ( ( rule__AssignAction__VariableAssignment_2 ) ) )
+            // InternalMySelenium.g:2200:1: ( ( rule__AssignAction__VariableAssignment_2 ) )
             {
-            // InternalMySelenium.g:2194:1: ( ( rule__AssignAction__VariableAssignment_2 ) )
-            // InternalMySelenium.g:2195:2: ( rule__AssignAction__VariableAssignment_2 )
+            // InternalMySelenium.g:2200:1: ( ( rule__AssignAction__VariableAssignment_2 ) )
+            // InternalMySelenium.g:2201:2: ( rule__AssignAction__VariableAssignment_2 )
             {
              before(grammarAccess.getAssignActionAccess().getVariableAssignment_2()); 
-            // InternalMySelenium.g:2196:2: ( rule__AssignAction__VariableAssignment_2 )
-            // InternalMySelenium.g:2196:3: rule__AssignAction__VariableAssignment_2
+            // InternalMySelenium.g:2202:2: ( rule__AssignAction__VariableAssignment_2 )
+            // InternalMySelenium.g:2202:3: rule__AssignAction__VariableAssignment_2
             {
             pushFollow(FOLLOW_2);
             rule__AssignAction__VariableAssignment_2();
@@ -6939,14 +6959,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group__0"
-    // InternalMySelenium.g:2205:1: rule__Selector__Group__0 : rule__Selector__Group__0__Impl rule__Selector__Group__1 ;
+    // InternalMySelenium.g:2211:1: rule__Selector__Group__0 : rule__Selector__Group__0__Impl rule__Selector__Group__1 ;
     public final void rule__Selector__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2209:1: ( rule__Selector__Group__0__Impl rule__Selector__Group__1 )
-            // InternalMySelenium.g:2210:2: rule__Selector__Group__0__Impl rule__Selector__Group__1
+            // InternalMySelenium.g:2215:1: ( rule__Selector__Group__0__Impl rule__Selector__Group__1 )
+            // InternalMySelenium.g:2216:2: rule__Selector__Group__0__Impl rule__Selector__Group__1
             {
             pushFollow(FOLLOW_20);
             rule__Selector__Group__0__Impl();
@@ -6977,21 +6997,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group__0__Impl"
-    // InternalMySelenium.g:2217:1: rule__Selector__Group__0__Impl : ( ( rule__Selector__ElementAssignment_0 ) ) ;
+    // InternalMySelenium.g:2223:1: rule__Selector__Group__0__Impl : ( ( rule__Selector__ElementAssignment_0 ) ) ;
     public final void rule__Selector__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2221:1: ( ( ( rule__Selector__ElementAssignment_0 ) ) )
-            // InternalMySelenium.g:2222:1: ( ( rule__Selector__ElementAssignment_0 ) )
+            // InternalMySelenium.g:2227:1: ( ( ( rule__Selector__ElementAssignment_0 ) ) )
+            // InternalMySelenium.g:2228:1: ( ( rule__Selector__ElementAssignment_0 ) )
             {
-            // InternalMySelenium.g:2222:1: ( ( rule__Selector__ElementAssignment_0 ) )
-            // InternalMySelenium.g:2223:2: ( rule__Selector__ElementAssignment_0 )
+            // InternalMySelenium.g:2228:1: ( ( rule__Selector__ElementAssignment_0 ) )
+            // InternalMySelenium.g:2229:2: ( rule__Selector__ElementAssignment_0 )
             {
              before(grammarAccess.getSelectorAccess().getElementAssignment_0()); 
-            // InternalMySelenium.g:2224:2: ( rule__Selector__ElementAssignment_0 )
-            // InternalMySelenium.g:2224:3: rule__Selector__ElementAssignment_0
+            // InternalMySelenium.g:2230:2: ( rule__Selector__ElementAssignment_0 )
+            // InternalMySelenium.g:2230:3: rule__Selector__ElementAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Selector__ElementAssignment_0();
@@ -7024,14 +7044,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group__1"
-    // InternalMySelenium.g:2232:1: rule__Selector__Group__1 : rule__Selector__Group__1__Impl rule__Selector__Group__2 ;
+    // InternalMySelenium.g:2238:1: rule__Selector__Group__1 : rule__Selector__Group__1__Impl rule__Selector__Group__2 ;
     public final void rule__Selector__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2236:1: ( rule__Selector__Group__1__Impl rule__Selector__Group__2 )
-            // InternalMySelenium.g:2237:2: rule__Selector__Group__1__Impl rule__Selector__Group__2
+            // InternalMySelenium.g:2242:1: ( rule__Selector__Group__1__Impl rule__Selector__Group__2 )
+            // InternalMySelenium.g:2243:2: rule__Selector__Group__1__Impl rule__Selector__Group__2
             {
             pushFollow(FOLLOW_21);
             rule__Selector__Group__1__Impl();
@@ -7062,17 +7082,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group__1__Impl"
-    // InternalMySelenium.g:2244:1: rule__Selector__Group__1__Impl : ( '[' ) ;
+    // InternalMySelenium.g:2250:1: rule__Selector__Group__1__Impl : ( '[' ) ;
     public final void rule__Selector__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2248:1: ( ( '[' ) )
-            // InternalMySelenium.g:2249:1: ( '[' )
+            // InternalMySelenium.g:2254:1: ( ( '[' ) )
+            // InternalMySelenium.g:2255:1: ( '[' )
             {
-            // InternalMySelenium.g:2249:1: ( '[' )
-            // InternalMySelenium.g:2250:2: '['
+            // InternalMySelenium.g:2255:1: ( '[' )
+            // InternalMySelenium.g:2256:2: '['
             {
              before(grammarAccess.getSelectorAccess().getLeftSquareBracketKeyword_1()); 
             match(input,45,FOLLOW_2); 
@@ -7099,14 +7119,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group__2"
-    // InternalMySelenium.g:2259:1: rule__Selector__Group__2 : rule__Selector__Group__2__Impl rule__Selector__Group__3 ;
+    // InternalMySelenium.g:2265:1: rule__Selector__Group__2 : rule__Selector__Group__2__Impl rule__Selector__Group__3 ;
     public final void rule__Selector__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2263:1: ( rule__Selector__Group__2__Impl rule__Selector__Group__3 )
-            // InternalMySelenium.g:2264:2: rule__Selector__Group__2__Impl rule__Selector__Group__3
+            // InternalMySelenium.g:2269:1: ( rule__Selector__Group__2__Impl rule__Selector__Group__3 )
+            // InternalMySelenium.g:2270:2: rule__Selector__Group__2__Impl rule__Selector__Group__3
             {
             pushFollow(FOLLOW_21);
             rule__Selector__Group__2__Impl();
@@ -7137,29 +7157,29 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group__2__Impl"
-    // InternalMySelenium.g:2271:1: rule__Selector__Group__2__Impl : ( ( rule__Selector__AttrsAssignment_2 )? ) ;
+    // InternalMySelenium.g:2277:1: rule__Selector__Group__2__Impl : ( ( rule__Selector__AttrsAssignment_2 )? ) ;
     public final void rule__Selector__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2275:1: ( ( ( rule__Selector__AttrsAssignment_2 )? ) )
-            // InternalMySelenium.g:2276:1: ( ( rule__Selector__AttrsAssignment_2 )? )
+            // InternalMySelenium.g:2281:1: ( ( ( rule__Selector__AttrsAssignment_2 )? ) )
+            // InternalMySelenium.g:2282:1: ( ( rule__Selector__AttrsAssignment_2 )? )
             {
-            // InternalMySelenium.g:2276:1: ( ( rule__Selector__AttrsAssignment_2 )? )
-            // InternalMySelenium.g:2277:2: ( rule__Selector__AttrsAssignment_2 )?
+            // InternalMySelenium.g:2282:1: ( ( rule__Selector__AttrsAssignment_2 )? )
+            // InternalMySelenium.g:2283:2: ( rule__Selector__AttrsAssignment_2 )?
             {
              before(grammarAccess.getSelectorAccess().getAttrsAssignment_2()); 
-            // InternalMySelenium.g:2278:2: ( rule__Selector__AttrsAssignment_2 )?
+            // InternalMySelenium.g:2284:2: ( rule__Selector__AttrsAssignment_2 )?
             int alt17=2;
             int LA17_0 = input.LA(1);
 
-            if ( (LA17_0==12||(LA17_0>=16 && LA17_0<=21)) ) {
+            if ( ((LA17_0>=11 && LA17_0<=12)||(LA17_0>=16 && LA17_0<=21)) ) {
                 alt17=1;
             }
             switch (alt17) {
                 case 1 :
-                    // InternalMySelenium.g:2278:3: rule__Selector__AttrsAssignment_2
+                    // InternalMySelenium.g:2284:3: rule__Selector__AttrsAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Selector__AttrsAssignment_2();
@@ -7195,14 +7215,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group__3"
-    // InternalMySelenium.g:2286:1: rule__Selector__Group__3 : rule__Selector__Group__3__Impl rule__Selector__Group__4 ;
+    // InternalMySelenium.g:2292:1: rule__Selector__Group__3 : rule__Selector__Group__3__Impl rule__Selector__Group__4 ;
     public final void rule__Selector__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2290:1: ( rule__Selector__Group__3__Impl rule__Selector__Group__4 )
-            // InternalMySelenium.g:2291:2: rule__Selector__Group__3__Impl rule__Selector__Group__4
+            // InternalMySelenium.g:2296:1: ( rule__Selector__Group__3__Impl rule__Selector__Group__4 )
+            // InternalMySelenium.g:2297:2: rule__Selector__Group__3__Impl rule__Selector__Group__4
             {
             pushFollow(FOLLOW_22);
             rule__Selector__Group__3__Impl();
@@ -7233,17 +7253,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group__3__Impl"
-    // InternalMySelenium.g:2298:1: rule__Selector__Group__3__Impl : ( ']' ) ;
+    // InternalMySelenium.g:2304:1: rule__Selector__Group__3__Impl : ( ']' ) ;
     public final void rule__Selector__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2302:1: ( ( ']' ) )
-            // InternalMySelenium.g:2303:1: ( ']' )
+            // InternalMySelenium.g:2308:1: ( ( ']' ) )
+            // InternalMySelenium.g:2309:1: ( ']' )
             {
-            // InternalMySelenium.g:2303:1: ( ']' )
-            // InternalMySelenium.g:2304:2: ']'
+            // InternalMySelenium.g:2309:1: ( ']' )
+            // InternalMySelenium.g:2310:2: ']'
             {
              before(grammarAccess.getSelectorAccess().getRightSquareBracketKeyword_3()); 
             match(input,46,FOLLOW_2); 
@@ -7270,14 +7290,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group__4"
-    // InternalMySelenium.g:2313:1: rule__Selector__Group__4 : rule__Selector__Group__4__Impl rule__Selector__Group__5 ;
+    // InternalMySelenium.g:2319:1: rule__Selector__Group__4 : rule__Selector__Group__4__Impl rule__Selector__Group__5 ;
     public final void rule__Selector__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2317:1: ( rule__Selector__Group__4__Impl rule__Selector__Group__5 )
-            // InternalMySelenium.g:2318:2: rule__Selector__Group__4__Impl rule__Selector__Group__5
+            // InternalMySelenium.g:2323:1: ( rule__Selector__Group__4__Impl rule__Selector__Group__5 )
+            // InternalMySelenium.g:2324:2: rule__Selector__Group__4__Impl rule__Selector__Group__5
             {
             pushFollow(FOLLOW_22);
             rule__Selector__Group__4__Impl();
@@ -7308,20 +7328,20 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group__4__Impl"
-    // InternalMySelenium.g:2325:1: rule__Selector__Group__4__Impl : ( ( rule__Selector__Group_4__0 )? ) ;
+    // InternalMySelenium.g:2331:1: rule__Selector__Group__4__Impl : ( ( rule__Selector__Group_4__0 )? ) ;
     public final void rule__Selector__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2329:1: ( ( ( rule__Selector__Group_4__0 )? ) )
-            // InternalMySelenium.g:2330:1: ( ( rule__Selector__Group_4__0 )? )
+            // InternalMySelenium.g:2335:1: ( ( ( rule__Selector__Group_4__0 )? ) )
+            // InternalMySelenium.g:2336:1: ( ( rule__Selector__Group_4__0 )? )
             {
-            // InternalMySelenium.g:2330:1: ( ( rule__Selector__Group_4__0 )? )
-            // InternalMySelenium.g:2331:2: ( rule__Selector__Group_4__0 )?
+            // InternalMySelenium.g:2336:1: ( ( rule__Selector__Group_4__0 )? )
+            // InternalMySelenium.g:2337:2: ( rule__Selector__Group_4__0 )?
             {
              before(grammarAccess.getSelectorAccess().getGroup_4()); 
-            // InternalMySelenium.g:2332:2: ( rule__Selector__Group_4__0 )?
+            // InternalMySelenium.g:2338:2: ( rule__Selector__Group_4__0 )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -7330,7 +7350,7 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
             }
             switch (alt18) {
                 case 1 :
-                    // InternalMySelenium.g:2332:3: rule__Selector__Group_4__0
+                    // InternalMySelenium.g:2338:3: rule__Selector__Group_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Selector__Group_4__0();
@@ -7366,14 +7386,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group__5"
-    // InternalMySelenium.g:2340:1: rule__Selector__Group__5 : rule__Selector__Group__5__Impl ;
+    // InternalMySelenium.g:2346:1: rule__Selector__Group__5 : rule__Selector__Group__5__Impl ;
     public final void rule__Selector__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2344:1: ( rule__Selector__Group__5__Impl )
-            // InternalMySelenium.g:2345:2: rule__Selector__Group__5__Impl
+            // InternalMySelenium.g:2350:1: ( rule__Selector__Group__5__Impl )
+            // InternalMySelenium.g:2351:2: rule__Selector__Group__5__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Selector__Group__5__Impl();
@@ -7399,20 +7419,20 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group__5__Impl"
-    // InternalMySelenium.g:2351:1: rule__Selector__Group__5__Impl : ( ( rule__Selector__AllAssignment_5 )? ) ;
+    // InternalMySelenium.g:2357:1: rule__Selector__Group__5__Impl : ( ( rule__Selector__AllAssignment_5 )? ) ;
     public final void rule__Selector__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2355:1: ( ( ( rule__Selector__AllAssignment_5 )? ) )
-            // InternalMySelenium.g:2356:1: ( ( rule__Selector__AllAssignment_5 )? )
+            // InternalMySelenium.g:2361:1: ( ( ( rule__Selector__AllAssignment_5 )? ) )
+            // InternalMySelenium.g:2362:1: ( ( rule__Selector__AllAssignment_5 )? )
             {
-            // InternalMySelenium.g:2356:1: ( ( rule__Selector__AllAssignment_5 )? )
-            // InternalMySelenium.g:2357:2: ( rule__Selector__AllAssignment_5 )?
+            // InternalMySelenium.g:2362:1: ( ( rule__Selector__AllAssignment_5 )? )
+            // InternalMySelenium.g:2363:2: ( rule__Selector__AllAssignment_5 )?
             {
              before(grammarAccess.getSelectorAccess().getAllAssignment_5()); 
-            // InternalMySelenium.g:2358:2: ( rule__Selector__AllAssignment_5 )?
+            // InternalMySelenium.g:2364:2: ( rule__Selector__AllAssignment_5 )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -7421,7 +7441,7 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
             }
             switch (alt19) {
                 case 1 :
-                    // InternalMySelenium.g:2358:3: rule__Selector__AllAssignment_5
+                    // InternalMySelenium.g:2364:3: rule__Selector__AllAssignment_5
                     {
                     pushFollow(FOLLOW_2);
                     rule__Selector__AllAssignment_5();
@@ -7457,14 +7477,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group_4__0"
-    // InternalMySelenium.g:2367:1: rule__Selector__Group_4__0 : rule__Selector__Group_4__0__Impl rule__Selector__Group_4__1 ;
+    // InternalMySelenium.g:2373:1: rule__Selector__Group_4__0 : rule__Selector__Group_4__0__Impl rule__Selector__Group_4__1 ;
     public final void rule__Selector__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2371:1: ( rule__Selector__Group_4__0__Impl rule__Selector__Group_4__1 )
-            // InternalMySelenium.g:2372:2: rule__Selector__Group_4__0__Impl rule__Selector__Group_4__1
+            // InternalMySelenium.g:2377:1: ( rule__Selector__Group_4__0__Impl rule__Selector__Group_4__1 )
+            // InternalMySelenium.g:2378:2: rule__Selector__Group_4__0__Impl rule__Selector__Group_4__1
             {
             pushFollow(FOLLOW_12);
             rule__Selector__Group_4__0__Impl();
@@ -7495,17 +7515,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group_4__0__Impl"
-    // InternalMySelenium.g:2379:1: rule__Selector__Group_4__0__Impl : ( '.parent' ) ;
+    // InternalMySelenium.g:2385:1: rule__Selector__Group_4__0__Impl : ( '.parent' ) ;
     public final void rule__Selector__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2383:1: ( ( '.parent' ) )
-            // InternalMySelenium.g:2384:1: ( '.parent' )
+            // InternalMySelenium.g:2389:1: ( ( '.parent' ) )
+            // InternalMySelenium.g:2390:1: ( '.parent' )
             {
-            // InternalMySelenium.g:2384:1: ( '.parent' )
-            // InternalMySelenium.g:2385:2: '.parent'
+            // InternalMySelenium.g:2390:1: ( '.parent' )
+            // InternalMySelenium.g:2391:2: '.parent'
             {
              before(grammarAccess.getSelectorAccess().getParentKeyword_4_0()); 
             match(input,47,FOLLOW_2); 
@@ -7532,14 +7552,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group_4__1"
-    // InternalMySelenium.g:2394:1: rule__Selector__Group_4__1 : rule__Selector__Group_4__1__Impl rule__Selector__Group_4__2 ;
+    // InternalMySelenium.g:2400:1: rule__Selector__Group_4__1 : rule__Selector__Group_4__1__Impl rule__Selector__Group_4__2 ;
     public final void rule__Selector__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2398:1: ( rule__Selector__Group_4__1__Impl rule__Selector__Group_4__2 )
-            // InternalMySelenium.g:2399:2: rule__Selector__Group_4__1__Impl rule__Selector__Group_4__2
+            // InternalMySelenium.g:2404:1: ( rule__Selector__Group_4__1__Impl rule__Selector__Group_4__2 )
+            // InternalMySelenium.g:2405:2: rule__Selector__Group_4__1__Impl rule__Selector__Group_4__2
             {
             pushFollow(FOLLOW_23);
             rule__Selector__Group_4__1__Impl();
@@ -7570,17 +7590,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group_4__1__Impl"
-    // InternalMySelenium.g:2406:1: rule__Selector__Group_4__1__Impl : ( '(' ) ;
+    // InternalMySelenium.g:2412:1: rule__Selector__Group_4__1__Impl : ( '(' ) ;
     public final void rule__Selector__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2410:1: ( ( '(' ) )
-            // InternalMySelenium.g:2411:1: ( '(' )
+            // InternalMySelenium.g:2416:1: ( ( '(' ) )
+            // InternalMySelenium.g:2417:1: ( '(' )
             {
-            // InternalMySelenium.g:2411:1: ( '(' )
-            // InternalMySelenium.g:2412:2: '('
+            // InternalMySelenium.g:2417:1: ( '(' )
+            // InternalMySelenium.g:2418:2: '('
             {
              before(grammarAccess.getSelectorAccess().getLeftParenthesisKeyword_4_1()); 
             match(input,48,FOLLOW_2); 
@@ -7607,14 +7627,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group_4__2"
-    // InternalMySelenium.g:2421:1: rule__Selector__Group_4__2 : rule__Selector__Group_4__2__Impl rule__Selector__Group_4__3 ;
+    // InternalMySelenium.g:2427:1: rule__Selector__Group_4__2 : rule__Selector__Group_4__2__Impl rule__Selector__Group_4__3 ;
     public final void rule__Selector__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2425:1: ( rule__Selector__Group_4__2__Impl rule__Selector__Group_4__3 )
-            // InternalMySelenium.g:2426:2: rule__Selector__Group_4__2__Impl rule__Selector__Group_4__3
+            // InternalMySelenium.g:2431:1: ( rule__Selector__Group_4__2__Impl rule__Selector__Group_4__3 )
+            // InternalMySelenium.g:2432:2: rule__Selector__Group_4__2__Impl rule__Selector__Group_4__3
             {
             pushFollow(FOLLOW_24);
             rule__Selector__Group_4__2__Impl();
@@ -7645,21 +7665,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group_4__2__Impl"
-    // InternalMySelenium.g:2433:1: rule__Selector__Group_4__2__Impl : ( ( rule__Selector__ParentAssignment_4_2 ) ) ;
+    // InternalMySelenium.g:2439:1: rule__Selector__Group_4__2__Impl : ( ( rule__Selector__ParentAssignment_4_2 ) ) ;
     public final void rule__Selector__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2437:1: ( ( ( rule__Selector__ParentAssignment_4_2 ) ) )
-            // InternalMySelenium.g:2438:1: ( ( rule__Selector__ParentAssignment_4_2 ) )
+            // InternalMySelenium.g:2443:1: ( ( ( rule__Selector__ParentAssignment_4_2 ) ) )
+            // InternalMySelenium.g:2444:1: ( ( rule__Selector__ParentAssignment_4_2 ) )
             {
-            // InternalMySelenium.g:2438:1: ( ( rule__Selector__ParentAssignment_4_2 ) )
-            // InternalMySelenium.g:2439:2: ( rule__Selector__ParentAssignment_4_2 )
+            // InternalMySelenium.g:2444:1: ( ( rule__Selector__ParentAssignment_4_2 ) )
+            // InternalMySelenium.g:2445:2: ( rule__Selector__ParentAssignment_4_2 )
             {
              before(grammarAccess.getSelectorAccess().getParentAssignment_4_2()); 
-            // InternalMySelenium.g:2440:2: ( rule__Selector__ParentAssignment_4_2 )
-            // InternalMySelenium.g:2440:3: rule__Selector__ParentAssignment_4_2
+            // InternalMySelenium.g:2446:2: ( rule__Selector__ParentAssignment_4_2 )
+            // InternalMySelenium.g:2446:3: rule__Selector__ParentAssignment_4_2
             {
             pushFollow(FOLLOW_2);
             rule__Selector__ParentAssignment_4_2();
@@ -7692,14 +7712,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group_4__3"
-    // InternalMySelenium.g:2448:1: rule__Selector__Group_4__3 : rule__Selector__Group_4__3__Impl ;
+    // InternalMySelenium.g:2454:1: rule__Selector__Group_4__3 : rule__Selector__Group_4__3__Impl ;
     public final void rule__Selector__Group_4__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2452:1: ( rule__Selector__Group_4__3__Impl )
-            // InternalMySelenium.g:2453:2: rule__Selector__Group_4__3__Impl
+            // InternalMySelenium.g:2458:1: ( rule__Selector__Group_4__3__Impl )
+            // InternalMySelenium.g:2459:2: rule__Selector__Group_4__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Selector__Group_4__3__Impl();
@@ -7725,17 +7745,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__Group_4__3__Impl"
-    // InternalMySelenium.g:2459:1: rule__Selector__Group_4__3__Impl : ( ')' ) ;
+    // InternalMySelenium.g:2465:1: rule__Selector__Group_4__3__Impl : ( ')' ) ;
     public final void rule__Selector__Group_4__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2463:1: ( ( ')' ) )
-            // InternalMySelenium.g:2464:1: ( ')' )
+            // InternalMySelenium.g:2469:1: ( ( ')' ) )
+            // InternalMySelenium.g:2470:1: ( ')' )
             {
-            // InternalMySelenium.g:2464:1: ( ')' )
-            // InternalMySelenium.g:2465:2: ')'
+            // InternalMySelenium.g:2470:1: ( ')' )
+            // InternalMySelenium.g:2471:2: ')'
             {
              before(grammarAccess.getSelectorAccess().getRightParenthesisKeyword_4_3()); 
             match(input,49,FOLLOW_2); 
@@ -7762,14 +7782,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Parent__Group__0"
-    // InternalMySelenium.g:2475:1: rule__Parent__Group__0 : rule__Parent__Group__0__Impl rule__Parent__Group__1 ;
+    // InternalMySelenium.g:2481:1: rule__Parent__Group__0 : rule__Parent__Group__0__Impl rule__Parent__Group__1 ;
     public final void rule__Parent__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2479:1: ( rule__Parent__Group__0__Impl rule__Parent__Group__1 )
-            // InternalMySelenium.g:2480:2: rule__Parent__Group__0__Impl rule__Parent__Group__1
+            // InternalMySelenium.g:2485:1: ( rule__Parent__Group__0__Impl rule__Parent__Group__1 )
+            // InternalMySelenium.g:2486:2: rule__Parent__Group__0__Impl rule__Parent__Group__1
             {
             pushFollow(FOLLOW_20);
             rule__Parent__Group__0__Impl();
@@ -7800,21 +7820,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Parent__Group__0__Impl"
-    // InternalMySelenium.g:2487:1: rule__Parent__Group__0__Impl : ( ( rule__Parent__ElementAssignment_0 ) ) ;
+    // InternalMySelenium.g:2493:1: rule__Parent__Group__0__Impl : ( ( rule__Parent__ElementAssignment_0 ) ) ;
     public final void rule__Parent__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2491:1: ( ( ( rule__Parent__ElementAssignment_0 ) ) )
-            // InternalMySelenium.g:2492:1: ( ( rule__Parent__ElementAssignment_0 ) )
+            // InternalMySelenium.g:2497:1: ( ( ( rule__Parent__ElementAssignment_0 ) ) )
+            // InternalMySelenium.g:2498:1: ( ( rule__Parent__ElementAssignment_0 ) )
             {
-            // InternalMySelenium.g:2492:1: ( ( rule__Parent__ElementAssignment_0 ) )
-            // InternalMySelenium.g:2493:2: ( rule__Parent__ElementAssignment_0 )
+            // InternalMySelenium.g:2498:1: ( ( rule__Parent__ElementAssignment_0 ) )
+            // InternalMySelenium.g:2499:2: ( rule__Parent__ElementAssignment_0 )
             {
              before(grammarAccess.getParentAccess().getElementAssignment_0()); 
-            // InternalMySelenium.g:2494:2: ( rule__Parent__ElementAssignment_0 )
-            // InternalMySelenium.g:2494:3: rule__Parent__ElementAssignment_0
+            // InternalMySelenium.g:2500:2: ( rule__Parent__ElementAssignment_0 )
+            // InternalMySelenium.g:2500:3: rule__Parent__ElementAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Parent__ElementAssignment_0();
@@ -7847,14 +7867,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Parent__Group__1"
-    // InternalMySelenium.g:2502:1: rule__Parent__Group__1 : rule__Parent__Group__1__Impl rule__Parent__Group__2 ;
+    // InternalMySelenium.g:2508:1: rule__Parent__Group__1 : rule__Parent__Group__1__Impl rule__Parent__Group__2 ;
     public final void rule__Parent__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2506:1: ( rule__Parent__Group__1__Impl rule__Parent__Group__2 )
-            // InternalMySelenium.g:2507:2: rule__Parent__Group__1__Impl rule__Parent__Group__2
+            // InternalMySelenium.g:2512:1: ( rule__Parent__Group__1__Impl rule__Parent__Group__2 )
+            // InternalMySelenium.g:2513:2: rule__Parent__Group__1__Impl rule__Parent__Group__2
             {
             pushFollow(FOLLOW_21);
             rule__Parent__Group__1__Impl();
@@ -7885,17 +7905,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Parent__Group__1__Impl"
-    // InternalMySelenium.g:2514:1: rule__Parent__Group__1__Impl : ( '[' ) ;
+    // InternalMySelenium.g:2520:1: rule__Parent__Group__1__Impl : ( '[' ) ;
     public final void rule__Parent__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2518:1: ( ( '[' ) )
-            // InternalMySelenium.g:2519:1: ( '[' )
+            // InternalMySelenium.g:2524:1: ( ( '[' ) )
+            // InternalMySelenium.g:2525:1: ( '[' )
             {
-            // InternalMySelenium.g:2519:1: ( '[' )
-            // InternalMySelenium.g:2520:2: '['
+            // InternalMySelenium.g:2525:1: ( '[' )
+            // InternalMySelenium.g:2526:2: '['
             {
              before(grammarAccess.getParentAccess().getLeftSquareBracketKeyword_1()); 
             match(input,45,FOLLOW_2); 
@@ -7922,14 +7942,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Parent__Group__2"
-    // InternalMySelenium.g:2529:1: rule__Parent__Group__2 : rule__Parent__Group__2__Impl rule__Parent__Group__3 ;
+    // InternalMySelenium.g:2535:1: rule__Parent__Group__2 : rule__Parent__Group__2__Impl rule__Parent__Group__3 ;
     public final void rule__Parent__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2533:1: ( rule__Parent__Group__2__Impl rule__Parent__Group__3 )
-            // InternalMySelenium.g:2534:2: rule__Parent__Group__2__Impl rule__Parent__Group__3
+            // InternalMySelenium.g:2539:1: ( rule__Parent__Group__2__Impl rule__Parent__Group__3 )
+            // InternalMySelenium.g:2540:2: rule__Parent__Group__2__Impl rule__Parent__Group__3
             {
             pushFollow(FOLLOW_21);
             rule__Parent__Group__2__Impl();
@@ -7960,29 +7980,29 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Parent__Group__2__Impl"
-    // InternalMySelenium.g:2541:1: rule__Parent__Group__2__Impl : ( ( rule__Parent__AttrsAssignment_2 )? ) ;
+    // InternalMySelenium.g:2547:1: rule__Parent__Group__2__Impl : ( ( rule__Parent__AttrsAssignment_2 )? ) ;
     public final void rule__Parent__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2545:1: ( ( ( rule__Parent__AttrsAssignment_2 )? ) )
-            // InternalMySelenium.g:2546:1: ( ( rule__Parent__AttrsAssignment_2 )? )
+            // InternalMySelenium.g:2551:1: ( ( ( rule__Parent__AttrsAssignment_2 )? ) )
+            // InternalMySelenium.g:2552:1: ( ( rule__Parent__AttrsAssignment_2 )? )
             {
-            // InternalMySelenium.g:2546:1: ( ( rule__Parent__AttrsAssignment_2 )? )
-            // InternalMySelenium.g:2547:2: ( rule__Parent__AttrsAssignment_2 )?
+            // InternalMySelenium.g:2552:1: ( ( rule__Parent__AttrsAssignment_2 )? )
+            // InternalMySelenium.g:2553:2: ( rule__Parent__AttrsAssignment_2 )?
             {
              before(grammarAccess.getParentAccess().getAttrsAssignment_2()); 
-            // InternalMySelenium.g:2548:2: ( rule__Parent__AttrsAssignment_2 )?
+            // InternalMySelenium.g:2554:2: ( rule__Parent__AttrsAssignment_2 )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
-            if ( (LA20_0==12||(LA20_0>=16 && LA20_0<=21)) ) {
+            if ( ((LA20_0>=11 && LA20_0<=12)||(LA20_0>=16 && LA20_0<=21)) ) {
                 alt20=1;
             }
             switch (alt20) {
                 case 1 :
-                    // InternalMySelenium.g:2548:3: rule__Parent__AttrsAssignment_2
+                    // InternalMySelenium.g:2554:3: rule__Parent__AttrsAssignment_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Parent__AttrsAssignment_2();
@@ -8018,14 +8038,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Parent__Group__3"
-    // InternalMySelenium.g:2556:1: rule__Parent__Group__3 : rule__Parent__Group__3__Impl ;
+    // InternalMySelenium.g:2562:1: rule__Parent__Group__3 : rule__Parent__Group__3__Impl ;
     public final void rule__Parent__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2560:1: ( rule__Parent__Group__3__Impl )
-            // InternalMySelenium.g:2561:2: rule__Parent__Group__3__Impl
+            // InternalMySelenium.g:2566:1: ( rule__Parent__Group__3__Impl )
+            // InternalMySelenium.g:2567:2: rule__Parent__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Parent__Group__3__Impl();
@@ -8051,17 +8071,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Parent__Group__3__Impl"
-    // InternalMySelenium.g:2567:1: rule__Parent__Group__3__Impl : ( ']' ) ;
+    // InternalMySelenium.g:2573:1: rule__Parent__Group__3__Impl : ( ']' ) ;
     public final void rule__Parent__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2571:1: ( ( ']' ) )
-            // InternalMySelenium.g:2572:1: ( ']' )
+            // InternalMySelenium.g:2577:1: ( ( ']' ) )
+            // InternalMySelenium.g:2578:1: ( ']' )
             {
-            // InternalMySelenium.g:2572:1: ( ']' )
-            // InternalMySelenium.g:2573:2: ']'
+            // InternalMySelenium.g:2578:1: ( ']' )
+            // InternalMySelenium.g:2579:2: ']'
             {
              before(grammarAccess.getParentAccess().getRightSquareBracketKeyword_3()); 
             match(input,46,FOLLOW_2); 
@@ -8088,14 +8108,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attributes__Group__0"
-    // InternalMySelenium.g:2583:1: rule__Attributes__Group__0 : rule__Attributes__Group__0__Impl rule__Attributes__Group__1 ;
+    // InternalMySelenium.g:2589:1: rule__Attributes__Group__0 : rule__Attributes__Group__0__Impl rule__Attributes__Group__1 ;
     public final void rule__Attributes__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2587:1: ( rule__Attributes__Group__0__Impl rule__Attributes__Group__1 )
-            // InternalMySelenium.g:2588:2: rule__Attributes__Group__0__Impl rule__Attributes__Group__1
+            // InternalMySelenium.g:2593:1: ( rule__Attributes__Group__0__Impl rule__Attributes__Group__1 )
+            // InternalMySelenium.g:2594:2: rule__Attributes__Group__0__Impl rule__Attributes__Group__1
             {
             pushFollow(FOLLOW_25);
             rule__Attributes__Group__0__Impl();
@@ -8126,21 +8146,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attributes__Group__0__Impl"
-    // InternalMySelenium.g:2595:1: rule__Attributes__Group__0__Impl : ( ( rule__Attributes__AttrsAssignment_0 ) ) ;
+    // InternalMySelenium.g:2601:1: rule__Attributes__Group__0__Impl : ( ( rule__Attributes__AttrsAssignment_0 ) ) ;
     public final void rule__Attributes__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2599:1: ( ( ( rule__Attributes__AttrsAssignment_0 ) ) )
-            // InternalMySelenium.g:2600:1: ( ( rule__Attributes__AttrsAssignment_0 ) )
+            // InternalMySelenium.g:2605:1: ( ( ( rule__Attributes__AttrsAssignment_0 ) ) )
+            // InternalMySelenium.g:2606:1: ( ( rule__Attributes__AttrsAssignment_0 ) )
             {
-            // InternalMySelenium.g:2600:1: ( ( rule__Attributes__AttrsAssignment_0 ) )
-            // InternalMySelenium.g:2601:2: ( rule__Attributes__AttrsAssignment_0 )
+            // InternalMySelenium.g:2606:1: ( ( rule__Attributes__AttrsAssignment_0 ) )
+            // InternalMySelenium.g:2607:2: ( rule__Attributes__AttrsAssignment_0 )
             {
              before(grammarAccess.getAttributesAccess().getAttrsAssignment_0()); 
-            // InternalMySelenium.g:2602:2: ( rule__Attributes__AttrsAssignment_0 )
-            // InternalMySelenium.g:2602:3: rule__Attributes__AttrsAssignment_0
+            // InternalMySelenium.g:2608:2: ( rule__Attributes__AttrsAssignment_0 )
+            // InternalMySelenium.g:2608:3: rule__Attributes__AttrsAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Attributes__AttrsAssignment_0();
@@ -8173,14 +8193,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attributes__Group__1"
-    // InternalMySelenium.g:2610:1: rule__Attributes__Group__1 : rule__Attributes__Group__1__Impl ;
+    // InternalMySelenium.g:2616:1: rule__Attributes__Group__1 : rule__Attributes__Group__1__Impl ;
     public final void rule__Attributes__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2614:1: ( rule__Attributes__Group__1__Impl )
-            // InternalMySelenium.g:2615:2: rule__Attributes__Group__1__Impl
+            // InternalMySelenium.g:2620:1: ( rule__Attributes__Group__1__Impl )
+            // InternalMySelenium.g:2621:2: rule__Attributes__Group__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Attributes__Group__1__Impl();
@@ -8206,20 +8226,20 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attributes__Group__1__Impl"
-    // InternalMySelenium.g:2621:1: rule__Attributes__Group__1__Impl : ( ( rule__Attributes__Group_1__0 )* ) ;
+    // InternalMySelenium.g:2627:1: rule__Attributes__Group__1__Impl : ( ( rule__Attributes__Group_1__0 )* ) ;
     public final void rule__Attributes__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2625:1: ( ( ( rule__Attributes__Group_1__0 )* ) )
-            // InternalMySelenium.g:2626:1: ( ( rule__Attributes__Group_1__0 )* )
+            // InternalMySelenium.g:2631:1: ( ( ( rule__Attributes__Group_1__0 )* ) )
+            // InternalMySelenium.g:2632:1: ( ( rule__Attributes__Group_1__0 )* )
             {
-            // InternalMySelenium.g:2626:1: ( ( rule__Attributes__Group_1__0 )* )
-            // InternalMySelenium.g:2627:2: ( rule__Attributes__Group_1__0 )*
+            // InternalMySelenium.g:2632:1: ( ( rule__Attributes__Group_1__0 )* )
+            // InternalMySelenium.g:2633:2: ( rule__Attributes__Group_1__0 )*
             {
              before(grammarAccess.getAttributesAccess().getGroup_1()); 
-            // InternalMySelenium.g:2628:2: ( rule__Attributes__Group_1__0 )*
+            // InternalMySelenium.g:2634:2: ( rule__Attributes__Group_1__0 )*
             loop21:
             do {
                 int alt21=2;
@@ -8232,7 +8252,7 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
                 switch (alt21) {
             	case 1 :
-            	    // InternalMySelenium.g:2628:3: rule__Attributes__Group_1__0
+            	    // InternalMySelenium.g:2634:3: rule__Attributes__Group_1__0
             	    {
             	    pushFollow(FOLLOW_26);
             	    rule__Attributes__Group_1__0();
@@ -8271,14 +8291,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attributes__Group_1__0"
-    // InternalMySelenium.g:2637:1: rule__Attributes__Group_1__0 : rule__Attributes__Group_1__0__Impl rule__Attributes__Group_1__1 ;
+    // InternalMySelenium.g:2643:1: rule__Attributes__Group_1__0 : rule__Attributes__Group_1__0__Impl rule__Attributes__Group_1__1 ;
     public final void rule__Attributes__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2641:1: ( rule__Attributes__Group_1__0__Impl rule__Attributes__Group_1__1 )
-            // InternalMySelenium.g:2642:2: rule__Attributes__Group_1__0__Impl rule__Attributes__Group_1__1
+            // InternalMySelenium.g:2647:1: ( rule__Attributes__Group_1__0__Impl rule__Attributes__Group_1__1 )
+            // InternalMySelenium.g:2648:2: rule__Attributes__Group_1__0__Impl rule__Attributes__Group_1__1
             {
             pushFollow(FOLLOW_27);
             rule__Attributes__Group_1__0__Impl();
@@ -8309,17 +8329,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attributes__Group_1__0__Impl"
-    // InternalMySelenium.g:2649:1: rule__Attributes__Group_1__0__Impl : ( ',' ) ;
+    // InternalMySelenium.g:2655:1: rule__Attributes__Group_1__0__Impl : ( ',' ) ;
     public final void rule__Attributes__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2653:1: ( ( ',' ) )
-            // InternalMySelenium.g:2654:1: ( ',' )
+            // InternalMySelenium.g:2659:1: ( ( ',' ) )
+            // InternalMySelenium.g:2660:1: ( ',' )
             {
-            // InternalMySelenium.g:2654:1: ( ',' )
-            // InternalMySelenium.g:2655:2: ','
+            // InternalMySelenium.g:2660:1: ( ',' )
+            // InternalMySelenium.g:2661:2: ','
             {
              before(grammarAccess.getAttributesAccess().getCommaKeyword_1_0()); 
             match(input,50,FOLLOW_2); 
@@ -8346,14 +8366,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attributes__Group_1__1"
-    // InternalMySelenium.g:2664:1: rule__Attributes__Group_1__1 : rule__Attributes__Group_1__1__Impl ;
+    // InternalMySelenium.g:2670:1: rule__Attributes__Group_1__1 : rule__Attributes__Group_1__1__Impl ;
     public final void rule__Attributes__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2668:1: ( rule__Attributes__Group_1__1__Impl )
-            // InternalMySelenium.g:2669:2: rule__Attributes__Group_1__1__Impl
+            // InternalMySelenium.g:2674:1: ( rule__Attributes__Group_1__1__Impl )
+            // InternalMySelenium.g:2675:2: rule__Attributes__Group_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Attributes__Group_1__1__Impl();
@@ -8379,21 +8399,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attributes__Group_1__1__Impl"
-    // InternalMySelenium.g:2675:1: rule__Attributes__Group_1__1__Impl : ( ( rule__Attributes__AttrsAssignment_1_1 ) ) ;
+    // InternalMySelenium.g:2681:1: rule__Attributes__Group_1__1__Impl : ( ( rule__Attributes__AttrsAssignment_1_1 ) ) ;
     public final void rule__Attributes__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2679:1: ( ( ( rule__Attributes__AttrsAssignment_1_1 ) ) )
-            // InternalMySelenium.g:2680:1: ( ( rule__Attributes__AttrsAssignment_1_1 ) )
+            // InternalMySelenium.g:2685:1: ( ( ( rule__Attributes__AttrsAssignment_1_1 ) ) )
+            // InternalMySelenium.g:2686:1: ( ( rule__Attributes__AttrsAssignment_1_1 ) )
             {
-            // InternalMySelenium.g:2680:1: ( ( rule__Attributes__AttrsAssignment_1_1 ) )
-            // InternalMySelenium.g:2681:2: ( rule__Attributes__AttrsAssignment_1_1 )
+            // InternalMySelenium.g:2686:1: ( ( rule__Attributes__AttrsAssignment_1_1 ) )
+            // InternalMySelenium.g:2687:2: ( rule__Attributes__AttrsAssignment_1_1 )
             {
              before(grammarAccess.getAttributesAccess().getAttrsAssignment_1_1()); 
-            // InternalMySelenium.g:2682:2: ( rule__Attributes__AttrsAssignment_1_1 )
-            // InternalMySelenium.g:2682:3: rule__Attributes__AttrsAssignment_1_1
+            // InternalMySelenium.g:2688:2: ( rule__Attributes__AttrsAssignment_1_1 )
+            // InternalMySelenium.g:2688:3: rule__Attributes__AttrsAssignment_1_1
             {
             pushFollow(FOLLOW_2);
             rule__Attributes__AttrsAssignment_1_1();
@@ -8426,14 +8446,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attribute__Group__0"
-    // InternalMySelenium.g:2691:1: rule__Attribute__Group__0 : rule__Attribute__Group__0__Impl rule__Attribute__Group__1 ;
+    // InternalMySelenium.g:2697:1: rule__Attribute__Group__0 : rule__Attribute__Group__0__Impl rule__Attribute__Group__1 ;
     public final void rule__Attribute__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2695:1: ( rule__Attribute__Group__0__Impl rule__Attribute__Group__1 )
-            // InternalMySelenium.g:2696:2: rule__Attribute__Group__0__Impl rule__Attribute__Group__1
+            // InternalMySelenium.g:2701:1: ( rule__Attribute__Group__0__Impl rule__Attribute__Group__1 )
+            // InternalMySelenium.g:2702:2: rule__Attribute__Group__0__Impl rule__Attribute__Group__1
             {
             pushFollow(FOLLOW_16);
             rule__Attribute__Group__0__Impl();
@@ -8464,21 +8484,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attribute__Group__0__Impl"
-    // InternalMySelenium.g:2703:1: rule__Attribute__Group__0__Impl : ( ( rule__Attribute__NameAssignment_0 ) ) ;
+    // InternalMySelenium.g:2709:1: rule__Attribute__Group__0__Impl : ( ( rule__Attribute__NameAssignment_0 ) ) ;
     public final void rule__Attribute__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2707:1: ( ( ( rule__Attribute__NameAssignment_0 ) ) )
-            // InternalMySelenium.g:2708:1: ( ( rule__Attribute__NameAssignment_0 ) )
+            // InternalMySelenium.g:2713:1: ( ( ( rule__Attribute__NameAssignment_0 ) ) )
+            // InternalMySelenium.g:2714:1: ( ( rule__Attribute__NameAssignment_0 ) )
             {
-            // InternalMySelenium.g:2708:1: ( ( rule__Attribute__NameAssignment_0 ) )
-            // InternalMySelenium.g:2709:2: ( rule__Attribute__NameAssignment_0 )
+            // InternalMySelenium.g:2714:1: ( ( rule__Attribute__NameAssignment_0 ) )
+            // InternalMySelenium.g:2715:2: ( rule__Attribute__NameAssignment_0 )
             {
              before(grammarAccess.getAttributeAccess().getNameAssignment_0()); 
-            // InternalMySelenium.g:2710:2: ( rule__Attribute__NameAssignment_0 )
-            // InternalMySelenium.g:2710:3: rule__Attribute__NameAssignment_0
+            // InternalMySelenium.g:2716:2: ( rule__Attribute__NameAssignment_0 )
+            // InternalMySelenium.g:2716:3: rule__Attribute__NameAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Attribute__NameAssignment_0();
@@ -8511,14 +8531,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attribute__Group__1"
-    // InternalMySelenium.g:2718:1: rule__Attribute__Group__1 : rule__Attribute__Group__1__Impl rule__Attribute__Group__2 ;
+    // InternalMySelenium.g:2724:1: rule__Attribute__Group__1 : rule__Attribute__Group__1__Impl rule__Attribute__Group__2 ;
     public final void rule__Attribute__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2722:1: ( rule__Attribute__Group__1__Impl rule__Attribute__Group__2 )
-            // InternalMySelenium.g:2723:2: rule__Attribute__Group__1__Impl rule__Attribute__Group__2
+            // InternalMySelenium.g:2728:1: ( rule__Attribute__Group__1__Impl rule__Attribute__Group__2 )
+            // InternalMySelenium.g:2729:2: rule__Attribute__Group__1__Impl rule__Attribute__Group__2
             {
             pushFollow(FOLLOW_28);
             rule__Attribute__Group__1__Impl();
@@ -8549,17 +8569,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attribute__Group__1__Impl"
-    // InternalMySelenium.g:2730:1: rule__Attribute__Group__1__Impl : ( '=' ) ;
+    // InternalMySelenium.g:2736:1: rule__Attribute__Group__1__Impl : ( '=' ) ;
     public final void rule__Attribute__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2734:1: ( ( '=' ) )
-            // InternalMySelenium.g:2735:1: ( '=' )
+            // InternalMySelenium.g:2740:1: ( ( '=' ) )
+            // InternalMySelenium.g:2741:1: ( '=' )
             {
-            // InternalMySelenium.g:2735:1: ( '=' )
-            // InternalMySelenium.g:2736:2: '='
+            // InternalMySelenium.g:2741:1: ( '=' )
+            // InternalMySelenium.g:2742:2: '='
             {
              before(grammarAccess.getAttributeAccess().getEqualsSignKeyword_1()); 
             match(input,42,FOLLOW_2); 
@@ -8586,14 +8606,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attribute__Group__2"
-    // InternalMySelenium.g:2745:1: rule__Attribute__Group__2 : rule__Attribute__Group__2__Impl ;
+    // InternalMySelenium.g:2751:1: rule__Attribute__Group__2 : rule__Attribute__Group__2__Impl ;
     public final void rule__Attribute__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2749:1: ( rule__Attribute__Group__2__Impl )
-            // InternalMySelenium.g:2750:2: rule__Attribute__Group__2__Impl
+            // InternalMySelenium.g:2755:1: ( rule__Attribute__Group__2__Impl )
+            // InternalMySelenium.g:2756:2: rule__Attribute__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Attribute__Group__2__Impl();
@@ -8619,21 +8639,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attribute__Group__2__Impl"
-    // InternalMySelenium.g:2756:1: rule__Attribute__Group__2__Impl : ( ( rule__Attribute__Alternatives_2 ) ) ;
+    // InternalMySelenium.g:2762:1: rule__Attribute__Group__2__Impl : ( ( rule__Attribute__Alternatives_2 ) ) ;
     public final void rule__Attribute__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2760:1: ( ( ( rule__Attribute__Alternatives_2 ) ) )
-            // InternalMySelenium.g:2761:1: ( ( rule__Attribute__Alternatives_2 ) )
+            // InternalMySelenium.g:2766:1: ( ( ( rule__Attribute__Alternatives_2 ) ) )
+            // InternalMySelenium.g:2767:1: ( ( rule__Attribute__Alternatives_2 ) )
             {
-            // InternalMySelenium.g:2761:1: ( ( rule__Attribute__Alternatives_2 ) )
-            // InternalMySelenium.g:2762:2: ( rule__Attribute__Alternatives_2 )
+            // InternalMySelenium.g:2767:1: ( ( rule__Attribute__Alternatives_2 ) )
+            // InternalMySelenium.g:2768:2: ( rule__Attribute__Alternatives_2 )
             {
              before(grammarAccess.getAttributeAccess().getAlternatives_2()); 
-            // InternalMySelenium.g:2763:2: ( rule__Attribute__Alternatives_2 )
-            // InternalMySelenium.g:2763:3: rule__Attribute__Alternatives_2
+            // InternalMySelenium.g:2769:2: ( rule__Attribute__Alternatives_2 )
+            // InternalMySelenium.g:2769:3: rule__Attribute__Alternatives_2
             {
             pushFollow(FOLLOW_2);
             rule__Attribute__Alternatives_2();
@@ -8666,14 +8686,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionParameters__Group__0"
-    // InternalMySelenium.g:2772:1: rule__FunctionParameters__Group__0 : rule__FunctionParameters__Group__0__Impl rule__FunctionParameters__Group__1 ;
+    // InternalMySelenium.g:2778:1: rule__FunctionParameters__Group__0 : rule__FunctionParameters__Group__0__Impl rule__FunctionParameters__Group__1 ;
     public final void rule__FunctionParameters__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2776:1: ( rule__FunctionParameters__Group__0__Impl rule__FunctionParameters__Group__1 )
-            // InternalMySelenium.g:2777:2: rule__FunctionParameters__Group__0__Impl rule__FunctionParameters__Group__1
+            // InternalMySelenium.g:2782:1: ( rule__FunctionParameters__Group__0__Impl rule__FunctionParameters__Group__1 )
+            // InternalMySelenium.g:2783:2: rule__FunctionParameters__Group__0__Impl rule__FunctionParameters__Group__1
             {
             pushFollow(FOLLOW_10);
             rule__FunctionParameters__Group__0__Impl();
@@ -8704,17 +8724,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionParameters__Group__0__Impl"
-    // InternalMySelenium.g:2784:1: rule__FunctionParameters__Group__0__Impl : ( '(' ) ;
+    // InternalMySelenium.g:2790:1: rule__FunctionParameters__Group__0__Impl : ( '(' ) ;
     public final void rule__FunctionParameters__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2788:1: ( ( '(' ) )
-            // InternalMySelenium.g:2789:1: ( '(' )
+            // InternalMySelenium.g:2794:1: ( ( '(' ) )
+            // InternalMySelenium.g:2795:1: ( '(' )
             {
-            // InternalMySelenium.g:2789:1: ( '(' )
-            // InternalMySelenium.g:2790:2: '('
+            // InternalMySelenium.g:2795:1: ( '(' )
+            // InternalMySelenium.g:2796:2: '('
             {
              before(grammarAccess.getFunctionParametersAccess().getLeftParenthesisKeyword_0()); 
             match(input,48,FOLLOW_2); 
@@ -8741,14 +8761,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionParameters__Group__1"
-    // InternalMySelenium.g:2799:1: rule__FunctionParameters__Group__1 : rule__FunctionParameters__Group__1__Impl rule__FunctionParameters__Group__2 ;
+    // InternalMySelenium.g:2805:1: rule__FunctionParameters__Group__1 : rule__FunctionParameters__Group__1__Impl rule__FunctionParameters__Group__2 ;
     public final void rule__FunctionParameters__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2803:1: ( rule__FunctionParameters__Group__1__Impl rule__FunctionParameters__Group__2 )
-            // InternalMySelenium.g:2804:2: rule__FunctionParameters__Group__1__Impl rule__FunctionParameters__Group__2
+            // InternalMySelenium.g:2809:1: ( rule__FunctionParameters__Group__1__Impl rule__FunctionParameters__Group__2 )
+            // InternalMySelenium.g:2810:2: rule__FunctionParameters__Group__1__Impl rule__FunctionParameters__Group__2
             {
             pushFollow(FOLLOW_29);
             rule__FunctionParameters__Group__1__Impl();
@@ -8779,21 +8799,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionParameters__Group__1__Impl"
-    // InternalMySelenium.g:2811:1: rule__FunctionParameters__Group__1__Impl : ( ( rule__FunctionParameters__VariablesAssignment_1 ) ) ;
+    // InternalMySelenium.g:2817:1: rule__FunctionParameters__Group__1__Impl : ( ( rule__FunctionParameters__VariablesAssignment_1 ) ) ;
     public final void rule__FunctionParameters__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2815:1: ( ( ( rule__FunctionParameters__VariablesAssignment_1 ) ) )
-            // InternalMySelenium.g:2816:1: ( ( rule__FunctionParameters__VariablesAssignment_1 ) )
+            // InternalMySelenium.g:2821:1: ( ( ( rule__FunctionParameters__VariablesAssignment_1 ) ) )
+            // InternalMySelenium.g:2822:1: ( ( rule__FunctionParameters__VariablesAssignment_1 ) )
             {
-            // InternalMySelenium.g:2816:1: ( ( rule__FunctionParameters__VariablesAssignment_1 ) )
-            // InternalMySelenium.g:2817:2: ( rule__FunctionParameters__VariablesAssignment_1 )
+            // InternalMySelenium.g:2822:1: ( ( rule__FunctionParameters__VariablesAssignment_1 ) )
+            // InternalMySelenium.g:2823:2: ( rule__FunctionParameters__VariablesAssignment_1 )
             {
              before(grammarAccess.getFunctionParametersAccess().getVariablesAssignment_1()); 
-            // InternalMySelenium.g:2818:2: ( rule__FunctionParameters__VariablesAssignment_1 )
-            // InternalMySelenium.g:2818:3: rule__FunctionParameters__VariablesAssignment_1
+            // InternalMySelenium.g:2824:2: ( rule__FunctionParameters__VariablesAssignment_1 )
+            // InternalMySelenium.g:2824:3: rule__FunctionParameters__VariablesAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__FunctionParameters__VariablesAssignment_1();
@@ -8826,14 +8846,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionParameters__Group__2"
-    // InternalMySelenium.g:2826:1: rule__FunctionParameters__Group__2 : rule__FunctionParameters__Group__2__Impl rule__FunctionParameters__Group__3 ;
+    // InternalMySelenium.g:2832:1: rule__FunctionParameters__Group__2 : rule__FunctionParameters__Group__2__Impl rule__FunctionParameters__Group__3 ;
     public final void rule__FunctionParameters__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2830:1: ( rule__FunctionParameters__Group__2__Impl rule__FunctionParameters__Group__3 )
-            // InternalMySelenium.g:2831:2: rule__FunctionParameters__Group__2__Impl rule__FunctionParameters__Group__3
+            // InternalMySelenium.g:2836:1: ( rule__FunctionParameters__Group__2__Impl rule__FunctionParameters__Group__3 )
+            // InternalMySelenium.g:2837:2: rule__FunctionParameters__Group__2__Impl rule__FunctionParameters__Group__3
             {
             pushFollow(FOLLOW_29);
             rule__FunctionParameters__Group__2__Impl();
@@ -8864,20 +8884,20 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionParameters__Group__2__Impl"
-    // InternalMySelenium.g:2838:1: rule__FunctionParameters__Group__2__Impl : ( ( rule__FunctionParameters__Group_2__0 )* ) ;
+    // InternalMySelenium.g:2844:1: rule__FunctionParameters__Group__2__Impl : ( ( rule__FunctionParameters__Group_2__0 )* ) ;
     public final void rule__FunctionParameters__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2842:1: ( ( ( rule__FunctionParameters__Group_2__0 )* ) )
-            // InternalMySelenium.g:2843:1: ( ( rule__FunctionParameters__Group_2__0 )* )
+            // InternalMySelenium.g:2848:1: ( ( ( rule__FunctionParameters__Group_2__0 )* ) )
+            // InternalMySelenium.g:2849:1: ( ( rule__FunctionParameters__Group_2__0 )* )
             {
-            // InternalMySelenium.g:2843:1: ( ( rule__FunctionParameters__Group_2__0 )* )
-            // InternalMySelenium.g:2844:2: ( rule__FunctionParameters__Group_2__0 )*
+            // InternalMySelenium.g:2849:1: ( ( rule__FunctionParameters__Group_2__0 )* )
+            // InternalMySelenium.g:2850:2: ( rule__FunctionParameters__Group_2__0 )*
             {
              before(grammarAccess.getFunctionParametersAccess().getGroup_2()); 
-            // InternalMySelenium.g:2845:2: ( rule__FunctionParameters__Group_2__0 )*
+            // InternalMySelenium.g:2851:2: ( rule__FunctionParameters__Group_2__0 )*
             loop22:
             do {
                 int alt22=2;
@@ -8890,7 +8910,7 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
                 switch (alt22) {
             	case 1 :
-            	    // InternalMySelenium.g:2845:3: rule__FunctionParameters__Group_2__0
+            	    // InternalMySelenium.g:2851:3: rule__FunctionParameters__Group_2__0
             	    {
             	    pushFollow(FOLLOW_26);
             	    rule__FunctionParameters__Group_2__0();
@@ -8929,14 +8949,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionParameters__Group__3"
-    // InternalMySelenium.g:2853:1: rule__FunctionParameters__Group__3 : rule__FunctionParameters__Group__3__Impl ;
+    // InternalMySelenium.g:2859:1: rule__FunctionParameters__Group__3 : rule__FunctionParameters__Group__3__Impl ;
     public final void rule__FunctionParameters__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2857:1: ( rule__FunctionParameters__Group__3__Impl )
-            // InternalMySelenium.g:2858:2: rule__FunctionParameters__Group__3__Impl
+            // InternalMySelenium.g:2863:1: ( rule__FunctionParameters__Group__3__Impl )
+            // InternalMySelenium.g:2864:2: rule__FunctionParameters__Group__3__Impl
             {
             pushFollow(FOLLOW_2);
             rule__FunctionParameters__Group__3__Impl();
@@ -8962,17 +8982,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionParameters__Group__3__Impl"
-    // InternalMySelenium.g:2864:1: rule__FunctionParameters__Group__3__Impl : ( ')' ) ;
+    // InternalMySelenium.g:2870:1: rule__FunctionParameters__Group__3__Impl : ( ')' ) ;
     public final void rule__FunctionParameters__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2868:1: ( ( ')' ) )
-            // InternalMySelenium.g:2869:1: ( ')' )
+            // InternalMySelenium.g:2874:1: ( ( ')' ) )
+            // InternalMySelenium.g:2875:1: ( ')' )
             {
-            // InternalMySelenium.g:2869:1: ( ')' )
-            // InternalMySelenium.g:2870:2: ')'
+            // InternalMySelenium.g:2875:1: ( ')' )
+            // InternalMySelenium.g:2876:2: ')'
             {
              before(grammarAccess.getFunctionParametersAccess().getRightParenthesisKeyword_3()); 
             match(input,49,FOLLOW_2); 
@@ -8999,14 +9019,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionParameters__Group_2__0"
-    // InternalMySelenium.g:2880:1: rule__FunctionParameters__Group_2__0 : rule__FunctionParameters__Group_2__0__Impl rule__FunctionParameters__Group_2__1 ;
+    // InternalMySelenium.g:2886:1: rule__FunctionParameters__Group_2__0 : rule__FunctionParameters__Group_2__0__Impl rule__FunctionParameters__Group_2__1 ;
     public final void rule__FunctionParameters__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2884:1: ( rule__FunctionParameters__Group_2__0__Impl rule__FunctionParameters__Group_2__1 )
-            // InternalMySelenium.g:2885:2: rule__FunctionParameters__Group_2__0__Impl rule__FunctionParameters__Group_2__1
+            // InternalMySelenium.g:2890:1: ( rule__FunctionParameters__Group_2__0__Impl rule__FunctionParameters__Group_2__1 )
+            // InternalMySelenium.g:2891:2: rule__FunctionParameters__Group_2__0__Impl rule__FunctionParameters__Group_2__1
             {
             pushFollow(FOLLOW_10);
             rule__FunctionParameters__Group_2__0__Impl();
@@ -9037,17 +9057,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionParameters__Group_2__0__Impl"
-    // InternalMySelenium.g:2892:1: rule__FunctionParameters__Group_2__0__Impl : ( ',' ) ;
+    // InternalMySelenium.g:2898:1: rule__FunctionParameters__Group_2__0__Impl : ( ',' ) ;
     public final void rule__FunctionParameters__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2896:1: ( ( ',' ) )
-            // InternalMySelenium.g:2897:1: ( ',' )
+            // InternalMySelenium.g:2902:1: ( ( ',' ) )
+            // InternalMySelenium.g:2903:1: ( ',' )
             {
-            // InternalMySelenium.g:2897:1: ( ',' )
-            // InternalMySelenium.g:2898:2: ','
+            // InternalMySelenium.g:2903:1: ( ',' )
+            // InternalMySelenium.g:2904:2: ','
             {
              before(grammarAccess.getFunctionParametersAccess().getCommaKeyword_2_0()); 
             match(input,50,FOLLOW_2); 
@@ -9074,14 +9094,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionParameters__Group_2__1"
-    // InternalMySelenium.g:2907:1: rule__FunctionParameters__Group_2__1 : rule__FunctionParameters__Group_2__1__Impl ;
+    // InternalMySelenium.g:2913:1: rule__FunctionParameters__Group_2__1 : rule__FunctionParameters__Group_2__1__Impl ;
     public final void rule__FunctionParameters__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2911:1: ( rule__FunctionParameters__Group_2__1__Impl )
-            // InternalMySelenium.g:2912:2: rule__FunctionParameters__Group_2__1__Impl
+            // InternalMySelenium.g:2917:1: ( rule__FunctionParameters__Group_2__1__Impl )
+            // InternalMySelenium.g:2918:2: rule__FunctionParameters__Group_2__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__FunctionParameters__Group_2__1__Impl();
@@ -9107,21 +9127,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionParameters__Group_2__1__Impl"
-    // InternalMySelenium.g:2918:1: rule__FunctionParameters__Group_2__1__Impl : ( ( rule__FunctionParameters__VariablesAssignment_2_1 ) ) ;
+    // InternalMySelenium.g:2924:1: rule__FunctionParameters__Group_2__1__Impl : ( ( rule__FunctionParameters__VariablesAssignment_2_1 ) ) ;
     public final void rule__FunctionParameters__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2922:1: ( ( ( rule__FunctionParameters__VariablesAssignment_2_1 ) ) )
-            // InternalMySelenium.g:2923:1: ( ( rule__FunctionParameters__VariablesAssignment_2_1 ) )
+            // InternalMySelenium.g:2928:1: ( ( ( rule__FunctionParameters__VariablesAssignment_2_1 ) ) )
+            // InternalMySelenium.g:2929:1: ( ( rule__FunctionParameters__VariablesAssignment_2_1 ) )
             {
-            // InternalMySelenium.g:2923:1: ( ( rule__FunctionParameters__VariablesAssignment_2_1 ) )
-            // InternalMySelenium.g:2924:2: ( rule__FunctionParameters__VariablesAssignment_2_1 )
+            // InternalMySelenium.g:2929:1: ( ( rule__FunctionParameters__VariablesAssignment_2_1 ) )
+            // InternalMySelenium.g:2930:2: ( rule__FunctionParameters__VariablesAssignment_2_1 )
             {
              before(grammarAccess.getFunctionParametersAccess().getVariablesAssignment_2_1()); 
-            // InternalMySelenium.g:2925:2: ( rule__FunctionParameters__VariablesAssignment_2_1 )
-            // InternalMySelenium.g:2925:3: rule__FunctionParameters__VariablesAssignment_2_1
+            // InternalMySelenium.g:2931:2: ( rule__FunctionParameters__VariablesAssignment_2_1 )
+            // InternalMySelenium.g:2931:3: rule__FunctionParameters__VariablesAssignment_2_1
             {
             pushFollow(FOLLOW_2);
             rule__FunctionParameters__VariablesAssignment_2_1();
@@ -9154,14 +9174,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCallParameters__Group__0"
-    // InternalMySelenium.g:2934:1: rule__FunctionCallParameters__Group__0 : rule__FunctionCallParameters__Group__0__Impl rule__FunctionCallParameters__Group__1 ;
+    // InternalMySelenium.g:2940:1: rule__FunctionCallParameters__Group__0 : rule__FunctionCallParameters__Group__0__Impl rule__FunctionCallParameters__Group__1 ;
     public final void rule__FunctionCallParameters__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2938:1: ( rule__FunctionCallParameters__Group__0__Impl rule__FunctionCallParameters__Group__1 )
-            // InternalMySelenium.g:2939:2: rule__FunctionCallParameters__Group__0__Impl rule__FunctionCallParameters__Group__1
+            // InternalMySelenium.g:2944:1: ( rule__FunctionCallParameters__Group__0__Impl rule__FunctionCallParameters__Group__1 )
+            // InternalMySelenium.g:2945:2: rule__FunctionCallParameters__Group__0__Impl rule__FunctionCallParameters__Group__1
             {
             pushFollow(FOLLOW_30);
             rule__FunctionCallParameters__Group__0__Impl();
@@ -9192,17 +9212,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCallParameters__Group__0__Impl"
-    // InternalMySelenium.g:2946:1: rule__FunctionCallParameters__Group__0__Impl : ( '(' ) ;
+    // InternalMySelenium.g:2952:1: rule__FunctionCallParameters__Group__0__Impl : ( '(' ) ;
     public final void rule__FunctionCallParameters__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2950:1: ( ( '(' ) )
-            // InternalMySelenium.g:2951:1: ( '(' )
+            // InternalMySelenium.g:2956:1: ( ( '(' ) )
+            // InternalMySelenium.g:2957:1: ( '(' )
             {
-            // InternalMySelenium.g:2951:1: ( '(' )
-            // InternalMySelenium.g:2952:2: '('
+            // InternalMySelenium.g:2957:1: ( '(' )
+            // InternalMySelenium.g:2958:2: '('
             {
              before(grammarAccess.getFunctionCallParametersAccess().getLeftParenthesisKeyword_0()); 
             match(input,48,FOLLOW_2); 
@@ -9229,14 +9249,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCallParameters__Group__1"
-    // InternalMySelenium.g:2961:1: rule__FunctionCallParameters__Group__1 : rule__FunctionCallParameters__Group__1__Impl rule__FunctionCallParameters__Group__2 ;
+    // InternalMySelenium.g:2967:1: rule__FunctionCallParameters__Group__1 : rule__FunctionCallParameters__Group__1__Impl rule__FunctionCallParameters__Group__2 ;
     public final void rule__FunctionCallParameters__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2965:1: ( rule__FunctionCallParameters__Group__1__Impl rule__FunctionCallParameters__Group__2 )
-            // InternalMySelenium.g:2966:2: rule__FunctionCallParameters__Group__1__Impl rule__FunctionCallParameters__Group__2
+            // InternalMySelenium.g:2971:1: ( rule__FunctionCallParameters__Group__1__Impl rule__FunctionCallParameters__Group__2 )
+            // InternalMySelenium.g:2972:2: rule__FunctionCallParameters__Group__1__Impl rule__FunctionCallParameters__Group__2
             {
             pushFollow(FOLLOW_30);
             rule__FunctionCallParameters__Group__1__Impl();
@@ -9267,20 +9287,20 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCallParameters__Group__1__Impl"
-    // InternalMySelenium.g:2973:1: rule__FunctionCallParameters__Group__1__Impl : ( ( rule__FunctionCallParameters__Group_1__0 )? ) ;
+    // InternalMySelenium.g:2979:1: rule__FunctionCallParameters__Group__1__Impl : ( ( rule__FunctionCallParameters__Group_1__0 )? ) ;
     public final void rule__FunctionCallParameters__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2977:1: ( ( ( rule__FunctionCallParameters__Group_1__0 )? ) )
-            // InternalMySelenium.g:2978:1: ( ( rule__FunctionCallParameters__Group_1__0 )? )
+            // InternalMySelenium.g:2983:1: ( ( ( rule__FunctionCallParameters__Group_1__0 )? ) )
+            // InternalMySelenium.g:2984:1: ( ( rule__FunctionCallParameters__Group_1__0 )? )
             {
-            // InternalMySelenium.g:2978:1: ( ( rule__FunctionCallParameters__Group_1__0 )? )
-            // InternalMySelenium.g:2979:2: ( rule__FunctionCallParameters__Group_1__0 )?
+            // InternalMySelenium.g:2984:1: ( ( rule__FunctionCallParameters__Group_1__0 )? )
+            // InternalMySelenium.g:2985:2: ( rule__FunctionCallParameters__Group_1__0 )?
             {
              before(grammarAccess.getFunctionCallParametersAccess().getGroup_1()); 
-            // InternalMySelenium.g:2980:2: ( rule__FunctionCallParameters__Group_1__0 )?
+            // InternalMySelenium.g:2986:2: ( rule__FunctionCallParameters__Group_1__0 )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -9289,7 +9309,7 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
             }
             switch (alt23) {
                 case 1 :
-                    // InternalMySelenium.g:2980:3: rule__FunctionCallParameters__Group_1__0
+                    // InternalMySelenium.g:2986:3: rule__FunctionCallParameters__Group_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__FunctionCallParameters__Group_1__0();
@@ -9325,14 +9345,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCallParameters__Group__2"
-    // InternalMySelenium.g:2988:1: rule__FunctionCallParameters__Group__2 : rule__FunctionCallParameters__Group__2__Impl ;
+    // InternalMySelenium.g:2994:1: rule__FunctionCallParameters__Group__2 : rule__FunctionCallParameters__Group__2__Impl ;
     public final void rule__FunctionCallParameters__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:2992:1: ( rule__FunctionCallParameters__Group__2__Impl )
-            // InternalMySelenium.g:2993:2: rule__FunctionCallParameters__Group__2__Impl
+            // InternalMySelenium.g:2998:1: ( rule__FunctionCallParameters__Group__2__Impl )
+            // InternalMySelenium.g:2999:2: rule__FunctionCallParameters__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__FunctionCallParameters__Group__2__Impl();
@@ -9358,17 +9378,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCallParameters__Group__2__Impl"
-    // InternalMySelenium.g:2999:1: rule__FunctionCallParameters__Group__2__Impl : ( ')' ) ;
+    // InternalMySelenium.g:3005:1: rule__FunctionCallParameters__Group__2__Impl : ( ')' ) ;
     public final void rule__FunctionCallParameters__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3003:1: ( ( ')' ) )
-            // InternalMySelenium.g:3004:1: ( ')' )
+            // InternalMySelenium.g:3009:1: ( ( ')' ) )
+            // InternalMySelenium.g:3010:1: ( ')' )
             {
-            // InternalMySelenium.g:3004:1: ( ')' )
-            // InternalMySelenium.g:3005:2: ')'
+            // InternalMySelenium.g:3010:1: ( ')' )
+            // InternalMySelenium.g:3011:2: ')'
             {
              before(grammarAccess.getFunctionCallParametersAccess().getRightParenthesisKeyword_2()); 
             match(input,49,FOLLOW_2); 
@@ -9395,14 +9415,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCallParameters__Group_1__0"
-    // InternalMySelenium.g:3015:1: rule__FunctionCallParameters__Group_1__0 : rule__FunctionCallParameters__Group_1__0__Impl rule__FunctionCallParameters__Group_1__1 ;
+    // InternalMySelenium.g:3021:1: rule__FunctionCallParameters__Group_1__0 : rule__FunctionCallParameters__Group_1__0__Impl rule__FunctionCallParameters__Group_1__1 ;
     public final void rule__FunctionCallParameters__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3019:1: ( rule__FunctionCallParameters__Group_1__0__Impl rule__FunctionCallParameters__Group_1__1 )
-            // InternalMySelenium.g:3020:2: rule__FunctionCallParameters__Group_1__0__Impl rule__FunctionCallParameters__Group_1__1
+            // InternalMySelenium.g:3025:1: ( rule__FunctionCallParameters__Group_1__0__Impl rule__FunctionCallParameters__Group_1__1 )
+            // InternalMySelenium.g:3026:2: rule__FunctionCallParameters__Group_1__0__Impl rule__FunctionCallParameters__Group_1__1
             {
             pushFollow(FOLLOW_25);
             rule__FunctionCallParameters__Group_1__0__Impl();
@@ -9433,21 +9453,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCallParameters__Group_1__0__Impl"
-    // InternalMySelenium.g:3027:1: rule__FunctionCallParameters__Group_1__0__Impl : ( ( rule__FunctionCallParameters__VariablesAssignment_1_0 ) ) ;
+    // InternalMySelenium.g:3033:1: rule__FunctionCallParameters__Group_1__0__Impl : ( ( rule__FunctionCallParameters__VariablesAssignment_1_0 ) ) ;
     public final void rule__FunctionCallParameters__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3031:1: ( ( ( rule__FunctionCallParameters__VariablesAssignment_1_0 ) ) )
-            // InternalMySelenium.g:3032:1: ( ( rule__FunctionCallParameters__VariablesAssignment_1_0 ) )
+            // InternalMySelenium.g:3037:1: ( ( ( rule__FunctionCallParameters__VariablesAssignment_1_0 ) ) )
+            // InternalMySelenium.g:3038:1: ( ( rule__FunctionCallParameters__VariablesAssignment_1_0 ) )
             {
-            // InternalMySelenium.g:3032:1: ( ( rule__FunctionCallParameters__VariablesAssignment_1_0 ) )
-            // InternalMySelenium.g:3033:2: ( rule__FunctionCallParameters__VariablesAssignment_1_0 )
+            // InternalMySelenium.g:3038:1: ( ( rule__FunctionCallParameters__VariablesAssignment_1_0 ) )
+            // InternalMySelenium.g:3039:2: ( rule__FunctionCallParameters__VariablesAssignment_1_0 )
             {
              before(grammarAccess.getFunctionCallParametersAccess().getVariablesAssignment_1_0()); 
-            // InternalMySelenium.g:3034:2: ( rule__FunctionCallParameters__VariablesAssignment_1_0 )
-            // InternalMySelenium.g:3034:3: rule__FunctionCallParameters__VariablesAssignment_1_0
+            // InternalMySelenium.g:3040:2: ( rule__FunctionCallParameters__VariablesAssignment_1_0 )
+            // InternalMySelenium.g:3040:3: rule__FunctionCallParameters__VariablesAssignment_1_0
             {
             pushFollow(FOLLOW_2);
             rule__FunctionCallParameters__VariablesAssignment_1_0();
@@ -9480,14 +9500,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCallParameters__Group_1__1"
-    // InternalMySelenium.g:3042:1: rule__FunctionCallParameters__Group_1__1 : rule__FunctionCallParameters__Group_1__1__Impl ;
+    // InternalMySelenium.g:3048:1: rule__FunctionCallParameters__Group_1__1 : rule__FunctionCallParameters__Group_1__1__Impl ;
     public final void rule__FunctionCallParameters__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3046:1: ( rule__FunctionCallParameters__Group_1__1__Impl )
-            // InternalMySelenium.g:3047:2: rule__FunctionCallParameters__Group_1__1__Impl
+            // InternalMySelenium.g:3052:1: ( rule__FunctionCallParameters__Group_1__1__Impl )
+            // InternalMySelenium.g:3053:2: rule__FunctionCallParameters__Group_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__FunctionCallParameters__Group_1__1__Impl();
@@ -9513,20 +9533,20 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCallParameters__Group_1__1__Impl"
-    // InternalMySelenium.g:3053:1: rule__FunctionCallParameters__Group_1__1__Impl : ( ( rule__FunctionCallParameters__Group_1_1__0 )* ) ;
+    // InternalMySelenium.g:3059:1: rule__FunctionCallParameters__Group_1__1__Impl : ( ( rule__FunctionCallParameters__Group_1_1__0 )* ) ;
     public final void rule__FunctionCallParameters__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3057:1: ( ( ( rule__FunctionCallParameters__Group_1_1__0 )* ) )
-            // InternalMySelenium.g:3058:1: ( ( rule__FunctionCallParameters__Group_1_1__0 )* )
+            // InternalMySelenium.g:3063:1: ( ( ( rule__FunctionCallParameters__Group_1_1__0 )* ) )
+            // InternalMySelenium.g:3064:1: ( ( rule__FunctionCallParameters__Group_1_1__0 )* )
             {
-            // InternalMySelenium.g:3058:1: ( ( rule__FunctionCallParameters__Group_1_1__0 )* )
-            // InternalMySelenium.g:3059:2: ( rule__FunctionCallParameters__Group_1_1__0 )*
+            // InternalMySelenium.g:3064:1: ( ( rule__FunctionCallParameters__Group_1_1__0 )* )
+            // InternalMySelenium.g:3065:2: ( rule__FunctionCallParameters__Group_1_1__0 )*
             {
              before(grammarAccess.getFunctionCallParametersAccess().getGroup_1_1()); 
-            // InternalMySelenium.g:3060:2: ( rule__FunctionCallParameters__Group_1_1__0 )*
+            // InternalMySelenium.g:3066:2: ( rule__FunctionCallParameters__Group_1_1__0 )*
             loop24:
             do {
                 int alt24=2;
@@ -9539,7 +9559,7 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
                 switch (alt24) {
             	case 1 :
-            	    // InternalMySelenium.g:3060:3: rule__FunctionCallParameters__Group_1_1__0
+            	    // InternalMySelenium.g:3066:3: rule__FunctionCallParameters__Group_1_1__0
             	    {
             	    pushFollow(FOLLOW_26);
             	    rule__FunctionCallParameters__Group_1_1__0();
@@ -9578,14 +9598,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCallParameters__Group_1_1__0"
-    // InternalMySelenium.g:3069:1: rule__FunctionCallParameters__Group_1_1__0 : rule__FunctionCallParameters__Group_1_1__0__Impl rule__FunctionCallParameters__Group_1_1__1 ;
+    // InternalMySelenium.g:3075:1: rule__FunctionCallParameters__Group_1_1__0 : rule__FunctionCallParameters__Group_1_1__0__Impl rule__FunctionCallParameters__Group_1_1__1 ;
     public final void rule__FunctionCallParameters__Group_1_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3073:1: ( rule__FunctionCallParameters__Group_1_1__0__Impl rule__FunctionCallParameters__Group_1_1__1 )
-            // InternalMySelenium.g:3074:2: rule__FunctionCallParameters__Group_1_1__0__Impl rule__FunctionCallParameters__Group_1_1__1
+            // InternalMySelenium.g:3079:1: ( rule__FunctionCallParameters__Group_1_1__0__Impl rule__FunctionCallParameters__Group_1_1__1 )
+            // InternalMySelenium.g:3080:2: rule__FunctionCallParameters__Group_1_1__0__Impl rule__FunctionCallParameters__Group_1_1__1
             {
             pushFollow(FOLLOW_28);
             rule__FunctionCallParameters__Group_1_1__0__Impl();
@@ -9616,17 +9636,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCallParameters__Group_1_1__0__Impl"
-    // InternalMySelenium.g:3081:1: rule__FunctionCallParameters__Group_1_1__0__Impl : ( ',' ) ;
+    // InternalMySelenium.g:3087:1: rule__FunctionCallParameters__Group_1_1__0__Impl : ( ',' ) ;
     public final void rule__FunctionCallParameters__Group_1_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3085:1: ( ( ',' ) )
-            // InternalMySelenium.g:3086:1: ( ',' )
+            // InternalMySelenium.g:3091:1: ( ( ',' ) )
+            // InternalMySelenium.g:3092:1: ( ',' )
             {
-            // InternalMySelenium.g:3086:1: ( ',' )
-            // InternalMySelenium.g:3087:2: ','
+            // InternalMySelenium.g:3092:1: ( ',' )
+            // InternalMySelenium.g:3093:2: ','
             {
              before(grammarAccess.getFunctionCallParametersAccess().getCommaKeyword_1_1_0()); 
             match(input,50,FOLLOW_2); 
@@ -9653,14 +9673,14 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCallParameters__Group_1_1__1"
-    // InternalMySelenium.g:3096:1: rule__FunctionCallParameters__Group_1_1__1 : rule__FunctionCallParameters__Group_1_1__1__Impl ;
+    // InternalMySelenium.g:3102:1: rule__FunctionCallParameters__Group_1_1__1 : rule__FunctionCallParameters__Group_1_1__1__Impl ;
     public final void rule__FunctionCallParameters__Group_1_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3100:1: ( rule__FunctionCallParameters__Group_1_1__1__Impl )
-            // InternalMySelenium.g:3101:2: rule__FunctionCallParameters__Group_1_1__1__Impl
+            // InternalMySelenium.g:3106:1: ( rule__FunctionCallParameters__Group_1_1__1__Impl )
+            // InternalMySelenium.g:3107:2: rule__FunctionCallParameters__Group_1_1__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__FunctionCallParameters__Group_1_1__1__Impl();
@@ -9686,21 +9706,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCallParameters__Group_1_1__1__Impl"
-    // InternalMySelenium.g:3107:1: rule__FunctionCallParameters__Group_1_1__1__Impl : ( ( rule__FunctionCallParameters__VariablesAssignment_1_1_1 ) ) ;
+    // InternalMySelenium.g:3113:1: rule__FunctionCallParameters__Group_1_1__1__Impl : ( ( rule__FunctionCallParameters__VariablesAssignment_1_1_1 ) ) ;
     public final void rule__FunctionCallParameters__Group_1_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3111:1: ( ( ( rule__FunctionCallParameters__VariablesAssignment_1_1_1 ) ) )
-            // InternalMySelenium.g:3112:1: ( ( rule__FunctionCallParameters__VariablesAssignment_1_1_1 ) )
+            // InternalMySelenium.g:3117:1: ( ( ( rule__FunctionCallParameters__VariablesAssignment_1_1_1 ) ) )
+            // InternalMySelenium.g:3118:1: ( ( rule__FunctionCallParameters__VariablesAssignment_1_1_1 ) )
             {
-            // InternalMySelenium.g:3112:1: ( ( rule__FunctionCallParameters__VariablesAssignment_1_1_1 ) )
-            // InternalMySelenium.g:3113:2: ( rule__FunctionCallParameters__VariablesAssignment_1_1_1 )
+            // InternalMySelenium.g:3118:1: ( ( rule__FunctionCallParameters__VariablesAssignment_1_1_1 ) )
+            // InternalMySelenium.g:3119:2: ( rule__FunctionCallParameters__VariablesAssignment_1_1_1 )
             {
              before(grammarAccess.getFunctionCallParametersAccess().getVariablesAssignment_1_1_1()); 
-            // InternalMySelenium.g:3114:2: ( rule__FunctionCallParameters__VariablesAssignment_1_1_1 )
-            // InternalMySelenium.g:3114:3: rule__FunctionCallParameters__VariablesAssignment_1_1_1
+            // InternalMySelenium.g:3120:2: ( rule__FunctionCallParameters__VariablesAssignment_1_1_1 )
+            // InternalMySelenium.g:3120:3: rule__FunctionCallParameters__VariablesAssignment_1_1_1
             {
             pushFollow(FOLLOW_2);
             rule__FunctionCallParameters__VariablesAssignment_1_1_1();
@@ -9733,17 +9753,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Functions__FunctionsAssignment_0"
-    // InternalMySelenium.g:3123:1: rule__Functions__FunctionsAssignment_0 : ( ruleFunction ) ;
+    // InternalMySelenium.g:3129:1: rule__Functions__FunctionsAssignment_0 : ( ruleFunction ) ;
     public final void rule__Functions__FunctionsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3127:1: ( ( ruleFunction ) )
-            // InternalMySelenium.g:3128:2: ( ruleFunction )
+            // InternalMySelenium.g:3133:1: ( ( ruleFunction ) )
+            // InternalMySelenium.g:3134:2: ( ruleFunction )
             {
-            // InternalMySelenium.g:3128:2: ( ruleFunction )
-            // InternalMySelenium.g:3129:3: ruleFunction
+            // InternalMySelenium.g:3134:2: ( ruleFunction )
+            // InternalMySelenium.g:3135:3: ruleFunction
             {
              before(grammarAccess.getFunctionsAccess().getFunctionsFunctionParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -9774,17 +9794,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Functions__MainFunctionAssignment_1"
-    // InternalMySelenium.g:3138:1: rule__Functions__MainFunctionAssignment_1 : ( ruleMainFunction ) ;
+    // InternalMySelenium.g:3144:1: rule__Functions__MainFunctionAssignment_1 : ( ruleMainFunction ) ;
     public final void rule__Functions__MainFunctionAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3142:1: ( ( ruleMainFunction ) )
-            // InternalMySelenium.g:3143:2: ( ruleMainFunction )
+            // InternalMySelenium.g:3148:1: ( ( ruleMainFunction ) )
+            // InternalMySelenium.g:3149:2: ( ruleMainFunction )
             {
-            // InternalMySelenium.g:3143:2: ( ruleMainFunction )
-            // InternalMySelenium.g:3144:3: ruleMainFunction
+            // InternalMySelenium.g:3149:2: ( ruleMainFunction )
+            // InternalMySelenium.g:3150:3: ruleMainFunction
             {
              before(grammarAccess.getFunctionsAccess().getMainFunctionMainFunctionParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -9815,17 +9835,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Statements__StatementsAssignment"
-    // InternalMySelenium.g:3153:1: rule__Statements__StatementsAssignment : ( ruleStatement ) ;
+    // InternalMySelenium.g:3159:1: rule__Statements__StatementsAssignment : ( ruleStatement ) ;
     public final void rule__Statements__StatementsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3157:1: ( ( ruleStatement ) )
-            // InternalMySelenium.g:3158:2: ( ruleStatement )
+            // InternalMySelenium.g:3163:1: ( ( ruleStatement ) )
+            // InternalMySelenium.g:3164:2: ( ruleStatement )
             {
-            // InternalMySelenium.g:3158:2: ( ruleStatement )
-            // InternalMySelenium.g:3159:3: ruleStatement
+            // InternalMySelenium.g:3164:2: ( ruleStatement )
+            // InternalMySelenium.g:3165:3: ruleStatement
             {
              before(grammarAccess.getStatementsAccess().getStatementsStatementParserRuleCall_0()); 
             pushFollow(FOLLOW_2);
@@ -9856,17 +9876,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__MainFunction__StatementsAssignment_3"
-    // InternalMySelenium.g:3168:1: rule__MainFunction__StatementsAssignment_3 : ( ruleStatements ) ;
+    // InternalMySelenium.g:3174:1: rule__MainFunction__StatementsAssignment_3 : ( ruleStatements ) ;
     public final void rule__MainFunction__StatementsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3172:1: ( ( ruleStatements ) )
-            // InternalMySelenium.g:3173:2: ( ruleStatements )
+            // InternalMySelenium.g:3178:1: ( ( ruleStatements ) )
+            // InternalMySelenium.g:3179:2: ( ruleStatements )
             {
-            // InternalMySelenium.g:3173:2: ( ruleStatements )
-            // InternalMySelenium.g:3174:3: ruleStatements
+            // InternalMySelenium.g:3179:2: ( ruleStatements )
+            // InternalMySelenium.g:3180:3: ruleStatements
             {
              before(grammarAccess.getMainFunctionAccess().getStatementsStatementsParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -9897,17 +9917,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Function__NameAssignment_1"
-    // InternalMySelenium.g:3183:1: rule__Function__NameAssignment_1 : ( ruleFunctionName ) ;
+    // InternalMySelenium.g:3189:1: rule__Function__NameAssignment_1 : ( ruleFunctionName ) ;
     public final void rule__Function__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3187:1: ( ( ruleFunctionName ) )
-            // InternalMySelenium.g:3188:2: ( ruleFunctionName )
+            // InternalMySelenium.g:3193:1: ( ( ruleFunctionName ) )
+            // InternalMySelenium.g:3194:2: ( ruleFunctionName )
             {
-            // InternalMySelenium.g:3188:2: ( ruleFunctionName )
-            // InternalMySelenium.g:3189:3: ruleFunctionName
+            // InternalMySelenium.g:3194:2: ( ruleFunctionName )
+            // InternalMySelenium.g:3195:3: ruleFunctionName
             {
              before(grammarAccess.getFunctionAccess().getNameFunctionNameParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -9938,17 +9958,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Function__ParamsAssignment_2"
-    // InternalMySelenium.g:3198:1: rule__Function__ParamsAssignment_2 : ( ruleFunctionParameters ) ;
+    // InternalMySelenium.g:3204:1: rule__Function__ParamsAssignment_2 : ( ruleFunctionParameters ) ;
     public final void rule__Function__ParamsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3202:1: ( ( ruleFunctionParameters ) )
-            // InternalMySelenium.g:3203:2: ( ruleFunctionParameters )
+            // InternalMySelenium.g:3208:1: ( ( ruleFunctionParameters ) )
+            // InternalMySelenium.g:3209:2: ( ruleFunctionParameters )
             {
-            // InternalMySelenium.g:3203:2: ( ruleFunctionParameters )
-            // InternalMySelenium.g:3204:3: ruleFunctionParameters
+            // InternalMySelenium.g:3209:2: ( ruleFunctionParameters )
+            // InternalMySelenium.g:3210:3: ruleFunctionParameters
             {
              before(grammarAccess.getFunctionAccess().getParamsFunctionParametersParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -9979,17 +9999,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Function__StatementsAssignment_4"
-    // InternalMySelenium.g:3213:1: rule__Function__StatementsAssignment_4 : ( ruleStatements ) ;
+    // InternalMySelenium.g:3219:1: rule__Function__StatementsAssignment_4 : ( ruleStatements ) ;
     public final void rule__Function__StatementsAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3217:1: ( ( ruleStatements ) )
-            // InternalMySelenium.g:3218:2: ( ruleStatements )
+            // InternalMySelenium.g:3223:1: ( ( ruleStatements ) )
+            // InternalMySelenium.g:3224:2: ( ruleStatements )
             {
-            // InternalMySelenium.g:3218:2: ( ruleStatements )
-            // InternalMySelenium.g:3219:3: ruleStatements
+            // InternalMySelenium.g:3224:2: ( ruleStatements )
+            // InternalMySelenium.g:3225:3: ruleStatements
             {
              before(grammarAccess.getFunctionAccess().getStatementsStatementsParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -10020,17 +10040,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionName__NameAssignment"
-    // InternalMySelenium.g:3228:1: rule__FunctionName__NameAssignment : ( RULE_ID ) ;
+    // InternalMySelenium.g:3234:1: rule__FunctionName__NameAssignment : ( RULE_ID ) ;
     public final void rule__FunctionName__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3232:1: ( ( RULE_ID ) )
-            // InternalMySelenium.g:3233:2: ( RULE_ID )
+            // InternalMySelenium.g:3238:1: ( ( RULE_ID ) )
+            // InternalMySelenium.g:3239:2: ( RULE_ID )
             {
-            // InternalMySelenium.g:3233:2: ( RULE_ID )
-            // InternalMySelenium.g:3234:3: RULE_ID
+            // InternalMySelenium.g:3239:2: ( RULE_ID )
+            // InternalMySelenium.g:3240:3: RULE_ID
             {
              before(grammarAccess.getFunctionNameAccess().getNameIDTerminalRuleCall_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -10057,21 +10077,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__RefAssignment_0"
-    // InternalMySelenium.g:3243:1: rule__FunctionCall__RefAssignment_0 : ( ( RULE_ID ) ) ;
+    // InternalMySelenium.g:3249:1: rule__FunctionCall__RefAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__FunctionCall__RefAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3247:1: ( ( ( RULE_ID ) ) )
-            // InternalMySelenium.g:3248:2: ( ( RULE_ID ) )
+            // InternalMySelenium.g:3253:1: ( ( ( RULE_ID ) ) )
+            // InternalMySelenium.g:3254:2: ( ( RULE_ID ) )
             {
-            // InternalMySelenium.g:3248:2: ( ( RULE_ID ) )
-            // InternalMySelenium.g:3249:3: ( RULE_ID )
+            // InternalMySelenium.g:3254:2: ( ( RULE_ID ) )
+            // InternalMySelenium.g:3255:3: ( RULE_ID )
             {
              before(grammarAccess.getFunctionCallAccess().getRefFunctionNameCrossReference_0_0()); 
-            // InternalMySelenium.g:3250:3: ( RULE_ID )
-            // InternalMySelenium.g:3251:4: RULE_ID
+            // InternalMySelenium.g:3256:3: ( RULE_ID )
+            // InternalMySelenium.g:3257:4: RULE_ID
             {
              before(grammarAccess.getFunctionCallAccess().getRefFunctionNameIDTerminalRuleCall_0_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -10102,17 +10122,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCall__ParamsAssignment_1"
-    // InternalMySelenium.g:3262:1: rule__FunctionCall__ParamsAssignment_1 : ( ruleFunctionCallParameters ) ;
+    // InternalMySelenium.g:3268:1: rule__FunctionCall__ParamsAssignment_1 : ( ruleFunctionCallParameters ) ;
     public final void rule__FunctionCall__ParamsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3266:1: ( ( ruleFunctionCallParameters ) )
-            // InternalMySelenium.g:3267:2: ( ruleFunctionCallParameters )
+            // InternalMySelenium.g:3272:1: ( ( ruleFunctionCallParameters ) )
+            // InternalMySelenium.g:3273:2: ( ruleFunctionCallParameters )
             {
-            // InternalMySelenium.g:3267:2: ( ruleFunctionCallParameters )
-            // InternalMySelenium.g:3268:3: ruleFunctionCallParameters
+            // InternalMySelenium.g:3273:2: ( ruleFunctionCallParameters )
+            // InternalMySelenium.g:3274:3: ruleFunctionCallParameters
             {
              before(grammarAccess.getFunctionCallAccess().getParamsFunctionCallParametersParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -10143,17 +10163,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Projection__SelectorAssignment_0"
-    // InternalMySelenium.g:3277:1: rule__Projection__SelectorAssignment_0 : ( ruleSelector ) ;
+    // InternalMySelenium.g:3283:1: rule__Projection__SelectorAssignment_0 : ( ruleSelector ) ;
     public final void rule__Projection__SelectorAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3281:1: ( ( ruleSelector ) )
-            // InternalMySelenium.g:3282:2: ( ruleSelector )
+            // InternalMySelenium.g:3287:1: ( ( ruleSelector ) )
+            // InternalMySelenium.g:3288:2: ( ruleSelector )
             {
-            // InternalMySelenium.g:3282:2: ( ruleSelector )
-            // InternalMySelenium.g:3283:3: ruleSelector
+            // InternalMySelenium.g:3288:2: ( ruleSelector )
+            // InternalMySelenium.g:3289:3: ruleSelector
             {
              before(grammarAccess.getProjectionAccess().getSelectorSelectorParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -10184,17 +10204,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Projection__ProjectionActionAssignment_2"
-    // InternalMySelenium.g:3292:1: rule__Projection__ProjectionActionAssignment_2 : ( ruleProjectionAction ) ;
+    // InternalMySelenium.g:3298:1: rule__Projection__ProjectionActionAssignment_2 : ( ruleProjectionAction ) ;
     public final void rule__Projection__ProjectionActionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3296:1: ( ( ruleProjectionAction ) )
-            // InternalMySelenium.g:3297:2: ( ruleProjectionAction )
+            // InternalMySelenium.g:3302:1: ( ( ruleProjectionAction ) )
+            // InternalMySelenium.g:3303:2: ( ruleProjectionAction )
             {
-            // InternalMySelenium.g:3297:2: ( ruleProjectionAction )
-            // InternalMySelenium.g:3298:3: ruleProjectionAction
+            // InternalMySelenium.g:3303:2: ( ruleProjectionAction )
+            // InternalMySelenium.g:3304:3: ruleProjectionAction
             {
              before(grammarAccess.getProjectionAccess().getProjectionActionProjectionActionParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -10225,17 +10245,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertEquals__AssertableElementAssignment_1"
-    // InternalMySelenium.g:3307:1: rule__AssertEquals__AssertableElementAssignment_1 : ( ruleAssertableElement ) ;
+    // InternalMySelenium.g:3313:1: rule__AssertEquals__AssertableElementAssignment_1 : ( ruleAssertableElement ) ;
     public final void rule__AssertEquals__AssertableElementAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3311:1: ( ( ruleAssertableElement ) )
-            // InternalMySelenium.g:3312:2: ( ruleAssertableElement )
+            // InternalMySelenium.g:3317:1: ( ( ruleAssertableElement ) )
+            // InternalMySelenium.g:3318:2: ( ruleAssertableElement )
             {
-            // InternalMySelenium.g:3312:2: ( ruleAssertableElement )
-            // InternalMySelenium.g:3313:3: ruleAssertableElement
+            // InternalMySelenium.g:3318:2: ( ruleAssertableElement )
+            // InternalMySelenium.g:3319:3: ruleAssertableElement
             {
              before(grammarAccess.getAssertEqualsAccess().getAssertableElementAssertableElementParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -10266,17 +10286,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertEquals__AssertableElementAssignment_3"
-    // InternalMySelenium.g:3322:1: rule__AssertEquals__AssertableElementAssignment_3 : ( ruleAssertableElement ) ;
+    // InternalMySelenium.g:3328:1: rule__AssertEquals__AssertableElementAssignment_3 : ( ruleAssertableElement ) ;
     public final void rule__AssertEquals__AssertableElementAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3326:1: ( ( ruleAssertableElement ) )
-            // InternalMySelenium.g:3327:2: ( ruleAssertableElement )
+            // InternalMySelenium.g:3332:1: ( ( ruleAssertableElement ) )
+            // InternalMySelenium.g:3333:2: ( ruleAssertableElement )
             {
-            // InternalMySelenium.g:3327:2: ( ruleAssertableElement )
-            // InternalMySelenium.g:3328:3: ruleAssertableElement
+            // InternalMySelenium.g:3333:2: ( ruleAssertableElement )
+            // InternalMySelenium.g:3334:3: ruleAssertableElement
             {
              before(grammarAccess.getAssertEqualsAccess().getAssertableElementAssertableElementParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -10307,17 +10327,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertContains__ContainerAssignment_1"
-    // InternalMySelenium.g:3337:1: rule__AssertContains__ContainerAssignment_1 : ( ruleAssertableElement ) ;
+    // InternalMySelenium.g:3343:1: rule__AssertContains__ContainerAssignment_1 : ( ruleAssertableElement ) ;
     public final void rule__AssertContains__ContainerAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3341:1: ( ( ruleAssertableElement ) )
-            // InternalMySelenium.g:3342:2: ( ruleAssertableElement )
+            // InternalMySelenium.g:3347:1: ( ( ruleAssertableElement ) )
+            // InternalMySelenium.g:3348:2: ( ruleAssertableElement )
             {
-            // InternalMySelenium.g:3342:2: ( ruleAssertableElement )
-            // InternalMySelenium.g:3343:3: ruleAssertableElement
+            // InternalMySelenium.g:3348:2: ( ruleAssertableElement )
+            // InternalMySelenium.g:3349:3: ruleAssertableElement
             {
              before(grammarAccess.getAssertContainsAccess().getContainerAssertableElementParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -10348,17 +10368,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssertContains__ElementAssignment_3"
-    // InternalMySelenium.g:3352:1: rule__AssertContains__ElementAssignment_3 : ( ruleAssertableElement ) ;
+    // InternalMySelenium.g:3358:1: rule__AssertContains__ElementAssignment_3 : ( ruleAssertableElement ) ;
     public final void rule__AssertContains__ElementAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3356:1: ( ( ruleAssertableElement ) )
-            // InternalMySelenium.g:3357:2: ( ruleAssertableElement )
+            // InternalMySelenium.g:3362:1: ( ( ruleAssertableElement ) )
+            // InternalMySelenium.g:3363:2: ( ruleAssertableElement )
             {
-            // InternalMySelenium.g:3357:2: ( ruleAssertableElement )
-            // InternalMySelenium.g:3358:3: ruleAssertableElement
+            // InternalMySelenium.g:3363:2: ( ruleAssertableElement )
+            // InternalMySelenium.g:3364:3: ruleAssertableElement
             {
              before(grammarAccess.getAssertContainsAccess().getElementAssertableElementParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -10389,17 +10409,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NavigationAction__ActionAssignment_0"
-    // InternalMySelenium.g:3367:1: rule__NavigationAction__ActionAssignment_0 : ( ruleNavigationActionType ) ;
+    // InternalMySelenium.g:3373:1: rule__NavigationAction__ActionAssignment_0 : ( ruleNavigationActionType ) ;
     public final void rule__NavigationAction__ActionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3371:1: ( ( ruleNavigationActionType ) )
-            // InternalMySelenium.g:3372:2: ( ruleNavigationActionType )
+            // InternalMySelenium.g:3377:1: ( ( ruleNavigationActionType ) )
+            // InternalMySelenium.g:3378:2: ( ruleNavigationActionType )
             {
-            // InternalMySelenium.g:3372:2: ( ruleNavigationActionType )
-            // InternalMySelenium.g:3373:3: ruleNavigationActionType
+            // InternalMySelenium.g:3378:2: ( ruleNavigationActionType )
+            // InternalMySelenium.g:3379:3: ruleNavigationActionType
             {
              before(grammarAccess.getNavigationActionAccess().getActionNavigationActionTypeParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -10430,17 +10450,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__NavigationAction__ParamAssignment_1"
-    // InternalMySelenium.g:3382:1: rule__NavigationAction__ParamAssignment_1 : ( RULE_STRING ) ;
+    // InternalMySelenium.g:3388:1: rule__NavigationAction__ParamAssignment_1 : ( RULE_STRING ) ;
     public final void rule__NavigationAction__ParamAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3386:1: ( ( RULE_STRING ) )
-            // InternalMySelenium.g:3387:2: ( RULE_STRING )
+            // InternalMySelenium.g:3392:1: ( ( RULE_STRING ) )
+            // InternalMySelenium.g:3393:2: ( RULE_STRING )
             {
-            // InternalMySelenium.g:3387:2: ( RULE_STRING )
-            // InternalMySelenium.g:3388:3: RULE_STRING
+            // InternalMySelenium.g:3393:2: ( RULE_STRING )
+            // InternalMySelenium.g:3394:3: RULE_STRING
             {
              before(grammarAccess.getNavigationActionAccess().getParamSTRINGTerminalRuleCall_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -10467,17 +10487,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Action__ActionAssignment_0"
-    // InternalMySelenium.g:3397:1: rule__Action__ActionAssignment_0 : ( ruleActionType ) ;
+    // InternalMySelenium.g:3403:1: rule__Action__ActionAssignment_0 : ( ruleActionType ) ;
     public final void rule__Action__ActionAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3401:1: ( ( ruleActionType ) )
-            // InternalMySelenium.g:3402:2: ( ruleActionType )
+            // InternalMySelenium.g:3407:1: ( ( ruleActionType ) )
+            // InternalMySelenium.g:3408:2: ( ruleActionType )
             {
-            // InternalMySelenium.g:3402:2: ( ruleActionType )
-            // InternalMySelenium.g:3403:3: ruleActionType
+            // InternalMySelenium.g:3408:2: ( ruleActionType )
+            // InternalMySelenium.g:3409:3: ruleActionType
             {
              before(grammarAccess.getActionAccess().getActionActionTypeParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -10508,17 +10528,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Action__TargetAssignment_1"
-    // InternalMySelenium.g:3412:1: rule__Action__TargetAssignment_1 : ( ruleActionTarget ) ;
+    // InternalMySelenium.g:3418:1: rule__Action__TargetAssignment_1 : ( ruleActionTarget ) ;
     public final void rule__Action__TargetAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3416:1: ( ( ruleActionTarget ) )
-            // InternalMySelenium.g:3417:2: ( ruleActionTarget )
+            // InternalMySelenium.g:3422:1: ( ( ruleActionTarget ) )
+            // InternalMySelenium.g:3423:2: ( ruleActionTarget )
             {
-            // InternalMySelenium.g:3417:2: ( ruleActionTarget )
-            // InternalMySelenium.g:3418:3: ruleActionTarget
+            // InternalMySelenium.g:3423:2: ( ruleActionTarget )
+            // InternalMySelenium.g:3424:3: ruleActionTarget
             {
              before(grammarAccess.getActionAccess().getTargetActionTargetParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -10549,17 +10569,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Action__ParamAssignment_2"
-    // InternalMySelenium.g:3427:1: rule__Action__ParamAssignment_2 : ( ruleActionParameter ) ;
+    // InternalMySelenium.g:3433:1: rule__Action__ParamAssignment_2 : ( ruleActionParameter ) ;
     public final void rule__Action__ParamAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3431:1: ( ( ruleActionParameter ) )
-            // InternalMySelenium.g:3432:2: ( ruleActionParameter )
+            // InternalMySelenium.g:3437:1: ( ( ruleActionParameter ) )
+            // InternalMySelenium.g:3438:2: ( ruleActionParameter )
             {
-            // InternalMySelenium.g:3432:2: ( ruleActionParameter )
-            // InternalMySelenium.g:3433:3: ruleActionParameter
+            // InternalMySelenium.g:3438:2: ( ruleActionParameter )
+            // InternalMySelenium.g:3439:3: ruleActionParameter
             {
              before(grammarAccess.getActionAccess().getParamActionParameterParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -10590,17 +10610,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssignAction__TargetAssignment_1"
-    // InternalMySelenium.g:3442:1: rule__AssignAction__TargetAssignment_1 : ( ruleActionTarget ) ;
+    // InternalMySelenium.g:3448:1: rule__AssignAction__TargetAssignment_1 : ( ruleActionTarget ) ;
     public final void rule__AssignAction__TargetAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3446:1: ( ( ruleActionTarget ) )
-            // InternalMySelenium.g:3447:2: ( ruleActionTarget )
+            // InternalMySelenium.g:3452:1: ( ( ruleActionTarget ) )
+            // InternalMySelenium.g:3453:2: ( ruleActionTarget )
             {
-            // InternalMySelenium.g:3447:2: ( ruleActionTarget )
-            // InternalMySelenium.g:3448:3: ruleActionTarget
+            // InternalMySelenium.g:3453:2: ( ruleActionTarget )
+            // InternalMySelenium.g:3454:3: ruleActionTarget
             {
              before(grammarAccess.getAssignActionAccess().getTargetActionTargetParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -10631,17 +10651,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AssignAction__VariableAssignment_2"
-    // InternalMySelenium.g:3457:1: rule__AssignAction__VariableAssignment_2 : ( ruleVariable ) ;
+    // InternalMySelenium.g:3463:1: rule__AssignAction__VariableAssignment_2 : ( ruleVariable ) ;
     public final void rule__AssignAction__VariableAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3461:1: ( ( ruleVariable ) )
-            // InternalMySelenium.g:3462:2: ( ruleVariable )
+            // InternalMySelenium.g:3467:1: ( ( ruleVariable ) )
+            // InternalMySelenium.g:3468:2: ( ruleVariable )
             {
-            // InternalMySelenium.g:3462:2: ( ruleVariable )
-            // InternalMySelenium.g:3463:3: ruleVariable
+            // InternalMySelenium.g:3468:2: ( ruleVariable )
+            // InternalMySelenium.g:3469:3: ruleVariable
             {
              before(grammarAccess.getAssignActionAccess().getVariableVariableParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -10672,17 +10692,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ActionParameterString__ValueAssignment"
-    // InternalMySelenium.g:3472:1: rule__ActionParameterString__ValueAssignment : ( RULE_STRING ) ;
+    // InternalMySelenium.g:3478:1: rule__ActionParameterString__ValueAssignment : ( RULE_STRING ) ;
     public final void rule__ActionParameterString__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3476:1: ( ( RULE_STRING ) )
-            // InternalMySelenium.g:3477:2: ( RULE_STRING )
+            // InternalMySelenium.g:3482:1: ( ( RULE_STRING ) )
+            // InternalMySelenium.g:3483:2: ( RULE_STRING )
             {
-            // InternalMySelenium.g:3477:2: ( RULE_STRING )
-            // InternalMySelenium.g:3478:3: RULE_STRING
+            // InternalMySelenium.g:3483:2: ( RULE_STRING )
+            // InternalMySelenium.g:3484:3: RULE_STRING
             {
              before(grammarAccess.getActionParameterStringAccess().getValueSTRINGTerminalRuleCall_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -10709,17 +10729,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__ElementAssignment_0"
-    // InternalMySelenium.g:3487:1: rule__Selector__ElementAssignment_0 : ( ruleDOMElement ) ;
+    // InternalMySelenium.g:3493:1: rule__Selector__ElementAssignment_0 : ( ruleDOMElement ) ;
     public final void rule__Selector__ElementAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3491:1: ( ( ruleDOMElement ) )
-            // InternalMySelenium.g:3492:2: ( ruleDOMElement )
+            // InternalMySelenium.g:3497:1: ( ( ruleDOMElement ) )
+            // InternalMySelenium.g:3498:2: ( ruleDOMElement )
             {
-            // InternalMySelenium.g:3492:2: ( ruleDOMElement )
-            // InternalMySelenium.g:3493:3: ruleDOMElement
+            // InternalMySelenium.g:3498:2: ( ruleDOMElement )
+            // InternalMySelenium.g:3499:3: ruleDOMElement
             {
              before(grammarAccess.getSelectorAccess().getElementDOMElementParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -10750,17 +10770,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__AttrsAssignment_2"
-    // InternalMySelenium.g:3502:1: rule__Selector__AttrsAssignment_2 : ( ruleAttributes ) ;
+    // InternalMySelenium.g:3508:1: rule__Selector__AttrsAssignment_2 : ( ruleAttributes ) ;
     public final void rule__Selector__AttrsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3506:1: ( ( ruleAttributes ) )
-            // InternalMySelenium.g:3507:2: ( ruleAttributes )
+            // InternalMySelenium.g:3512:1: ( ( ruleAttributes ) )
+            // InternalMySelenium.g:3513:2: ( ruleAttributes )
             {
-            // InternalMySelenium.g:3507:2: ( ruleAttributes )
-            // InternalMySelenium.g:3508:3: ruleAttributes
+            // InternalMySelenium.g:3513:2: ( ruleAttributes )
+            // InternalMySelenium.g:3514:3: ruleAttributes
             {
              before(grammarAccess.getSelectorAccess().getAttrsAttributesParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -10791,17 +10811,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__ParentAssignment_4_2"
-    // InternalMySelenium.g:3517:1: rule__Selector__ParentAssignment_4_2 : ( ruleParent ) ;
+    // InternalMySelenium.g:3523:1: rule__Selector__ParentAssignment_4_2 : ( ruleParent ) ;
     public final void rule__Selector__ParentAssignment_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3521:1: ( ( ruleParent ) )
-            // InternalMySelenium.g:3522:2: ( ruleParent )
+            // InternalMySelenium.g:3527:1: ( ( ruleParent ) )
+            // InternalMySelenium.g:3528:2: ( ruleParent )
             {
-            // InternalMySelenium.g:3522:2: ( ruleParent )
-            // InternalMySelenium.g:3523:3: ruleParent
+            // InternalMySelenium.g:3528:2: ( ruleParent )
+            // InternalMySelenium.g:3529:3: ruleParent
             {
              before(grammarAccess.getSelectorAccess().getParentParentParserRuleCall_4_2_0()); 
             pushFollow(FOLLOW_2);
@@ -10832,21 +10852,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Selector__AllAssignment_5"
-    // InternalMySelenium.g:3532:1: rule__Selector__AllAssignment_5 : ( ( '.all' ) ) ;
+    // InternalMySelenium.g:3538:1: rule__Selector__AllAssignment_5 : ( ( '.all' ) ) ;
     public final void rule__Selector__AllAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3536:1: ( ( ( '.all' ) ) )
-            // InternalMySelenium.g:3537:2: ( ( '.all' ) )
+            // InternalMySelenium.g:3542:1: ( ( ( '.all' ) ) )
+            // InternalMySelenium.g:3543:2: ( ( '.all' ) )
             {
-            // InternalMySelenium.g:3537:2: ( ( '.all' ) )
-            // InternalMySelenium.g:3538:3: ( '.all' )
+            // InternalMySelenium.g:3543:2: ( ( '.all' ) )
+            // InternalMySelenium.g:3544:3: ( '.all' )
             {
              before(grammarAccess.getSelectorAccess().getAllAllKeyword_5_0()); 
-            // InternalMySelenium.g:3539:3: ( '.all' )
-            // InternalMySelenium.g:3540:4: '.all'
+            // InternalMySelenium.g:3545:3: ( '.all' )
+            // InternalMySelenium.g:3546:4: '.all'
             {
              before(grammarAccess.getSelectorAccess().getAllAllKeyword_5_0()); 
             match(input,51,FOLLOW_2); 
@@ -10877,17 +10897,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Parent__ElementAssignment_0"
-    // InternalMySelenium.g:3551:1: rule__Parent__ElementAssignment_0 : ( ruleDOMElement ) ;
+    // InternalMySelenium.g:3557:1: rule__Parent__ElementAssignment_0 : ( ruleDOMElement ) ;
     public final void rule__Parent__ElementAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3555:1: ( ( ruleDOMElement ) )
-            // InternalMySelenium.g:3556:2: ( ruleDOMElement )
+            // InternalMySelenium.g:3561:1: ( ( ruleDOMElement ) )
+            // InternalMySelenium.g:3562:2: ( ruleDOMElement )
             {
-            // InternalMySelenium.g:3556:2: ( ruleDOMElement )
-            // InternalMySelenium.g:3557:3: ruleDOMElement
+            // InternalMySelenium.g:3562:2: ( ruleDOMElement )
+            // InternalMySelenium.g:3563:3: ruleDOMElement
             {
              before(grammarAccess.getParentAccess().getElementDOMElementParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -10918,17 +10938,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Parent__AttrsAssignment_2"
-    // InternalMySelenium.g:3566:1: rule__Parent__AttrsAssignment_2 : ( ruleAttributes ) ;
+    // InternalMySelenium.g:3572:1: rule__Parent__AttrsAssignment_2 : ( ruleAttributes ) ;
     public final void rule__Parent__AttrsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3570:1: ( ( ruleAttributes ) )
-            // InternalMySelenium.g:3571:2: ( ruleAttributes )
+            // InternalMySelenium.g:3576:1: ( ( ruleAttributes ) )
+            // InternalMySelenium.g:3577:2: ( ruleAttributes )
             {
-            // InternalMySelenium.g:3571:2: ( ruleAttributes )
-            // InternalMySelenium.g:3572:3: ruleAttributes
+            // InternalMySelenium.g:3577:2: ( ruleAttributes )
+            // InternalMySelenium.g:3578:3: ruleAttributes
             {
              before(grammarAccess.getParentAccess().getAttrsAttributesParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -10959,17 +10979,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attributes__AttrsAssignment_0"
-    // InternalMySelenium.g:3581:1: rule__Attributes__AttrsAssignment_0 : ( ruleAttribute ) ;
+    // InternalMySelenium.g:3587:1: rule__Attributes__AttrsAssignment_0 : ( ruleAttribute ) ;
     public final void rule__Attributes__AttrsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3585:1: ( ( ruleAttribute ) )
-            // InternalMySelenium.g:3586:2: ( ruleAttribute )
+            // InternalMySelenium.g:3591:1: ( ( ruleAttribute ) )
+            // InternalMySelenium.g:3592:2: ( ruleAttribute )
             {
-            // InternalMySelenium.g:3586:2: ( ruleAttribute )
-            // InternalMySelenium.g:3587:3: ruleAttribute
+            // InternalMySelenium.g:3592:2: ( ruleAttribute )
+            // InternalMySelenium.g:3593:3: ruleAttribute
             {
              before(grammarAccess.getAttributesAccess().getAttrsAttributeParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -11000,17 +11020,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attributes__AttrsAssignment_1_1"
-    // InternalMySelenium.g:3596:1: rule__Attributes__AttrsAssignment_1_1 : ( ruleAttribute ) ;
+    // InternalMySelenium.g:3602:1: rule__Attributes__AttrsAssignment_1_1 : ( ruleAttribute ) ;
     public final void rule__Attributes__AttrsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3600:1: ( ( ruleAttribute ) )
-            // InternalMySelenium.g:3601:2: ( ruleAttribute )
+            // InternalMySelenium.g:3606:1: ( ( ruleAttribute ) )
+            // InternalMySelenium.g:3607:2: ( ruleAttribute )
             {
-            // InternalMySelenium.g:3601:2: ( ruleAttribute )
-            // InternalMySelenium.g:3602:3: ruleAttribute
+            // InternalMySelenium.g:3607:2: ( ruleAttribute )
+            // InternalMySelenium.g:3608:3: ruleAttribute
             {
              before(grammarAccess.getAttributesAccess().getAttrsAttributeParserRuleCall_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -11041,17 +11061,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attribute__NameAssignment_0"
-    // InternalMySelenium.g:3611:1: rule__Attribute__NameAssignment_0 : ( ruleDOMAttribute ) ;
+    // InternalMySelenium.g:3617:1: rule__Attribute__NameAssignment_0 : ( ruleDOMAttribute ) ;
     public final void rule__Attribute__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3615:1: ( ( ruleDOMAttribute ) )
-            // InternalMySelenium.g:3616:2: ( ruleDOMAttribute )
+            // InternalMySelenium.g:3621:1: ( ( ruleDOMAttribute ) )
+            // InternalMySelenium.g:3622:2: ( ruleDOMAttribute )
             {
-            // InternalMySelenium.g:3616:2: ( ruleDOMAttribute )
-            // InternalMySelenium.g:3617:3: ruleDOMAttribute
+            // InternalMySelenium.g:3622:2: ( ruleDOMAttribute )
+            // InternalMySelenium.g:3623:3: ruleDOMAttribute
             {
              before(grammarAccess.getAttributeAccess().getNameDOMAttributeParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -11082,17 +11102,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attribute__ValueAssignment_2_0"
-    // InternalMySelenium.g:3626:1: rule__Attribute__ValueAssignment_2_0 : ( RULE_STRING ) ;
+    // InternalMySelenium.g:3632:1: rule__Attribute__ValueAssignment_2_0 : ( RULE_STRING ) ;
     public final void rule__Attribute__ValueAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3630:1: ( ( RULE_STRING ) )
-            // InternalMySelenium.g:3631:2: ( RULE_STRING )
+            // InternalMySelenium.g:3636:1: ( ( RULE_STRING ) )
+            // InternalMySelenium.g:3637:2: ( RULE_STRING )
             {
-            // InternalMySelenium.g:3631:2: ( RULE_STRING )
-            // InternalMySelenium.g:3632:3: RULE_STRING
+            // InternalMySelenium.g:3637:2: ( RULE_STRING )
+            // InternalMySelenium.g:3638:3: RULE_STRING
             {
              before(grammarAccess.getAttributeAccess().getValueSTRINGTerminalRuleCall_2_0_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -11119,17 +11139,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Attribute__VariableAssignment_2_1"
-    // InternalMySelenium.g:3641:1: rule__Attribute__VariableAssignment_2_1 : ( ruleVariableRef ) ;
+    // InternalMySelenium.g:3647:1: rule__Attribute__VariableAssignment_2_1 : ( ruleVariableRef ) ;
     public final void rule__Attribute__VariableAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3645:1: ( ( ruleVariableRef ) )
-            // InternalMySelenium.g:3646:2: ( ruleVariableRef )
+            // InternalMySelenium.g:3651:1: ( ( ruleVariableRef ) )
+            // InternalMySelenium.g:3652:2: ( ruleVariableRef )
             {
-            // InternalMySelenium.g:3646:2: ( ruleVariableRef )
-            // InternalMySelenium.g:3647:3: ruleVariableRef
+            // InternalMySelenium.g:3652:2: ( ruleVariableRef )
+            // InternalMySelenium.g:3653:3: ruleVariableRef
             {
              before(grammarAccess.getAttributeAccess().getVariableVariableRefParserRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -11160,17 +11180,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionParameters__VariablesAssignment_1"
-    // InternalMySelenium.g:3656:1: rule__FunctionParameters__VariablesAssignment_1 : ( ruleVariable ) ;
+    // InternalMySelenium.g:3662:1: rule__FunctionParameters__VariablesAssignment_1 : ( ruleVariable ) ;
     public final void rule__FunctionParameters__VariablesAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3660:1: ( ( ruleVariable ) )
-            // InternalMySelenium.g:3661:2: ( ruleVariable )
+            // InternalMySelenium.g:3666:1: ( ( ruleVariable ) )
+            // InternalMySelenium.g:3667:2: ( ruleVariable )
             {
-            // InternalMySelenium.g:3661:2: ( ruleVariable )
-            // InternalMySelenium.g:3662:3: ruleVariable
+            // InternalMySelenium.g:3667:2: ( ruleVariable )
+            // InternalMySelenium.g:3668:3: ruleVariable
             {
              before(grammarAccess.getFunctionParametersAccess().getVariablesVariableParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -11201,17 +11221,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionParameters__VariablesAssignment_2_1"
-    // InternalMySelenium.g:3671:1: rule__FunctionParameters__VariablesAssignment_2_1 : ( ruleVariable ) ;
+    // InternalMySelenium.g:3677:1: rule__FunctionParameters__VariablesAssignment_2_1 : ( ruleVariable ) ;
     public final void rule__FunctionParameters__VariablesAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3675:1: ( ( ruleVariable ) )
-            // InternalMySelenium.g:3676:2: ( ruleVariable )
+            // InternalMySelenium.g:3681:1: ( ( ruleVariable ) )
+            // InternalMySelenium.g:3682:2: ( ruleVariable )
             {
-            // InternalMySelenium.g:3676:2: ( ruleVariable )
-            // InternalMySelenium.g:3677:3: ruleVariable
+            // InternalMySelenium.g:3682:2: ( ruleVariable )
+            // InternalMySelenium.g:3683:3: ruleVariable
             {
              before(grammarAccess.getFunctionParametersAccess().getVariablesVariableParserRuleCall_2_1_0()); 
             pushFollow(FOLLOW_2);
@@ -11242,17 +11262,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCallParameters__VariablesAssignment_1_0"
-    // InternalMySelenium.g:3686:1: rule__FunctionCallParameters__VariablesAssignment_1_0 : ( ruleVariableCall ) ;
+    // InternalMySelenium.g:3692:1: rule__FunctionCallParameters__VariablesAssignment_1_0 : ( ruleVariableCall ) ;
     public final void rule__FunctionCallParameters__VariablesAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3690:1: ( ( ruleVariableCall ) )
-            // InternalMySelenium.g:3691:2: ( ruleVariableCall )
+            // InternalMySelenium.g:3696:1: ( ( ruleVariableCall ) )
+            // InternalMySelenium.g:3697:2: ( ruleVariableCall )
             {
-            // InternalMySelenium.g:3691:2: ( ruleVariableCall )
-            // InternalMySelenium.g:3692:3: ruleVariableCall
+            // InternalMySelenium.g:3697:2: ( ruleVariableCall )
+            // InternalMySelenium.g:3698:3: ruleVariableCall
             {
              before(grammarAccess.getFunctionCallParametersAccess().getVariablesVariableCallParserRuleCall_1_0_0()); 
             pushFollow(FOLLOW_2);
@@ -11283,17 +11303,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FunctionCallParameters__VariablesAssignment_1_1_1"
-    // InternalMySelenium.g:3701:1: rule__FunctionCallParameters__VariablesAssignment_1_1_1 : ( ruleVariableCall ) ;
+    // InternalMySelenium.g:3707:1: rule__FunctionCallParameters__VariablesAssignment_1_1_1 : ( ruleVariableCall ) ;
     public final void rule__FunctionCallParameters__VariablesAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3705:1: ( ( ruleVariableCall ) )
-            // InternalMySelenium.g:3706:2: ( ruleVariableCall )
+            // InternalMySelenium.g:3711:1: ( ( ruleVariableCall ) )
+            // InternalMySelenium.g:3712:2: ( ruleVariableCall )
             {
-            // InternalMySelenium.g:3706:2: ( ruleVariableCall )
-            // InternalMySelenium.g:3707:3: ruleVariableCall
+            // InternalMySelenium.g:3712:2: ( ruleVariableCall )
+            // InternalMySelenium.g:3713:3: ruleVariableCall
             {
              before(grammarAccess.getFunctionCallParametersAccess().getVariablesVariableCallParserRuleCall_1_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -11324,21 +11344,21 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VariableRef__RefAssignment"
-    // InternalMySelenium.g:3716:1: rule__VariableRef__RefAssignment : ( ( RULE_ID ) ) ;
+    // InternalMySelenium.g:3722:1: rule__VariableRef__RefAssignment : ( ( RULE_ID ) ) ;
     public final void rule__VariableRef__RefAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3720:1: ( ( ( RULE_ID ) ) )
-            // InternalMySelenium.g:3721:2: ( ( RULE_ID ) )
+            // InternalMySelenium.g:3726:1: ( ( ( RULE_ID ) ) )
+            // InternalMySelenium.g:3727:2: ( ( RULE_ID ) )
             {
-            // InternalMySelenium.g:3721:2: ( ( RULE_ID ) )
-            // InternalMySelenium.g:3722:3: ( RULE_ID )
+            // InternalMySelenium.g:3727:2: ( ( RULE_ID ) )
+            // InternalMySelenium.g:3728:3: ( RULE_ID )
             {
              before(grammarAccess.getVariableRefAccess().getRefVariableCrossReference_0()); 
-            // InternalMySelenium.g:3723:3: ( RULE_ID )
-            // InternalMySelenium.g:3724:4: RULE_ID
+            // InternalMySelenium.g:3729:3: ( RULE_ID )
+            // InternalMySelenium.g:3730:4: RULE_ID
             {
              before(grammarAccess.getVariableRefAccess().getRefVariableIDTerminalRuleCall_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -11369,17 +11389,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Variable__NameAssignment"
-    // InternalMySelenium.g:3735:1: rule__Variable__NameAssignment : ( RULE_ID ) ;
+    // InternalMySelenium.g:3741:1: rule__Variable__NameAssignment : ( RULE_ID ) ;
     public final void rule__Variable__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3739:1: ( ( RULE_ID ) )
-            // InternalMySelenium.g:3740:2: ( RULE_ID )
+            // InternalMySelenium.g:3745:1: ( ( RULE_ID ) )
+            // InternalMySelenium.g:3746:2: ( RULE_ID )
             {
-            // InternalMySelenium.g:3740:2: ( RULE_ID )
-            // InternalMySelenium.g:3741:3: RULE_ID
+            // InternalMySelenium.g:3746:2: ( RULE_ID )
+            // InternalMySelenium.g:3747:3: RULE_ID
             {
              before(grammarAccess.getVariableAccess().getNameIDTerminalRuleCall_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -11406,17 +11426,17 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__StringParameter__ValueAssignment"
-    // InternalMySelenium.g:3750:1: rule__StringParameter__ValueAssignment : ( RULE_STRING ) ;
+    // InternalMySelenium.g:3756:1: rule__StringParameter__ValueAssignment : ( RULE_STRING ) ;
     public final void rule__StringParameter__ValueAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalMySelenium.g:3754:1: ( ( RULE_STRING ) )
-            // InternalMySelenium.g:3755:2: ( RULE_STRING )
+            // InternalMySelenium.g:3760:1: ( ( RULE_STRING ) )
+            // InternalMySelenium.g:3761:2: ( RULE_STRING )
             {
-            // InternalMySelenium.g:3755:2: ( RULE_STRING )
-            // InternalMySelenium.g:3756:3: RULE_STRING
+            // InternalMySelenium.g:3761:2: ( RULE_STRING )
+            // InternalMySelenium.g:3762:3: RULE_STRING
             {
              before(grammarAccess.getStringParameterAccess().getValueSTRINGTerminalRuleCall_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -11445,11 +11465,11 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
 
 
     protected DFA4 dfa4 = new DFA4(this);
-    static final String dfa_1s = "\133\uffff";
-    static final String dfa_2s = "\1\4\3\uffff\1\4\1\uffff\2\52\12\55\1\4\2\uffff\1\14\2\61\10\52\1\50\2\4\1\60\1\50\1\13\2\61\2\56\1\26\3\52\1\14\12\55\7\52\1\14\1\4\7\52\1\61\2\56\1\4\1\50\2\56\1\14\7\52\1\4\2\56";
-    static final String dfa_3s = "\1\54\3\uffff\1\37\1\uffff\1\60\1\53\12\55\1\61\2\uffff\1\56\2\62\1\53\7\52\1\63\2\5\1\60\1\50\1\15\4\62\1\37\3\53\1\25\12\55\7\52\1\56\1\5\7\52\1\61\2\62\1\5\1\63\2\62\1\25\7\52\1\5\2\62";
-    static final String dfa_4s = "\1\uffff\1\1\1\2\1\3\1\uffff\1\6\15\uffff\1\5\1\4\106\uffff";
-    static final String dfa_5s = "\133\uffff}>";
+    static final String dfa_1s = "\137\uffff";
+    static final String dfa_2s = "\1\4\3\uffff\1\4\1\uffff\2\52\12\55\1\4\2\uffff\1\13\2\61\11\52\1\50\2\4\1\60\1\50\1\13\2\61\2\56\1\26\3\52\1\13\12\55\10\52\1\13\1\4\10\52\1\61\2\56\1\4\1\50\2\56\1\13\10\52\1\4\2\56";
+    static final String dfa_3s = "\1\54\3\uffff\1\37\1\uffff\1\60\1\53\12\55\1\61\2\uffff\1\56\2\62\1\53\10\52\1\63\2\5\1\60\1\50\1\15\4\62\1\37\3\53\1\25\12\55\10\52\1\56\1\5\10\52\1\61\2\62\1\5\1\63\2\62\1\25\10\52\1\5\2\62";
+    static final String dfa_4s = "\1\uffff\1\1\1\2\1\3\1\uffff\1\6\15\uffff\1\4\1\5\112\uffff";
+    static final String dfa_5s = "\137\uffff}>";
     static final String[] dfa_6s = {
             "\1\3\11\uffff\2\5\20\uffff\4\1\5\uffff\1\4\2\uffff\1\2",
             "",
@@ -11457,8 +11477,8 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
             "",
             "\1\6\1\7\20\uffff\1\10\1\11\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21",
             "",
-            "\1\24\1\23\4\uffff\1\22",
-            "\1\24\1\23",
+            "\1\23\1\24\4\uffff\1\22",
+            "\1\23\1\24",
             "\1\25",
             "\1\25",
             "\1\25",
@@ -11472,76 +11492,80 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
             "\1\26\1\27\53\uffff\1\30",
             "",
             "",
-            "\1\32\3\uffff\1\31\1\33\1\34\1\35\1\36\1\37\30\uffff\1\40",
-            "\1\30\1\41",
-            "\1\30\1\41",
-            "\1\24\1\23",
-            "\1\42",
-            "\1\42",
-            "\1\42",
-            "\1\42",
-            "\1\42",
-            "\1\42",
-            "\1\42",
-            "\1\45\6\uffff\1\43\3\uffff\1\44",
-            "\1\46\1\47",
-            "\1\51\1\50",
-            "\1\52",
-            "\1\45",
-            "\1\53\1\54\1\55",
-            "\1\30\1\41",
-            "\1\30\1\41",
-            "\1\40\3\uffff\1\56",
-            "\1\40\3\uffff\1\56",
-            "\1\57\1\60\1\61\1\62\1\63\1\64\1\65\1\66\1\67\1\70",
-            "\1\24\1\23",
-            "\1\24\1\23",
-            "\1\24\1\23",
-            "\1\72\3\uffff\1\71\1\73\1\74\1\75\1\76\1\77",
-            "\1\100",
-            "\1\100",
-            "\1\100",
-            "\1\100",
-            "\1\100",
-            "\1\100",
-            "\1\100",
-            "\1\100",
-            "\1\100",
-            "\1\100",
-            "\1\101",
-            "\1\101",
-            "\1\101",
-            "\1\101",
-            "\1\101",
-            "\1\101",
-            "\1\101",
-            "\1\103\3\uffff\1\102\1\104\1\105\1\106\1\107\1\110\30\uffff\1\111",
-            "\1\113\1\112",
-            "\1\114",
-            "\1\114",
-            "\1\114",
-            "\1\114",
-            "\1\114",
-            "\1\114",
-            "\1\114",
-            "\1\115",
-            "\1\40\3\uffff\1\56",
-            "\1\40\3\uffff\1\56",
-            "\1\117\1\116",
-            "\1\45\12\uffff\1\44",
-            "\1\111\3\uffff\1\120",
-            "\1\111\3\uffff\1\120",
-            "\1\122\3\uffff\1\121\1\123\1\124\1\125\1\126\1\127",
-            "\1\130",
-            "\1\130",
-            "\1\130",
-            "\1\130",
-            "\1\130",
-            "\1\130",
-            "\1\130",
-            "\1\132\1\131",
-            "\1\111\3\uffff\1\120",
-            "\1\111\3\uffff\1\120"
+            "\1\40\1\32\3\uffff\1\31\1\33\1\34\1\35\1\36\1\37\30\uffff\1\41",
+            "\1\30\1\42",
+            "\1\30\1\42",
+            "\1\23\1\24",
+            "\1\43",
+            "\1\43",
+            "\1\43",
+            "\1\43",
+            "\1\43",
+            "\1\43",
+            "\1\43",
+            "\1\43",
+            "\1\46\6\uffff\1\44\3\uffff\1\45",
+            "\1\47\1\50",
+            "\1\52\1\51",
+            "\1\53",
+            "\1\46",
+            "\1\54\1\55\1\56",
+            "\1\30\1\42",
+            "\1\30\1\42",
+            "\1\41\3\uffff\1\57",
+            "\1\41\3\uffff\1\57",
+            "\1\60\1\61\1\62\1\63\1\64\1\65\1\66\1\67\1\70\1\71",
+            "\1\23\1\24",
+            "\1\23\1\24",
+            "\1\23\1\24",
+            "\1\101\1\73\3\uffff\1\72\1\74\1\75\1\76\1\77\1\100",
+            "\1\102",
+            "\1\102",
+            "\1\102",
+            "\1\102",
+            "\1\102",
+            "\1\102",
+            "\1\102",
+            "\1\102",
+            "\1\102",
+            "\1\102",
+            "\1\103",
+            "\1\103",
+            "\1\103",
+            "\1\103",
+            "\1\103",
+            "\1\103",
+            "\1\103",
+            "\1\103",
+            "\1\113\1\105\3\uffff\1\104\1\106\1\107\1\110\1\111\1\112\30\uffff\1\114",
+            "\1\116\1\115",
+            "\1\117",
+            "\1\117",
+            "\1\117",
+            "\1\117",
+            "\1\117",
+            "\1\117",
+            "\1\117",
+            "\1\117",
+            "\1\120",
+            "\1\41\3\uffff\1\57",
+            "\1\41\3\uffff\1\57",
+            "\1\122\1\121",
+            "\1\46\12\uffff\1\45",
+            "\1\114\3\uffff\1\123",
+            "\1\114\3\uffff\1\123",
+            "\1\133\1\125\3\uffff\1\124\1\126\1\127\1\130\1\131\1\132",
+            "\1\134",
+            "\1\134",
+            "\1\134",
+            "\1\134",
+            "\1\134",
+            "\1\134",
+            "\1\134",
+            "\1\134",
+            "\1\136\1\135",
+            "\1\114\3\uffff\1\123",
+            "\1\114\3\uffff\1\123"
     };
 
     static final short[] dfa_1 = DFA.unpackEncodedString(dfa_1s);
@@ -11590,13 +11614,13 @@ public class InternalMySeleniumParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x00000000FFC00010L});
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x00004000003F1000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x00004000003F1800L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0008800000000000L});
     public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x00000000FFC00000L});
     public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0002000000000000L});
     public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0004000000000000L});
     public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0004000000000002L});
-    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x00000000003F1000L});
+    public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x00000000003F1800L});
     public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000000000030L});
     public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0006000000000000L});
     public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0002000000000030L});

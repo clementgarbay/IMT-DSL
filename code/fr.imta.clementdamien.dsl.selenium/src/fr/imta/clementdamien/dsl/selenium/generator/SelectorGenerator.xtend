@@ -27,10 +27,10 @@ class SelectorGenerator {
 	            				'''" + «attribute.variable.compile» + "'''
 	            		}
 	            		
-	            		val attributeName = if(attribute.name == "text") '''.''' else '''@«attribute.name»'''
+	            		val attributeName = if (attribute.name == "text") '''normalize-space(.)''' else '''@«attribute.name»'''
 	            		
 	                '''(«attributeName» = '«value»')'''
-	            }].join(" AND ")
+	            }].join(" and ")
         	
             return '''[«restiction»]'''
         }
@@ -48,10 +48,10 @@ class SelectorGenerator {
 	            				'''" + «attribute.variable.compile» + "'''
 	            		}
 	            		
-	                val attributeName = if(attribute.name == "text") '''.''' else '''@«attribute.name»'''
+	                val attributeName = if (attribute.name == "text") '''normalize-space(.)''' else '''@«attribute.name»'''
 	            		
 	                '''(«attributeName» = '«value»')'''
-	            }].join(" AND ")
+	            }].join(" and ")
         	
             return '''[«restiction»]'''
         }
