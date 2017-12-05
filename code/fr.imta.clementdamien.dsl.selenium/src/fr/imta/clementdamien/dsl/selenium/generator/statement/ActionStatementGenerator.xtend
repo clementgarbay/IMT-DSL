@@ -22,6 +22,15 @@ class ActionStatementGenerator {
     
     def dispatch delegateCompile(Action action, Selector selector, String parameter) {
     		val function = if (selector.isAll()) 'findElements' else 'findElement'
+    		
+    		if (action.action == "click" || action.action == "choose") {
+    			return 
+				'''
+				Actions actions = new Actions(driver);
+				actions.moveToElement(driver.«function»(«action.target.compileActionTarget»)).click().perform();
+				'''
+    		}
+        
     		'''driver.«function»(«action.target.compileActionTarget»)«action.target.handleIterable(action, parameter.toString)»;'''
     }
     
@@ -33,7 +42,7 @@ class ActionStatementGenerator {
     		if (action.action == "count") return '''.size()'''
     		
     		val actionName = 
-    			if (action.action == "choose") 
+    			if (action.action == "choose") // TODO: refactor because code not reached
     				"click" 
     			else if (action.action == "fill")
     				"sendKeys"

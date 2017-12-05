@@ -36,6 +36,7 @@ class ProgramGenerator {
        import org.openqa.selenium.chrome.ChromeDriverService;
        import org.openqa.selenium.remote.DesiredCapabilities;
        import org.openqa.selenium.remote.RemoteWebDriver;
+       import org.openqa.selenium.interactions.Actions;
        import org.openqa.selenium.WebElement;
 
        import java.io.File;
