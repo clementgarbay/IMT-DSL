@@ -33,8 +33,7 @@ class ActionStatementGenerator {
 				});
 				'''
     			} else {
-    				val random = new Random().nextInt(5000000)
-    				val actionName = '''action«random»'''
+    				val actionName = '''action«action.hashCode»'''
     				return 
 				'''
 				Actions «actionName» = new Actions(driver);
@@ -50,7 +49,7 @@ class ActionStatementGenerator {
     
     def dispatch delegateCompile(Action action, VariableRef varRef, String parameter) {
     		if (action.action == "click" || action.action == "choose") {
-    			val actionName = '''action«varRef.getRef().getName()»'''
+    			val actionName = '''action«action.hashCode»'''
     			return 
 				'''
 				Actions «actionName» = new Actions(driver);
@@ -76,7 +75,7 @@ class ActionStatementGenerator {
     			'''.forEach(element -> element«element»)''' 
 		else
 			element
-    }
+    } 
     
     def dispatch handleIterable(VariableRef varRef, Action action, String parameter) {
     		'''.«action.action»(«parameter»)'''
